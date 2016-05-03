@@ -1,4 +1,4 @@
-##DotFiles##
+## Éti's DotFiles##
 
 These are my DotFiles, you can fork them via:
 
