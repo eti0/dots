@@ -1,0 +1,182 @@
+default_color = "-1";
+
+info_eol = "false";
+
+replaces = { "[]" = "%w$*%n"; };
+
+abstracts = {
+
+  indent_default = " + %y│%n ";
+  line_start = "";
+  timestamp = "";
+  hilight = "%_$*%_";
+  error = "%y$*%n";
+  channel = "%w$*%n";
+  nick = "%_$*%_";
+  nickhost = "%y$*";
+  server = "%_$*%_";
+  comment = "%n(%w$*%n)";
+  reason = "{comment $*}";
+  mode = "{comment $*}";
+
+  channick_hilight = "%y$*%N";
+  chanhost_hilight = "{nickhost $*}";
+
+  channick = "$*";
+  chanhost = "{nickhost $*}";
+
+  channelhilight = "%y$*%n";
+
+  ban = "$*";
+
+  msgnick = "%y$0%w$1 %y│ %|";
+  ownmsgnick = "{msgnick $0 $1-}";
+  ownnick = "%y$*%y";
+  pubmsgnick = "{msgnick $0 $1-}";
+  pubnick = "%K$*%y";
+  menick = "%K$*%y";
+
+  # generic one that's used by most actions
+  action = "%K$* %y│ %K";
+
+  # own action, both private/public
+  ownaction = "%K$* %y│%K";
+
+  # own action with target, both private/public
+  ownaction_target = "{action $*}";
+
+  # private action sent by others
+  pvtaction = "{action $*}";
+  pvtaction_query = "{action $*}";
+
+  # public action sent by others
+  pubaction = "{action $*}";
+
+  whois = "%w    │  %n$1-";
+
+  ownnotice = "%NNote n = %Mnew%n $0 ($1-) ";
+  notice = "%M$*%n ";
+  pubnotice_channel = " %N($*)";
+  pvtnotice_host = " %N($*)";
+  servernotice = " %N($*)";
+
+  ownctcp = "%N$0 (%w$1-%N) ";
+  ctcp = "%N$*%n";
+
+  wallop = "%w$*%n: ";
+  wallop_nick = "%n$*";
+  wallop_action = "%w * $*%n ";
+
+  #netsplit = "%w$*%n";
+  #netjoin = "%w$*%n";
+
+  names_users = "%y┌─┄┄─┄┄──┘ %nusers in %y$1";
+  names_nick = "$2$0%n$1 ";
+  names_nick_op = "{names_nick $* %w}";
+  names_nick_halfop = "{names_nick $* %w}";
+  names_nick_voice = "{names_nick $* %w}";
+  names_prefix = "%y│ %n$1";
+  names_channel = "%W$*%n";
+
+  dcc = "%y$*%n";
+  dccfile = "%_$*%_";
+
+  dccownmsg = "%b /* $0 ($1-) */";
+  dccownnick = "$*%n";
+  dccownquerynick = "$*%n";
+  dccownaction = "{action $*}";
+  dccownaction_target = "{action $*}";
+
+  dccmsg = "%y/* $1- ($0) */";
+  dccquerynick = "%y$*%n";
+  dccaction = "{action $*}";
+
+  sb_background = "%N%N";
+
+  sb_prompt_bg = "%n";
+
+  sbstart = " %y┌─┄┄─────┘ %w";
+  sbend = "";
+
+  topicsbstart = "%w$C %y┄─┄$*";
+  topicsbend = "$*";
+
+  prompt = " %y└──┄┄ ";
+
+  sb = "";
+  #sb = "%N$*%N ";
+  sbmode = "%y(%w+%N$*%y)%n";
+  sbaway = "%y(%Naway%y)%N";
+  sbservertag = "%y:%N$0%y(%N^X%y)";
+  #sbservertag = "";
+  sbnickmode = "%w$0%N$1";
+
+  #sb_usercount = "{sb %_$0%_ nicks ($1-)}";
+  #sb_uc_ircops = "%_*%_$*";
+  #sb_uc_ops = "%_@%y$*%n";
+  #sb_uc_halfops = "%_%%%y$*%n";
+  #sb_uc_voices = "%_+%y$*%n";
+  #sb_uc_normal = "%w$*%n";
+  #sb_uc_space = " ";
+
+  #sb_act_sep = "%y$*";
+  #sb_act_text = "%N$*";
+  #sb_act_msg = "%y$*";
+  #sb_act_hilight = "%y%9$*%n";
+  #sb_act_hilight_color = "%y%9$1-%n";
+};
+
+formats = {
+  "fe-common/core" = {
+    #line_start = "{line_start}";
+    line_start_irssi = "{line_start}";
+    join = "%n join %y┄┄─┤ %n{channick $0} %w(%n{nickhost %w$1}%w)%n joined %w$2";
+    part = "%n part %y┄┄─┤ %n{channick $0} %w(%n{nickhost %w$1}%w)%n left %w$2 {reason %y$3}";
+    quit = "%n quit %y┄┄─┤ %nsignoff%w: %n{channick $0}%w {reason %y$2}";
+    kick = "%y kick %y┄┄─┤ %n{channick $0} was kicked by $2 %w{reason %y$3}";
+    nick_changed = "        %y┄┼┄%w %n{channick $0} %y>> %W{channick $1}";
+    your_nick_changed = "        %y┄┼┄%w %n{channick $0} %y>> %W{channick $1}";
+    new_topic = "%y┌─┄┄─────┘%n\012%y│ %wtopic %y'$2' %Nset by%y $0\012%y└─┄┄─┄┄──┐ ";
+    endofnames = "%y└─┄┄─┄┄──┐ %ytotal: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normies%n";
+    #nick padding
+    pubmsg = "{pubmsgnick $2 {pubnick \00312$[-7]0}}$1";
+    own_msg = "{ownmsgnick $2 {ownnick $[-7]0}}$1";
+    own_msg_channel = "{ownmsgnick $3 {ownnick $[-7]0}{msgchannel $1}}$2";
+    own_msg_private_query = "{ownprivmsgnick {ownprivnick $[-7]2}}$1";
+    pubmsg_me = "{pubmsghinick $[-7]0 {menick $2}}%y$1";
+    pubmsg_me_channel = "{pubmsghinick $3 {menick $[-7]0}{msgchannel $1}}$2";
+    pubmsg_hilight_channel = "{pubmsghinick $0 $[-7]1$4{msgchannel $2}}$3";
+    pubmsg_hilight = "{pubmsghinick $3 {menick $[-7]1}}$2";
+    pubmsg_channel = "{pubmsgnick {pubnick %y$[-7]0}$2}$1";
+    msg_private_query = "{privmsgnick $[-7]0}$2";
+  };
+  "fe-common/irc" = {
+    chanmode_change = "%n mode %y┄┄─┤ %w(%y{channick $1}%w) %nby %y$2";
+    server_chanmode_change = "%n mode %y┄┄─┤ %w{channick $1} %n(%w$2%n)";
+    whois = "%y┌─┄┄    %n\012%y│ %wuser %y$0 %w(%n$1%y@%n$2%w) %n\012%y│ %wname %n$3%n";
+    whois_idle = "%y│ %widle%y %|$1d $2h $3m $4s";
+    whois_idle_signon = "%y│ %widle%y %|$1d $2h $3m $4s {comment signon: $5}";
+    whois_server = "%y│ %wserv%y %|$1 {comment $2}";
+    whois_oper = "%y│ %woper%y {hilight $1}";
+    whois_registered = "%y│ %wrgis%n yes";
+    whois_help = "%y│ %whelp%y available for help";
+    whois_modes = "%y│ %wmode%y $1";
+    whois_realhost = "%y│ %wreal%y $1-";
+    whois_usermode = "%y│ %wumod%y $1";
+    whois_channels = "%y│ %wchan%y %|$1";
+    whois_away = "%y│ %waway%y %|$1";
+    whois_special = "%y│ %winfo%y {comment %|$1}";
+    whois_extra = "%y│ %wextr%y %|$1";
+    end_of_whois = "%y└─┄┄ ";
+    whois_not_found = "%y──┄┄ %wthere is no such nick %y$0";
+    topic = "%ntopic %y┄┄─┤ %y$0 %y$1";
+    topic_info = "      %y┄┄─┤ %wset by %y$0 %y(%w$1%y)";
+    channel_synced = "%n sync %y┄┄─┤ %nin {hilight $1} secs";
+    channel_created = "%n      %y┄┄─┤ %ncreated $1";
+    action_core = "%y$[-8]0 %y│ %y$1";
+    own_action = "{ownaction $[-8]0} $1";
+    action_private = "{pvtaction $[-8]0}$1";
+    action_private_query = "{pvtaction_query $[-8} $2";
+    action_public = "{pubaction $[-8]0}$1";
+  };
+};

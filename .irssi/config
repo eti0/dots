@@ -1,0 +1,558 @@
+servers = (
+
+  {
+    address = "irc.freenode.net";
+    chatnet = "Freenode";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  }
+);
+
+chatnets = {
+  Freenode = {
+    type = "IRC";
+    max_kicks = "1";
+    max_msgs = "4";
+    max_whois = "1";
+  };
+};
+
+channels = (
+  { name = "#solus"; chatnet = "FreeNode"; autojoin = "yes"; },
+  { name = "#linux"; chatnet = "FreeNode"; autojoin = "yes"; },
+  { name = "#solus-chat"; chatnet = "FreeNode"; autojoin = "yes"; }
+);
+
+aliases = {
+  ATAG = "WINDOW SERVER";
+  ADDALLCHANS = "SCRIPT EXEC foreach my \\$channel (Irssi::channels()) { Irssi::command(\"CHANNEL ADD -auto \\$channel->{name} \\$channel->{server}->{tag} \\$channel->{key}\")\\;}";
+  B = "BAN";
+  BACK = "AWAY";
+  BANS = "BAN";
+  BYE = "QUIT";
+  C = "CLEAR";
+  CALC = "EXEC - if command -v bc >/dev/null 2>&1\\; then printf '%s=' '$*'\\; echo '$*' | bc -l\\; else echo bc was not found\\; fi";
+  CHAT = "DCC CHAT";
+  CUBES = "SCRIPT EXEC Irssi::active_win->print(\"%_bases\", MSGLEVEL_CLIENTCRAP) \\; Irssi::active_win->print( do { join '', map { \"%x0\\${_}0\\$_\" } '0'..'9','A'..'F' }, MSGLEVEL_NEVER | MSGLEVEL_CLIENTCRAP) \\; Irssi::active_win->print(\"%_cubes\", MSGLEVEL_CLIENTCRAP) \\; Irssi::active_win->print( do { my \\$y = \\$_*6 \\; join '', map { my \\$x = \\$_ \\; map { \"%x\\$x\\$_\\$x\\$_\" } @{['0'..'9','A'..'Z']}[\\$y .. \\$y+5] } 1..6 }, MSGLEVEL_NEVER | MSGLEVEL_CLIENTCRAP) for 0..5 \\; Irssi::active_win->print(\"%_grays\", MSGLEVEL_CLIENTCRAP) \\; Irssi::active_win->print( do { join '', map { \"%x7\\${_}7\\$_\" } 'A'..'X' }, MSGLEVEL_NEVER | MSGLEVEL_CLIENTCRAP) \\; Irssi::active_win->print(\"%_mIRC extended colours\", MSGLEVEL_CLIENTCRAP) \\; my \\$x \\; \\$x .= sprintf \"\00399,%02d%02d\",\\$_,\\$_ for 0..15 \\; Irssi::active_win->print(\\$x, MSGLEVEL_NEVER | MSGLEVEL_CLIENTCRAP) \\; for my \\$z (0..6) { my \\$x \\; \\$x .= sprintf \"\00399,%02d%02d\",\\$_,\\$_ for 16+(\\$z*12)..16+(\\$z*12)+11 \\; Irssi::active_win->print(\\$x, MSGLEVEL_NEVER | MSGLEVEL_CLIENTCRAP) }";
+  DATE = "TIME";
+  DEHIGHLIGHT = "DEHILIGHT";
+  DESCRIBE = "ACTION";
+  DHL = "DEHILIGHT";
+  EXEMPTLIST = "MODE $C +e";
+  EXIT = "QUIT";
+  GOTO = "SCROLLBACK GOTO";
+  HIGHLIGHT = "HILIGHT";
+  HL = "HILIGHT";
+  HOST = "USERHOST";
+  INVITELIST = "MODE $C +I";
+  J = "JOIN";
+  K = "KICK";
+  KB = "KICKBAN";
+  KN = "KNOCKOUT";
+  LAST = "LASTLOG";
+  LEAVE = "PART";
+  M = "MSG";
+  MUB = "UNBAN *";
+  N = "NAMES";
+  NMSG = "^MSG";
+  P = "PART";
+  Q = "QUERY";
+  RESET = "SET -default";
+  RUN = "SCRIPT LOAD";
+  SAY = "MSG *";
+  SB = "SCROLLBACK";
+  SBAR = "STATUSBAR";
+  SIGNOFF = "QUIT";
+  SV = "MSG * Irssi $J ($V) - http://www.irssi.org";
+  T = "TOPIC";
+  UB = "UNBAN";
+  UMODE = "MODE $N";
+  UNSET = "SET -clear";
+  W = "WHO";
+  WC = "WINDOW CLOSE";
+  WG = "WINDOW GOTO";
+  WJOIN = "JOIN -window";
+  WI = "WHOIS";
+  WII = "WHOIS $0 $0";
+  WL = "WINDOW LIST";
+  WN = "WINDOW NEW HIDDEN";
+  WQUERY = "QUERY -window";
+  WW = "WHOWAS";
+  1 = "WINDOW GOTO 1";
+  2 = "WINDOW GOTO 2";
+  3 = "WINDOW GOTO 3";
+  4 = "WINDOW GOTO 4";
+  5 = "WINDOW GOTO 5";
+  6 = "WINDOW GOTO 6";
+  7 = "WINDOW GOTO 7";
+  8 = "WINDOW GOTO 8";
+  9 = "WINDOW GOTO 9";
+  10 = "WINDOW GOTO 10";
+  11 = "WINDOW GOTO 11";
+  12 = "WINDOW GOTO 12";
+  13 = "WINDOW GOTO 13";
+  14 = "WINDOW GOTO 14";
+  15 = "WINDOW GOTO 15";
+  16 = "WINDOW GOTO 16";
+  17 = "WINDOW GOTO 17";
+  18 = "WINDOW GOTO 18";
+  19 = "WINDOW GOTO 19";
+  20 = "WINDOW GOTO 20";
+  21 = "WINDOW GOTO 21";
+  22 = "WINDOW GOTO 22";
+  23 = "WINDOW GOTO 23";
+  24 = "WINDOW GOTO 24";
+  25 = "WINDOW GOTO 25";
+  26 = "WINDOW GOTO 26";
+  27 = "WINDOW GOTO 27";
+  28 = "WINDOW GOTO 28";
+  29 = "WINDOW GOTO 29";
+  30 = "WINDOW GOTO 30";
+  31 = "WINDOW GOTO 31";
+  32 = "WINDOW GOTO 32";
+  33 = "WINDOW GOTO 33";
+  34 = "WINDOW GOTO 34";
+  35 = "WINDOW GOTO 35";
+  36 = "WINDOW GOTO 36";
+  37 = "WINDOW GOTO 37";
+  38 = "WINDOW GOTO 38";
+  39 = "WINDOW GOTO 39";
+  40 = "WINDOW GOTO 40";
+  41 = "WINDOW GOTO 41";
+  42 = "WINDOW GOTO 42";
+  43 = "WINDOW GOTO 43";
+  44 = "WINDOW GOTO 44";
+  45 = "WINDOW GOTO 45";
+  46 = "WINDOW GOTO 46";
+  47 = "WINDOW GOTO 47";
+  48 = "WINDOW GOTO 48";
+  49 = "WINDOW GOTO 49";
+  50 = "WINDOW GOTO 50";
+  51 = "WINDOW GOTO 51";
+  52 = "WINDOW GOTO 52";
+  53 = "WINDOW GOTO 53";
+  54 = "WINDOW GOTO 54";
+  55 = "WINDOW GOTO 55";
+  56 = "WINDOW GOTO 56";
+  57 = "WINDOW GOTO 57";
+  58 = "WINDOW GOTO 58";
+  59 = "WINDOW GOTO 59";
+  60 = "WINDOW GOTO 60";
+  61 = "WINDOW GOTO 61";
+  62 = "WINDOW GOTO 62";
+  63 = "WINDOW GOTO 63";
+  64 = "WINDOW GOTO 64";
+  65 = "WINDOW GOTO 65";
+  66 = "WINDOW GOTO 66";
+  67 = "WINDOW GOTO 67";
+  68 = "WINDOW GOTO 68";
+  69 = "WINDOW GOTO 69";
+  70 = "WINDOW GOTO 70";
+  71 = "WINDOW GOTO 71";
+  72 = "WINDOW GOTO 72";
+  73 = "WINDOW GOTO 73";
+  74 = "WINDOW GOTO 74";
+  75 = "WINDOW GOTO 75";
+  76 = "WINDOW GOTO 76";
+  77 = "WINDOW GOTO 77";
+  78 = "WINDOW GOTO 78";
+  79 = "WINDOW GOTO 79";
+  80 = "WINDOW GOTO 80";
+  81 = "WINDOW GOTO 81";
+  82 = "WINDOW GOTO 82";
+  83 = "WINDOW GOTO 83";
+  84 = "WINDOW GOTO 84";
+  85 = "WINDOW GOTO 85";
+  86 = "WINDOW GOTO 86";
+  87 = "WINDOW GOTO 87";
+  88 = "WINDOW GOTO 88";
+  89 = "WINDOW GOTO 89";
+  90 = "WINDOW GOTO 90";
+  91 = "WINDOW GOTO 91";
+  92 = "WINDOW GOTO 92";
+  93 = "WINDOW GOTO 93";
+  94 = "WINDOW GOTO 94";
+  95 = "WINDOW GOTO 95";
+  96 = "WINDOW GOTO 96";
+  97 = "WINDOW GOTO 97";
+  98 = "WINDOW GOTO 98";
+  99 = "WINDOW GOTO 99";
+};
+
+statusbar = {
+
+  items = {
+
+    barstart = "{sbstart}";
+    barend = "{sbend}";
+
+    topicbarstart = "{topicsbstart}";
+    topicbarend = "{topicsbend}";
+
+    time = "{sb $Z}";
+    user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
+
+    window = "{sb $winref:$tag/$itemname{sbmode $M}}";
+    window_empty = "{sb $winref{sbservertag $tag}}";
+
+    prompt = "{prompt $[.15]itemname}";
+    prompt_empty = "{prompt $winname}";
+
+    topic = " $topic";
+    topic_empty = " Irssi v$J - http://www.irssi.org";
+
+    lag = "{sb Lag: $0-}";
+    act = "{sb Act: $0-}";
+    more = "-- more --";
+  };
+
+  default = {
+
+    window = {
+
+      disabled = "no";
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "active";
+
+      items = {
+        barstart = { priority = "100"; };
+        time = { };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        act = { priority = "10"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    window_inact = {
+
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "inactive";
+
+      items = {
+        barstart = { priority = "100"; };
+        window = { };
+        window_empty = { };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    prompt = {
+
+      type = "root";
+      placement = "bottom";
+      position = "100";
+      visible = "always";
+
+      items = {
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        input = { priority = "10"; };
+      };
+    };
+
+    topic = {
+
+      type = "root";
+      placement = "top";
+      position = "1";
+      visible = "always";
+
+      items = {
+        topicbarstart = { priority = "100"; };
+        topic = { };
+        topic_empty = { };
+        topicbarend = { priority = "100"; alignment = "right"; };
+      };
+    };
+  };
+};
+settings = {
+  core = {
+    real_name = "Étienne Baritaud Figueroa";
+    user_name = "eti_";
+    nick = "eti1337";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { theme = "lines"; };
+};
+
+#!# Theme
+# default foreground color (%N) - -1 is the "default terminal color"
+default_color = "-1";
+
+
+# print timestamp/servertag at the end of line, not at beginning
+info_eol = "false";
+
+# these characters are automatically replaced with specified color
+# (dark grey by default)
+replaces = { "[]" = "%g$*%n"; };
+
+abstracts = {
+
+  ############# generic ###############################
+
+  #indent_default = "               + ";
+  indent_default = "";
+
+  # text to insert at the beginning of each non-message line
+  # line_start = "%g//%n ";
+  line_start = "";
+
+  # timestamp styling, nothing by default
+  #timestamp = "%K$0-%n";
+  timestamp = "";
+
+  # any kind of text that needs hilighting, default is to bold
+  hilight = "%_$*%_";
+
+  # any kind of error message, default is bright red
+  error = "%R$*%n";
+
+  # channel name is printed
+  channel = "%b$*%n";
+
+  # nick is printed
+  #nick = "%_$*%_";
+  nick = "";
+
+  # nick host is printed
+  nickhost = "%g$*";
+
+  # server name is printed
+  server = "%_$*%_";
+
+  # some kind of comment is printed
+  comment = "%n(%b\"$*\"%n);";
+
+  # reason for something is printed (part, quit, kick, ..)
+  reason = "{comment $*}";
+
+  # mode change is printed ([+o nick])
+  mode = "{comment $*}";
+
+  ## channel specific messages
+
+  # highlighted nick/host is printed (joins)
+  channick_hilight = "%g$*%N";
+  chanhost_hilight = "{nickhost $*}";
+
+  # nick/host is printed (parts, quits, etc.)
+  channick = "$*";
+  chanhost = "{nickhost $*}";
+
+  # highlighted channel name is printed
+  channelhilight = "%g$*%n";
+
+  # ban/ban exception/invite list mask is printed
+  ban = "$*";
+
+  ########### messages #################################
+
+  # the basic styling of how to print message, $0 = nick mode, $1 = nick
+  # msgnick = "$1-$0%KÂ·%N %|";
+  #msgnick = "%K$0%N $1 %Kâ”‚ %|%N";
+  # msgnick = "%K$0%N $1 %KÂ· %|%N";
+  msgnick = "%K%N $0 $1 :  %N";
+
+  # $0 = nick mode, $1 = nick
+  ownmsgnick = "{msgnick $0 $1}";
+  ownnick = "%Y$*%n";
+
+  # public message in channel, $0 = nick mode, $1 = nick
+  pubmsgnick = "{msgnick $0 $1}";
+  pubnick = "%N$*%n";
+
+  # public highlighted message in channel
+  pubmsghinick = "{msgnick $0 $1}%r";
+  menick = "%R$*%n";
+
+  # channel name is printed with message
+  msgchannel = "%K:%m$*%n";
+
+  # private message, $0 = nick, $1 = host
+  privmsg = "$0=%b\"$1-\"%n ";
+
+  # private message from you, $0 = "msg", $1 = target nick
+  ownprivmsg = "$0=%b\"$1-\"%n ";
+
+  # private message in query
+  # privmsgnick = "{msgnick $*}";
+  privmsgnick = " %gÂ»%N ";
+
+  # own private message in query
+  #ownprivmsgnick = "{privmsgnick $*}";
+  ownprivmsgnick = " %rÂ«%N ";
+  #ownprivnick = "$*";
+
+
+  ########## Actions (/ME stuff) #########################
+
+  action_core = " $n$* :";
+
+  action = "{action_core $*} ";
+
+  ownaction = "{action %p$*}";
+
+  ownaction_target = "{action_core $0}%Y:%c$1%n ";
+
+  pvtaction = "%y (*) $*%n ";
+  pvtaction_query = "{action $* }";
+
+  pubaction = "{action $* }";
+
+  # notices
+  ownnotice = "%NNote n = %Mnew%n $0 ($1-) ";
+  notice = "%M$*%n ";
+  pubnotice_channel = " %N($*)";
+  pvtnotice_host = " %N($*)";
+  servernotice = " %N($*)";
+
+  # CTCPs
+  ownctcp = "%NCTCP c = %Mnew%n $0 ($1-) ";
+  ctcp = "%N$*%n";
+
+  # wallops
+  wallop = "%K$*%n: ";
+  wallop_nick = "%n$*";
+  wallop_action = "%K * $*%n ";
+
+  # netsplits
+  netsplit = "       %Knsplit : %b\"$*\"%n";
+  netjoin = "        %Knjoin %G : %b\"$*\"%n";
+
+  # /names list
+  names_prefix = "             %Y:%n ";
+  names_nick = "%_$2$0%_%n$1- ";
+  names_nick_op = "{names_nick $* %R}";
+  names_nick_halfop = "{names_nick $* %C}";
+  names_nick_voice = "{names_nick $* %K}";
+  names_users = "             %Y:%n $1";
+  names_channel = "\"%b$*\"%n";
+
+  # DCC
+  dcc = "%g$*%n";
+  dccfile = "%_$*%_";
+
+  # DCC chat, own msg/action
+  dccownmsg = "%g /* $0 ($1-) */";
+  dccownnick = "$*%n";
+  dccownquerynick = "$*%n";
+  dccownaction = "{action $*}";
+  dccownaction_target = "{action $*}";
+
+  # DCC chat, others
+  dccmsg = "%g/* $1- ($0) */";
+  dccquerynick = "%g$*%n";
+  dccaction = "{action $*}";
+
+  ######## statusbar/topicbar ############################
+
+  # default background for all statusbars. You can also give
+  # the default foreground color for statusbar items.
+  sb_background = "%N";
+
+  # default backround for "default" statusbar group
+  sb_default_bg = "%N";
+  # background for prompt / input line
+  sb_prompt_bg = "%N";
+  # background for info statusbar
+  #sb_info_bg = "%0";
+  # background for topicbar (same default)
+  #sb_topic_bg = "%0";
+
+  # text at the beginning of statusbars. sb-item already puts
+  # space there,so we don't use anything by default.
+  sbstart = "";
+  # text at the end of statusbars. Use space so that it's never
+  # used for anything.
+  sbend = "";
+
+  topicsbstart = "%BChannel: %b\"$*";
+  topicsbend = "$*%b\"";
+
+  prompt = "$c ;";
+
+  sb = "[$*]";
+  sbmode = " %K[%g%g+%n$*%K]";
+  sbaway = " %g/* zZzZ */%n";
+  sbservertag = ":%g$0%n";
+  sbnickmode = "$0";
+
+  # Usercount
+  sb_usercount = "{sb %_$0%_ nicks ($1-)}";
+  sb_uc_ircops = "%_*%_$*";
+  sb_uc_ops = "%_@%r$*%n";
+  sb_uc_halfops = "%_%%%g$*%n";
+  sb_uc_voices = "%_+%y$*%n";
+  sb_uc_normal = "%w$*%n";
+  sb_uc_space = " ";
+  # activity in statusbar
+
+
+  sb_act_sep = " ";
+  # normal text
+  sb_act_text = "%K%9$*%n";
+  # public message
+  sb_act_msg = "%Y%9$*%n";
+  # hilight
+  sb_act_hilight = "%R%9$*%n";
+  # hilight with specified color, $0 = color, $1 = text
+  sb_act_hilight_color = "%R%9$1-%n";
+};
+
+########################################################
+
+formats = {
+  "fe-common/core" = {
+    line_start = "{line_start}";
+    line_start_irssi = "{line_start}";
+
+    join = "%G>%K>     join    %g>%n {channick $0}";
+    part = "%R<%K<     part    %r<%n {channick $0}";
+    kick = "%R<%K<     kicked  %r<%n {channick $0}";
+    quit = "%R<%K<     quit    %r< %n {channick $0}";
+    quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
+
+    nick_changed = "%K{channick $[-13]0}%G|%n {channick $1}";
+    your_nick_changed = "%K         you : %n {channick $1}";
+
+    pubmsg = "{pubmsgnick $2 {pubnick \00302$[-11]0}}$1";
+
+    own_msg = "{ownmsgnick $2 {ownnick $[-11]0}}$1";
+    own_msg_channel = "{ownmsgnick $3 {ownnick $[-11]0}{msgchannel $1}}$2";
+    own_msg_private_query = "{ownprivmsgnick {ownprivnick $[-11]2}}$1";
+
+    pubmsg_me = "{pubmsghinick $2 {menick $[-11]0}}$1";
+    pubmsg_me_channel = "{pubmsghinick $3 {menick $[-11]0}{msgchannel $1}}$2";
+
+    pubmsg_hilight = "{pubmsghinick $3 {menick $[-11]1}}$2";
+    pubmsg_hilight_channel = "{pubmsghinick $0 $[-11]1$4{msgchannel $2}}$3";
+
+    pubmsg_channel = "{pubmsgnick {pubnick %G$[-11]0}$2}$1";
+    msg_private_query = "{privmsgnick $[-11]0}$2";
+    new_topic = "       %ctopic %K    :  %B'$2' %non %b$1%n%K[set by {nick %y$0}]";
+
+    endofnames = "       names     :  Total: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, \012{hilight $5} normal%n";
+  };
+  "fe-common/irc" = {
+    chanmode_change = " mode      : %n {channick $1}";
+    server_chanmode_change = "%        mode %y    : %n {channick $1}";
+
+    own_action = "{ownaction $[-11]0} $1";
+    action_private = "{pvtaction $[-11]0}$1";
+    action_private_query = "{pvtaction_query $[-11]0} $2";
+    action_public = "{pubaction $[-11]0}$1";
+  };
+};

@@ -1,0 +1,48 @@
+! Urxvt Settings
+
+! Pas de barre de défilement
+URxvt*scrollBar: False
+
+! Couleur d'arrière plan
+URxvt*background: #303030
+
+! Couleur d'avant plan blanc
+URxvt*foreground: white
+
+! Dimension du terminal
+URxvt*geometry: 80x25
+
+! Fix 256
+
+URxvt*termName: rxvt
+
+! Police
+
+URxvt.font: xft:DejaVu Sans Mono:size=8
+URxvt.boldFont: xft:DejaVu Sans Mono:size=8
+
+! Lien cliquable
+! Valeur possible pour l'option matcher button: 1=clic gauche, 2= clic milieu, 3=clic droit
+
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      google-chrome-stable
+URxvt.matcher.button:   3
+
+! Colors
+
+*color0:  #2E3436
+*color1:  #ff3838
+*color2:  #4E9A06
+*color3:  #C4A000
+*color4:  #3465A4
+*color5:  #75507B
+*color6:  #ce5c00
+*color7:  #babdb9
+*color8:  #555753
+*color9:  #EF2929
+*color10: #8AE234
+*color11: #FCE94F
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #fcaf3e
+*color15: #EEEEEC
