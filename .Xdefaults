@@ -1,7 +1,7 @@
 ! Urxvt Settings
 
 ! Pas de barre de défilement
-URxvt*scrollBar: False
+URxvt*scrollBar: True
 
 ! Couleur d'arrière plan
 URxvt*background: #303030
@@ -30,19 +30,19 @@ URxvt.matcher.button:   3
 
 ! Colors
 
-*color0:  #2E3436
+*color0:  #FED9B9
 *color1:  #ff3838
-*color2:  #4E9A06
-*color3:  #C4A000
+*color2:  #68C79B
+*color3:  #FED9B9
 *color4:  #3465A4
 *color5:  #75507B
-*color6:  #ce5c00
-*color7:  #babdb9
+*color6:  #7ae3ce
+*color7:  #61D8D8
 *color8:  #555753
 *color9:  #EF2929
-*color10: #8AE234
-*color11: #FCE94F
+*color10: #5CD48B
+*color11: #EBC086
 *color12: #729FCF
 *color13: #AD7FA8
-*color14: #fcaf3e
-*color15: #EEEEEC
+*color14: #25fcff
+*color15: #ececec
