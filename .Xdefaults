@@ -1,7 +1,7 @@
 ! Urxvt Settings
 
 ! Pas de barre de défilement
-URxvt*scrollBar: True
+URxvt*scrollBar: False
 
 ! Couleur d'arrière plan
 URxvt*background: #303030

@@ -18,11 +18,10 @@
 [encoding] {UTF-8}
       [exec] (URxvt) {urxvt}
       [exec] (Nautilus) {nautilus}
-      [exec] (Google Chrome) {google-chrome-stable}
+      [exec] (Chromium) {chromium}
       [submenu] (SFT                                >)
       [exec] (IRC) {urxvt -e irssi}
       [exec] (AlsaMixer) {urxvt -e alsamixer}
-      [exec] (NCMPCPP) {urxvt -e ncmpcpp}     
       [end]
 [separator]
 [submenu] (Fluxbox Menu                >)
