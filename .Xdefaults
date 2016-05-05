@@ -10,7 +10,7 @@ URxvt*background: #303030
 URxvt*foreground: white
 
 ! Dimension du terminal
-URxvt*geometry: 80x25
+URxvt*geometry: 100x25
 
 ! Fix 256
 
@@ -30,19 +30,57 @@ URxvt.matcher.button:   3
 
 ! Colors
 
-*color0:  #FED9B9
-*color1:  #ff3838
-*color2:  #68C79B
-*color3:  #FED9B9
-*color4:  #3465A4
-*color5:  #75507B
-*color6:  #7ae3ce
-*color7:  #61D8D8
-*color8:  #555753
-*color9:  #EF2929
-*color10: #5CD48B
-*color11: #EBC086
-*color12: #729FCF
-*color13: #AD7FA8
-*color14: #25fcff
-*color15: #ececec
+! special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+
+! red
+*.color1:       #a54242
+*.color9:       #cc6666
+
+! green
+*.color2:       #8c9440
+*.color10:      #b5bd68
+
+! yellow
+*.color3:       #faa65c
+*.color11:      #ffb777
+
+! blue
+*.color4:       #5f819d
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #85678f
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
+
+
+! *color0:  #FED9B9
+! *color1:  #ff3838
+! *color2:  #68C79B
+! *color3:  #FED9B9
+! *color4:  #3465A4
+! *color5:  #75507B
+! *color6:  #7ae3ce
+! *color7:  #61D8D8
+! *color8:  #555753
+! *color9:  #EF2929
+! *color10: #5CD48B
+! *color11: #EBC086
+! *color12: #729FCF
+! *color13: #AD7FA8
+! *color14: #25fcff
+! *color15: #ececec

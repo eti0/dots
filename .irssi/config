@@ -1,28 +1,55 @@
 servers = (
-
   {
     address = "irc.freenode.net";
     chatnet = "Freenode";
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
-    autoconnect = "yes";
+    autoconnect = "no";
+  },
+  {
+    address = "irc.debian.org";
+    chatnet = "Debian";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "no";
+  },
+  {
+    address = "irc.teknik.io";
+    chatnet = "Teknik";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "no";
+  },
+  {
+    address = "irc.rizon.net";
+    chatnet = "Rizon";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "no";
+  },
+  {
+    address = "unix.chat";
+    chatnet = "Unix";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "no";
   }
 );
 
-chatnets = {
-  Freenode = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "4";
-    max_whois = "1";
-  };
-};
-
 channels = (
-  { name = "#solus"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#linux"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#solus-chat"; chatnet = "FreeNode"; autojoin = "yes"; }
+  { name = "#solus"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#linux"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#solus-chat"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#debian"; chatnet = "Debian"; autojoin = "yes"; },
+  { name = "#debian-fr"; chatnet = "Debian"; autojoin = "yes"; },
+  { name = "#rice"; chatnet = "Rizon"; autojoin = "yes"; },
+  { name = "#/g/technology"; chatnet = "Rizon"; autojoin = "yes"; },
+  { name = "#nixers"; chatnet = "Unix"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -555,4 +582,12 @@ formats = {
     action_private_query = "{pvtaction_query $[-11]0} $2";
     action_public = "{pubaction $[-11]0}$1";
   };
+};
+
+chatnets = {
+  Freenode = { type = "IRC"; };
+  Debian = { type = "IRC"; };
+  Teknik = { type = "IRC"; };
+  Rizon = { type = "IRC"; };
+  Unix = { type = "IRC"; };
 };

@@ -3,4 +3,5 @@
   [Layer]	{2}
 [end]
 [app] (name=urxvt) (class=URxvt)
+[app] (name=Chromium) (class=chromium)
 [end]

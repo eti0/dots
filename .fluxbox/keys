@@ -8,8 +8,8 @@ OnDesktop Mouse3 :RootMenu
 #OnDesktop Mouse5 :NextWorkspace
 
 # scroll on the toolbar to change current window
-OnToolbar Mouse4 :PrevWindow {static groups} (iconhidden=no)
-OnToolbar Mouse5 :NextWindow {static groups} (iconhidden=no)
+#OnToolbar Mouse4 :PrevWindow {static groups} (iconhidden=no)
+#OnToolbar Mouse5 :NextWindow {static groups} (iconhidden=no)
 
 # alt + left/right click to move/resize a window
 OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
@@ -58,7 +58,7 @@ Mod4 8 :Tab 8
 Mod4 9 :Tab 9
 
 # open a terminal
-Mod1 F1 :Exec xterm
+Mod1 Control T :Exec urxvt
 
 # open a dialog to run programs
 Mod1 F2 :Exec fbrun
@@ -83,8 +83,8 @@ Mod1 space :WindowMenu
 Control Mod1 Delete :Exit
 
 # change to previous/next workspace
-Control Mod1 Left :PrevWorkspace
-Control Mod1 Right :NextWorkspace
+#Control Mod1 Left :PrevWorkspace
+#Control Mod1 Right :NextWorkspace
 
 # send the current window to previous/next workspace
 Mod4 Left :SendToPrevWorkspace

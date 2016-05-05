@@ -17,7 +17,7 @@
 [begin] (Fluxbox)
 [encoding] {UTF-8}
       [exec] (URxvt) {urxvt}
-      [exec] (Nautilus) {nautilus}
+      [exec] (Nautilus) {nautilus --no-desktop --browser}
       [exec] (Chromium) {chromium}
       [submenu] (SFT                                >)
       [exec] (IRC) {urxvt -e irssi}
@@ -38,7 +38,10 @@
       [restart] (Restart)
       [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) | xmessage -file - -center}
       [separator]
+      [submenu] (Power   >)
+      [exec] (Suspend) {systemctl suspend}
       [exit] (Logout)
+      
 [end]
 [endencoding]
 [end]
