@@ -6,9 +6,13 @@ sh /home/eti/Documents/StartupScripts/wp
 
 sh /home/eti/Documents/StartupScripts/mouse
 
-# Conky
+# Conky Script
 
-exec conky-manager
+sh /home/eti/.conky/conky-startup.sh
+
+# Apps
+
+# steam
 
 # Starts Fluxbox
 

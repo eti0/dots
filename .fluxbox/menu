@@ -11,10 +11,16 @@
       [submenu] (Audio)
       [exec] (AlsaMixer) {urxvt -e alsamixer}
       [exec] (PulseAudio EQ) {pulseaudio-equalizer-gtk}
+      [exec] (Soundnode) {/home/eti/Documents/Logiciels/SoundNode/Soundnode}
+      [end]
+      [submenu] (Programming)
+      [exec] (Sublime Text 3) {subl}
       [end]
       [submenu] (System)
       [exec] (Ranger) {urxvt -e ranger}
       [exec] (System Monitor) {gnome-system-monitor}
+      [exec] (System Settings) {gnome-control-center}
+      [exec] (System Settings [Root]) {gksudo gnome-control-center}
       [end]
       [submenu] (Fluff)
       [exec] (qBittorrent) {qbittorrent}
@@ -38,9 +44,13 @@
       [separator]
       [submenu] (Power   >)
       [separator]
+      [exit] (Logout)
+      [separator]
       [exec] (Suspend) {systemctl suspend}
       [separator]
-      [exit] (Logout)
+      [exec] (Reboot) {gksudo reboot}
+      [separator]
+      [exec] (Shutdown) {gksudo shutdown now}
       [separator]
 [end]
 [endencoding]
