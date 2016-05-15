@@ -1,82 +1,92 @@
-ggqbp7zip
-ler
-gnotor
+gium
+vim-gnominkscape
+libreoffice
+gdisk
+gparted
+nautilus
+gnome-disks
+gksudo gparted
+gksudo gnome-dgksudo gnome-system-monitor
+gksudo pcmanfm
+arance
+dio-code
+spotify-client
+spotify
+firefox
 lxappearance
--cener
-gconf-editor
-dconf-editor
-playonlinux
-wine
-git-cola
-filezilla
-leafpad
 gimp
-sublime-text
-sublime-text-3
-sublime-text3
-sublimetext3
-sublime_text
-network-manager
-conky-manager
-illa
-leafpad
-gimp
-sublime-text
-sublime-text-3
-sublime-text3
-sublimetext3
-sublime_text
-network-manager
-conky
-conky-manager
-illa
-leafpad
-gimp
-sublime-text
-sublime-text-3
-sublime-text3
-sublimetext3
-sublime_text
-network-manager
-conky
-vivaldi-stable
-filezilla
-3
-sublime-text3
-sublimetext3
-sublime_text
-network-manager
-conky
-conky-manager
-illa
-leafpad
-gimp
-sublime-text
-sublime-text-3
-sublime-text3
-sublimetext3
-sublime_text
-network-manager
-conky
-vivaldi-stable
-gnome-tweak-tool
-google-chrome
-google-chrome-stable
-chromium
-vim-gnome
-nvidia-settings
-ublime-text3
-sublimetext3
-sublime_text
-network-manager
-conky
-vivaldi-stable
-gnome-tweak-tool
-google-chrome
-google-chrome-stable
-chromium
-vim-gnome
+m-gnome
 vlc
 visual-studio-code
 spotify-client
 spotify
+firefox
+lxappearance
+inkscape
+libreoffice
+gdisk
+gparted
+nautilus
+gnome-disks
+gksudo gparted
+gksudo gnome-disks
+xfce4-panel -r
+fluxbox -restart
+lxappearance
+ilus
+gnome-disks
+gksudo gparted
+gksudo gnome-disks
+xfce4-panel -r
+fluxbox -restart
+lxappearance
+restart
+lxappearance
+ilus
+gnome-disks
+gksudo gparted
+gksudo gnome-disks
+xfce4-panel -r
+fluxbox -restart
+lxappearance
+isks
+gksudo gparted
+gksudo gnome-disks
+xfce4-panel -r
+fluxbox -restart
+lxappearance
+ppearance
+isks
+gksudo gparted
+gksudo gnome-disks
+xfce4-panel -r
+fluxbox -restart
+lxappearance
+ks
+gksudo gparted
+gksudo gnome-disks
+xfce4-panel -r
+fluxbox -restart
+xfce4-panel
+gnome-tweak-tool
+lxappearance
+restart
+xfce4-panel
+gnome-tweak-tool
+gimp
+e-tweak-tool
+lxappearance
+-disks
+xfce4-panel -r
+fluxbox -restart
+xfce4-panel
+gnome-tweak-tool
+lxappearance
+restart
+xfce4-panel
+gnome-tweak-tool
+gimp
+e-tweak-tool
+gksudo pcmanfm
+gksudo gnome-system-monitor
+sudo openvpn --config .ccrypto.ovpn

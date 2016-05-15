@@ -20,6 +20,7 @@
       [exec] (Sublime Text 3) {subl}
       [end]
       [submenu] (System)
+      [exec] (OpenVPN) {urxvt -e sudo openvpn --config .ccrypto.ovpn}
       [exec] (Ranger) {urxvt -e ranger}
       [exec] (System Monitor) {gnome-system-monitor}
       [exec] (System Settings) {gnome-control-center}

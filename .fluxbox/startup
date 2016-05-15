@@ -10,9 +10,9 @@ sh /home/eti/Documents/StartupScripts/mouse
 
 sh /home/eti/.conky/conky-startup.sh
 
-# Apps
+# VPN
 
-# steam
+sudo openvpn --config .ccrypto.ovpn
 
 # Starts Fluxbox
 
