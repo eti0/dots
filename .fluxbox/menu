@@ -1,6 +1,5 @@
-[begin] (Fluxbox)
+[begin]
 [encoding] {UTF-8}
-[separator]
       [exec] (URxvt) {urxvt}
       [exec] (PCmanFM) {pcmanfm}
       [exec] (Chromium) {chromium}
@@ -15,9 +14,6 @@
       [submenu] (Music)
       [exec] (Soundnode) {/home/eti/Documents/Logiciels/SoundNode/Soundnode}
       [exec] (Spotify) {spotify}
-      [end]
-      [submenu] (Programming)
-      [exec] (Sublime Text 3) {subl}
       [end]
       [submenu] (System)
       [exec] (OpenVPN) {urxvt -e sudo openvpn --config .ccrypto.ovpn}
@@ -47,7 +43,7 @@
       [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) | xmessage -file - -center}
       [separator]
       [submenu] (Power   >)
-      [separator]
+      [nop]
       [exit] (Logout)
       [separator]
       [exec] (Suspend) {systemctl suspend}
@@ -55,6 +51,7 @@
       [exec] (Reboot) {gksudo reboot}
       [separator]
       [exec] (Shutdown) {gksudo shutdown now}
+      [nop]
 [end]
 [endencoding]
 [end]
