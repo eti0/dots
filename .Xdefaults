@@ -1,22 +1,21 @@
-! Urxvt Settings
-
-! Pas de barre de défilement
+! No scrollbar
 URxvt*scrollBar: False
 
-! Couleur d'arrière plan
-URxvt*background: #303030
+! Background color
+URxvt*background: #181818
 
-! Couleur d'avant plan blanc
+
+! Foreground color
 URxvt*foreground: white
 
-! Dimension du terminal
+! Terminal dimensions
 URxvt*geometry: 100x25
 
 ! Fix 256
 
 URxvt*termName: rxvt
 
-! Police
+! Font
 
 URxvt.font: xft:DejaVu Sans Mono:size=8
 URxvt.boldFont: xft:DejaVu Sans Mono:size=8
@@ -25,18 +24,18 @@ URxvt.boldFont: xft:DejaVu Sans Mono:size=8
 
 Xcursor.theme:   Openzone Black Slim
 
-! Lien cliquable
+! Clic-able links
 ! Valeur possible pour l'option matcher button: 1=clic gauche, 2= clic milieu, 1=clic droit
 
 URxvt.perl-ext-common:  default,matcher
-URxvt.urlLauncher:      google-chrome-stable
+URxvt.urlLauncher:      chromium
 URxvt.matcher.button:   1
 
 ! Colors
 
 ! special
 *.foreground:   #c5c8c6
-*.background:   #1d1f21
+*.background:   #181818
 *.cursorColor:  #c5c8c6
 
 ! black
@@ -70,21 +69,3 @@ URxvt.matcher.button:   1
 ! white
 *.color7:       #707880
 *.color15:      #c5c8c6
-
-
-! *color0:  #FED9B9
-! *color1:  #ff3838
-! *color2:  #68C79B
-! *color3:  #FED9B9
-! *color4:  #3465A4
-! *color5:  #75507B
-! *color6:  #7ae3ce
-! *color7:  #61D8D8
-! *color8:  #555753
-! *color9:  #EF2929
-! *color10: #5CD48B
-! *color11: #EBC086
-! *color12: #729FCF
-! *color13: #AD7FA8
-! *color14: #25fcff
-! *color15: #ececec
