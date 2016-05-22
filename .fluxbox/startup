@@ -10,9 +10,9 @@ sh /home/eti/Documents/StartupScripts/mouse
 
 sh /home/eti/.conky/conky-startup.sh
 
-# VPN
+# No Screen-off timer
 
-sudo openvpn --config .ccrypto.ovpn
+xset -dpms s off
 
 # Starts Fluxbox
 

@@ -25,6 +25,7 @@
       [submenu] (Fluff)
       [exec] (qBittorrent) {qbittorrent}
       [exec] (Steam) {steam}
+      [exec] (Sublime Text 3) {subl}
       [end]
       [end]
 [separator]
