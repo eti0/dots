@@ -1,0 +1,8 @@
+# Tint2 Panel
+tint2 &
+
+# Battery Indicator
+mate-power-manager &
+
+# Set the background
+hsetroot -cover ~/Pictures/Wallpapers/wallhaven-385542.jpg &
