@@ -111,7 +111,7 @@ mouse_scroll_down = none
 systray_padding = 7 0 5
 systray_background_id = 3
 systray_sort = ascending
-systray_icon_size = 12
+systray_icon_size = 14
 systray_icon_asb = 100 0 50
 systray_monitor = 1
 

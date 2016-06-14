@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=eti-kfe
+Name=Kfe
 Comment=dark, cold, clean
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=eti-kfe
-MetacityTheme=eti-kfe
+GtkTheme=Kfe
+MetacityTheme=Kfe
 ButtonLayout=:minimize,maximize,close
 IconTheme=gnome

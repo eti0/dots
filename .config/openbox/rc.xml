@@ -57,7 +57,7 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Overpass Semi-Light</name>
+      <name>Noto Sans</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -66,7 +66,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Overpass Ultra-Light</name>
+      <name>Noto Sans</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -75,8 +75,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Overpass Semi-Light</name>
-      <size>8</size>
+      <name>Noto Sans</name>
+      <size>7</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -84,7 +84,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Overpass Semi-Light</name>
+      <name>Noto Sans</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -93,7 +93,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Overpass</name>
+      <name>Noto Sans</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -102,7 +102,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Overpass</name>
+      <name>Noto Sans</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -185,7 +185,7 @@
     <keybind key="A-F2">
       <action name="Execute">
         <name>Run</name>
-        <command>rofi -show run</command>
+        <command>rofi -show run -width 750 -location 0 -lines 5 -bw 0 -font "Overpass 9" -padding 2 -separator-style none -color-window "argb:755b8b78, argb:0002b36, argb:0000000" -color-normal "argb:13000000, #ffffff, argb:0000000, argb:094ecc9, #6cffa0" -color-active "argb:05b8b78, #ffffff, argb:0000000, argb:05b8b78, #00ff3d" -color-urgent "argb:054b18d, #a40c27, argb:0000000, argb:0ba3b38, #ff002f"</command>
       </action>
     </keybind>
     <chainQuitKey>C-g</chainQuitKey>
