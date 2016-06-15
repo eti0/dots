@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>eti-opb</name>
+    <name>eti-dark-green</name>
     <titleLayout>LIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -176,16 +176,16 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
-    <keybind key="C-A-t">
-      <action name="urxvt">
-        <name>Terminal</name>
+    <keybind key="A-F1">
+      <action name="Execute">
+	<name>Terminal</name>
         <command>urxvt</command>
       </action>
     </keybind>
     <keybind key="A-F2">
       <action name="Execute">
         <name>Run</name>
-        <command>rofi -show run -width 750 -location 0 -lines 5 -bw 0 -font "Overpass 9" -padding 2 -separator-style none -color-window "argb:755b8b78, argb:0002b36, argb:0000000" -color-normal "argb:13000000, #ffffff, argb:0000000, argb:094ecc9, #6cffa0" -color-active "argb:05b8b78, #ffffff, argb:0000000, argb:05b8b78, #00ff3d" -color-urgent "argb:054b18d, #a40c27, argb:0000000, argb:0ba3b38, #ff002f"</command>
+        <command>rofi -show run -width 750 -location 0 -lines 5 -bw 0 -font "Noto Sans 10" -padding 2 -separator-style flat -hide-scrollbar -color-window "argb:e2292929, argb:21313131, argb:6c000000" -color-normal "argb:0000000, argb:daffffff, argb:0000000, argb:83000000, #ffffff" -color-active "argb:5000000, argb:e5ffffff, argb:0000000, argb:50000000, #ffffff" -color-urgent "argb:5000000, #ffef00, argb:0000000, argb:59000000, #e2ff00"</command>
       </action>
     </keybind>
     <chainQuitKey>C-g</chainQuitKey>
@@ -209,9 +209,6 @@
       <action name="GoToDesktop">
         <to>4</to>
       </action>
-    </keybind>
-    <keybind key="C-d">
-      <action name="ToggleShowDesktop"/>
     </keybind>
     <keybind key="W-F1">
       <action name="SendToDesktop">
@@ -242,12 +239,6 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-    <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
-    <keybind key="A-Print">
-      <action name="Execute">
-        <command>scrot -s</command>
-      </action>
-    </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -258,59 +249,14 @@
         </finalactions>
       </action>
     </keybind>
-    <keybind key="A-S-Tab">
-      <action name="PreviousWindow">
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
-      </action>
-    </keybind>
-    <keybind key="C-A-Tab">
-      <action name="NextWindow">
-        <panels>yes</panels>
-        <desktop>yes</desktop>
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
-      </action>
-    </keybind>
-    <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
-      <action name="DirectionalCycleWindows">
-        <direction>right</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Left">
-      <action name="DirectionalCycleWindows">
-        <direction>left</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Up">
-      <action name="DirectionalCycleWindows">
-        <direction>up</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Down">
-      <action name="DirectionalCycleWindows">
-        <direction>down</direction>
-      </action>
-    </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="W-e">
+    <keybind key="A-e">
       <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
           <name>pcmanfm</name>
-        </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
       </action>
     </keybind>
     <!-- Launch scrot when Print is pressed -->
-    <keybind key="W-Print">
+    <keybind key="Print">
       <action name="Execute">
         <command>scrot</command>
       </action>

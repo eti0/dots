@@ -7,31 +7,31 @@
 rounded = 0
 border_width = 0
 background_color = #202020 100
-border_color = #ffffff 100
+border_color = #343434 100
 background_color_hover = #202020 100
-border_color_hover = #ffffff 100
+border_color_hover = #343434 100
 background_color_pressed = #202020 100
-border_color_pressed = #ffffff 100
+border_color_pressed = #343434 100
 
 # Background 2: Active task, Clock, Launcher icon, Urgent task
 rounded = 0
 border_width = 0
-background_color = #5b8b78 100
-border_color = #224f55 0
-background_color_hover = #46919c 100
-border_color_hover = #224f55 0
-background_color_pressed = #46919c 100
-border_color_pressed = #224f55 0
+background_color = #0bf674 100
+border_color = #0bf674 0
+background_color_hover = #0bf674 100
+border_color_hover = #0bf674 0
+background_color_pressed = #0bf674 100
+border_color_pressed = #0bf674 0
 
 # Background 3: Default task, Iconified task, Launcher, Systray, Tooltip
 rounded = 0
 border_width = 0
-background_color = #30483f 100
-border_color = #ffffff 100
-background_color_hover = #46919c 32
-border_color_hover = #ffffff 100
-background_color_pressed = #46919c 32
-border_color_pressed = #ffffff 100
+background_color = #05803c 100
+border_color = #343434 100
+background_color_hover = #0bf674 32
+border_color_hover = #343434 100
+background_color_pressed = #0bf674 32
+border_color_pressed = #343434 100
 
 #-------------------------------------
 # Panel
@@ -71,7 +71,7 @@ taskbar_always_show_all_desktop_tasks = 0
 taskbar_name_padding = 0 0
 taskbar_name_background_id = 0
 taskbar_name_active_background_id = 0
-taskbar_name_font = Sans 10
+taskbar_name_font = Noto Sans 10
 taskbar_name_font_color = #000000 100
 taskbar_name_active_font_color = #000000 100
 taskbar_distribute_size = 0
@@ -88,10 +88,10 @@ task_maximum_size = 200 30
 task_padding = 8 2 8
 task_font = Sans 8
 task_tooltip = 0
-task_font_color = #ffffff 100
-task_active_font_color = #ffffff 100
-task_urgent_font_color = #ffffff 100
-task_iconified_font_color = #ffffff 100
+task_font_color = #f5f5f5 100
+task_active_font_color = #343434 100
+task_urgent_font_color = #343434 100
+task_iconified_font_color = #343434 100
 task_icon_asb = 100 0 0
 task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0
@@ -135,7 +135,7 @@ time1_font = Sans 7
 time1_timezone = 
 time2_timezone = 
 time2_font = Sans 8
-clock_font_color = #ffffff 100
+clock_font_color = #343434 100
 clock_padding = 6 0
 clock_background_id = 2
 clock_tooltip = 
@@ -153,7 +153,7 @@ battery_low_status = 20
 battery_low_cmd = notify-send "battery low"
 bat1_font = Sans 8
 bat2_font = Sans 8
-battery_font_color = #ffffff 100
+battery_font_color = #343434 100
 battery_padding = 0 0
 battery_background_id = 0
 battery_hide = 90
@@ -171,6 +171,6 @@ tooltip_show_timeout = 0
 tooltip_hide_timeout = 0
 tooltip_padding = 8 8
 tooltip_background_id = 3
-tooltip_font_color = #ffffff 100
+tooltip_font_color = #343434 100
 tooltip_font = Sans 8
 
