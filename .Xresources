@@ -1,25 +1,3 @@
-! No scrollbar
-URxvt*scrollBar: False
-
-! Terminal dimensions
-URxvt*geometry: 100x25
-
-! Fix 256
-URxvt*termName: rxvt
-
-! Font
-URxvt.font: xft:DejaVu Sans Mono:size=8
-URxvt.boldFont: xft:DejaVu Sans Mono:size=8
-
-! Cursor
-Xcursor.theme:   Paper
-
-! Click-able links
-URxvt.perl-ext-common:  default,matcher
-URxvt.urlLauncher:      chromium
-URxvt.matcher.button:   1
-
-! Colors
 URxvt*background:                     #1d1f21
 URxvt*foreground:                     #c5c8c6
 URxvt*cursorColor:                    #c5c8c6
@@ -51,3 +29,12 @@ URxvt*color18:                        #282a2e
 URxvt*color19:                        #373b41
 URxvt*color20:                        #b4b7b4
 URxvt*color21:                        #e0e0e0
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: argb:e2292929, argb:21313131, argb:6c000000
+rofi.color-normal: argb:0000000, argb:daffffff, argb:0000000, argb:83000000, #ffffff
+rofi.color-active: argb:5000000, argb:e5ffffff, argb:0000000, argb:50000000, #ffffff
+rofi.color-urgent: argb:5000000, #ffef00, argb:0000000, argb:59000000, #e2ff00
