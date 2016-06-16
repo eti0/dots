@@ -1,0 +1,66 @@
+/************
+ ! Nautilus *
+*************/
+
+@include exports("nautilus") {
+    .nautilus-desktop * {
+        color: $white;
+        text-shadow: 1px 1px $black;
+
+        &:active { color: $fg_color; }
+
+        &:selected { color: $selected_fg_color; }
+
+        &:active, &:hover, &:selected { text-shadow: none; }
+    }
+
+    .nautilus-window {
+        toolbar {
+            border-width: 0 0 1px;
+            border-style: solid;
+            border-color: border_normal($toolbar_bg_color);
+        }
+
+        .sidebar {
+            border: none;
+            frame { border: 0; }
+        }
+
+        paned {
+            border-width: 0 1px 0 0;
+            border-style: solid;
+
+            &, &:hover {
+                border-color: shade($bg_color, ($contrast + .1));
+                background-color: $bg_color;
+            }
+        }
+
+        notebook {
+            background-color: $base_color;
+            border: none;
+            frame { border: 0; }
+        }
+
+        .searchbar-container {
+            border-bottom: 2px solid $base_color;
+            border-left-width: 0px;
+
+            searchbar {
+                padding-top: $spacing - 3px;
+                padding-bottom: $spacing - 2px;
+                border: none;
+                background-color: $selected_bg_color;
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+                
+                .search {
+                    border-right-width: 1px;
+                
+                    + button {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
