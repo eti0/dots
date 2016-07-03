@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=PCManFM
+Exec=pcmanfm
+Icon=/home/eti/.local/share/applications/icons/fm.png

@@ -5,7 +5,9 @@ tint2 &
 mate-power-manager &
 
 # Set the background
-hsetroot -cover ~/Pictures/Wallpapers/wallhaven-385542.jpg &
+hsetroot -cover /home/eti/Pictures/Wallpapers/elephant-dark.png &
 
 # Compton ( For transparency of the elements )
-compton &
+compton -c &
+
+volumeicon &

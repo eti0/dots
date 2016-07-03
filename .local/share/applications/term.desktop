@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=Terminal
+Exec=gnome-terminal
+Icon=/home/eti/.local/share/applications/icons/cli.png

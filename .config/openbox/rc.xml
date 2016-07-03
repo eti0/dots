@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>eti-dark-green</name>
+    <name>elephant-dark-opb</name>
     <titleLayout>LIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -57,7 +57,7 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Noto Sans</name>
+      <name>Futura Bk</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -66,7 +66,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Noto Sans</name>
+      <name>Futura Bk</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -178,7 +178,7 @@
   <keyboard>
     <keybind key="A-F1">
       <action name="Execute">
-	<name>Terminal</name>
+        <name>Terminal</name>
         <command>urxvt</command>
       </action>
     </keybind>
@@ -186,6 +186,12 @@
       <action name="Execute">
         <name>Run</name>
         <command>rofi -show run -width 750 -location 0 -lines 5 -bw 0 -font "Noto Sans 10" -padding 2 -separator-style flat -hide-scrollbar -color-window "argb:e2292929, argb:21313131, argb:6c000000" -color-normal "argb:0000000, argb:daffffff, argb:0000000, argb:83000000, #ffffff" -color-active "argb:5000000, argb:e5ffffff, argb:0000000, argb:50000000, #ffffff" -color-urgent "argb:5000000, #ffef00, argb:0000000, argb:59000000, #e2ff00"</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-l">
+      <action name="Execute">
+        <name>Lock</name>
+        <command>./.lock</command>
       </action>
     </keybind>
     <chainQuitKey>C-g</chainQuitKey>
@@ -252,7 +258,7 @@
     <!-- Keybindings for running applications -->
     <keybind key="A-e">
       <action name="Execute">
-          <name>pcmanfm</name>
+        <name>pcmanfm</name>
       </action>
     </keybind>
     <!-- Launch scrot when Print is pressed -->
@@ -297,26 +303,6 @@
         <action name="Lower"/>
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
-      </mousebind>
-      <mousebind button="A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
       </mousebind>
     </context>
     <context name="Titlebar">
@@ -511,36 +497,6 @@
       </mousebind>
     </context>
     <context name="Desktop">
-      <mousebind button="Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
       <mousebind button="Left" action="Press">
         <action name="Focus"/>
         <action name="Raise"/>
@@ -642,7 +598,7 @@
   # order that they appear in this list
 
 
-    # each rule element can be left out or set to 'default' to specify to not 
+    # each rule element can be left out or set to 'default' to specify to not
     # change that attribute of the window
 
     <decor>yes</decor>

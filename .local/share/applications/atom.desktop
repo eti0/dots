@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=Atom
+Exec=atom
+Icon=/home/eti/.local/share/applications/icons/atom.png
+Name[en_US]=atom.desktop

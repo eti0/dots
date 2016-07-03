@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=Nautilus
+Exec=nautilus
+Icon=/home/eti/.local/share/applications/icons/fm.png
+Name[en_US]=nautilus.desktop
