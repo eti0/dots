@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=mpv
+Exec=mpv
+Icon=/home/eti/.local/share/applications/icons/mpv.svg
