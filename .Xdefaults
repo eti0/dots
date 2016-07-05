@@ -1,53 +1,74 @@
 ! No scrollbar
 URxvt*scrollBar: False
 
+! Background color
+URxvt*background: #272727
+
+!Spacing
+URxvt*linespace: 10
+URxvt*letterSpace: -2
+
+! Foreground color
+URxvt*foreground: white
+
 ! Terminal dimensions
 URxvt*geometry: 100x25
 
 ! Fix 256
+
 URxvt*termName: rxvt
 
 ! Font
-URxvt.font: xft:DejaVu Sans Mono:size=8
-URxvt.boldFont: xft:DejaVu Sans Mono:size=8
+
+URxvt.font: xft:Tangerine:size=8
+URxvt.boldFont: xft:Tangerine:size=8
 
 ! Cursor
-Xcursor.theme:   Paper
 
-! Click-able links
+Xcursor.theme:   Openzone Black Slim
+
+! Clic-able links
+! Valeur possible pour l'option matcher button: 1=clic gauche, 2= clic milieu, 1=clic droit
+
 URxvt.perl-ext-common:  default,matcher
 URxvt.urlLauncher:      chromium
 URxvt.matcher.button:   1
 
 ! Colors
-URxvt*background:                     #1d1f21
-URxvt*foreground:                     #c5c8c6
-URxvt*cursorColor:                    #c5c8c6
 
-URxvt*scrollColor:                    #c5c8c6
-URxvt*highlightColor:                 #373b41
-URxvt*highlightTextColor:             #b4b7b4
+! special
+*.foreground:   #c5c8c6
+*.background:   #181818
+*.cursorColor:  #c5c8c6
 
-URxvt*color0:                         #1d1f21
-URxvt*color1:                         #cc6666
-URxvt*color2:                         #b5bd68
-URxvt*color3:                         #f0c674
-URxvt*color4:                         #81a2be
-URxvt*color5:                         #b294bb
-URxvt*color6:                         #8abeb7
-URxvt*color7:                         #c5c8c6
-URxvt*color8:                         #969896
-URxvt*color9:                         #cc6666
-URxvt*color10:                        #b5bd68
-URxvt*color11:                        #f0c674
-URxvt*color12:                        #81a2be
-URxvt*color13:                        #b294bb
-URxvt*color14:                        #8abeb7
-URxvt*color15:                        #ffffff
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
 
-URxvt*color16:                        #de935f
-URxvt*color17:                        #a3685a
-URxvt*color18:                        #282a2e
-URxvt*color19:                        #373b41
-URxvt*color20:                        #b4b7b4
-URxvt*color21:                        #e0e0e0
+! red
+*.color1:       #e55050
+*.color9:       #c76363
+
+! green
+*.color2:       #c1c974
+*.color10:      #e2e99d
+
+! yellow
+*.color3:       #faa65c
+*.color11:      #ffb777
+
+! blue
+*.color4:       #58a3b8
+*.color12:      #80b6bd
+
+! magenta
+*.color5:       #b77dca
+*.color13:      #b29cb9
+
+! cyan
+*.color6:       #7cc7bd
+*.color14:      #85b0aa
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
