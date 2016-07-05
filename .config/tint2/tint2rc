@@ -16,27 +16,27 @@ border_color_pressed = #343434 100
 # Background 2: Active task, Clock, Launcher icon, Urgent task
 rounded = 0
 border_width = 0
-background_color = #e8586e 100
-border_color = #e8586e 0
-background_color_hover = #e8586e 100
-border_color_hover = #e8586e 0
-background_color_pressed = #e8586e 100
-border_color_pressed = #e8586e 0
+background_color = #505050 100
+border_color = #505050 0
+background_color_hover = #505050 100
+border_color_hover = #505050 0
+background_color_pressed = #505050 100
+border_color_pressed = #505050 0
 
 # Background 3: Default task, Iconified task, Launcher, Systray, Tooltip, Panel
 rounded = 0
 border_width = 0
-background_color = #c23f53 100
+background_color = #404040 100
 border_color = #343434 100
-background_color_hover = #e8586e 32
+background_color_hover = #505050 32
 border_color_hover = #343434 100
-background_color_pressed = #e8586e 32
+background_color_pressed = #505050 32
 border_color_pressed = #343434 100
 
 #-------------------------------------
 # Panel
 panel_items = LTSC
-panel_size = 100% 20
+panel_size = 100% 22
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_background_id = 1
@@ -72,8 +72,8 @@ taskbar_name_padding = 0 0
 taskbar_name_background_id = 0
 taskbar_name_active_background_id = 0
 taskbar_name_font = Noto Sans 10
-taskbar_name_font_color = #000000 100
-taskbar_name_active_font_color = #000000 100
+taskbar_name_font_color = #c4c4c4 100
+taskbar_name_active_font_color = #e6e6e6 100
 taskbar_distribute_size = 0
 taskbar_sort_order = none
 task_align = left
@@ -88,10 +88,10 @@ task_maximum_size = 200 30
 task_padding = 8 2 8
 task_font = Sans 8
 task_tooltip = 0
-task_font_color = #303030 100
-task_active_font_color = #303030 100
-task_urgent_font_color = #343434 100
-task_iconified_font_color = #343434 100
+task_font_color = #c4c4c4 100
+task_active_font_color = #e6e6e6 100
+task_urgent_font_color = #e6e6e6 100
+task_iconified_font_color = #c4c4c4 100
 task_icon_asb = 100 0 0
 task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0
@@ -111,9 +111,9 @@ mouse_scroll_down = none
 systray_padding = 7 0 5
 systray_background_id = 3
 systray_sort = ascending
-systray_icon_size = 14
-systray_icon_asb = 100 0 50
-systray_icon_theme = Paper
+systray_icon_size = 15
+systray_icon_theme = Papyrus Dark GTK
+systray_icon_asb = 100 0 100
 systray_monitor = 1
 
 #-------------------------------------
@@ -126,9 +126,9 @@ launcher_icon_theme = Antu-universal-symbolic-white
 launcher_icon_theme_override = 1
 startup_notifications = 0
 launcher_tooltip = 0
-launcher_item_app = /home/eti/.local/share/applications/chromium.desktop
-launcher_item_app = /home/eti/.local/share/applications/pcmanfm.desktop
-launcher_item_app = /home/eti/.local/share/applications/term.desktop
+# launcher_item_app = /home/eti/.local/share/applications/chromium.desktop
+# launcher_item_app = /home/eti/.local/share/applications/pcmanfm.desktop
+# launcher_item_app = /home/eti/.local/share/applications/term.desktop
 
 #-------------------------------------
 # Clock
@@ -138,7 +138,7 @@ time1_font = Sans 7
 time1_timezone =
 time2_timezone =
 time2_font = Sans 8
-clock_font_color = #343434 100
+clock_font_color = #e6e6e6 100
 clock_padding = 6 0
 clock_background_id = 2
 clock_tooltip =
@@ -156,7 +156,7 @@ battery_low_status = 20
 battery_low_cmd = notify-send "battery low"
 bat1_font = Sans 8
 bat2_font = Sans 8
-battery_font_color = #343434 100
+battery_font_color = #e6e6e6 100
 battery_padding = 0 0
 battery_background_id = 0
 battery_hide = 90
@@ -174,5 +174,5 @@ tooltip_show_timeout = 0
 tooltip_hide_timeout = 0
 tooltip_padding = 8 8
 tooltip_background_id = 3
-tooltip_font_color = #343434 100
+tooltip_font_color = #e6e6e6 100
 tooltip_font = Sans 8
