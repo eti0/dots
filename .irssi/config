@@ -1,7 +1,7 @@
 servers = (
   {
     address = "irc.freenode.net";
-    chatnet = "Freenode";
+    chatnet = "freenode";
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
@@ -9,7 +9,7 @@ servers = (
   },
   {
     address = "irc.debian.org";
-    chatnet = "Debian";
+    chatnet = "debian";
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
@@ -25,30 +25,30 @@ servers = (
   },
   {
     address = "irc.rizon.net";
-    chatnet = "Rizon";
+    chatnet = "rizon";
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "no";
   },
   {
-    address = "unix.chat";
-    chatnet = "Unix";
+    address = "irc.nixers.net";
+    chatnet = "nixers";
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
-    autoconnect = "no";
+    autoconnect = "yes";
   }
 );
 
 channels = (
-  { name = "#solus"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#linux"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#solus-chat"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#debian"; chatnet = "Debian"; autojoin = "yes"; },
-  { name = "#debian-fr"; chatnet = "Debian"; autojoin = "yes"; },
-  { name = "#rice"; chatnet = "Rizon"; autojoin = "yes"; },
-  { name = "#/g/technology"; chatnet = "Rizon"; autojoin = "yes"; },
+  { name = "#solus"; chatnet = "Freenode"; autojoin = "no"; },
+  { name = "#linux"; chatnet = "Freenode"; autojoin = "no"; },
+  { name = "#solus-chat"; chatnet = "Freenode"; autojoin = "no"; },
+  { name = "#debian"; chatnet = "Debian"; autojoin = "no"; },
+  { name = "#debian-fr"; chatnet = "Debian"; autojoin = "no"; },
+  { name = "#rice"; chatnet = "Rizon"; autojoin = "no"; },
+  { name = "#/g/technology"; chatnet = "Rizon"; autojoin = "no"; },
   { name = "#nixers"; chatnet = "Unix"; autojoin = "yes"; }
 );
 
@@ -308,7 +308,7 @@ settings = {
   core = {
     real_name = "Étienne Baritaud Figueroa";
     user_name = "eti_";
-    nick = "eti1337";
+    nick = "eti_";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { theme = "lines"; };
@@ -590,4 +590,5 @@ chatnets = {
   Teknik = { type = "IRC"; };
   Rizon = { type = "IRC"; };
   Unix = { type = "IRC"; };
+  nixers = { type = "IRC"; };
 };

@@ -1,0 +1,24 @@
+sw_volume: 1
+audio_device_state:1:My ALSA Device
+audio_device_state:1:FIFO
+state: pause
+current: 6
+time: 2.263000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Neon Grave EP/Zomboy - Lights Out.mp3
+1:Neon Grave EP/Zomboy - Dip It.mp3
+2:Neon Grave EP/Zomboy - Get With The Program (feat. O.V).mp3
+3:Neon Grave EP/Zomboy - Miles Away (feat. Nefera).mp3
+4:Neon Grave EP/Zomboy - Like A Bitch (Extended Mix).mp3
+5:22 Raw.m4a
+6:Destroy Them With Lazers.mp3
+7:The Chainsmokers - Roses ft. ROZES (Electric Joy Ride Remix).mp3
+8:Radium - Winter Mix 2014.mp3
+playlist_end

@@ -1,18 +1,25 @@
 ! No scrollbar
 URxvt*scrollBar: False
 
+! Cursor Options
+URxvt.cursorBlink: 1
+URxvt*cursorColor:  #CC6666
+
+! Modi
+URxvt*modifier: alt
+
 ! Background color
 URxvt*background: #272727
 
-!Spacing
-URxvt*linespace: 10
-URxvt*letterSpace: -2
+! Spacing
+! URxvt*linespace: 10
+! URxvt*letterSpace: -2
 
 ! Foreground color
 URxvt*foreground: white
 
 ! Terminal dimensions
-URxvt*geometry: 100x25
+URxvt*geometry: 125x25
 
 ! Fix 256
 
@@ -20,12 +27,12 @@ URxvt*termName: rxvt
 
 ! Font
 
-URxvt.font: xft:Tangerine:size=8
-URxvt.boldFont: xft:Tangerine:size=8
+URxvt.font: -fuyuki-tangerine-medium-r-normal--10-110-75-75-m-50-iso8859-1
+URxvt.boldFont: -fuyuki-tangerine-medium-r-normal--10-110-75-75-m-50-iso8859-1
 
 ! Cursor
 
-Xcursor.theme:   Openzone Black Slim
+Xcursor.theme:   OSX-ElCap
 
 ! Clic-able links
 ! Valeur possible pour l'option matcher button: 1=clic gauche, 2= clic milieu, 1=clic droit

@@ -26,7 +26,7 @@ border_color_pressed = #505050 0
 # Background 3: Default task, Iconified task, Launcher, Systray, Tooltip, Panel
 rounded = 0
 border_width = 0
-background_color = #404040 100
+background_color = #383838 100
 border_color = #343434 100
 background_color_hover = #505050 32
 border_color_hover = #343434 100
@@ -36,7 +36,7 @@ border_color_pressed = #343434 100
 #-------------------------------------
 # Panel
 panel_items = LTSC
-panel_size = 100% 22
+panel_size = 75% 20
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_background_id = 1
@@ -53,7 +53,7 @@ autohide_height = 1
 strut_policy = follow_size
 panel_window_name = tint2
 disable_transparency = 0
-mouse_effects = 0
+mouse_effects = 1
 font_shadow = 0
 mouse_hover_icon_asb = 100 0 10
 mouse_pressed_icon_asb = 100 0 0
@@ -71,7 +71,7 @@ taskbar_always_show_all_desktop_tasks = 0
 taskbar_name_padding = 0 0
 taskbar_name_background_id = 0
 taskbar_name_active_background_id = 0
-taskbar_name_font = Noto Sans 10
+taskbar_name_font = Terminus 5
 taskbar_name_font_color = #c4c4c4 100
 taskbar_name_active_font_color = #e6e6e6 100
 taskbar_distribute_size = 0
@@ -86,7 +86,7 @@ task_centered = 1
 urgent_nb_of_blink = 7
 task_maximum_size = 200 30
 task_padding = 8 2 8
-task_font = Sans 8
+task_font = 5x5 Pixel 6
 task_tooltip = 0
 task_font_color = #c4c4c4 100
 task_active_font_color = #e6e6e6 100
@@ -108,40 +108,41 @@ mouse_scroll_down = none
 
 #-------------------------------------
 # System tray (notification area)
-systray_padding = 7 0 5
+systray_padding = 7 0 7
 systray_background_id = 3
 systray_sort = ascending
-systray_icon_size = 15
+systray_icon_size = 14
 systray_icon_theme = Papyrus Dark GTK
-systray_icon_asb = 100 0 100
+systray_icon_asb = 100 0 10
 systray_monitor = 1
 
 #-------------------------------------
 # Launcher
-launcher_padding = 6 6 6
+launcher_padding = 7 5 7
 launcher_background_id = 3
 launcher_icon_background_id = 3
-launcher_icon_size = 16
+launcher_icon_size = 12
+launcher_icon_asb = 75 0 10
 launcher_icon_theme = Antu-universal-symbolic-white
 launcher_icon_theme_override = 1
 startup_notifications = 0
-launcher_tooltip = 0
-# launcher_item_app = /home/eti/.local/share/applications/chromium.desktop
-# launcher_item_app = /home/eti/.local/share/applications/pcmanfm.desktop
-# launcher_item_app = /home/eti/.local/share/applications/term.desktop
+launcher_tooltip = 1
+launcher_item_app = /home/eti/.local/share/applications/chromium.desktop
+launcher_item_app = /home/eti/.local/share/applications/pcmanfm.desktop
+launcher_item_app = /home/eti/.local/share/applications/term.desktop
 
 #-------------------------------------
 # Clock
-time1_format = %H:%M
+time1_format = %H:%M:%S
 time2_format =
-time1_font = Sans 7
+time1_font = 04b03 6
 time1_timezone =
 time2_timezone =
-time2_font = Sans 8
+time2_font = Terminus 7
 clock_font_color = #e6e6e6 100
 clock_padding = 6 0
 clock_background_id = 2
-clock_tooltip =
+clock_tooltip = %A %d %B
 clock_tooltip_timezone =
 clock_lclick_command =
 clock_rclick_command =
@@ -175,4 +176,4 @@ tooltip_hide_timeout = 0
 tooltip_padding = 8 8
 tooltip_background_id = 3
 tooltip_font_color = #e6e6e6 100
-tooltip_font = Sans 8
+tooltip_font = Terminus 8
