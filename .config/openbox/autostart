@@ -7,7 +7,11 @@ mate-power-manager &
 # Set the background
 hsetroot -tile /home/eti/MEGA/Random/tiled.png &
 
+# Fonts
+sh /home/eti/Documents/StartupScripts/tangerine.sh &
+
 # Compton ( For transparency of the elements )
 compton -c -C -r 7 -l -10 -t -10 -f -I 0.085 -O 0.090 -D 7 -G --sw-opti &
 
+# Volume Icon
 volumeicon &

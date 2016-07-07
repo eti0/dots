@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
 	<menu id="root-menu" label="Openbox">
+		<separator/>
 		<item label="Terminal">
 			<action name="Execute">
 				<execute>urxvt</execute>
 			</action>
 		</item>
+		<!-- This requires the presence of the 'menu' package to work -->
 		<item label="Files">
 			<action name="Execute">
 				<execute>pcmanfm</execute>
@@ -16,21 +18,33 @@
 				<execute>chromium</execute>
 			</action>
 		</item>
-		<!-- This requires the presence of the 'menu' package to work -->
 		<separator/>
-		<menu id="client-list-menu"/>
+		<menu id="root-menu-25101" label="Power">
+			<item label="Sleep">
+				<action name="Execute">
+					<execute>systemctl suspend</execute>
+				</action>
+			</item>
+			<item label="Reboot">
+				<action name="Execute">
+					<execute>systemctl reboot</execute>
+				</action>
+			</item>
+			<item label="Shutdown">
+				<action name="Execute">
+					<execute>systemctl suspend</execute>
+				</action>
+			</item>
+		</menu>
 		<separator/>
-		<item label="Sleep">
-			<action name="Execute">
-				<execute>systemctl suspend</execute>
-			</action>
-		</item>
-		<item label="Restart">
-			<action name="Restart"/>
-		</item>
+		<menu id="root-menu-22111" label="Misc">
+			<item label="Exit Openbox">
+				<action name="Exit"/>
+			</item>
+			<item label="Restart Openbox">
+				<action name="Restart"/>
+			</item>
+		</menu>
 		<separator/>
-		<item label="Exit">
-			<action name="Exit"/>
-		</item>
 	</menu>
 </openbox_menu>

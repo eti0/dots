@@ -55,10 +55,10 @@
       D: omnipresent (on all desktops).
   -->
     <keepBorder>yes</keepBorder>
-    <animateIconify>yes</animateIconify>
+    <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Hack</name>
-      <size>8</size>
+      <name>04b03</name>
+      <size>6</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -66,8 +66,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Hack</name>
-      <size>8</size>
+      <name>04b03</name>
+      <size>6</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -75,17 +75,17 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Hack</name>
+      <name>5x5 Pixel</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>Normal</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Hack</name>
-      <size>8</size>
+      <name>5x5 Pixel</name>
+      <size>7</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -127,7 +127,7 @@
       <name>Idle</name>
       <name>Theater</name>
     </names>
-    <popupTime>875</popupTime>
+    <popupTime>515</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
@@ -152,20 +152,20 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>0</top>
-    <bottom>0</bottom>
-    <left>0</left>
-    <right>0</right>
+    <top>30</top>
+    <bottom>20</bottom>
+    <left>20</left>
+    <right>20</right>
   </margins>
   <dock>
-    <position>TopLeft</position>
+    <position>Top</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
     <noStrut>no</noStrut>
     <stacking>Above</stacking>
     <!-- 'Above', 'Normal', or 'Below' -->
-    <direction>Vertical</direction>
+    <direction>Horizontal</direction>
     <!-- 'Vertical' or 'Horizontal' -->
     <autoHide>no</autoHide>
     <hideDelay>300</hideDelay>
@@ -186,6 +186,18 @@
       <action name="Execute">
         <name>Run</name>
         <command>rofi -show run -width 750 -location 0 -lines 5 -bw 0 -font "Noto Sans 10" -padding 2 -separator-style flat -hide-scrollbar -color-window "argb:e2292929, argb:21313131, argb:6c000000" -color-normal "argb:0000000, argb:daffffff, argb:0000000, argb:83000000, #ffffff" -color-active "argb:5000000, argb:e5ffffff, argb:0000000, argb:50000000, #ffffff" -color-urgent "argb:5000000, #ffef00, argb:0000000, argb:59000000, #e2ff00"</command>
+      </action>
+    </keybind>
+    <keybind key="A-F3">
+     <action name="Execute">
+       <name>PCManFM</name>
+       <command>pcmanfm --new-win</command>
+     </action>  
+    </keybind>
+    <keybind key="A-F5">
+      <action name="Execute">
+        <name>Chromium</name>
+        <command>chromium</command>
       </action>
     </keybind>
     <keybind key="C-A-l">
