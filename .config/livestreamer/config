@@ -1,0 +1,11 @@
+# Token
+twitch-oauth-token=44ui581j2kic6szb6788m3lfma987o
+
+
+# Default quality
+default-stream=high
+
+# Player settings
+
+player=mpv --cache 2048
+player-no-close
