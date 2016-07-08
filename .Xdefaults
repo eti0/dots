@@ -3,7 +3,7 @@ URxvt*scrollBar: False
 
 ! Cursor Options
 URxvt*cursorBlink: 1
-URxvt*cursorColor:  #c76363
+URxvt*cursorColor:  #e55050
 
 ! Modi
 URxvt*modifier: alt
