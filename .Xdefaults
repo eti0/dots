@@ -2,8 +2,8 @@
 URxvt*scrollBar: False
 
 ! Cursor Options
-URxvt.cursorBlink: 1
-URxvt*cursorColor:  #CC6666
+URxvt*cursorBlink: 1
+URxvt*cursorColor:  #c76363
 
 ! Modi
 URxvt*modifier: alt
@@ -30,12 +30,14 @@ URxvt*termName: rxvt
 URxvt.font: -fuyuki-tangerine-medium-r-normal--10-110-75-75-m-50-iso8859-1
 URxvt.boldFont: -fuyuki-tangerine-medium-r-normal--10-110-75-75-m-50-iso8859-1
 
+! URxvt.font: xft:Sans:size=8px
+! URxvt.boldFont: xft:Sans:size=8px
+
 ! Cursor
 
 Xcursor.theme:   OSX-ElCap
 
 ! Clic-able links
-! Valeur possible pour l'option matcher button: 1=clic gauche, 2= clic milieu, 1=clic droit
 
 URxvt.perl-ext-common:  default,matcher
 URxvt.urlLauncher:      chromium
@@ -46,7 +48,6 @@ URxvt.matcher.button:   1
 ! special
 *.foreground:   #c5c8c6
 *.background:   #181818
-*.cursorColor:  #c5c8c6
 
 ! black
 *.color0:       #282a2e

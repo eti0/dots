@@ -49,7 +49,7 @@ channels = (
   { name = "#debian-fr"; chatnet = "Debian"; autojoin = "no"; },
   { name = "#rice"; chatnet = "Rizon"; autojoin = "no"; },
   { name = "#/g/technology"; chatnet = "Rizon"; autojoin = "no"; },
-  { name = "#nixers"; chatnet = "Unix"; autojoin = "yes"; }
+  { name = "#unix"; chatnet = "Unix"; autojoin = "yes"; }
 );
 
 aliases = {
