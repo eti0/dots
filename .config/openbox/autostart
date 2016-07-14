@@ -5,7 +5,7 @@ tint2 &
 mate-power-manager &
 
 # Set the background
-hsetroot -tile /home/eti/MEGA/Random/bitmaps/crossy04.gif &
+hsetroot -cover /home/eti/MEGA/Wallpapers/qqIkCL3-2.jpg &
 
 # Fonts
 sh /home/eti/.scripts/tangerine.sh &
@@ -15,3 +15,6 @@ compton -c -C -r 7 -l -10 -t -10 -f -I 0.085 -O 0.090 -D 7 -G --sw-opti &
 
 # Volume Icon
 volumeicon &
+
+# Redshift 
+redshift-gtk &
