@@ -39,7 +39,7 @@ print-uptime()
 }
 
 print-shell() {
-color-echo 'SH' $SHELL
+  color-echo 'SH' '/usr/bin/fish'
 }
 
 print-cpu()
@@ -50,13 +50,13 @@ print-cpu()
   else
     cpu=$(grep -m1 -i 'model name' /proc/cpuinfo)
   fi
-  color-echo 'CPU' "${cpu#*: }" # everything after colon is processor name
+  color-echo 'CP' "${cpu#*: }" # everything after colon is processor name
 }
 
 print-gpu()
 {
   gpu=$(lspci | grep VGA | awk -F ': ' '{print $2}' | sed 's/(rev ..)//g')
-  color-echo 'GPU' "$gpu"
+  color-echo 'GP' "$gpu"
 }
 
 print-packages()
@@ -86,14 +86,32 @@ print-distro()
   fi
 }
 
+# echo
+# echo -e  "   ${prp}          | ${rst}" 
+# echo -en "   ${grn}█▀▀▀▀▀█   | ${rst}" && print-distro
+# echo -en "   ${ylw}█     █   | ${rst}" && print-uptime
+# echo -en "   ${red}█  ●  █   | ${rst}" && print-shell
+# echo -en "   ${prp}█     █   | ${rst}" && print-wm
+# echo -en "   ${cyn}█▄▄▄▄▄█   | ${rst}" && print-kernel
+# echo -e  "   ${prp}          | ${rst}" 
+# echo
+# echo
+
 echo
-echo -e  "   ${prp}          | ${rst}" 
-echo -en "   ${grn}█▀▀▀▀▀█   | ${rst}" && print-distro
-echo -en "   ${ylw}█     █   | ${rst}" && print-uptime
-echo -en "   ${red}█  ●  █   | ${rst}" && print-shell
-echo -en "   ${prp}█     █   | ${rst}" && print-wm
-echo -en "   ${cyn}█▄▄▄▄▄█   | ${rst}" && print-kernel
-echo -e  "   ${prp}          | ${rst}" 
+echo -en " ${prp} █▀▀▀▀▀▀▀▀█   | ${rst} " && print-distro
+echo -en " ${bprp} █        █   | ${rst} " && print-wm
+echo -en " ${grn} █  █  █  █   | ${rst} " && print-uptime
+echo -en " ${ylw} █        █   | ${rst} " && print-shell
+echo -en " ${red} ▀█▄▄▄▄▄▄█▀   | ${rst} " && print-cpu
 echo
 echo
+
 #print-colors
+
+# █▀▀▀▀▀▀▀▀█
+# █        █
+# █  █  █  █
+# █        █
+# ▀█▄▄▄▄▄▄█▀ 
+
+# Hoy hoy !
