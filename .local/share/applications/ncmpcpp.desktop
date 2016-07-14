@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=Ncmpcpp
+Exec=urxvt -geometry 125x68 -e ncmpcpp
+Icon=/home/eti/.local/share/applications/icons/play.svg
+Name[en_US]=ncmpcpp

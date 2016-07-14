@@ -3,5 +3,5 @@
 Terminal=false
 Type=Application
 Name=Terminal
-Exec=urxvt
+Exec=urxvt -cd ~
 Icon=/home/eti/.local/share/applications/icons/cli.svg
