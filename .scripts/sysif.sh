@@ -39,7 +39,7 @@ print-uptime()
 }
 
 print-shell() {
-  color-echo 'SH' '/usr/bin/fish'
+  color-echo 'SH' `ps -p $$ -o cmd | tail -1`
 }
 
 print-cpu()
