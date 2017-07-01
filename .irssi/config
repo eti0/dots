@@ -1,0 +1,68 @@
+utf8 = "on";
+
+
+servers = (
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "no";
+  },
+  {
+    address = "irc.nixers.net";
+    chatnet = "nixers";
+    port = "6667";
+    use_ssl = "no";
+    autoconnect = "no";
+  },
+  {
+    address = "irc.rizon.net";
+    chatnet = "rizon";
+    port = "6697";
+    use_tls = "yes";
+    tls_verify = "yes";
+    tls_capath = "/etc/ssl/certs";
+  }
+);
+
+
+chatnets = {
+  freenode = { type = "IRC"; };
+  rizon = {
+    type = "IRC";
+  };
+  nixers = { type = "IRC"; };
+};
+
+
+settings = {
+  core = { real_name = "~"; user_name = "eti"; nick = "eti"; };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { theme = "allegro"; };
+  type = "IRC";
+};
+
+
+statusbar = {
+  default = {
+    topic = { disabled = "yes"; };
+    window = {
+      items = {
+        barstart = { priority = "100"; };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; alignment = "right"; position = "0"; };
+        act = { priority = "10"; alignment = "right"; position = "0"; };
+        more = { priority = "10"; alignment = "right"; position = "0"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+  };
+};
+
+
+ignores = ( { level = "JOINS PARTS QUITS NICKS MODES"; } );
+aliases = { leave = "part"; close = "window close"; };

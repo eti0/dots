@@ -1,0 +1,86 @@
+!             __    ___          ____
+!    __ _____/ /__ / _/__ ___ __/ / /____
+!  _ \ \ / _  / -_) _/ _ `/ // / / __(_-<
+! (_)_\_\\_,_/\__/_/ \_,_/\_,_/_/\__/___/
+!
+
+! fonts
+*font: -uw-ttyp0-medium-r-normal--11-100-75-75-c-60-iso10646-1
+*boldFont: -uw-ttyp0-medium-r-normal--11-100-75-75-c-60-iso10646-1
+
+
+! disable urxvts ugly scrollbar
+*scrollBar: false
+
+
+! colorscheme! special
+*.foreground:   #e9e9e9
+*.background:   #101617
+*.cursorColor:  #e9e9e9
+
+! black
+*.color0:       #101617
+*.color8:       #222e30
+
+! red
+*.color1:       #ff5b5b
+*.color9:       #ff5b5b
+
+! green
+*.color2:       #6bd27e
+*.color10:      #6bd27e
+
+! yellow
+*.color3:       #a0a0a0
+*.color11:      #ff8080
+
+! blue
+*.color4:       #686868
+*.color12:      #a2e5af
+
+! magenta
+*.color5:       #747474
+*.color13:      #f38a8a
+
+! cyan
+*.color6:       #6bd27e
+*.color14:      #b2e6ba
+
+! white
+*.color7:       #f0f0f0
+*.color15:      #f4f4f4
+
+
+! cursor
+*cursorBlink: 1
+
+
+! size
+*geometry: 85x24
+
+
+! padding
+*internalBorder: 16
+
+
+! xft fonts settings
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.antialias: 1
+Xft.rgba: rgb
+
+
+! cursor
+Xcursor.theme: ElCapitan
+
+
+! rofi settings
+rofi.color-enabled: true
+
+! Property            Background      Foreground      Background Alt       Highlight BG      Highlight FG
+rofi.color-window:    #050505,        #FFFFFF,        #050505,             #c9c9c9,          #050505
+rofi.color-normal:    #050505,        #FFFFFF,        #050505,             #c9c9c9,          #050505
+rofi.color-active:    #050505,        #FFFFFF,        #050505,             #c9c9c9,          #050505
+rofi.color-urgent:    #050505,        #DDDDDD,        #050505,             #c9c9c9,          #050505

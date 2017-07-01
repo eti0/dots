@@ -1,0 +1,57 @@
+# MPD Settings ..
+mpd_crossfade_time = "3"
+mpd_port = "7755"
+
+# Display ..
+song_list_format = " $0%n $0• $0%t $R$0%A "
+song_columns_list_format = "(3)[]{}(92)[white]{t} (4)[red]{l}"
+song_status_format = " $4%t $0 "
+playlist_display_mode = "columns" (classic/columns)
+
+# Now Playing ..
+now_playing_prefix = "$4>> "
+
+# Playlist ..
+browser_playlist_prefix = "$4 ♥ $3 "
+
+# Delays ..
+playlist_disable_highlight_delay = "1"
+message_delay_time= "1"
+
+# Progress Bar ..
+progressbar_look = "---"
+progressbar_boldness = "yes"
+progressbar_color = "white"
+progressbar_elapsed_color = "red"
+
+# Colors ..
+colors_enabled = "yes"
+empty_tag_color = "white"
+statusbar_color = "white"
+state_line_color = "white"
+state_flags_color = "white"
+main_window_color = "white"
+header_window_color = "white"
+main_window_highlight_color = "white"
+
+# Misc ..
+display_bitrate = "no"
+autocenter_mode = "yes"
+centered_cursor = "yes"
+titles_visibility = "no"
+statusbar_visibility = "yes"
+mouse_support = "no"
+header_visibility = "no"
+display_remaining_time = "no"
+ask_before_clearing_playlists = "no"
+discard_colors_if_item_is_selected = "yes"
+
+# Visualizer ..
+visualizer_in_stereo = "no"
+visualizer_sync_interval = "30"
+visualizer_output_name = "fifo"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_type = "spectrum" (spectrum/wave)
+visualizer_sample_multiplier = 0.20
+visualizer_color = "white"
+visualizer_look = "∙~"

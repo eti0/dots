@@ -1,0 +1,4 @@
+background "#252525"
+dockapp_mode simple
+icon_size 24
+geometry 1x1+5-5

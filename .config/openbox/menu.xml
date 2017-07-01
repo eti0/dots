@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox">
+		<separator/>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>urxvt</execute>
+			</action>
+		</item>
+		<item label="Files">
+			<action name="Execute">
+				<execute>dbus-launch pcmanfm --new-window</execute>
+			</action>
+		</item>
+		<item label="Chromium">
+			<action name="Execute">
+				<execute>chromium</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="root-menu-25101" label="Power">
+			<item label="Sleep">
+				<action name="Execute">
+					<execute>sudo zzz</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="root-menu-22111" label="Misc">
+			<item label="Exit Openbox">
+				<action name="Exit"/>
+			</item>
+			<item label="Restart Openbox">
+				<action name="Restart"/>
+			</item>
+		</menu>
+		<separator/>
+	</menu>
+</openbox_menu>

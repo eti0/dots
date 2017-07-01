@@ -1,0 +1,51 @@
+# compton
+compton --config ~/.config/compton.conf -Ccf --vsync opengl &
+
+# tray
+stalonetray &
+
+# set the gamma
+xgamma -gamma 0.85 &
+
+# fonts
+bash ~/.scripts/fonts.sh &
+
+# volume Icon
+volumeicon &
+
+# network Manager
+nm-applet &
+
+# beep
+xset -b &
+
+# urxvt daemon
+urxvtd &
+
+# quicktile
+quicktile --daemonize &
+
+# set the background
+./.fehbg &
+
+# megasync
+megasync &
+
+# bar
+sleep 3s && ./.scripts/bar.sh &
+
+# panel
+sleep 4s && tint2 -c ~/.config/tint2/lemons &
+
+# xrdb
+xrdb ~/.Xdefaults &
+
+# mouse speed
+xset m 0 0 &
+xinput --set-prop 10 'libinput Accel Speed' -1 &
+
+# start mpd
+mpd &
+
+# clipmenu
+clipmenud &
