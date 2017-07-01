@@ -1,22 +1,23 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# requires https://github.com/stark/siji installed to display icons
 
 clock() {
-	DATETIME=$(date +%R)
-	echo -n %{F#B6B6B6}%{F#eee} $DATETIME
+	datetime=$(date +%R)
+	echo -n %{F#B6B6B6}%{F#eee} $datetime
 }
 
 sound() {
-	SOUND=$(amixer get Master | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p'| uniq)
-	echo %{F#B6B6B6}%{F#eee} $SOUND%
+	level=$(amixer get Master 2>&1 | awk '/Front Left:/{gsub(/[\[\]]/, "", $5); print $5}')
+	echo %{F#B6B6B6}%{F#eee} $level
 }
 
 song() {
-	CURRENTSONG=$(mpc -p 7755 current)
-	PLAYING=$(mpc -p 7755 status | grep -o 'playing')
+	csong=$(mpc -p 7755 current)
+	playing=$(mpc -p 7755 status | grep -o 'playing')
 
-	if test "$PLAYING" = "playing"; then
-		echo %{F#B6B6B6}%{F#eee} $CURRENTSONG
-	else test "$PLAYING" = "";
+	if test "$playing" = "playing"; then
+		echo %{F#B6B6B6}%{F#eee} $csong
+	else test "$playing" = "";
 		echo ''
 	fi
 }
@@ -31,8 +32,8 @@ desktops() {
 }
 
 network() {
-	CNETWORK=$(iwgetid -r)
-	echo %{F#B6B6B6}%{F#eee} $CNETWORK
+	cnetwork=$(iwgetid -r)
+	echo %{F#B6B6B6}%{F#eee} $cnetwork
 }
 
 battery() {
@@ -63,6 +64,6 @@ battery() {
 
 # print all
 while true; do
-	echo "%{F#B6B6B6}%{l} $(desktops)%{c}$(clock)%{r}$(network)  $(sound)  %{F#B6B6B6}$(battery) "
-	sleep 0.25
+	echo "%{F#B6B6B6}%{l} $(desktops) %{c}$(clock) %{r}$(network) $(sound) %{F#B6B6B6}$(battery) "
+	sleep 0.2
 done

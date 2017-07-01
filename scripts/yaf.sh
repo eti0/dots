@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # i do not own this, i simply stole it from somebody else probably from r/up
 # if you're the one who wrote this in the first place then thank you

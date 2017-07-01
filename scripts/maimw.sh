@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 maim -s --hidecursor ~/Pictures/Screenshots/$(date +%F-%T).png
 
