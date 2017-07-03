@@ -42,28 +42,19 @@ network() {
 
 battery() {
     percent=$(cat /sys/class/power_supply/BAT0/capacity)
-    power_now=$(cat /sys/class/power_supply/BAT0/power_now)
-
-    fullthing="${symbol}$text ${percent}%"
-
-    if test $power_now = "0"; then
-        symbol=""
-        echo -n "${symbol}$text ${percent}%"
-    elif test $percent = "98"; then
-        symbol=""
-        echo -n "${symbol}$text 100%"
-    else
-        if test $percent -gt 60; then
-            symbol=""
-            echo -n "${symbol}$text ${percent}%"
-        elif test $percent -gt 30; then
-            symbol=""
-            echo -n "${symbol}$text ${percent}%"
-        else
-            symbol=""
-            echo -n "${symbol}$text ${percent}%"
-        fi
-    fi
+    power=$(cat /sys/class/power_supply/BAT0/status)
+	
+	if test $power = "Charging" ; then
+		echo -n "$accent$text $percent%"
+	else
+		if test $percent -gt 60 ; then
+			echo -n "$accent$text $percent%"
+		elif test $percent -gt 30 ; then
+			echo -n "$accent$text $percent%"
+		else
+			echo -n "$accent$text $percent%"
+		fi
+	fi
 }
 
 # print all
