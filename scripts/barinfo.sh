@@ -29,9 +29,9 @@ song() {
 desktops() {
 	cur=`xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'`
 	tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
-	for w in `seq 0 $((cur - 1))`; do line="${line} ◽"; done
-	line="${line} $text◾$accent"
-	for w in `seq $((cur + 2)) $tot`; do line="${line} ◽"; done
+	for w in `seq 0 $((cur - 1))`; do line="${line}$accent◽ "; done
+	line="${line}$text◾"
+	for w in `seq $((cur + 2)) $tot`; do line="${line}$accent ◽"; done
 	echo $line
 }
 
@@ -47,9 +47,9 @@ battery() {
 	if test $power = "Charging" ; then
 		echo -n "$accent$text $percent%"
 	else
-		if test $percent -gt 60 ; then
-			echo -n "$accent$text $percent%"
-		elif test $percent -gt 30 ; then
+		if test $percent -gt 80 ; then
+			echo -n "$accent$text $percent%"
+		elif test $percent -gt 50 ; then
 			echo -n "$accent$text $percent%"
 		else
 			echo -n "$accent$text $percent%"
@@ -59,6 +59,6 @@ battery() {
 
 # print all
 while true; do
-	echo "$accent%{l} $(desktops) %{c}$(clock) %{r}$(network)  $(sound)  $accent$(battery) "
+	echo "%{l} $(desktops) %{c}$(clock) %{r}$(network)  $(sound)  $(battery) "
 	sleep 0.2
 done
