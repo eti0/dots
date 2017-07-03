@@ -19,7 +19,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>haliscool</name>
+    <name>novy</name>
     <titleLayout>IMC</titleLayout>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
@@ -126,7 +126,7 @@
     <keybind key="A-F2">
       <action name="Execute">
         <name>Run</name>
-        <command>rofi -show run -fullscreen True -lines 3 -line-margin 6 -padding 280 -bw 0 -opacity "95" -font "Iosevka 14" -scrollbar-width 0 -separator-style "none"</command>
+        <command>rofi -show run -lines 7 -line-margin 8 -padding 20 -font "t0-11-uni 8" -scrollbar-width 0 -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="A-F3">
@@ -151,6 +151,12 @@
       <action name="Execute">
         <name>Stalonetray</name>
         <command>stalonetray</command>
+      </action>
+    </keybind>
+    <keybind key="A-F8">
+      <action name="Execute">
+        <name>Clipboard</name>
+        <command>clipmenu -lines 15 -line-margin 6 -padding 20 -font "t0-11-uni 8" -scrollbar-width 0 -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="C-Left">
@@ -444,8 +450,8 @@
     <file>menu.xml</file>
     <hideDelay>200</hideDelay>
     <middle>no</middle>
-    <submenuShowDelay>100</submenuShowDelay>
-    <submenuHideDelay>400</submenuHideDelay>
+    <submenuShowDelay>50</submenuShowDelay>
+    <submenuHideDelay>100</submenuHideDelay>
     <showIcons>yes</showIcons>
     <manageDesktops>yes</manageDesktops>
   </menu>
@@ -453,9 +459,9 @@
     <!--<application name="urxvt*">
       <decor>no</decor>
     </application>
+    -->
     <application class="*">
       <decor>no</decor>
     </application>
-    -->
   </applications>
 </openbox_config>

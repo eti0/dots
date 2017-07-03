@@ -1,8 +1,11 @@
+# nm
+NetworkManager &
+
 # compton
 compton --config ~/.config/compton.conf -Ccf --vsync opengl &
 
 # tray
-stalonetray &
+# stalonetray &
 
 # set the gamma
 xgamma -gamma 0.85 &
@@ -10,20 +13,20 @@ xgamma -gamma 0.85 &
 # fonts
 bash ~/.scripts/fonts.sh &
 
-# volume Icon
+# touchpad
+bash ~/.scripts/touchpad.sh &
+
+# volume icon
 volumeicon &
 
-# network Manager
+# network manager applet
 nm-applet &
 
-# beep
+# beep off
 xset -b &
 
 # urxvt daemon
 urxvtd &
-
-# quicktile
-quicktile --daemonize &
 
 # set the background
 ./.fehbg &
@@ -35,17 +38,13 @@ megasync &
 sleep 3s && ./.scripts/bar.sh &
 
 # panel
-sleep 4s && tint2 -c ~/.config/tint2/lemons &
-
-# xrdb
-xrdb ~/.Xdefaults &
-
-# mouse speed
-xset m 0 0 &
-xinput --set-prop 10 'libinput Accel Speed' -1 &
+# sleep 3s && tint2 -c ~/.config/tint2/greenlemons &
 
 # start mpd
 mpd &
 
 # clipmenu
 clipmenud &
+
+# geary
+geary --hidden &
