@@ -19,7 +19,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>novy</name>
+    <name>sibby</name>
     <titleLayout>IMC</titleLayout>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
@@ -126,7 +126,7 @@
     <keybind key="A-F2">
       <action name="Execute">
         <name>Run</name>
-        <command>rofi -show run -lines 7 -line-margin 8 -padding 20 -font "t0-11-uni 8" -scrollbar-width 0 -separator-style "none"</command>
+        <command>rofi -show run -lines 7 -line-margin 8 -padding 20 -font "Roboto Mono 12" -scrollbar-width 0 -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="A-F3">
@@ -156,7 +156,7 @@
     <keybind key="A-F8">
       <action name="Execute">
         <name>Clipboard</name>
-        <command>clipmenu -lines 15 -line-margin 6 -padding 20 -font "t0-11-uni 8" -scrollbar-width 0 -separator-style "none"</command>
+        <command>clipmenu -lines 15 -line-margin 6 -padding 20 -font "Roboto Mono 12" -scrollbar-width 0 -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="C-Left">
@@ -459,9 +459,9 @@
     <!--<application name="urxvt*">
       <decor>no</decor>
     </application>
-    -->
     <application class="*">
       <decor>no</decor>
     </application>
+    -->
   </applications>
 </openbox_config>
