@@ -2,11 +2,11 @@
 # requires https://github.com/stark/siji installed to display icons
 
 # define the colors
-accent="%{F#B6B6B6}"
-text="%{F#eee}"
+accent="%{F#a5bcc0}"
+text="%{F#e1e9ea}"
 
 clock() {
-	datetime=$(date +%R)
+	datetime=$(date "+%a %R")
 	echo -n $accent$text $datetime
 }
 
@@ -70,6 +70,6 @@ battery() {
 
 # print all
 while true; do
-	echo "%{l} $(desktops)  $(rsong) %{c}$(clock) %{r}$(network)  $(sound)  $(battery) "
+	echo "%{l} $(desktops)  $(rsong) %{c}$(clock) %{r}$(sound) "
 	sleep 0.5
 done
