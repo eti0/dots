@@ -5,6 +5,9 @@
 # fetch the colors from colors.sh
 source "/home/eti/.scripts/colors.sh"
 
+# define the padding size
+padding="  "
+
 
 clock() {
 	datetime=$(date "+%a %R")
@@ -85,6 +88,6 @@ battery() {
 
 
 while true ; do
-	echo "%{l} $(desktops)  $(song) %{c} $(clock) %{r} $(network)  $(sound)  $(battery) "
+	echo "%{l}$padding$(desktops)$padding$(song) %{c}$(clock) %{r}$(network)$padding$(sound)$padding$(battery)$padding"
 	sleep ".2s"
 done
