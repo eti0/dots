@@ -5,6 +5,7 @@
 # fetch the colors from colors.sh
 source "/home/eti/.scripts/colors.sh"
 
+
 # define the padding size
 padding="  "
 
