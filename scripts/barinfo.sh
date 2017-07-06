@@ -2,8 +2,8 @@
 # requires https://github.com/stark/siji installed to display icons
 
 # define the colors
-accent="%{F#a5bcc0}"
-text="%{F#e1e9ea}"
+accent="%{F#96eba6}"
+text="%{F#ebf1f2}"
 
 clock() {
 	datetime=$(date "+%a %R")
@@ -12,7 +12,7 @@ clock() {
 
 sound() {
 	level=$(amixer get Master 2>&1 | awk '/Front Left:/{gsub(/[\[\]]/, "", $5); print $5}')
-	echo $accent$text $level
+	echo $accent$text $level
 }
 
 song() {
@@ -48,7 +48,12 @@ desktops() {
 
 network() {
 	cnetwork=$(iwgetid -r)
-	echo $accent$text $cnetwork
+
+	if test "$cnetwork" = "" ; then
+		echo $accent$text offline
+	else
+		echo $accent$text $cnetwork
+	fi
 }
 
 battery() {
@@ -56,20 +61,23 @@ battery() {
     power=$(cat /sys/class/power_supply/BAT0/status)
 	
 	if test $power = "Charging" ; then
-		echo -n "$accent$text $percent%"
+		echo -n "$accent$text $percent%"
 	else
-		if test $percent -gt 80 ; then
-			echo -n "$accent$text $percent%"
-		elif test $percent -gt 50 ; then
-			echo -n "$accent$text $percent%"
-		else
-			echo -n "$accent$text $percent%"
+		if test $percent -eq 100 ; then
+			echo -n "$accent$text $percent%"
+		elif test $percent -gt 80 ; then
+			echo -n "$accent$text $percent%"
+		elif test $percent -gt 60 ; then
+			echo -n "$accent$text $percent%"
+		else 
+			echo -n "$accent$text $percent%"
 		fi
 	fi
 }
 
 # print all
-while true; do
-	echo "%{l} $(desktops)  $(rsong) %{c}$(clock) %{r}$(sound) "
-	sleep 0.5
+for (( ; ; ))
+do
+	echo "%{l} $(desktops)  $(song) %{c} $(clock) %{r}  $(network)  $(sound)  $(battery) "
+	sleep 0.2
 done
