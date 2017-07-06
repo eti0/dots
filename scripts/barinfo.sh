@@ -1,19 +1,22 @@
 #!/usr/bin/env bash
 # requires https://github.com/stark/siji installed to display icons
 
-# define the colors
-accent="%{F#96eba6}"
-text="%{F#ebf1f2}"
+
+# fetch the colors from colors.sh
+source "/home/eti/.scripts/colors.sh"
+
 
 clock() {
 	datetime=$(date "+%a %R")
 	echo -n $accent$text $datetime
 }
 
+
 sound() {
 	level=$(amixer get Master 2>&1 | awk '/Front Left:/{gsub(/[\[\]]/, "", $5); print $5}')
 	echo $accent$text $level
 }
+
 
 song() {
 	csong=$(mpc -p 7755 current)
@@ -26,6 +29,7 @@ song() {
 	fi
 }
 
+
 rsong() {
 	rcsong=$(mpc -h lemon.eti.tf -p 5577 current)
 	rplaying=$(mpc -h lemon.eti.tf -p 5577 status | grep -o 'playing')
@@ -37,6 +41,7 @@ rsong() {
 	fi
 }
 
+
 desktops() {
 	cur=`xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'`
 	tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
@@ -47,6 +52,7 @@ desktops() {
 	echo $line
 }
 
+
 network() {
 	cnetwork=$(iwgetid -r)
 
@@ -56,6 +62,7 @@ network() {
 		echo $accent$text $cnetwork
 	fi
 }
+
 
 battery() {
     percent=$(cat /sys/class/power_supply/BAT0/capacity)
@@ -76,9 +83,8 @@ battery() {
 	fi
 }
 
-# print all
-for (( ; ; ))
-do
-	echo "%{l} $(desktops)  $(song) %{c} $(clock) %{r}  $(network)  $(sound)  $(battery) "
-	sleep 0.2
+
+while true ; do
+	echo "%{l} $(desktops)  $(song) %{c} $(clock) %{r} $(network)  $(sound)  $(battery) "
+	sleep ".2s"
 done
