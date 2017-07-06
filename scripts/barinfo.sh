@@ -89,6 +89,8 @@ battery() {
 
 
 while true ; do
-	echo "%{l}$padding$(desktops)$padding$(song) %{c}$(clock) %{r}$(network)$padding$(sound)$padding$(battery)$padding"
+	echo "%{l}$padding$(desktops)$padding$(song) \
+		  %{c}$(clock) \
+		  %{r}$(network)$padding$(sound)$padding$(battery)$padding"
 	sleep ".2s"
 done
