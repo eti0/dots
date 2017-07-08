@@ -3,7 +3,8 @@
 
 
 # fetch the colors from colors.sh
-source "/home/eti/.scripts/colors.sh"
+user=$(whoami)
+source "/home/$user/.scripts/colors.sh"
 
 
 # define the padding size
@@ -79,7 +80,7 @@ battery() {
 			echo -n "$accent$text $percent%"
 		elif test $percent -gt 80 ; then
 			echo -n "$accent$text $percent%"
-		elif test $percent -gt 60 ; then
+		elif test $percent -gt 50 ; then
 			echo -n "$accent$text $percent%"
 		else 
 			echo -n "$accent$text $percent%"
@@ -88,9 +89,17 @@ battery() {
 }
 
 
+brightness() {
+	level=$(xbacklight)
+	smp=$(printf '%.0f\n' $level)
+
+	echo $accent$text $smp%
+}
+
+
 while true ; do
 	echo "%{l}$padding$(desktops)$padding$(song) \
-		  %{c}$(clock) \
-		  %{r}$(network)$padding$(sound)$padding$(battery)$padding"
+	      %{c}$(clock) \
+	      %{r}$(network)$padding$(sound)$padding$(battery)$padding"
 	sleep ".2s"
 done
