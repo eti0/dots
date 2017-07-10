@@ -9,7 +9,7 @@
 		</item>
 		<item label="Files">
 			<action name="Execute">
-				<execute>dbus-launch pcmanfm --new-window</execute>
+				<execute>dbus-launch pcmanfm</execute>
 			</action>
 		</item>
 		<item label="Chromium">

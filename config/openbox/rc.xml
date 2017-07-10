@@ -19,7 +19,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>sibby</name>
+    <name>iris</name>
     <titleLayout>IMC</titleLayout>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
@@ -28,7 +28,11 @@
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
-    <font place="InactiveWindow"><name>lemon</name><size>8</size><weight>Normal</weight><slant>Normal</slant>&gt;
+    <font place="InactiveWindow">
+      <name>lemon</name>
+      <size>8</size>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
       <name>lemon</name>
@@ -78,7 +82,7 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>51</top>
+    <top>56</top>
     <bottom>30</bottom>
     <left>30</left>
     <right>30</right>
@@ -112,11 +116,6 @@
         <command>rtile.rb --all-binary</command>
       </action>
     </keybind>
-    <keybind>
-      <action name="">
-        
-      </action>
-    </keybind>
     <keybind key="A-F1">
       <action name="Execute">
         <name>Terminal</name>
@@ -132,7 +131,7 @@
     <keybind key="A-F3">
       <action name="Execute">
         <name>PCManFM</name>
-        <command>dbus-launch pcmanfm --new-win</command>
+        <command>dbus-launch pcmanfm</command>
       </action>
     </keybind>
     <keybind key="A-F5">
@@ -221,6 +220,7 @@
           <action name="Focus"/>
           <action name="Raise"/>
         </finalactions>
+        <dialog>none</dialog>
       </action>
     </keybind>
   </keyboard>
