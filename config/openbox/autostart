@@ -2,10 +2,7 @@
 NetworkManager &
 
 # compton
-compton --config ~/.config/compton.conf -Ccf --vsync opengl &
-
-# tray
-# stalonetray &
+compton --config ~/.config/compton.conf -f --vsync opengl &
 
 # set the gamma
 xgamma -gamma 0.85 &
@@ -37,14 +34,8 @@ megasync &
 # bar
 sleep 3s && ./.scripts/bar.sh &
 
-# panel
-# sleep 3s && tint2 -c ~/.config/tint2/greenlemons &
-
 # start mpd
 mpd &
 
 # clipmenu
 clipmenud &
-
-# geary
-# geary --hidden &

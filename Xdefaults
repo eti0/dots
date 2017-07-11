@@ -16,7 +16,7 @@
 ! colorscheme
 ! special
 *.foreground:   #eeeeee
-*.background:   #101617
+*.background:   #1c2526
 *.cursorColor:  #eeeeee
 
 ! black
@@ -56,6 +56,14 @@
 *cursorBlink: 1
 
 
+! links
+*.perl-ext-common: default,matcher,selection-to-clipboard
+*.urlLauncher: /usr/bin/chromium
+*.url-launcher: /usr/bin/chromium
+*.matcher.button: 1
+*.colorUL: #e17878
+
+
 ! size
 *geometry: 85x24
 
@@ -81,7 +89,7 @@ Xcursor.theme: ElCapitan
 rofi.color-enabled: true
 
 ! Property            Background      Foreground      Background Alt       Highlight BG      Highlight FG
-rofi.color-window:    #050505,        #FFFFFF,        #050505,             #c9c9c9,          #050505
-rofi.color-normal:    #050505,        #FFFFFF,        #050505,             #c9c9c9,          #050505
-rofi.color-active:    #050505,        #FFFFFF,        #050505,             #c9c9c9,          #050505
-rofi.color-urgent:    #050505,        #DDDDDD,        #050505,             #c9c9c9,          #050505
+rofi.color-window:    #101617,        #FFFFFF,        #101617,             #c9c9c9,          #101617
+rofi.color-normal:    #101617,        #FFFFFF,        #101617,             #101617,          #f96868
+rofi.color-active:    #101617,        #FFFFFF,        #101617,             #c9c9c9,          #101617
+rofi.color-urgent:    #101617,        #DDDDDD,        #101617,             #c9c9c9,          #101617
