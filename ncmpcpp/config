@@ -7,71 +7,65 @@
 #	                              \/_/          \/_/    \/_/ 
 
 
-# files & directories
-ncmpcpp_directory = ~/.ncmpcpp
-mpd_music_dir = ~/Music
+# mpd
+mpd_port = "7755"
 
 
-# network
-mpd_host = localhost
-mpd_port = 7755
-mpd_connection_timeout = 5
-mpd_crossfade_time = 5
+# display
+song_list_format = " $0%n $0• $0%t $R$0%A "
+song_columns_list_format = "(3)[]{}(92)[white]{t} (4)[red]{l}"
+song_status_format = " $4%t $0 "
+playlist_display_mode = "columns" (classic/columns)
 
 
-# visualizer
-audio_output {
-       type            "fifo"
-       name            "FIFO"
-       path            "/tmp/mpd.fifo"
-       format          "44100:16:2"
-}
-
-visualizer_fifo_path = /tmp/mpd.fifo
-visualizer_output_name = FIFO
-visualizer_in_stereo = no
-visualizer_sample_multiplier = 0.15
-visualizer_sync_interval = 15
-visualizer_type = spectrum
-visualizer_look = ●-
+# now playing
+now_playing_prefix = "$4>>"
 
 
-# player settings
-centered_cursor = yes
-progressbar_look ==>
-progressbar_boldness = no
-user_interface = alternative
-startup_screen = browser
+# playlist
+browser_playlist_prefix = "$4 ♥ $3 "
 
 
-# displays
-display_volume_level = no
-display_bitrate = yes
-display_remaining_time = yes
+# delays
+playlist_disable_highlight_delay = "1"
+message_delay_time= "1"
 
 
-# misc
-mouse_support = no
-external_editor = micro
-use_console_editor = yes
+# progress bar
+progressbar_look = "---"
+progressbar_color = "black"
+progressbar_elapsed_color = "white"
 
 
 # colors
-colors_enabled = yes
-empty_tag_color = red
-header_window_color = red
-volume_color = red
-state_line_color = red
-state_flags_color = red
-main_window_color = red
-color1 = white
-color2 = red
-main_window_highlight_color = red
-progressbar_color = white
-progressbar_elapsed_color = red
-statusbar_color = red
-alternative_ui_separator_color = red
-active_column_color = red
-visualizer_color = red
-window_border_color = red
-active_window_border = white
+colors_enabled = "yes"
+empty_tag_color = "white"
+statusbar_color = "white"
+state_line_color = "white"
+state_flags_color = "white"
+main_window_color = "white"
+header_window_color = "white"
+
+
+# misc
+display_bitrate = "no"
+autocenter_mode = "yes"
+centered_cursor = "yes"
+titles_visibility = "no"
+statusbar_visibility = "no"
+mouse_support = "no"
+header_visibility = "no"
+display_remaining_time = "no"
+ask_before_clearing_playlists = "yes"
+discard_colors_if_item_is_selected = "yes"
+
+
+# visualizer
+visualizer_in_stereo = "no"
+visualizer_sync_interval = "30"
+visualizer_output_name = "fifo"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_type = "spectrum" (spectrum/wave)
+# visualizer_sample_multiplier = 0.20
+visualizer_color = "white"
+visualizer_look = "∙~"
