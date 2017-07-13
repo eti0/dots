@@ -35,18 +35,6 @@ song() {
 }
 
 
-rsong() {
-	rcsong=$(mpc -h lemon.eti.tf -p 5577 current)
-	rplaying=$(mpc -h lemon.eti.tf -p 5577 status | grep -o 'playing')
-
-	if test "$rplaying" = "playing"; then
-		echo $accent$text $rcsong
-	else test "$rplaying" = "";
-		echo ''
-	fi
-}
-
-
 desktops() {
 	cur=`xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'`
 	tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
