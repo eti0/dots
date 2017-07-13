@@ -1,6 +1,3 @@
-# nm
-NetworkManager &
-
 # compton
 compton --config ~/.config/compton.conf -f --vsync opengl &
 
@@ -13,12 +10,6 @@ bash ~/.scripts/fonts.sh &
 # touchpad
 bash ~/.scripts/touchpad.sh &
 
-# volume icon
-volumeicon &
-
-# network manager applet
-nm-applet &
-
 # beep off
 xset -b &
 
@@ -28,11 +19,8 @@ urxvtd &
 # set the background
 ./.fehbg &
 
-# megasync
-megasync &
-
 # bar
-sleep 3s && ./.scripts/bar.sh &
+sleep 2s && ./.scripts/bar.sh &
 
 # start mpd
 mpd &
