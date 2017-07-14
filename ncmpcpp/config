@@ -32,7 +32,7 @@ message_delay_time= "1"
 
 
 # progress bar
-progressbar_look = "---"
+progressbar_look = "▁▁▁"
 progressbar_color = "black"
 progressbar_elapsed_color = "white"
 
