@@ -86,7 +86,7 @@ brightness() {
 
 
 while true ; do
-	echo "%{l}$padding$(desktops)$padding%{A:urxvtc -e 'ncmpcpp':}$(song)%{A} \
+	echo "%{l}$padding$(desktops)$padding$(song)$padding%{A:urxvtc -e 'ncmpcpp':}$bgc%{A} \
 	      %{c}%{A:ndate.sh:}$(clock)%{A} \
 	      %{r}%{A:urxvtc -e 'nmtui':}$(network)%{A}$padding%{A:urxvtc -e 'alsamixer':}$(sound)%{A}$padding$(battery)$padding"
 	sleep ".2s"
