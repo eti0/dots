@@ -3,24 +3,30 @@
 # no rice no life - display stuff that nobody cares about
 #
 
+
 # set the colors
-set fg normal
-set c1 brblue
-set c2 brred
+set fg (set_color normal)
+set c1 (set_color green)
+set c2 (set_color white)
+
 
 # set the variables
+set user (whoami)
 set hostname (hostname)
-set kernel (uname -r -s)
+set kernel (uname -r)
 set shell (basename $SHELL)
-set os "arch"
-set packages (pacman -Q | wc -l)
+set os "void"
 set wm "openbox"
+set init "runit"
 
 
-## EXECUTE
-
+# exec
 echo
-echo (set_color $fg) "┌───╮ │" (set_color $c1)"os:"(set_color $fg)"        $os"
-echo (set_color $fg) "│"(set_color $c2)"•‿•"(set_color $fg)"│ │" (set_color $c1)"shell:"(set_color $fg)"     $shell"
-echo (set_color $fg) "╰───┘ │" (set_color $c1)"wm:"(set_color $fg)"        $wm"
+echo "$user"$c1"@"$fg"$hostname"
+echo $c1"-----"
+echo $c1"	os"$fg":        $os"
+echo "┌───╮ "$c1"	kernel"$fg":    $kernel"
+echo "│"$c1"•˩•"$fg"│"$c1"	shell"$fg":     $shell"
+echo "╰───┘"$c1"	init"$fg":      $init"
+echo $c1"	wm"$fg":        $wm"
 echo
