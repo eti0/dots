@@ -9,4 +9,4 @@
 ```
 
 
-![rice](https://0x0.st/GEQ.png)
+![rice](https://0x0.st/GE1.png)
