@@ -24,8 +24,8 @@ sound() {
 
 
 song() {
-	csong=$(mpc -p 7755 current)
-	playing=$(mpc -p 7755 status | grep -o 'playing')
+	csong=$(mpc current)
+	playing=$(mpc status | grep -o 'playing')
 
 	if test "$playing" = "playing"; then
 		echo $accent$text $csong
@@ -86,7 +86,7 @@ brightness() {
 
 
 while true ; do
-	echo "%{l}$padding$(desktops)$padding$(song)$padding%{A:urxvtc -e 'ncmpcpp':}%{A3:mpc -p 7755 toggle:}$bgc%{A}%{A} \
+	echo "%{l}$padding$(desktops)$padding$(song)$padding%{A:urxvtc -e 'ncmpcpp':}%{A3:mpc toggle:}$bgc%{A}%{A} \
 	      %{c}%{A:ndate.sh:}$(clock)%{A} \
 	      %{r}%{A:urxvtc -e 'nmtui':}$(network)%{A}$padding%{A:urxvtc -e 'alsamixer':}$(sound)%{A}$padding$(battery)$padding"
 	sleep ".2s"
