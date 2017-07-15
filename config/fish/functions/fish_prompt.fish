@@ -16,6 +16,8 @@ function _git_is_dirty
 end
 
 function fish_prompt
+  set fish_greeting ""
+
   set -l last_status $status
 
   set -l cyan (set_color cyan)
@@ -25,7 +27,7 @@ function fish_prompt
   set -l green (set_color green)
   set -l normal (set_color normal)
 
-  set -l cwd $blue(basename (pwd | sed "s:^$HOME:~:"))
+  set -l cwd $red(basename (pwd | sed "s:^$HOME:~:"))
   
   # Display [venvname] if in a virtualenv
   if set -q VIRTUAL_ENV
