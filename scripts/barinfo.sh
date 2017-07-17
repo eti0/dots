@@ -19,7 +19,11 @@ clock() {
 
 sound() {
 	level=$(amixer get Master 2>&1 | awk '/Front Left:/{gsub(/[\[\]]/, "", $5); print $5}')
-	echo $accent$text $level
+	if [ "$level" == "0%" ]; then
+		echo $accent$text muted
+	else
+		echo $accent$text $level
+	fi
 }
 
 
@@ -27,9 +31,9 @@ song() {
 	csong=$(mpc current)
 	playing=$(mpc status | grep -o 'playing')
 
-	if test "$playing" = "playing"; then
+	if [ "$playing" = "playing" ]; then
 		echo $accent$text $csong
-	else test "$playing" = "";
+	else [ "$playing" = "" ];
 		echo ''
 	fi
 }
@@ -49,7 +53,7 @@ desktops() {
 network() {
 	cnetwork=$(iwgetid -r)
 
-	if test "$cnetwork" = "" ; then
+	if [ "$cnetwork" == "" ]; then
 		echo $accent$text offline
 	else
 		echo $accent$text $cnetwork
@@ -61,14 +65,14 @@ battery() {
     percent=$(cat /sys/class/power_supply/BAT0/capacity)
     power=$(cat /sys/class/power_supply/BAT0/status)
 	
-	if test $power = "Charging" ; then
+	if [ $power == "Charging" ] ; then
 		echo -n "$accent$text $percent%"
 	else
-		if test $percent -eq 100 ; then
+		if [ $percent == 100 ]; then
 			echo -n "$accent$text $percent%"
-		elif test $percent -gt 80 ; then
+		elif [ $percent > 80 ] ; then
 			echo -n "$accent$text $percent%"
-		elif test $percent -gt 50 ; then
+		elif [ $percent > 50 ]; then
 			echo -n "$accent$text $percent%"
 		else 
 			echo -n "$accent$text $percent%"
@@ -77,17 +81,9 @@ battery() {
 }
 
 
-brightness() {
-	level=$(xbacklight)
-	smp=$(printf '%.0f\n' $level)
-
-	echo $accent$text $smp%
-}
-
-
 while true ; do
 	echo "%{l}$padding$(desktops)$padding$(song)$padding%{A:urxvtc -e 'ncmpcpp':}%{A3:mpc toggle:}$bgc%{A}%{A} \
 	      %{c}%{A:ndate.sh:}$(clock)%{A} \
 	      %{r}%{A:urxvtc -e 'nmtui':}$(network)%{A}$padding%{A:urxvtc -e 'alsamixer':}$(sound)%{A}$padding$(battery)$padding"
-	sleep ".2s"
+	sleep ".3s"
 done
