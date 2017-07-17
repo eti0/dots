@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # define the colors
-accent="%{F#e69191}"
-text="%{F#ebf1f2}"
+accent="%{F#f9c168}"
+text="%{F#eeeeee}"
 bgn="#1c2526"
 bgc="%{F$bgn}"
