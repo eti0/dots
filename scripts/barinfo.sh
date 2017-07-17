@@ -31,9 +31,9 @@ song() {
 	csong=$(mpc current)
 	playing=$(mpc status | grep -o 'playing')
 
-	if [ "$playing" = "playing" ]; then
+	if [ "$playing" == "playing" ]; then
 		echo $accent$text $csong
-	else [ "$playing" = "" ];
+	else [ "$playing" == "" ];
 		echo ''
 	fi
 }
@@ -68,11 +68,11 @@ battery() {
 	if [ $power == "Charging" ] ; then
 		echo -n "$accent$text $percent%"
 	else
-		if [ $percent == 100 ]; then
+		if [ $percent -eq 100 ]; then
 			echo -n "$accent$text $percent%"
-		elif [ $percent > 80 ] ; then
+		elif [ $percent -gt 80 ] ; then
 			echo -n "$accent$text $percent%"
-		elif [ $percent > 50 ]; then
+		elif [ $percent -gt 50 ]; then
 			echo -n "$accent$text $percent%"
 		else 
 			echo -n "$accent$text $percent%"
