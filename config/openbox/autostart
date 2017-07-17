@@ -27,3 +27,6 @@ mpd &
 
 # clipmenu
 clipmenud &
+
+# mpd scrobbler
+mpdas &
