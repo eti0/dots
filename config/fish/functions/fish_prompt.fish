@@ -42,7 +42,7 @@ function fish_prompt
     set -l git_branch (_git_branch_name)
 
     if [ (_git_is_dirty) ]
-      set git_info $red $git_branch " ⨯" $normal
+      set git_info $red $git_branch " ×" $normal
     else
       set git_info $green $git_branch $normal
     end
@@ -55,5 +55,5 @@ function fish_prompt
   end
 
   # Terminate with a nice prompt char
-  echo -e -n -s $prompt_color ' > ' $normal
+  echo -e -n -s $prompt_color ' — ' $normal
 end
