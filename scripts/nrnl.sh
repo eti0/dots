@@ -4,15 +4,16 @@
 #
 
 
-# set the colors
+# set the colors - change this to your liking
 set fg (set_color normal)
-set c1 (set_color green)
+set c1 (set_color yellow)
 set c2 (set_color white)
 
 
 # set the variables
 set user (whoami)
-set hostname (hostname)
+set host (hostname)
+set userinf "$user"$c1"@"$fg"$host"
 set kernel (uname -r)
 set shell (basename $SHELL)
 set os "void"
@@ -20,10 +21,9 @@ set wm "openbox"
 set init "runit"
 
 
-# exec
+# execute everything
 echo
-echo "$user"$c1"@"$fg"$hostname"
-echo $c1"-----"
+echo $userinf
 echo $c1"	os"$fg":        $os"
 echo "┌───╮ "$c1"	kernel"$fg":    $kernel"
 echo "│"$c1"•˩•"$fg"│"$c1"	shell"$fg":     $shell"
