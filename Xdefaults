@@ -5,8 +5,8 @@
 !
 
 ! fonts
-*font: -uw-ttyp0-medium-r-normal--11-100-75-75-c-60-iso10646-1
-*boldFont: -uw-ttyp0-medium-r-normal--11-100-75-75-c-60-iso10646-1
+*font: -uw-ttyp0-*
+*boldFont: -uw-ttyp0-*
 
 ! disable urxvts ugly scrollbar
 *scrollBar: false
