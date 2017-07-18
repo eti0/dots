@@ -47,8 +47,8 @@
 *.color14:      #76b88c
 
 ! white
-*.color7:       #b4baba
-*.color15:      #d5dede
+*.color7:       #b8b8b8
+*.color15:      #d9d9d9
 
 
 ! cursor
@@ -60,7 +60,8 @@
 *.urlLauncher: /usr/bin/chromium
 *.url-launcher: /usr/bin/chromium
 *.matcher.button: 1
-*.colorUL: #e17878
+*.colorUL: #f9c168
+*.underlineColor: #1c2526
 
 
 ! size
@@ -68,7 +69,7 @@
 
 
 ! padding
-*internalBorder: 16
+*internalBorder: 20
 
 
 ! xft fonts settings
