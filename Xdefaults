@@ -57,11 +57,9 @@
 
 ! links
 *.perl-ext-common: default,matcher,selection-to-clipboard
-*.urlLauncher: /usr/bin/chromium
 *.url-launcher: /usr/bin/chromium
 *.matcher.button: 1
-*.colorUL: #f9c168
-*.underlineColor: #1c2526
+*.matcher.rend.0: fg5
 
 
 ! size
