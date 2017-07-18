@@ -20,7 +20,7 @@
   </placement>
   <theme>
     <name>vido</name>
-    <titleLayout>IMC</titleLayout>
+    <titleLayout>IC</titleLayout>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>lemon</name>
@@ -125,7 +125,7 @@
     <keybind key="A-F2">
       <action name="Execute">
         <name>Run</name>
-        <command>rofi -show run -lines 7 -line-margin 8 -padding 20 -font "Roboto Mono 12" -scrollbar-width 0 -separator-style "none"</command>
+        <command>rofi -show run -lines 7 -line-margin 8 -padding 20 -font "drift 8" -scrollbar-width 0 -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="A-F3">
@@ -155,7 +155,7 @@
     <keybind key="A-F8">
       <action name="Execute">
         <name>Clipboard</name>
-        <command>clipmenu -lines 15 -line-margin 6 -padding 20 -font "Roboto Mono 12" -scrollbar-width 0 -separator-style "none"</command>
+        <command>clipmenu -lines 15 -line-margin 6 -padding 20 -font "drift 8" -scrollbar-width 0 -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="C-Left">
