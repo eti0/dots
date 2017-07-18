@@ -65,7 +65,7 @@ battery() {
     percent=$(cat /sys/class/power_supply/BAT0/capacity)
     power=$(cat /sys/class/power_supply/BAT0/status)
 	
-	if [ $power == "Charging" ] ; then
+	if [[ $power == "Charging" || $power == "Unknown" ]]; then
 		echo -n "$accent$text $percent%"
 	else
 		if [ $percent -eq 100 ]; then
