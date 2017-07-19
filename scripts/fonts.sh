@@ -3,3 +3,5 @@
 mkfontdir ~/.fonts
 xset fp+ ~/.fonts
 xset fp rehash
+
+echo "done!"

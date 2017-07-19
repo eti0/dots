@@ -3,7 +3,7 @@
 
 
 # fetch the colors from colors.sh
-source "/home/$USER/.scripts/colors.sh"
+source "/usr/scripts/colors.sh"
 
 
 # define the padding size

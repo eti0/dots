@@ -2,7 +2,7 @@
 # fetch current weather
 
 nline=(echo)
-location="Bordeaux"
+location="Cambridge"
 
 $nline
 
