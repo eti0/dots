@@ -20,7 +20,7 @@
   </placement>
   <theme>
     <name>vido</name>
-    <titleLayout>IC</titleLayout>
+    <titleLayout>IMC</titleLayout>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>lemon</name>

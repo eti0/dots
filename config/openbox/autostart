@@ -5,10 +5,10 @@ compton --config ~/.config/compton.conf -f --vsync opengl &
 xgamma -gamma 0.85 &
 
 # fonts
-bash ~/.scripts/fonts.sh &
+fonts.sh &
 
 # touchpad
-bash ~/.scripts/touchpad.sh &
+touchpad.sh &
 
 # beep off
 xset -b &
@@ -20,7 +20,7 @@ urxvtd &
 ./.fehbg &
 
 # bar
-sleep 2s && ./.scripts/bar.sh &
+sleep 2s && bar.sh &
 
 # start mpd
 mpd &
