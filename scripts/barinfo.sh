@@ -17,7 +17,11 @@ clock() {
 
 cputemp() {
 	temp=$(cat /sys/class/thermal/thermal_zone0/temp | cut -c -2)
-	echo $accent$text $temp°
+	if [ "$temp" -gt "50" ]; then
+		echo $warning$text $temp°
+	else
+		echo $accent$text $temp°
+	fi
 }
 
 sound() {
@@ -46,9 +50,9 @@ desktops() {
 	cur=`xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'`
 	tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
 
-	for w in `seq 0 $((cur - 1))`; do line="${line}$text- "; done
-	line="${line}$accent-"
-	for w in `seq $((cur + 2)) $tot`; do line="${line}$text -"; done
+	for w in `seq 0 $((cur - 1))`; do line="${line}$text◽ "; done
+	line="${line}◾"
+	for w in `seq $((cur + 2)) $tot`; do line="${line}$text ◽"; done
 	echo $line
 }
 
@@ -85,7 +89,7 @@ battery() {
 
 
 while true ; do
-	echo "%{l}$padding$(desktops)$padding$(song)$padding%{A:urxvtc -e 'ncmpcpp':}%{A3:mpc toggle:}$bgc%{A}%{A} \
+	echo "%{l}$padding$(desktops)$padding$(song)$padding$alpha%{A:urxvtc -e 'ncmpcpp':}%{A3:mpc toggle:}%{A}%{A} \
 	      %{c}%{A:ndate.sh:}$(clock)%{A} \
 	      %{r}%{A:urxvtc -e 'htop':}$(cputemp)%{A}$padding%{A:urxvtc -e 'nmtui':}$(network)%{A}$padding%{A:urxvtc -e 'alsamixer':}$(sound)%{A}$padding$(battery)$padding"
 	sleep ".3s"
