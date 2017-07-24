@@ -17,7 +17,7 @@ clock() {
 
 cputemp() {
 	temp=$(cat /sys/class/thermal/thermal_zone0/temp | cut -c -2)
-	if [ "$temp" -gt "50" ]; then
+	if [ "$temp" -ge "60" ]; then
 		echo $warning$text $temp°
 	else
 		echo $accent$text $temp°
@@ -61,7 +61,7 @@ network() {
 	cnetwork=$(iwgetid -r)
 
 	if [ "$cnetwork" == "" ]; then
-		echo $accent$text offline
+		echo $warning$text offline
 	else
 		echo $accent$text $cnetwork
 	fi
@@ -73,10 +73,10 @@ battery() {
     power=$(cat /sys/class/power_supply/BAT0/status)
 	
 	if [[ $power == "Charging" || $power == "Unknown" ]]; then
-		echo -n "$accent$text $percent%"
+		echo -n "$accent$text $percent%"
 	else
 		if [ $percent -eq 100 ]; then
-			echo -n "$accent$text $percent%"
+			echo -n "$accent$text $percent%"
 		elif [ $percent -gt 80 ] ; then
 			echo -n "$accent$text $percent%"
 		elif [ $percent -gt 50 ]; then
