@@ -82,7 +82,7 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>56</top>
+    <top>35</top>
     <bottom>30</bottom>
     <left>30</left>
     <right>30</right>
@@ -125,7 +125,7 @@
     <keybind key="A-F2">
       <action name="Execute">
         <name>Run</name>
-        <command>rofi -show run -lines 7 -line-margin 8 -padding 20 -font "drift 8" -scrollbar-width 0 -separator-style "none"</command>
+        <command>rofi -show run -lines 7 -line-margin 8 -padding 30 -font "Roboto Mono Medium 11" -scrollbar-width 0 -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="A-F3">
@@ -155,7 +155,7 @@
     <keybind key="A-F8">
       <action name="Execute">
         <name>Clipboard</name>
-        <command>clipmenu -lines 15 -line-margin 6 -padding 20 -font "drift 8" -scrollbar-width 0 -separator-style "none"</command>
+        <command>clipmenu -lines 15 -line-margin 6 -padding 30 -font "Roboto Mono Medium 11" -scrollbar-width 0 -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="C-Left">
@@ -206,12 +206,12 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>sh ~/.scripts/maim.sh</command>
+        <command>maim.sh</command>
       </action>
     </keybind>
     <keybind key="A-Print">
       <action name="Execute">
-        <command>sh ~/.scripts/maimw.sh</command>
+        <command>maimw.sh</command>
       </action>
     </keybind>
     <keybind key="A-Tab">

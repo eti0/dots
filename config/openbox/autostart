@@ -30,3 +30,6 @@ clipmenud &
 
 # mpd scrobbler
 mpdas &
+
+# nm
+sudo nm-applet
