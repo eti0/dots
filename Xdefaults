@@ -91,3 +91,5 @@ rofi.color-window:    #101617,        #FFFFFF,        #101617,             #c9c9
 rofi.color-normal:    #101617,        #FFFFFF,        #101617,             #101617,          #f9c168
 rofi.color-active:    #101617,        #FFFFFF,        #101617,             #c9c9c9,          #101617
 rofi.color-urgent:    #101617,        #DDDDDD,        #101617,             #c9c9c9,          #101617
+rofi.run-command: fish -c '{cmd}'
+rofi.run-list-command: 'fish -c functions'
