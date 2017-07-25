@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-maim --hidecursor -s > "/tmp/shop.png"
+maim --hidecursor -s > "/tmp/hops.png"
 
-hop "/tmp/shop.png"
+hop "/tmp/hops.png"
