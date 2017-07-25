@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
+
 # colors
 transparent="#00000000"
-acc="#1c2526"
-txt="#1c2526"
+acc="#f9c168"
+txt="#eee"
 wrn="#e17878"
 bgn="#1c2526"
 

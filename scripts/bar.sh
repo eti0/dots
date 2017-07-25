@@ -7,4 +7,5 @@ source "/usr/scripts/colors.sh"
     -f '-benis-lemon-*' \
     -f '-wuncon-siji-*' \
     -g "x30" \
+    -B "$bgn" \
     | sh

@@ -1,7 +1,5 @@
 #!/usr/bin/env fish
-#
 # no rice no life - display stuff that nobody cares about
-#
 
 
 # set the colors - change this to your liking

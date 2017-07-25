@@ -51,7 +51,7 @@ desktops() {
 	tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
 
 	for w in `seq 0 $((cur - 1))`; do line="${line}$text◽ "; done
-	line="${line}◾"
+	line="${line}$accent◾"
 	for w in `seq $((cur + 2)) $tot`; do line="${line}$text ◽"; done
 	echo $line
 }
@@ -89,7 +89,7 @@ battery() {
 
 
 while true ; do
-	echo "%{l}$padding$(desktops)$padding$(song)$padding$alpha%{A:urxvtc -e 'ncmpcpp':}%{A3:mpc toggle:}%{A}%{A} \
+	echo "%{l}$padding$(desktops)$padding$(song)$padding$bgc%{A:urxvtc -e 'ncmpcpp':}%{A3:mpc toggle:}%{A}%{A} \
 	      %{c}%{A:ndate.sh:}$(clock)%{A} \
 	      %{r}%{A:urxvtc -e 'htop':}$(cputemp)%{A}$padding%{A:urxvtc -e 'nmtui':}$(network)%{A}$padding%{A:urxvtc -e 'alsamixer':}$(sound)%{A}$padding$(battery)$padding"
 	sleep ".3s"

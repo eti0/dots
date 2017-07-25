@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-paplay /usr/scripts/.ns/sound.wav
+paplay /usr/scripts/.ns/notif.wav
