@@ -9,4 +9,4 @@
 ```
 
 
-![rice](https://0x0.st/DbN.png)
+![rice](https://x.eti.tf/0fzDJ.png)

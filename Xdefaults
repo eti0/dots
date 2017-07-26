@@ -58,7 +58,7 @@
 ! links
 *.perl-ext-common: default,matcher,selection-to-clipboard
 *.url-launcher: /usr/bin/chromium
-*.matcher.button: 1
+*.matcher.button: 3
 *.matcher.rend.0: fg5
 
 
