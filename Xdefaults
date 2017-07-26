@@ -15,24 +15,24 @@
 ! colorscheme
 ! special
 *.foreground:   #eeeeee
-*.background:   #1c2526
+*.background:   #232e2f
 *.cursorColor:  #eeeeee
 
 ! black
-*.color0:       #202c2e
-*.color8:       #2e3e41
+*.color0:       #232e2f
+*.color8:       #3d4b4d
 
 ! red
-*.color1:       #e17878
-*.color9:       #e17878
+*.color1:       #cc6565
+*.color9:       #cc6565
 
 ! green
-*.color2:       #76b882
-*.color10:      #76b882
+*.color2:       #7fb36b
+*.color10:      #7fb36b
 
 ! yellow
-*.color3:       #f9c168
-*.color11:      #f9c168
+*.color3:       #f2d091
+*.color11:      #f2d091
 
 ! blue
 *.color4:       #8b9f9e
