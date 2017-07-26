@@ -13,8 +13,8 @@ servers = (
   {
     address = "irc.nixers.net";
     chatnet = "nixers";
-    port = "6667";
-    use_ssl = "no";
+    port = "6697";
+    use_ssl = "yes";
     autoconnect = "no";
   },
   {
@@ -32,6 +32,9 @@ chatnets = {
   freenode = { type = "IRC"; };
   rizon = {
     type = "IRC";
+    sasl_mechanism = "plain";
+    sasl_username = "eti";
+    sasl_password = "";
   };
   nixers = { type = "IRC"; };
 };
@@ -40,7 +43,11 @@ chatnets = {
 settings = {
   core = { real_name = "~"; user_name = "eti"; nick = "eti"; };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "allegro"; };
+  "fe-common/core" = {
+    theme = "onodera";
+    timestamps = "no";
+    show_nickmode_empty = "yes";
+  };
   type = "IRC";
 };
 
@@ -59,10 +66,26 @@ statusbar = {
         more = { priority = "10"; alignment = "right"; position = "0"; };
         barend = { priority = "100"; alignment = "right"; };
       };
+      position = "0";
+      placement = "top";
+      visible = "active";
+      disabled = "yes";
     };
+    prompt = { position = "0"; };
   };
 };
 
 
 ignores = ( { level = "JOINS PARTS QUITS NICKS MODES"; } );
-aliases = { leave = "part"; close = "window close"; };
+aliases = {
+  leave = "part";
+  close = "window close";
+  son = "statusbar window enable";
+  soff = "statusbar window disable";
+  afk = "away afk";
+};
+logs = { };
+keyboard = (
+  { key = "^O"; id = "command"; data = "son "; },
+  { key = "^P"; id = "command"; data = "soff "; }
+);
