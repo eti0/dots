@@ -2,10 +2,10 @@
 
 # colors
 transparent="#00000000"
-acc="#f9c168"
+acc="#f5b0b1"
 txt="#eee"
 wrn="#e17878"
-bgn="#1c2526"
+bgn="#232e2f"
 
 # other stuff
 alpha="%{F$transparent}"
