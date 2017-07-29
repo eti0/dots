@@ -5,9 +5,9 @@
 !
 
 ! fonts
-*font: -uw-ttyp0-*
-*boldFont: -uw-ttyp0-*
-! *.lineSpace: 2
+*font: -benis-lemon-*
+*boldFont: -benis-lemon-*
+*.lineSpace: 2
 
 ! disable urxvts ugly scrollbar
 *scrollBar: false
