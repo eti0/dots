@@ -7,7 +7,7 @@
 ! fonts
 *font: -benis-lemon-*
 *boldFont: -benis-lemon-*
-*.lineSpace: 2
+! *.lineSpace: 2
 
 ! disable urxvts ugly scrollbar
 *scrollBar: false
