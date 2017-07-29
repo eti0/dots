@@ -33,7 +33,7 @@ chatnets = {
   rizon = {
     type = "IRC";
     sasl_mechanism = "plain";
-    sasl_username = "eti";
+    sasl_username = "";
     sasl_password = "";
   };
   nixers = { type = "IRC"; };
@@ -42,13 +42,28 @@ chatnets = {
 
 settings = {
   core = { real_name = "~"; user_name = "eti"; nick = "eti"; };
-  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-text" = {
+    actlist_sort = "refnum";
+    indent = "10";
+    indent_always = "yes";
+  };
   "fe-common/core" = {
-    theme = "onodera";
+    theme = "noko";
     timestamps = "no";
     show_nickmode_empty = "yes";
+    autolog = "yes";
+    show_names_on_join = "no";
   };
   type = "IRC";
+  "perl/core/scripts" = {
+    nickcolor_colors = "12 13 14 15";
+    tmux_away_message = "afk";
+    tmux_away_window = "0";
+    neat_dynamic = "yes";
+    splitlong_max_length = "70";
+    splitlong_line_start = "- ";
+    splitlong_line_end = " ";
+  };
 };
 
 

@@ -62,25 +62,23 @@ abstracts = {
   ## generic
   ##
 
-  indent_default = "";
-
   # text to insert at the beginning of each non-message line
-  line_start = "";
+  line_start = "%y——%n ";
 
   # timestamp styling, nothing by default
   timestamp = "$*";
 
   # any kind of text that needs hilighting, default is to bold
-  hilight = "%r$*";
+  hilight = "%_$*%_";
 
   # any kind of error message, default is bright red
-  error = "%r$*%n";
+  error = "%R$*%n";
 
   # channel name is printed
-  channel = "%_$*%_";
+  channel = "%Y$*%n";
 
   # nick is printed
-  nick = "%_$*%_";
+  nick = "%g$*%n";
 
   # nick host is printed
   nickhost = "[$*]";
@@ -102,22 +100,27 @@ abstracts = {
   ##
 
   # highlighted nick/host is printed (joins)
-  channick_hilight = "%g$*%N";
-  chanhost_hilight = "{nickhost $*}";
+  channick_hilight = "%C$*%n";
+  chanhost_hilight = "{nickhost %c$*%n}";
 
   # nick/host is printed (parts, quits, etc.)
-  channick = "$*";
+  channick = "%c$*%n";
   chanhost = "{nickhost $*}";
 
   # highlighted channel name is printed
-  channelhilight = "%g$*%n";
+  channelhilight = "%c$*%n";
 
+  # ban/ban exception/invite list mask is printed
+  ban = "%c$*%n";
+
+  ##
+  ## me
   ##
   ## messages
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "%k$0%y$1%K - %n%|";
+  msgnick = "$1%K —%W ";
 
   # message from you is printed. "ownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -136,15 +139,15 @@ abstracts = {
   #  privmsgnick = "%K{msgnick  %R$*%K}%n";
 
   # $0 = nick mode, $1 = nick
-  ownmsgnick = "{msgnick $0 $1-}%n";
-  ownnick = "%Y%_$*%n";
+  ownmsgnick = "{msgnick $0 $1-}";
+  ownnick = "%y$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1-}";
-  pubnick = "%N$*%n";
+  pubnick = "$*";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
-  pubmsgmenick = "{msgnick $0 $1-}";
+  pubmsgmenick = "%8{msgnick $0 $1-}%n";
   menick = "$*%n";
 
   # public highlighted message in channel
@@ -172,7 +175,7 @@ abstracts = {
   ##
 
   # used internally by this theme
-  action_core = "%K*          %N$*%n";
+  action_core = "%y— $0%n$1";
 
   # generic one that's used by most actions
   action = "{action_core $*} ";
@@ -220,7 +223,7 @@ abstracts = {
 
   # /names list
   names_prefix = "";
-  names_nick = "[%_$0%_$1-] ";
+  names_nick = "[$0$1-] ";
   names_nick_op = "{names_nick $*}";
   names_nick_halfop = "{names_nick $*}";
   names_nick_voice = "{names_nick $*}";
@@ -256,27 +259,27 @@ abstracts = {
   # background for prompt / input line
   sb_prompt_bg = "%n";
   # background for info statusbar
-  sb_info_bg = "%7";
+  sb_info_bg = "%8";
   # background for topicbar (same default)
   #sb_topic_bg = "%4";
 
-  # text at the beginning of statusbars. sb-item already puts
-  # space there,so we don't use anything by default.
+  # text at the beginning of statusbars. "sb" already puts a space there,
+  # so we don't use anything by default.
   sbstart = "";
   # text at the end of statusbars. Use space so that it's never
   # used for anything.
-  sbend = "";
+  sbend = " ";
 
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = "%y— ";
+  prompt = "        %y—%n ";
 
-  sb = "%n$* ";
+  sb = "$* ";
   sbmode = "";
   sbaway = " (%Gafk%n)";
-  sbservertag = "%y:$0";
-  sbnickmode = "$*";
+  sbservertag = ":$0";
+  sbnickmode = "$0";
 
   # activity in statusbar
 
@@ -293,40 +296,13 @@ abstracts = {
 };
 formats = {
   "fe-common/core" = {
-    line_start = "{line_start}";
-    line_start_irssi = "{line_start}";
-
-    join = "%K!%g     join%K - %n{channick $0}";
-    part = "%K!%r     part%K - %n{channick $0}";
-    kick = "%K!%r   kicked%K - %n{channick $0}";
-    quit = "%K!%r     quit%K - %n{channick $0}";
-    quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
-
-    nick_changed = "%K{channick $[-9]0}%Y - %K{channick $1}";
-    your_nick_changed = "%K     you%Y - %K{channick $1}";
-
-    pubmsg = "{pubmsgnick $2{pubnick $nickcolor$[-9]0}}$1";
-
-    own_msg = "{ownmsgnick $2{ownnick $[-9]0}}$1";
-    own_msg_channel = "{ownmsgnick $3{ownnick $[-9]0}{msgchannel $1}}$2";
-    own_msg_private_query = "{ownprivmsgnick {ownprivnick $[-9]2}}$1";
-
-    pubmsg_me = "{pubmsghinick $2{menick $[-9]0}}$1";
-    pubmsg_me_channel = "{pubmsghinick $3{menick $[-9]0}{msgchannel $1}}$2";
-
-    pubmsg_channel = "{pubmsgnick {pubnick %G$[-9]0}$2}$1";
-    msg_private_query = "{privmsgnick $[-9]0}$2";
-    new_topic = " %ctopic%K - %B'$2' %non %b$1%n%K[set by {nick %y$0}]";
-
-    endofnames = " names%K - %mTotal: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal%n";
-  };
-  "fe-common/irc" = {
-    chanmode_change = "%K!     %Ymode%K - %n{channick $1}";
-    server_chanmode_change = "%    mode%K - %n{channick $1}";
-
-    own_action = "{ownaction $[-9]0} $1";
-    action_private = "{pvtaction $[-9]0} $1";
-    action_private_query = "{pvtaction_query $[-9]0} $2";
-    action_public = "{pubaction $[-9]0} $1";
+    pubmsg = "{pubmsgnick $nickalign$2 {pubnick $nickcolor$[7]0$nicktrunc}}$1";
+    own_msg = "{ownmsgnick $2 {ownnick $[7]0}}$1";
+    own_msg_channel = "{ownmsgnick $3 {ownnick $[7]0}{msgchannel $1}}$2";
+    pubmsg_me = "{pubmsgmenick $nickalign$2 {menick $[7]0$nicktrunc}}$1";
+    pubmsg_me_channel = "{pubmsgmenick $nickalign$3 {menick $[7]0$nicktrunc}{msgchannel $1}}$2";
+    pubmsg_hilight = "{pubmsghinick $0 $nickalign$3 $[7]1$nicktrunc}$2";
+    pubmsg_hilight_channel = "{pubmsghinick $0 $nickalign$4 $[7]1$nicktrunc{msgchannel $2}}$3";
+    pubmsg_channel = "{pubmsgnick $3 {pubnick $[7]0}{msgchannel $1}}$2";
   };
 };
