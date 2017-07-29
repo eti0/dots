@@ -19,7 +19,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>vido</name>
+    <name>ilya</name>
     <titleLayout>IMC</titleLayout>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
@@ -471,9 +471,10 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
-    <!--<application name="urxvt*">
+    <application name="chromium">
       <decor>no</decor>
     </application>
+    <!--
     <application class="*">
       <decor>no</decor>
     </application>
