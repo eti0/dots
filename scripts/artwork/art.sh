@@ -12,3 +12,5 @@ ffmpeg -loglevel 0 -y -i "/home/eti/Music/$csf" -vf scale=-1:200 "$csil"
 
 n30f -x "10" -y "40" -c "killall n30f" "$csbil" &
 n30f -x "12" -y "48" -c "killall n30f" "$csil"
+
+rm "$csil"
