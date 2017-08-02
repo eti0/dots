@@ -12,18 +12,18 @@ mpd_port = "7755"
 
 
 # display
-song_list_format = " $0%n $0• $0%t $R$0%A "
-song_columns_list_format = "(3)[]{}(92)[white]{t} (4)[yellow]{l}"
-song_status_format = " $4%t $0"
+song_list_format = "$0%t $R$0%A "
+song_columns_list_format = "(3)[]{}(92)[white]{t} (4)[green]{l}"
+song_status_format = " $3%t $0"
 playlist_display_mode = "columns" (classic/columns)
 
 
 # now playing
-now_playing_prefix = "$4—"
+now_playing_prefix = "$3—"
 
 
 # playlist
-browser_playlist_prefix = "$4 ♥ $3 "
+browser_playlist_prefix = "$3 ♥ $3 "
 
 
 # delays
@@ -58,6 +58,8 @@ header_visibility = "no"
 display_remaining_time = "no"
 ask_before_clearing_playlists = "yes"
 discard_colors_if_item_is_selected = "yes"
+allow_for_physical_item_deletion = "yes"
+seek_time = 3
 
 
 # visualizer
