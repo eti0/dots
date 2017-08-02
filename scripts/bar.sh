@@ -4,7 +4,7 @@
 source "/usr/scripts/colors.sh"
 
 /usr/scripts/barinfo.sh | lemonbar \
-    -f '-benis-lemon-*' \
+    -f '-x-vanilla-*' \
     -f '-wuncon-siji-*' \
     -g "x30" \
     -B "$bgn" \

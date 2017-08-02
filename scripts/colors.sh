@@ -2,8 +2,8 @@
 
 # colors
 transparent="#00000000"
-acc="#f5b0b1"
-txt="#eee"
+acc="#76b88c"
+txt="#fff"
 wrn="#e17878"
 bgn="#232e2f"
 
