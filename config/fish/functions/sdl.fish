@@ -5,7 +5,7 @@
 function sdl
     set cdir (pwd)
 
-    cd ~/Music/soundcloud
+    cd ~/Music/dl
 
     scdl -l $argv
 
