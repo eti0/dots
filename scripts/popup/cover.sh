@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
-
 # vars
 csf=`mpc -f %file% | head -1`
 csil="/tmp/mpdimg.png"
-csbil="/usr/scripts/artwork/bg.png"
-pointeril="/usr/scripts/artwork/pointer.png"
+csbil="/usr/scripts/popup/img/bg.png"
+pointeril="/usr/scripts/popup/img/pointer.png"
 
 # extract the album art
 ffmpeg -loglevel 0 -y -i "/home/eti/Music/$csf" -vf scale=-1:200 "$csil"
