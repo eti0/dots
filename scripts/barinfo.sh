@@ -89,7 +89,7 @@ battery() {
 
 
 while true ; do
-	echo "%{l}$padding$(desktops)$padding$(song)$bgc%{A:urxvtc -e 'ncmpcpp':}%{A3:mpc toggle:}ወወወ%{A}%{A} \
+	echo "%{l}$padding$(desktops)$padding%{A:art.sh:}$(song)%{A}$bgc%{A:urxvtc -e 'ncmpcpp':}%{A3:mpc toggle:}ወወወ%{A}%{A} \
 	      %{c}%{A:ndate.sh:}$(clock)%{A} \
 	      %{r}%{A:urxvtc -e 'htop':}$(cputemp)%{A}$padding%{A:urxvtc -e 'nmtui':}$(network)%{A}$padding%{A:urxvtc -e 'alsamixer':}$(sound)%{A}$padding$(battery)$padding"
 	sleep ".3s"
