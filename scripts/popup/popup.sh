@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# usage:
+# popup.sh [type] [program / file] [ geometry / placement ] -p [ pointer location ]
+# e.g.: popup.sh "term" "nmtui" "60x25+1056+42"
+# popup.sh "img" "rice.png" "10" -p "24"
 
 # vars
 pointer="/usr/scripts/popup/img/pointer.png"
