@@ -5,7 +5,7 @@ cil="/tmp/calendar.png"
 bg="/usr/scripts/popup/img/bg.png"
 
 # convert the output to png
-convert -background "#232e2f" \
+convert -background "rgba(0,0,0,0)" \
 		-fill white \
 		-font "erusfont" \
 		+antialias \
