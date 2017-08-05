@@ -8,4 +8,4 @@ source "/usr/scripts/colors.sh"
     -f '-wuncon-siji-*' \
     -g "x30" \
     -B "$bgn" \
-    | sh
+    | bash

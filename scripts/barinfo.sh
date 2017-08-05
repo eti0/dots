@@ -46,6 +46,26 @@ song() {
 }
 
 
+workspace() {
+	number=$(xdotool get_desktop | cut -c34)
+	wicon="$accent$text"
+
+	if [ "$number" = "0" ] ; then
+		echo "$wicon" "one"
+	elif [ "$number" = "1" ] ; then
+		echo "$wicon" "two"
+	elif [ "$number" = "2" ] ; then
+		echo "$wicon" "three"
+	elif [ "$number" = "3" ] ; then
+		echo "$wicon" "four"
+	elif [ "$number" = "4" ] ; then
+		echo "$wicon" "five"
+	else
+		echo "$number"
+	fi
+}
+
+
 desktops() {
 	cur=`xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'`
 	tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
@@ -89,8 +109,8 @@ battery() {
 
 
 while true ; do
-	echo "%{l}$padding$(desktops)$padding%{A:art.sh:}$(song)%{A}$bgc%{A:urxvtc -e 'ncmpcpp':}%{A3:mpc toggle:}ወወወ%{A}%{A} \
-	      %{c}%{A:ndate.sh:}$(clock)%{A} \
-	      %{r}%{A:urxvtc -e 'htop':}$(cputemp)%{A}$padding%{A:urxvtc -e 'nmtui':}$(network)%{A}$padding%{A:urxvtc -e 'alsamixer':}$(sound)%{A}$padding$(battery)$padding"
+	echo "%{l}$padding$(desktops)$padding%{A:cover.sh:}$(song)%{A}$bgc%{A:popup.sh "term" "ncmpcpp" "80x20+481+42":}%{A3:mpc toggle:}ወወወ%{A}%{A} \
+	      %{c}%{A:calendar.sh:}$(clock)%{A} \
+	      %{r}$padding%{A:popup.sh "term" "nmtui" "60x25+1056+42":}$(network)%{A}$padding%{A:popup.sh "term" "alsamixer" "60x25+1056+42":}$(sound)%{A}$padding$(battery)$padding"
 	sleep ".3s"
 done
