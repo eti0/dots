@@ -7,7 +7,7 @@
 # vars
 pointer="/usr/scripts/popup/img/pointer.png"
 
-# launch urxvt and nmtui
+# launch
 if [ "$1" == "img" ] ; then
 	n30f -t "popup" -x "$3" -y "40" -c "pkill -f 'pointer' && pkill -f 'n30f -t popup'" "$2" &
 else [ "$1" == "term" ]
