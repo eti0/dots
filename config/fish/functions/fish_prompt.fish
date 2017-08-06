@@ -27,7 +27,7 @@ function fish_prompt
   set -l green (set_color green)
   set -l normal (set_color normal)
 
-  set -l cwd $yellow(basename (pwd | sed "s:^$HOME:~:"))
+  set -l cwd $green(basename (pwd | sed "s:^$HOME:~:"))
   
   # Display [venvname] if in a virtualenv
   if set -q VIRTUAL_ENV
