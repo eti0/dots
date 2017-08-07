@@ -107,10 +107,35 @@ battery() {
 	fi
 }
 
+# not finished - can't be bothered
+weather() {
+	meteo=$(cat "/tmp/meteo.txt")
+
+	if [ "$meteo" == "mostly clear" ] ; then
+		echo $accent""$text "$meteo"
+	elif [ "$meteo" == "mostly clear" ] ; then
+		echo $accent""$text "$meteo"
+	elif [ "$meteo" == "mostly clear" ] ; then
+		echo $accent""$text "$meteo"
+	else
+		echo "no"
+	fi
+}
+
+window() {
+	cwindow=$(xdotool "getwindowfocus" "getwindowname" | head -c70)
+
+	if [ "$cwindow" == "Openbox" ] ; then
+		echo ""
+	else
+		echo $accent$text $cwindow
+	fi
+}
+
 
 while true ; do
 	echo "%{l}$padding$(desktops)$padding%{A:cover.sh:}$(song)%{A}$bgc%{A:popup.sh "term" "ncmpcpp" "80x20+481+40":}%{A3:mpc toggle:}ወወወ%{A}%{A} \
 	      %{c}%{A:calendar.sh:}$(clock)%{A} \
-	      %{r}$padding%{A:popup.sh "term" "nmtui" "60x25+1056+40":}$(network)%{A}$padding%{A:popup.sh "term" "alsamixer" "60x25+1056+40":}$(sound)%{A}$padding$(battery)$padding"
+	      %{r}$(window)$padding%{A:popup.sh "term" "nmtui" "60x25+1056+40":}$(network)%{A}$padding%{A:popup.sh "term" "alsamixer" "60x25+1056+40":}$(sound)%{A}$padding$(battery)$padding"
 	sleep ".3s"
 done

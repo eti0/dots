@@ -4,7 +4,7 @@
 
 # set the colors - change this to your liking
 set fg (set_color normal)
-set c1 (set_color yellow)
+set c1 (set_color green)
 set c2 (set_color white)
 
 
@@ -23,8 +23,8 @@ set init "runit"
 echo
 echo $userinf
 echo $c1"	os"$fg":        $os"
-echo "┌───╮ "$c1"	kernel"$fg":    $kernel"
-echo "│"$c1"•˩•"$fg"│"$c1"	shell"$fg":     $shell"
-echo "╰───┘"$c1"	init"$fg":      $init"
+echo "┌───┐ "$c1"	kernel"$fg":    $kernel"
+echo "│"$c1"•｣•"$fg"│"$c1"	shell"$fg":     $shell"
+echo "└───┘"$c1"	init"$fg":      $init"
 echo $c1"	wm"$fg":        $wm"
 echo
