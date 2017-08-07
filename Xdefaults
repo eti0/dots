@@ -23,15 +23,15 @@
 *.color8:       #808077
 
 ! red
-*.color1:       #cc6565
+*.color1:       #d99c9d
 *.color9:       #c8c8bd
 
 ! green
-*.color2:       #7fb36b
+*.color2:       #54bb6f
 *.color10:      #c8c8bb
 
 ! yellow
-*.color3:       #d99c9d
+*.color3:       #f2d091
 *.color11:      #b0b0c8
 
 ! blue
@@ -59,11 +59,11 @@
 *.perl-ext-common: default,matcher,selection-to-clipboard
 *.url-launcher: /usr/bin/chromium
 *.matcher.button: 3
-*.matcher.rend.0: fg5
+*.matcher.rend.0: fg4
 
 
 ! size
-*geometry: 80x25
+*geometry: 85x25
 
 
 ! padding
@@ -81,6 +81,7 @@ Xft.rgba: rgb
 
 ! cursor
 Xcursor.theme: ElCapitan
+Xcursor.size: 6
 
 
 ! rofi settings
@@ -88,7 +89,7 @@ rofi.color-enabled: true
 
 ! Property            Background      Foreground      Background Alt       Highlight BG      Highlight FG
 rofi.color-window:    #101617,        #FFFFFF,        #101617,             #c9c9c9,          #101617
-rofi.color-normal:    #101617,        #FFFFFF,        #101617,             #101617,          #d99c9d
+rofi.color-normal:    #101617,        #FFFFFF,        #101617,             #101617,          #54bb6f
 rofi.color-active:    #101617,        #FFFFFF,        #101617,             #c9c9c9,          #101617
 rofi.color-urgent:    #101617,        #DDDDDD,        #101617,             #c9c9c9,          #101617
 rofi.run-command: fish -c '{cmd}'
