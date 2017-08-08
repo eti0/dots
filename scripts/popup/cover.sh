@@ -9,7 +9,7 @@ csbil="/usr/scripts/popup/img/bg.png"
 ffmpeg -loglevel 0 -y -i "/home/eti/Music/$csf" -vf scale=-1:200 "$csil"
 
 # display it
-popup.sh "img" "$csbil" "10" -p "65" &
+popup.sh "img" "$csbil" "10" -p "76" &
 sleep "0.01s"
 n30f -t "coverp" -x "12" -y "42" -c "pkill -f 'n30f'" "$csil"
 
