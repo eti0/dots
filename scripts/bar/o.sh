@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
 # fetch the colors from colors.sh
-source "/usr/scripts/colors.sh"
+source "/usr/scripts/bar/colors.sh"
 
-/usr/scripts/barinfo.sh | lemonbar \
+/usr/scripts/bar/bar.sh | lemonbar \
     -f '-x-vanilla-*' \
     -f '-wuncon-siji-*' \
     -g "x30" \
-    -B "$bgn" \
     | bash
