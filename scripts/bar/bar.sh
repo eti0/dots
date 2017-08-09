@@ -71,7 +71,7 @@ battery() {
 		echo -n " $percent%"
 	else
 		if [ $percent -eq 100 ]; then
-			echo -n "$ $percent%"
+			echo -n " $percent%"
 		elif [ $percent -gt 80 ] ; then
 			echo -n " $percent%"
 		elif [ $percent -gt 50 ]; then
@@ -85,6 +85,6 @@ battery() {
 while true ; do
 	echo "%{A1:mpc toggle:}$a0%{l}$p$(desktops)$p%{A}%{A3:cover.sh:}%{A:popup.sh "term" "ncmpcpp" "80x20+481+40":}$a1$(song)%{A}%{A}$(window)$bg\
 	%{c}$p%{A:calendar.sh:}$(clock)%{A}$p\
-	%{r}%{A:popup.sh "term" "nmtui" "60x25+1056+40":}$a2$p$(network)$p%{A}%{A:popup.sh "term" "alsamixer" "60x25+1056+40":}$a1$p$(sound)$p%{A}$a0$p$(battery)$p$bg"
+	%{r}%{A:popup.sh "term" "nmtui" "60x25+994+40":}$a2$p$(network)$p%{A}%{A:popup.sh "term" "alsamixer" "60x25+994+40":}$a1$p$(sound)$p%{A}$a0$p$(battery)$p$bg"
 	sleep ".2s"
 done

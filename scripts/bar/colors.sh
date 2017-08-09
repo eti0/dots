@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-Ob
+
 # colors
 text="#fff"
 warning="#e17878"
