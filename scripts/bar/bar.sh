@@ -29,7 +29,7 @@ song() {
 
 clock() {
 	datetime=$(date "+%a %R")
-	echo  $datetime
+	echo $datetime
 }
 
 window() {
@@ -57,9 +57,9 @@ network() {
 sound() {
 	level=$(amixer get Master 2>&1 | awk '/Front Left:/{gsub(/[\[\]]/, "", $5); print $5}')
 	if [ "$level" == "0%" ]; then
-		echo $wrn$txt muted
+		echo $wrn$txt
 	else
-		echo  $level
+		echo  $level
 	fi
 }
 

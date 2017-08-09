@@ -9,7 +9,7 @@ pointer="/usr/scripts/popup/img/pointer.png"
 
 # launch
 if [ "$1" == "img" ] ; then
-	n30f -t "popup" -x "$3" -y "40" -c "pkill -f 'pointer' && pkill -f 'n30f -t popup'" "$2" &
+	n30f -t "popup" -x "$3" -y "40" -c "pkill -f 'n30f -t pointer' && pkill -f 'n30f -t popup'" "$2" &
 else [ "$1" == "term" ]
 	urxvt -name "popup" -g "$3" -bd "white" -b "2" -e "$2" &
 fi
