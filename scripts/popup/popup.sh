@@ -16,7 +16,7 @@ fi
     
 # pointer
 if [ "$4" == "-p" ] ; then
-	n30f -t "pointer" -x "$5" -y "34" -c "pkill -f 'n30f -t popup' && pkill -f '$2' && pkill -f 'pointer'" "$pointer"
+	n30f -t "pointer" -x "$5" -y "34" -c "pkill -f 'n30f' && pkill -f '$2' && pkill -f 'pointer'" "$pointer"
 else
 	exit
 fi
