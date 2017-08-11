@@ -5,8 +5,8 @@
 !
 
 ! fonts
-*font: -x-vanilla-*
-*boldFont: -x-vanilla-*
+*font: -uw-ttyp0-*
+*boldFont: -uw-ttyp0-*
 
 ! disable urxvts ugly scrollbar
 *scrollBar: false
@@ -15,40 +15,40 @@
 ! colorscheme
 ! special
 *.foreground:   #ffffff
-*.background:   #232e2f
+*.background:   #051519
 *.cursorColor:  #ffffff
 
 ! black
-*.color0:       #232e2f
-*.color8:       #808077
+*.color0:       #333333
+*.color8:       #3d3d3d
 
 ! red
-*.color1:       #d99c9d
-*.color9:       #c8c8bd
+*.color1:       #f8818e
+*.color9:       #fb3d66
 
 ! green
-*.color2:       #54bb6f
-*.color10:      #c8c8bb
+*.color2:       #92d3a2
+*.color10:      #6bb48d
 
 ! yellow
-*.color3:       #f2d091
-*.color11:      #b0b0c8
+*.color3:       #1a8e63
+*.color11:      #30c85a
 
 ! blue
-*.color4:       #8b9f9e
-*.color12:      #c8c8c8
+*.color4:       #8ed0ce
+*.color12:      #39a7a2
 
 ! magenta
-*.color5:       #ce8282
-*.color13:      #c5c8bf
+*.color5:       #5e468c
+*.color13:      #7e62b3
 
 ! cyan
-*.color6:       #76b88c
-*.color14:      #c2c8c1
+*.color6:       #31658c
+*.color14:      #6096bf
 
 ! white
-*.color7:       #b8b8b8
-*.color15:      #eeeeee
+*.color7:       #e2d8cd
+*.color15:      #e2d8cd
 
 
 ! cursor
@@ -63,7 +63,7 @@
 
 
 ! size
-*geometry: 85x25
+*geometry: 80x25
 
 
 ! padding
@@ -88,9 +88,9 @@ Xcursor.size: 6
 rofi.color-enabled: true
 
 ! Property            Background      Foreground      Background Alt       Highlight BG      Highlight FG
-rofi.color-window:    #101617,        #FFFFFF,        #101617,             #c9c9c9,          #101617
-rofi.color-normal:    #101617,        #FFFFFF,        #101617,             #101617,          #54bb6f
-rofi.color-active:    #101617,        #FFFFFF,        #101617,             #c9c9c9,          #101617
-rofi.color-urgent:    #101617,        #DDDDDD,        #101617,             #c9c9c9,          #101617
+rofi.color-window:    #051519,        #FFFFFF,        #051519,             #c9c9c9,          #051519
+rofi.color-normal:    #051519,        #FFFFFF,        #051519,             #051519,          #54bb6f
+rofi.color-active:    #051519,        #FFFFFF,        #051519,             #c9c9c9,          #051519
+rofi.color-urgent:    #051519,        #DDDDDD,        #051519,             #c9c9c9,          #051519
 rofi.run-command: fish -c '{cmd}'
 rofi.run-list-command: 'fish -c functions'
