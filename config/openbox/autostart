@@ -1,5 +1,5 @@
 # compton
-compton --config ~/.config/compton.conf -f --vsync opengl &
+compton --config ~/.config/compton.conf -Ccf --vsync opengl &
 
 # set the gamma
 xgamma -gamma 0.85 &
@@ -28,8 +28,8 @@ mpd &
 # clipmenu
 clipmenud &
 
-# mpd scrobbler
-mpdas &
+# welcome message
+sleep 4s && notify-send "welcome home" &
 
-# nm
-sudo nm-applet
+# mpd scrobbler
+sleep 1m && mpdas -c /home/eti/.mpdasrc &
