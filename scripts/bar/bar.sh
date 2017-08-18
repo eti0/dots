@@ -17,8 +17,8 @@ desktops() {
 }
 
 song() {
-	csong=$(mpc current)
-	playing=$(mpc status | grep -o 'playing')
+	csong=$(mpc current | head -c50)
+	playing=$(mpc status | grep -o 'playing' )
 
 	if [ "$playing" == "playing" ]; then
 		echo "   $csong  "
@@ -74,7 +74,7 @@ battery() {
 			echo -n " $percent%"
 		elif [ $percent -gt 80 ] ; then
 			echo -n " $percent%"
-		elif [ $percent -gt 50 ]; then
+		elif [ $percent -gt 30 ]; then
 			echo -n " $percent%"
 		else 
 			echo -n " $percent%"
