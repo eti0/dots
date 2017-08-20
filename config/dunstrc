@@ -37,7 +37,7 @@
     per_monitor_dpi = false
 
 [frame]
-    width = 1
+    width = 2
     color = "#ebf1f2"
 
 [shortcuts]
