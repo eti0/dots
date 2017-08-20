@@ -33,7 +33,7 @@ chatnets = {
   rizon = {
     type = "IRC";
     sasl_mechanism = "plain";
-    sasl_username = "";
+    sasl_username = "eti";
     sasl_password = "";
   };
   nixers = { type = "IRC"; };

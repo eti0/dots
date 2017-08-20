@@ -63,7 +63,7 @@ abstracts = {
   ##
 
   # text to insert at the beginning of each non-message line
-  line_start = "%y——%n ";
+  line_start = "%g——%n ";
 
   # timestamp styling, nothing by default
   timestamp = "$*";
@@ -140,7 +140,7 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1-}";
-  ownnick = "%y$*%n";
+  ownnick = "%g$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1-}";
@@ -175,7 +175,7 @@ abstracts = {
   ##
 
   # used internally by this theme
-  action_core = "%y— $0%n$1";
+  action_core = "%g— $0%n$1";
 
   # generic one that's used by most actions
   action = "{action_core $*} ";
@@ -273,7 +273,7 @@ abstracts = {
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = "        %y—%n ";
+  prompt = "        %g—%n ";
 
   sb = "$* ";
   sbmode = "";
