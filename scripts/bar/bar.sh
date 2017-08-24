@@ -16,6 +16,18 @@ desktops() {
 	echo $line
 }
 
+window() {
+	cwindow=$(xdotool "getwindowfocus" "getwindowname" | head -c50)
+
+	if [ "$cwindow" == "Openbox" ] ; then
+		echo ""
+	elif [ "$(song)" == "" ] ; then
+		echo "$a1   $cwindow  "
+	else
+		echo "$a2   $cwindow  "
+	fi
+}
+
 song() {
 	csong=$(mpc current | head -c50)
 	playing=$(mpc status | grep -o 'playing' )
@@ -32,16 +44,8 @@ clock() {
 	echo $datetime
 }
 
-window() {
-	cwindow=$(xdotool "getwindowfocus" "getwindowname" | head -c50)
-
-	if [ "$cwindow" == "Openbox" ] ; then
-		echo ""
-	elif [ "$(song)" == "" ] ; then
-		echo "$a1   $cwindow  "
-	else
-		echo "$a2   $cwindow  "
-	fi
+weather() {
+	cat "/tmp/fweather"
 }
 
 network() {
@@ -85,6 +89,6 @@ battery() {
 while true ; do
 	echo "%{A1:mpc toggle:}$a0%{l}$p$(desktops)$p%{A}%{A3:cover.sh:}%{A:popup.sh "term" "ncmpcpp" "80x20+481+40":}$a1$(song)%{A}%{A}$(window)$bg\
 	%{c}$p%{A:calendar.sh:}$(clock)%{A}$p\
-	%{r}%{A:popup.sh "term" "nmtui" "60x25+994+40":}$a2$p$(network)$p%{A}%{A:popup.sh "term" "alsamixer" "60x25+994+40":}$a1$p$(sound)$p%{A}$a0$p$(battery)$p$bg"
+	%{r}$a3$p$(weather)$p$a3%{A:popup.sh "term" "nmtui" "60x25+994+40":}$a2$p$(network)$p%{A}%{A:popup.sh "term" "alsamixer" "60x25+994+40":}$a1$p$(sound)$p%{A}$a0$p$(battery)$p$bg"
 	sleep ".2s"
 done
