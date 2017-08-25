@@ -11,7 +11,11 @@ wcond() {
 
 	if [ "$cond" == "(no conditions matched your header list, try with --verbose)" ] ; then
 		cond=$(weather -qm --headers="Weather" "$station" | sed "s/Weather: //")
-		echo "$cond"
+		if [ "$cond" == "(no conditions matched your header list, try with --verbose)" ] ; then
+			echo "condition unavailable"
+		else
+			echo "$cond"
+		fi
 	else
 		echo "$cond"
 	fi
