@@ -24,7 +24,7 @@ echo
 echo $userinf
 echo $c1"	os"$fg":        $os"
 echo "┌───┐ "$c1"	kernel"$fg":    $kernel"
-echo "│"$c1"•｣•"$fg"│"$c1"	shell"$fg":     $shell"
+echo "│"$c1"•˩•"$fg"│"$c1"	shell"$fg":     $shell"
 echo "└───┘"$c1"	init"$fg":      $init"
 echo $c1"	wm"$fg":        $wm"
 echo

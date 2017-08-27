@@ -8,5 +8,6 @@ elif [ "$1" = "s" ] ; then
 elif [ "$1" = "r" ] ; then
 	sudo xbps-remove "${@:2}"
 else
-	echo "exit: no arguments given"
+	echo "no arguments given"
+	exit 1
 fi
