@@ -1,6 +1,6 @@
 # titlebars
 border.width: 0
-window.inactive.border.color: #eeeeee
+window.inactive.border.color: #fcfcfc
 window.active.border.color: #ffffff
 padding.height: 10
 padding.width: 7
@@ -8,18 +8,18 @@ padding.width: 7
 
 # menu
 menu.items.active.bg: Solid Flat
-menu.items.active.bg.color: #051519
-menu.items.active.text.color: #54bb6f
+menu.items.active.bg.color: #ffffff
+menu.items.active.text.color: #92d3a2
 menu.items.bg: Flat Solid
-menu.items.bg.color: #051519
+menu.items.bg.color: #ffffff
 menu.items.disabled.text.color: #999
-menu.items.text.color: #ffffff
+menu.items.text.color: #051519
 menu.border.width: 15
-menu.border.color: #051519
-menu.separator.color: #051519
+menu.border.color: #ffffff
+menu.separator.color: #ffffff
 menu.title.bg: Solid Flat
-menu.title.bg.color: #051519
-menu.title.text.color: #ffffff
+menu.title.bg.color: #ffffff
+menu.title.text.color: #051519
 menu.title.text.justify: Center
 
 
@@ -36,18 +36,19 @@ window.handle.width: 0
 
 # active window
 window.active.*.bg: Solid Flat
-window.active.*.bg.color: #54bb6f
-window.active.button.*.bg.color: #54bb6f
-window.active.button.hover.image.color: #41a45c
-window.active.button.pressed.image.color: #41a45c
-window.active.button.toggled.image.color: #3d8750
-window.active.button.unpressed.image.color: #3d8750
+window.active.*.bg.color: #92d3a2
+window.active.button.*.bg.color: #92d3a2
+window.active.button.hover.image.color: #000000
+window.active.button.pressed.image.color: #ffffff
+window.active.button.toggled.image.color: #4b9b5f
+window.active.button.unpressed.image.color: #4b9b5f
 
 
 # inactive window
 window.inactive.*.bg: Solid Flat
-window.inactive.*.bg.color: #5ebb76
-window.inactive.button.*.bg.color: #5ebb76
-window.inactive.button.hover.image.color: #54bb6f
-window.inactive.button.toggled.image.color: #448755
-window.inactive.button.unpressed.image.color: #448755
+window.inactive.*.bg.color: #0a2126
+window.inactive.button.*.bg.color: #0a2126
+window.inactive.button.hover.image.color: #ffffff
+window.inactive.button.pressed.image.color: #ffffff
+window.inactive.button.toggled.image.color: #0a2126
+window.inactive.button.unpressed.image.color: #0a2126
