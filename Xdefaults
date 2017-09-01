@@ -5,8 +5,8 @@
 !
 
 ! fonts
-*font:				-artwiz-drift-*
-*boldFont:			-artwiz-drift-*
+*font:				-kakwa-kakwafont-*
+*boldFont:			-kakwa-kakwafont-*
 
 ! disable the scrollbar
 *scrollBar:			false
