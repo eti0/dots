@@ -2,4 +2,4 @@
 
 cd "/home/eti/Music/dl/yt"
 
-youtube-dl -x --audio-format "flac" "$1"
+youtube-dl -x --audio-format "mp3" "$@"
