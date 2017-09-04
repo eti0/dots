@@ -12,9 +12,9 @@ mpd_port = "7755"
 
 
 # display
-song_list_format = "$0%t $R$0%A "
-song_columns_list_format = "(3)[]{}(92)[white]{t} (4)[yellow]{l}"
-song_status_format = " $3%t $0"
+song_list_format = "$0%t"
+song_columns_list_format = "(5)[white]{}(55)[white]{t}"
+song_status_format = "$3%t"
 playlist_display_mode = "columns" (classic/columns)
 
 
