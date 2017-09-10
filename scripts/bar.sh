@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # source the colors from colors.sh
-source "/usr/scripts/bar/colors.sh"
+source "/usr/scripts/colors.sh"
 
 # vars
 p="  "
@@ -89,9 +89,9 @@ battery() {
 
 loop() {
 	while :; do
-		echo "%{A1:mpc toggle:}$a0%{l}$p$(desktops)$p%{A}%{A3:cover.sh:}%{A:popup.sh "term" "ncmpcpp" "80x20+481+40":}$a1$(song)%{A}%{A}$(window)$bg\
-		%{c}$p%{A:calendar.sh:}$(clock)%{A}$p\
-		%{r}$a3$p$(weather)$p$a3%{A:popup.sh "term" "nmtui" "60x25+994+40":}$a2$p$(network)$p%{A}%{A:popup.sh "term" "alsamixer" "60x25+994+40":}$a1$p$(sound)$p%{A}$a0$p$(battery)$p$bg"
+		echo "%{A1:popup.sh "term" "ncmpcpp" "80x20+711+40" &:}%{A3:mpc toggle &:}$a0%{l}$p$(desktops)$p%{A}%{A}%{A:cover.sh &:}$a1$(song)%{A}$(window)$bg\
+		%{c}$p%{A:calendar.sh &:}$(clock)%{A}$p\
+		%{r}$a2$p$(weather)$p$a0$p$(sound)$p$bg"
 		sleep ".2s"
 	done |\
 	

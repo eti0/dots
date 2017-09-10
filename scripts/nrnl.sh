@@ -4,7 +4,7 @@
 
 # set the colors - change this to your liking
 set fg (set_color normal)
-set c1 (set_color green)
+set c1 (set_color red)
 set c2 (set_color white)
 
 

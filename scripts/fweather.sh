@@ -2,7 +2,7 @@
 
 # vars
 tmpf="/tmp/fweather"
-station="EGSC"
+station="LFBD"
 temp=$(weather --no-cache -qm --headers="Temperature" "$station" | sed "s/Temperature: //" | sed "s/ //" | sed "s/C/°C/")
 
 

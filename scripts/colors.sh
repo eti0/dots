@@ -13,18 +13,11 @@ txt="%{F$text}"
 wrn="%{F$warning}"
 
 # accents
-acc0="#6bb48d"
-acc1="#7bbc99"
-acc2="#8cc5a6"
-acc3="#9dcdb3"
-acc4="#aed6c0"
-
-# accents - inverted
-# acc0="#ffce96"
-# acc1="#ffc88a"
-# acc2="#ffc27d"
-# acc3="#ffbb6f"
-# acc4="#ffd4a3"
+acc0="#f8818e"
+acc1="#f88b98"
+acc2="#f995a1"
+acc3="#f99fa9"
+acc4="#faa8b2"
 
 a0="%{B$acc0}"
 a1="%{B$acc1}"
