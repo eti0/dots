@@ -46,10 +46,10 @@ wm
 init
 cat <<EOF
 
-$user$f2@$rst$host
+$user${f2}@${rst}$host
 
-         ${f2}os${rst}:          ${os}
-┌───┐    ${f2}kernel${rst}:      ${kernel}
+         ${f2}os${rst}:          $os
+┌───┐    ${f2}kernel${rst}:      $kernel
 │${f2}•˩•${rst}│    ${f2}shell${rst}:       $shell
 └───┘    ${f2}init${rst}:        $init
          ${f2}wm${rst}:          $wm
