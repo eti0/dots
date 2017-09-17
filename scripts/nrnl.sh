@@ -20,8 +20,6 @@ kernel=${kernel%-*}
 shell=$(basename $SHELL)
 os() {
 	os=$(source /etc/os-release && echo $ID)
-	os=${os##*/}
-	os=${os%-*}
 	export os
 }
 wm() {
