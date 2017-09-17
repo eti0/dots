@@ -41,6 +41,7 @@ song() {
 
 clock() {
 	datetime=$(date "+%a %R")
+	
 	echo $datetime
 }
 
@@ -60,7 +61,9 @@ network() {
 
 sound() {
 	level=$(amixer get Master 2>&1 | awk '/Front Left:/{gsub(/[\[\]]/, "", $5); print $5}')
-	if [ "$level" == "0%" ]; then
+	muted=$(amixer get Master | grep -o off | tail -n1)
+	
+	if [ "$muted" == "off" ]; then
 		echo $wrn$txt
 	else
 		echo  $level
