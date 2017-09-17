@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # nrnl.sh - displays sys info
 
-# colors (algorithm by lolilolicon)
+# colors
 f=3 b=4
 for j in f b; do
 	for i in {0..7}; do
@@ -16,6 +16,7 @@ inv=$'\e[7m'
 user=$(whoami)
 host=$(hostname)
 kernel=$(uname -r)
+kernel=${kernel%-*}
 shell=$(basename $SHELL)
 os() {
 	os=$(source /etc/os-release && echo $ID)
@@ -30,7 +31,7 @@ wm() {
 	wm=${wm/*_NET_WM_NAME = }
 	wm=${wm/\"}
 	wm=${wm/\"*}
-	wm=${wm,,} # use this to output in lowercase
+	wm=${wm,,}
 	export wm
 }
 init() {
@@ -46,12 +47,16 @@ wm
 init
 cat <<EOF
 
-$user${f2}@${rst}$host
+$user${f1}@${rst}$host
 
-         ${f2}os${rst}:          $os
-┌───┐    ${f2}kernel${rst}:      $kernel
-│${f2}•˩•${rst}│    ${f2}shell${rst}:       $shell
-└───┘    ${f2}init${rst}:        $init
-         ${f2}wm${rst}:          $wm
+         ${f1}os${rst}:          $os
+┌───┐    ${f1}kernel${rst}:      $kernel
+│${f1}•˩•${rst}│    ${f1}shell${rst}:       $shell
+└───┘    ${f1}init${rst}:        $init
+         ${f1}wm${rst}:          $wm
 
 EOF
+
+# blocks
+pcs() { for i in {0..7}; do echo -en "\e[${1}$((30+$i))m \u2588\u2588 \e[0m"; done; }
+printf "\n%s\n%s\n\n" "$(pcs)" "$(pcs '1;')"
