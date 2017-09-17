@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#
 # nrnl.sh - displays sys info
 
 # colors (algorithm by lolilolicon)
@@ -37,6 +36,7 @@ wm() {
 init() {
 	init=$(readlink /sbin/init)
 	init=${init##*/}
+	init=${init%%-*}
 	export init
 }
 
