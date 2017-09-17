@@ -19,7 +19,7 @@ host=$(hostname)
 kernel=$(uname -r)
 shell=$(basename $SHELL)
 os() {
-	os=$(find /etc -mindepth 1 -maxdepth 1 ! -type l | grep release)
+	os=$(source /etc/os-release && echo $ID)
 	os=${os##*/}
 	os=${os%-*}
 	export os
