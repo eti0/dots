@@ -89,7 +89,7 @@ rofi.color-enabled:	true
 
 ! Property            Background      Foreground      Background Alt       Highlight BG      Highlight FG
 rofi.color-window:    #051519,        #FFFFFF,        #051519,             #c9c9c9,          #051519
-rofi.color-normal:    #051519,        #FFFFFF,        #051519,             #051519,          #92d3a2
+rofi.color-normal:    #051519,        #FFFFFF,        #051519,             #051519,          #f8818e
 rofi.color-active:    #051519,        #FFFFFF,        #051519,             #c9c9c9,          #051519
 rofi.color-urgent:    #051519,        #DDDDDD,        #051519,             #c9c9c9,          #051519
 rofi.run-command:	fish -c '{cmd}'
