@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
-maim -s --hidecursor ~/Pictures/Screenshots/$(date +%F-%T).png
+maim -s --hidecursor "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 
-notify-send "window screenshot taken"
+if [ "$?" == "1"  ] ; then
+	:
+else
+	notify-send "window screenshot taken"
+fi
