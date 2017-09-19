@@ -2,13 +2,10 @@
 compton -Ccf &
 
 # set the gamma
-xgamma -gamma 0.85 &
+xgamma -gamma 0.8 &
 
 # fonts
-fonts.sh &
-
-# touchpad
-touchpad.sh &
+/usr/scripts/fonts.sh &
 
 # beep off
 xset -b &
@@ -20,16 +17,13 @@ urxvtd &
 ./.fehbg &
 
 # bar
-sleep 2s && bar.sh &
+sleep 1s && /usr/scripts/bar.sh &
 
 # start mpd
 mpd &
 
 # clipmenu
 clipmenud &
-
-# welcome message
-sleep 4s && notify-send "welcome home" &
 
 # mpd scrobbler
 sleep 1m && mpdas -c /home/eti/.mpdasrc &
