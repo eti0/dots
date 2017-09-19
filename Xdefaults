@@ -8,6 +8,7 @@
 *font:				-kakwa-kakwafont-*
 *boldFont:			-kakwa-kakwafont-*
 
+
 ! disable the scrollbar
 *scrollBar:			false
 

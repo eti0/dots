@@ -24,9 +24,11 @@ wcond() {
 
 icon() {
 	weather=$(weather --no-cache -qm --headers="Weather" "$station" | sed "s/Weather: //")
-	
-	if [[ "$ctime" -le "07" || "$ctime" -ge "20" ]] ; then
-	 	ico=" "
+
+	if [ "$(wcond)" == "condition unavailable" ] ; then
+		:
+	elif [[ "$ctime" -le "07" || "$ctime" -ge "20" ]] ; then
+	 	ico=" "
 		echo "$ico"
 	elif [ "$weather" == "light rain" ] ; then
 		ico=""
