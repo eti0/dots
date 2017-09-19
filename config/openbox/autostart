@@ -1,5 +1,5 @@
 # compton
-compton --config ~/.config/compton.conf -Ccf --vsync opengl &
+compton -Ccf &
 
 # set the gamma
 xgamma -gamma 0.85 &
