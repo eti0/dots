@@ -10,6 +10,9 @@ xgamma -gamma 0.8 &
 # beep off
 xset -b &
 
+# screensaver off
+xset s off &
+
 # urxvt daemon
 urxvtd &
 
@@ -29,4 +32,7 @@ clipmenud &
 sleep 1m && mpdas -c /home/eti/.mpdasrc &
 
 # weather for the bar
-/usr/scripts/fweather.sh
+/usr/scripts/fweather.sh &
+
+# reload resources
+xrdb /home/eti/.Xdefaults &
