@@ -68,7 +68,7 @@
 
 
 ! padding
-*internalBorder:	20
+*internalBorder:	30
 
 
 ! xft fonts settings

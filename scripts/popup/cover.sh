@@ -6,7 +6,7 @@ csil="/tmp/cover.png"
 csbil="/usr/scripts/popup/img/bg.png"
 
 # extract the album art
-ffmpeg -loglevel 0 -y -i "/home/eti/Music/$csf" -vf scale=-1:200 "$csil"
+ffmpeg -loglevel 0 -y -i "$HOME/Music/$csf" -vf scale=-1:200 "$csil"
 
 # display it
 sleep ".1s"
