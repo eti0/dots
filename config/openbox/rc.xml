@@ -19,6 +19,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
+	<cornerRadius>8</cornerRadius>
     <name>c</name>
     <titleLayout>IMC</titleLayout>
     <animateIconify>no</animateIconify>
@@ -100,20 +101,15 @@
     <showDelay>300</showDelay>
   </dock>
   <keyboard>
-    <!-- tiling keybinds -->
+    <keybind key="C-A-l">
+      <action name="Execute">
+        <name>lock</name>
+        <command>/usr/scripts/lock.sh</command>
+      </action>
+    </keybind>
     <keybind key="C-W-c">
       <action name="Execute">
-        <command>center.sh</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-x">
-      <action name="Execute">
-        <command>rtile.rb --cycle</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-z">
-      <action name="Execute">
-        <command>rtile.rb --all-binary</command>
+        <command>/usr/scripts/center.sh</command>
       </action>
     </keybind>
     <keybind key="A-F1">
@@ -206,12 +202,12 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>maim.sh</command>
+        <command>/usr/scripts/scr.sh</command>
       </action>
     </keybind>
     <keybind key="A-Print">
       <action name="Execute">
-        <command>maimw.sh</command>
+        <command>/usr/scripts/scrw.sh</command>
       </action>
     </keybind>
     <keybind key="A-Tab">
@@ -478,10 +474,8 @@
       <decor>no</decor>
       <layer>above</layer>
     </application>
-    <!--
     <application class="*">
       <decor>no</decor>
     </application>
-    -->
   </applications>
 </openbox_config>
