@@ -92,7 +92,7 @@ battery() {
 
 loop() {
 	while :; do
-		echo "%{A1:popup.sh "term" "ncmpcpp" "60x20+760+40" &:}%{A3:mpc toggle &:}$a0%{l}$p$(desktops)$p%{A}%{A}%{A:cover.sh &:}$a1$(song)%{A}$(window)$bg\
+		echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+760+40" &:}%{A3:mpc toggle &:}$a0$p$(desktops)$p%{A}%{A}%{A:cover.sh &:}$a1$(song)%{A}$(window)$bg\
 		%{c}$p%{A:calendar.sh &:}$(clock)%{A}$p\
 		%{r}$a2$p$(weather)$p$a0$p$(sound)$p$bg"
 		sleep ".2s"

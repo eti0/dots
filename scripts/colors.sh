@@ -29,4 +29,5 @@ af0="%{F$acc0}"
 af1="%{F$acc1}"
 af2="%{F$text}"
 
+bgt="%{B$text}"
 bgf="%{F$background}"
