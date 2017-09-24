@@ -51,7 +51,13 @@ icon() {
 }
 
 while true ; do
-	echo "$(icon)$temp - $(wcond)" > "$tmpf"
-	cat "$tmpf"
-	sleep "15m"
+	if [ "$(wcond)" == "condition unavailable" ] ; then
+		echo " $temp" > "$tmpf"
+		cat "$tmpf"
+		sleep "15m"
+	else
+		echo "$(icon)$temp - $(wcond)" > "$tmpf"
+		cat "$tmpf"
+		sleep "15m"
+	fi
 done
