@@ -3,6 +3,7 @@
 
 icon="/usr/scripts/lock/lock.png"
 scr="/tmp/screen.png"
+fscr="/tmp/screen.jpg"
 
 (( $# )) && { icon=$1; }
 
@@ -10,11 +11,11 @@ scr="/tmp/screen.png"
 maim "$scr"
 
 # blur the screenshot and add the lock icon to it
-convert "$scr" -blur "0x8" "$scr"
-convert "$scr" "$icon" -gravity "center" -composite -matte "$scr"
+convert "$scr" -blur "0x8" -quality "0" "$fscr"
+convert "$fscr" "$icon" -gravity "center" -composite -matte -quality "0" "$scr"
 
 # execute the i3lock
 i3lock -u -i "$scr"
 
 # remove the file when done
-rm "$scr"
+rm "$scr" "$fscr"
