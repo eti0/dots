@@ -7,7 +7,7 @@
 mode = normal
  
 # Framerate Default: 60. Accepts only non-negative values.
-framerate = 40
+framerate = 50
 
 # Sensitivity in  %. If you think the bars are to low/response is to little, try
 # increasing this value 200 means double height. Accepts only non-negative values.
@@ -47,14 +47,14 @@ higher_cutoff_freq = 8000
 # 
 # for alsa 'source' will be the capture device. Default: 'hw:Loopback,1'
 # for fifo 'source' will be the path to fifo-file. Default: '/tmp/mpd.fifo' 
-method = pulse
-source = auto
+# method = pulse
+# source = auto
 
 # method = alsa  
 # source = hw:Loopback,1 
 
-; method = fifo
-; source = /tmp/mpd.fifo
+# method = fifo
+# source = /tmp/mpd.fifo
 
 
 

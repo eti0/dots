@@ -40,8 +40,8 @@ window.active.*.bg.color: #f8818e
 window.active.button.*.bg.color: #f8818e
 window.active.button.hover.image.color: #000000
 window.active.button.pressed.image.color: #ffffff
-window.active.button.toggled.image.color: #c3505e
-window.active.button.unpressed.image.color: #c3505e
+window.active.button.toggled.image.color: #ffffff
+window.active.button.unpressed.image.color: #ffffff
 
 
 # inactive window

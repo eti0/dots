@@ -71,18 +71,8 @@
 *internalBorder:	30
 
 
-! xft fonts settings
-Xft.autohint:		0
-Xft.lcdfilter:		lcddefault
-Xft.hinting:		1
-Xft.hintstyle:		hintslight
-Xft.antialias:		1
-Xft.rgba:			rgb
-
-
 ! cursor
 Xcursor.theme:		ElCapitan
-Xcursor.size:		6
 
 
 ! rofi settings
