@@ -6,12 +6,15 @@
     "colorscheme": "sol",
     "cursorline": true,
     "eofnewline": false,
+    "fileformat": "unix",
+    "fishfmt": true,
     "ftoptions": true,
     "ignorecase": false,
     "indentchar": " ",
     "infobar": true,
     "keepautoindent": false,
     "linter": true,
+    "mouse": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
     ],

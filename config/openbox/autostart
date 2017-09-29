@@ -11,6 +11,7 @@ xgamma -gamma 0.8 &
 xset -b &
 
 # screensaver off
+xset -dpms &
 xset s off &
 
 # urxvt daemon

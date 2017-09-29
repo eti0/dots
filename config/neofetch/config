@@ -12,6 +12,8 @@ print_info() {
     info "cpu" cpu
     info "ram" memory
 
+	info line_break
+
     # info line_break
     # info cols
     # info line_break
