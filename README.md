@@ -1,1 +1,1 @@
-![rice](https://x.eti.tf/IVVG3.png)
+![rice](https://x.eti.tf/iPXEt.png)
