@@ -45,6 +45,9 @@ icon() {
 	elif [ "$(wcond)" == "clear" ] ; then
 		ico=""
 		echo "$ico "
+	elif [ "$weather" == "patches of fog" ] ; then
+	 	ico=" "
+		echo "$ico"
 	else
 		:
 	fi
