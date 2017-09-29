@@ -15,10 +15,12 @@ monw=$(xdotool "getdisplaygeometry" | awk '{print $1;}')
 
 if [ $pid ] ; then
 	sed -i "s/<top>60<\/top>/<top>30<\/top>/g" "$HOME/.config/openbox/rc.xml"
+	sed -i "s/YPOS=\"60\"/YPOS=\"30\"/" "/usr/scripts/vol.sh"
 	openbox --reconfigure
 	kill -9 "$pid"
 else
 	sed -i "s/<top>30<\/top>/<top>60<\/top>/g" "$HOME/.config/openbox/rc.xml"
+	sed -i "s/YPOS=\"30\"/YPOS=\"60\"/" "/usr/scripts/vol.sh"
 	openbox --reconfigure
 
 	# since lemonbar is ugly on startup (empty spaces)
