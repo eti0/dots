@@ -11,7 +11,7 @@ fscr="/tmp/screen.jpg"
 maim "$scr"
 
 # blur the screenshot and add the lock icon to it
-convert "$scr" -blur "0x8" -quality "0" "$fscr"
+convert "$scr" -blur "0x6" -quality "0" "$fscr"
 convert "$fscr" "$icon" -gravity "center" -composite -matte -quality "0" "$scr"
 
 # execute the i3lock

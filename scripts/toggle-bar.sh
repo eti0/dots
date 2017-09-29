@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 # toggle the bar
 
-pid=$(pidof lemonbar)
+source "/usr/scripts/colors.sh"
+
+pid=$(pidof "lemonbar")
+tmpimg="/tmp/toggle.png"
+monw=$(xdotool "getdisplaygeometry" | awk '{print $1;}')
 
 if [ $pid ]; then
 	sed -i "s/<top>60<\/top>/<top>30<\/top>/g" "$HOME/.config/openbox/rc.xml"
@@ -10,7 +14,8 @@ if [ $pid ]; then
 else
 	sed -i "s/<top>30<\/top>/<top>60<\/top>/g" "$HOME/.config/openbox/rc.xml"
 	openbox --reconfigure
-	n30f "/usr/scripts/toggle-bar.png" &
+	convert -size "$monwx30" "xc:$background" "$tmpimg"
+	n30f "$tmpimg" &
 	/usr/scripts/bar.sh &
 	sleep ".5s" && kill -9 "$(pidof n30f)"
 fi

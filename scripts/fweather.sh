@@ -36,7 +36,7 @@ icon() {
 	elif [ "$weather" == "showers in the vicinity" ] ; then
 		ico=""
 		echo "$ico "
-	elif [[ "$(wcond)" == "mostly cloudy" || "$(wcond)" == "mostly clear"  ]] ; then
+	elif [[ "$(wcond)" == "mostly cloudy" ||  "$(wcond)" == "partly cloudy" || "$(wcond)" == "mostly clear"  ]] ; then
 		ico=""
 		echo "$ico "
 	elif [ "$(wcond)" == "overcast" ] ; then
@@ -51,7 +51,7 @@ icon() {
 }
 
 while true ; do
-	if [ "$(wcond)" == "condition unavailable" ] ; then
+	if [[ "$(wcond)" == "condition unavailable" || "$(wcond)" == "" ]] ; then
 		echo " $temp" > "$tmpf"
 		cat "$tmpf"
 		sleep "15m"
