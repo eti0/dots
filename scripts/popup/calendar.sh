@@ -17,7 +17,7 @@ convert -background "rgba(0,0,0,0)" \
 sleep ".1s"
 popup.sh "img" "$bg" "858" -p "954" &
 sleep ".05s"
-n30f -t "popup" -x "898" -y "95" -c "pkill -f 'n30f -t popup' && pkill -f 'n30f -t pointer'" "$cil"
+n30f -t "popup" -x "898" -y "95" -c "killall n30f" "$cil"
 pkill -f 'n30f -t pointer'
 
 # delete it

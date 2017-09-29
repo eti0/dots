@@ -123,5 +123,6 @@ if [ "$1" == "d" ] ; then
 elif [ "$1" == "l" ] ; then
 	loop-laptop "$@"
 else
-	printf "usage: bar [arg]"
+	printf "no arguments given\nusage: bar [ d (desktop) | l (laptop) ]\n"
+	exit 1
 fi

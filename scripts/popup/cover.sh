@@ -12,7 +12,7 @@ ffmpeg -loglevel 0 -y -i "$HOME/Music/$csf" -vf scale=-1:200 "$csil"
 sleep ".1s"
 popup.sh "img" "$csbil" "10" -p "77" &
 sleep ".05s"
-n30f -t "coverp" -x "12" -y "42" -c "pkill -f 'n30f'" "$csil"
+n30f -t "coverp" -x "12" -y "42" -c "killall n30f" "$csil"
 
 # delete it
 sleep ".25s"
