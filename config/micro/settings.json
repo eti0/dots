@@ -6,12 +6,10 @@
     "colorscheme": "sol",
     "cursorline": true,
     "eofnewline": false,
-    "fileformat": "unix",
-    "fishfmt": true,
     "ftoptions": true,
     "ignorecase": false,
     "indentchar": " ",
-    "infobar": false,
+    "infobar": true,
     "keepautoindent": false,
     "linter": true,
     "pluginchannels": [

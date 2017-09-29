@@ -20,36 +20,36 @@
 *.cursorColor:  #ffffff
 
 ! black
-*.color0:       #333333
-*.color8:       #3d3d3d
+*.color0:       #051519
+*.color8:       #323b3e
 
 ! red
 *.color1:       #f8818e
 *.color9:       #fb3d66
 
 ! green
-*.color2:       #92d3a2
-*.color10:      #6bb48d
+*.color2:       #84969a
+*.color10:      #22292a
 
 ! yellow
-*.color3:       #ffbb6f
-*.color11:      #ffb159
+*.color3:       #97a6aa
+*.color11:      #3e494c
 
 ! blue
-*.color4:       #8ed0ce
-*.color12:      #39a7a2
+*.color4:       #5e6f73
+*.color12:      #a2b0b3
 
 ! magenta
-*.color5:       #5e468c
-*.color13:      #7e62b3
+*.color5:       #677a7e
+*.color13:      #e0e5e6
 
 ! cyan
-*.color6:       #31658c
-*.color14:      #6096bf
+*.color6:       #7b8e93
+*.color14:      #556468
 
 ! white
-*.color7:       #e2e2e2
-*.color15:      #e2e2e2
+*.color7:       #b3bec1
+*.color15:      #f7f8f8
 
 
 ! cursor
@@ -71,7 +71,7 @@
 *internalBorder:	30
 
 
-! xft fonts
+! xft fonts settings
 Xft.autohint:		0
 Xft.lcdfilter:		lcddefault
 Xft.hinting:		1
@@ -79,8 +79,10 @@ Xft.hintstyle:		hintslight
 Xft.antialias:		1
 Xft.rgba:			rgb
 
+
 ! cursor
 Xcursor.theme:		ElCapitan
+Xcursor.size:		6
 
 
 ! rofi settings
