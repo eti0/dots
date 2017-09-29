@@ -14,7 +14,7 @@ if [ $pid ]; then
 else
 	sed -i "s/<top>30<\/top>/<top>60<\/top>/g" "$HOME/.config/openbox/rc.xml"
 	openbox --reconfigure
-	convert -size "$monwx30" "xc:$background" "$tmpimg"
+	convert -size "$monw x30" "xc:$background" "$tmpimg"
 	n30f "$tmpimg" &
 	/usr/scripts/bar.sh &
 	sleep ".5s" && kill -9 "$(pidof n30f)"
