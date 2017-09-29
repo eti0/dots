@@ -32,8 +32,8 @@
     browser = /usr/bin/chromium
     icon_position = off
     always_run_script = true
-    frame_width = 7
-    frame_color = "#ffffff"
+    # frame_width = 7
+    # frame_color = "#ffffff"
     
 [experimental]
     per_monitor_dpi = false
