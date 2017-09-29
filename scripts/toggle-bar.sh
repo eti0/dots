@@ -9,6 +9,7 @@ pid=$(pidof "lemonbar")
 
 # set the tmpimg location
 tmpimg="/tmp/toggle.png"
+
 # get the screen size
 monw=$(xdotool "getdisplaygeometry" | awk '{print $1;}')
 
@@ -26,6 +27,5 @@ else
 	n30f "$tmpimg" &
 
 	/usr/scripts/bar.sh &
-
-	sleep ".5s" && kill -9 "$(pidof n30f)"
+	sleep ".5s" && kill -9 "$(pidof n30f)" &
 fi
