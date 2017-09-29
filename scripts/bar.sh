@@ -41,7 +41,6 @@ song() {
 
 clock() {
 	datetime=$(date "+%a %R")
-	
 	echo $datetime
 }
 
@@ -53,7 +52,7 @@ network() {
 	cnetwork=$(iwgetid -r)
 
 	if [ "$cnetwork" == "" ]; then
-		echo $wrn$txt offline
+		echo $wrn$txt
 	else
 		echo  $cnetwork
 	fi
@@ -89,8 +88,7 @@ battery() {
 	fi
 }
 
-
-loop() {
+loop-desktop() {
 	while :; do
 		echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+760+40" &:}%{A3:mpc toggle &:}$a0$p$(desktops)$p%{A}%{A}%{A:cover.sh &:}$a1$(song)%{A}$(window)$bg\
 		%{c}$p%{A:calendar.sh &:}$(clock)%{A}$p\
@@ -105,4 +103,25 @@ loop() {
 	    | bash
 }
 
-loop "$@"
+loop-laptop() {
+	while :; do
+		echo "%{A1:popup.sh "term" "ncmpcpp" "60x20+476+40" &:}%{A3:mpc toggle &:}$a0%{l}$p$(desktops)$p%{A}%{A}%{A:cover.sh &:}$a1$(song)%{A}$(window)$bg\
+		%{c}$p%{A:calendar.sh:}$(clock)%{A}$p\
+		%{r}%{A:pkill -f '/usr/scripts/fweather.sh' & /usr/scripts/fweather.sh:}$a3$p$(weather)$p$a3%{A}$a2$p$(network)$p$a1$p$(sound)$p$a0$p$(battery)$p$bg"
+		sleep ".2s"
+	done |\
+	
+	lemonbar \
+	    -f '-x-vanilla-*' \
+	    -f '-wuncon-siji-*' \
+	    -g "x30" \
+	    | bash
+}
+
+if [ "$1" == "d" ] ; then
+	loop-desktop "$@"
+elif [ "$1" == "l" ] ; then
+	loop-laptop "$@"
+else
+	printf "usage: bar [arg]"
+fi
