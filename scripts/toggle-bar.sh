@@ -28,6 +28,6 @@ else
 	convert -size "$monw x30" "xc:$background" "$tmpimg"
 	n30f "$tmpimg" &
 
-	/usr/scripts/bar.sh &
+	/usr/scripts/bar.sh d &
 	sleep ".5s" && kill -9 "$(pidof n30f)" &
 fi
