@@ -9,14 +9,14 @@ pointer="/usr/scripts/popup/img/pointer.png"
 
 # launch
 if [ "$1" == "img" ] ; then
-	n30f -t "popup" -x "$3" -y "40" -c "killall n30f" "$2" &
+	n30f -t "popup" -x "$3" -y "56" -c "killall n30f" "$2" &
 else [ "$1" == "term" ]
 	urxvt -name "popup" -g "$3" -bd "#051519" -b "20" -e "$2" &
 fi
     
 # pointer
 if [ "$4" == "-p" ] ; then
-	n30f -t "pointer" -x "$5" -y "34" -c "killall n30f" "$pointer"
+	n30f -t "pointer" -x "$5" -y "50" -c "killall n30f" "$pointer"
 else
 	exit
 fi
