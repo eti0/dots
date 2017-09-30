@@ -7,7 +7,7 @@
 mode = normal
  
 # Framerate Default: 60. Accepts only non-negative values.
-framerate = 50
+framerate = 40
 
 # Sensitivity in  %. If you think the bars are to low/response is to little, try
 # increasing this value 200 means double height. Accepts only non-negative values.
@@ -47,14 +47,14 @@ higher_cutoff_freq = 8000
 # 
 # for alsa 'source' will be the capture device. Default: 'hw:Loopback,1'
 # for fifo 'source' will be the path to fifo-file. Default: '/tmp/mpd.fifo' 
-# method = pulse
-# source = auto
+method = pulse
+source = auto
 
 # method = alsa  
 # source = hw:Loopback,1 
 
-method = fifo
-source = /tmp/mpd.fifo
+; method = fifo
+; source = /tmp/mpd.fifo
 
 
 
@@ -63,12 +63,12 @@ source = /tmp/mpd.fifo
 # ouput method may be ncurses, noncurses or raw. noncurses is for systems that does not suport ncurses. 
 # raw is a 16 bit data stream of the bar heights that can be used to send to other applications
 # raw defaults to 200 bars, can be adjusted in the bars option above
-method = ncurses
+# method = ncurses
 
 # visual styles, may be 'stereo' or 'mono'. 
 # Stereo mirrors both channels with low frequencies in center.
 # Mono averages both channels and outputs left to right lowest to highest frequencies
-style = stereo
+style = mono
 
 # raw output target defaults to stdout, a fifo will be created if target does not exist
 ; raw_target = /dev/stdout
