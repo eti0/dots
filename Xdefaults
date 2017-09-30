@@ -66,6 +66,8 @@
 ! size
 *geometry:			60x22
 
+! depth
+*.depth:			32
 
 ! padding
 *internalBorder:	30
