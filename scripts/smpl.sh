@@ -64,23 +64,23 @@ battery() {
 
 loop-desktop() {
 	while :; do
-			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+760+40" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh &:}$(song)%{A}$bg\
-			%{c}$p%{A:calendar.sh &:}$(clock)%{A}$p\
-			%{r}$p$(sound)$p$(battery)$p$bg"
+			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+753+60" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
+			%{c}$p%{A:/usr/scripts/popup/calendar.sh d &:}$(clock)%{A}$p\
+			%{r}$p$(sound)$p$bg"
 			sleep ".2s"
 		done |\
-		
+	
 	lemonbar \
-		    -f '-x-vanilla-*' \
-		    -f '-wuncon-siji-*' \
-		    -g "512x30+427+20" \
-		    | bash
+	    -f '-x-vanilla-*' \
+	    -f '-wuncon-siji-*' \
+	    -g "512x30+704+20" \
+	    | bash
 }
 
 loop-laptop() {
 	while :; do
-			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+476+60" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh &:}$(song)%{A}$bg\
-			%{c}$p%{A:calendar.sh &:}$(clock)%{A}$p\
+			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+476+60" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh l &:}$(song)%{A}$bg\
+			%{c}$p%{A:/usr/scripts/popup/calendar.sh l &:}$(clock)%{A}$p\
 			%{r}$p$(sound)$p$(battery)$p$bg"
 			sleep ".2s"
 		done |\

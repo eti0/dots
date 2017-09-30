@@ -21,7 +21,7 @@ urxvtd &
 ./.fehbg &
 
 # bar
-sleep 1s && /usr/scripts/bar.sh &
+sleep 1s && /usr/scripts/smpl.sh d &
 
 # start mpd
 mpd &
