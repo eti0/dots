@@ -25,7 +25,7 @@ else
 
 	# since lemonbar is ugly on startup (empty spaces)
 	# i use n30f to display a png until the bar is done starting
-	convert -size "526x44" "xc:$background" "$tmpimg"
+	convert -size "512x30" "xc:$background" "$tmpimg"
 	n30f "$tmpimg" -x "704" -y "20" &
 
 	sleep ".5s" && /usr/scripts/smpl.sh d &

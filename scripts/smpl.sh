@@ -84,9 +84,6 @@ loop-desktop() {
 	    -f '-x-vanilla-*' \
 	    -f '-wuncon-siji-*' \
 	    -g "512x30+704+20" \
-	    -r "7" \
-	    -R "$border" \
-	    -d \
 	    | bash
 }
 
@@ -102,9 +99,6 @@ loop-laptop() {
 	    -f '-x-vanilla-*' \
 	    -f '-wuncon-siji-*' \
 	    -g "512x30+427+20" \
-	    -r "7" \
-	    -R "$border" \
-	    -d \
 	    | bash
 }
 
