@@ -64,7 +64,7 @@
 
 
 ! size
-*geometry:			60x22
+*geometry:			70x25
 
 ! depth
 *.depth:			32

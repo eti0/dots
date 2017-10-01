@@ -90,8 +90,8 @@ loop-desktop() {
 loop-laptop() {
 	while :; do
 			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+476+60" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh l &:}$(song)%{A}$bg\
-			%{c}%{A:/usr/scripts/popup/calendar.sh l &:}$p$(clock)$p%{A}\
-			%{r}%{A:gnome-control-center network &:}$p$(network)$p%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$(battery)$p$bg"
+			%{c}%{A:/usr/scripts/popup/calendar.sh l &:}$(clock)%{A}\
+			%{r}$p%{A:gnome-control-center network &:}$(network)%{A}$p%{A:/usr/scripts/vol.sh -t &:}$(sound)$p%{A}$(battery)$p$bg"
 			sleep ".2s"
 		done |\
 	
