@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# quit on error
+set -e
+
 # vars
 csf=`mpc -f %file% | head -1`
 csil="/tmp/cover.png"

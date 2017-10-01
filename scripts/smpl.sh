@@ -76,7 +76,7 @@ loop-desktop() {
 	while :; do
 			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+753+60" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
 			%{c}$p%{A:/usr/scripts/popup/calendar.sh d &:}$(clock)%{A}$p\
-			%{r}$p$(sound)$p$bg"
+			%{r}%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$bg"
 			sleep ".2s"
 		done |\
 	
@@ -91,7 +91,7 @@ loop-laptop() {
 	while :; do
 			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+476+60" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh l &:}$(song)%{A}$bg\
 			%{c}%{A:/usr/scripts/popup/calendar.sh l &:}$p$(clock)$p%{A}\
-			%{r}%{A:gnome-control-center network &:}$p$(network)$p%{A}$(sound)$p$(battery)$p$bg"
+			%{r}%{A:gnome-control-center network &:}$p$(network)$p%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$(battery)$p$bg"
 			sleep ".2s"
 		done |\
 	
