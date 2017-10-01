@@ -4,6 +4,7 @@
 text="#fff"
 warning="#232e2f"
 background="#051519"
+border="#0a2126"
 
 # other stuff
 trs="%{F#00000000}"
