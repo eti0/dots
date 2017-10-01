@@ -32,6 +32,16 @@ clock() {
 	echo $datetime
 }
 
+network() {
+	cnetwork=$(iwgetid -r)
+
+	if [ "$cnetwork" == "" ]; then
+		echo $wrn$txt
+	else
+		echo $af0$txt
+	fi
+}
+
 sound() {
 	level=$(amixer get Master 2>&1 | awk '/Front Left:/{gsub(/[\[\]]/, "", $5); print $5}')
 	muted=$(amixer get Master | grep -o off | tail -n1)
@@ -83,8 +93,8 @@ loop-desktop() {
 loop-laptop() {
 	while :; do
 			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+476+60" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh l &:}$(song)%{A}$bg\
-			%{c}$p%{A:/usr/scripts/popup/calendar.sh l &:}$(clock)%{A}$p\
-			%{r}$p$(sound)$p$(battery)$p$bg"
+			%{c}%{A:/usr/scripts/popup/calendar.sh l &:}$p$(clock)$p%{A}\
+			%{r}%{A:gnome-control-center network &:}$p$(network)$p%{A}$(sound)$p$(battery)$p$bg"
 			sleep ".2s"
 		done |\
 	
