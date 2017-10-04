@@ -3,6 +3,10 @@
 # vars
 cil="/tmp/calendar.png"
 bg="/usr/scripts/popup/img/bg.png"
+width=$(xdotool "getdisplaygeometry" | awk '{print $1;}')
+height=$(xdotool "getdisplaygeometry" | awk '{print $2;}')
+ypos=$(expr "$height" - "242")
+# xpos=$(expr "$width")
 
 # convert the output to png
 convert -background "rgba(0,0,0,0)" \
@@ -16,9 +20,9 @@ convert -background "rgba(0,0,0,0)" \
 # display it
 if [ "$1" == "d" ] ; then
 	sleep ".1s"
-	popup.sh "img" "$bg" "858" -p "954" &
+	popup.sh "img" "$bg" "$(expr "$width" - "214")" -p "1844" &
 	sleep ".05s"
-	n30f -t "popup" -x "898" -y "110" -c "killall n30f" "$cil"
+	n30f -t "popup" -x "$(expr "$width" - "170")" -y "$(expr "$ypos" + "52")" -c "killall n30f" "$cil"
 elif [ "$1" == "l" ] ; then
 	sleep ".1s"
 	popup.sh "img" "$bg" "581" -p "677" &

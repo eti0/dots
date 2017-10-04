@@ -14,20 +14,20 @@ tmpimg="/tmp/toggle.png"
 # monw=$(xdotool "getdisplaygeometry" | awk '{print $1;}')
 
 if [ $pid ] ; then
-	sed -i "s/<top>70<\/top>/<top>30<\/top>/g" "$HOME/.config/openbox/rc.xml"
-	sed -i "s/YPOS=\"70\"/YPOS=\"30\"/" "/usr/scripts/vol.sh"
+	sed -i "s/<bottom>70<\/bottom>/<bottom>30<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
+	# sed -i "s/YPOS=\"70\"/YPOS=\"30\"/" "/usr/scripts/vol.sh"
 	openbox --reconfigure
 	kill -9 "$pid"
 else
-	sed -i "s/<top>30<\/top>/<top>70<\/top>/g" "$HOME/.config/openbox/rc.xml"
-	sed -i "s/YPOS=\"30\"/YPOS=\"70\"/" "/usr/scripts/vol.sh"
+	sed -i "s/<bottom>30<\/bottom>/<bottom>60<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
+	# sed -i "s/YPOS=\"30\"/YPOS=\"70\"/" "/usr/scripts/vol.sh"
 	openbox --reconfigure
 
 	# since lemonbar is ugly on startup (empty spaces)
 	# i use n30f to display a png until the bar is done starting
-	convert -size "512x30" "xc:$background" "$tmpimg"
-	n30f "$tmpimg" -x "704" -y "20" &
+	convert -size "1920x30" "xc:$background" "$tmpimg"
+	n30f "$tmpimg" -y "1050" &
 
-	sleep ".5s" && /usr/scripts/smpl.sh d &
+	sleep ".5s" && /usr/scripts/wbr.sh d &
 	sleep "1s" && kill -9 "$(pidof n30f)" &
 fi

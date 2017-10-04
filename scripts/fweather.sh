@@ -6,6 +6,7 @@ station="LFBD"
 ctime=$(date "+%H")
 temp=$(weather --no-cache -qm --headers="Temperature" "$station" | sed "s/Temperature: //" | sed "s/ //" | sed "s/C/°C/")
 
+source "/usr/scripts/colors.sh"
 
 wcond() {
 	cond=$(weather --no-cache -qm --headers="Sky Conditions" "$station" | sed "s/Sky conditions: //")
@@ -55,11 +56,11 @@ icon() {
 
 while true ; do
 	if [[ "$(wcond)" == "condition unavailable" || "$(wcond)" == "" ]] ; then
-		echo " $temp" > "$tmpf"
+		echo "$af0$txt $temp" > "$tmpf"
 		cat "$tmpf"
 		sleep "15m"
 	else
-		echo "$(icon)$temp - $(wcond)" > "$tmpf"
+		echo "$af0$(icon)$txt$temp - $(wcond)" > "$tmpf"
 		cat "$tmpf"
 		sleep "15m"
 	fi
