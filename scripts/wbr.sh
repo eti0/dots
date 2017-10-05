@@ -47,7 +47,7 @@ network() {
 	if [ "$cnetwork" == "" ]; then
 		echo $wrn$txt
 	else
-		echo $af0$txt
+		echo $af0$txt $cnetwork
 	fi
 }
 
@@ -102,8 +102,8 @@ loop-desktop() {
 
 loop-laptop() {
 	while :; do
-			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+476+30" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$p$(window)$bg\
-			%{r}$(weather)%{A:/usr/scripts/vol.sh -t &:}$p%{A:gnome-control-center network &:}$p$(network)$p%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$(battery)$p%{A:/usr/scripts/popup/calendar.sh d &:}$(clock)%{A}$p$bg"
+			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+753+30" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$(window)$bg\
+			%{r}$(weather)%{A:/usr/scripts/vol.sh -t &:}$p%{A:gnome-control-center network &:}$(network)%{A}%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$(battery)$p%{A:/usr/scripts/popup/calendar.sh d &:}$(clock)%{A}$p$bg"
 			sleep ".2s"
 		done |\
 	

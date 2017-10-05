@@ -48,6 +48,8 @@ sound() {
 	
 	if [ "$muted" == "off" ]; then
 		echo $wrn$txt
+	elif [ "$level" == "0%" ]; then
+		echo $wrn$txt
 	else
 		echo $af0$txt $level
 	fi
@@ -70,6 +72,10 @@ battery() {
 			echo -n "$af0$txt $percent%"
 		fi
 	fi
+}
+
+acpi() {
+	notify-send "$(acpi | sed "s/Battery 0: //")"
 }
 
 loop-desktop() {
