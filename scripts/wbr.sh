@@ -17,7 +17,7 @@ desktops() {
 }
 
 song() {
-	csong=$(mpc current | head -c50)
+	csong=$(mpc current)
 	playing=$(mpc status | grep -o 'playing' )
 
 	if [ "$playing" == "playing" ]; then
@@ -28,7 +28,7 @@ song() {
 }
 
 window() {
-	cwindow=$(xdotool "getwindowfocus" "getwindowname" | head -c50)
+	cwindow=$(xdotool "getwindowfocus" "getwindowname")
 
 	if [ "$cwindow" == "Openbox" ] ; then
 		echo ""

@@ -2,7 +2,7 @@
 compton -Ccf &
 
 # set the gamma
-xgamma -gamma 0.8 &
+xgamma -gamma 0.7 &
 
 # fonts
 /usr/scripts/fonts.sh &
