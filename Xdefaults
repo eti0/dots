@@ -21,7 +21,7 @@
 
 ! black
 *.color0:			#051519
-*.color8:			#323b3e
+*.color8:			#617278
 
 ! red
 *.color1:			#f8818e

@@ -17,6 +17,7 @@ user=$(whoami)
 host=$(hostname)
 kernel=$(uname -r)
 kernel=${kernel%-*}
+kernel=${kernel%_*}
 shell=$(basename $SHELL)
 os() {
 	os=$(source /etc/os-release && echo $ID)
@@ -47,11 +48,11 @@ cat <<EOF
 
 $user${f1}@${rst}$host
 
-         ${f1}os${rst}:          $os
-┌───┐    ${f1}kernel${rst}:      $kernel
-│${f1}•˩•${rst}│    ${f1}shell${rst}:       $shell
-└───┘    ${f1}init${rst}:        $init
-         ${f1}wm${rst}:          $wm
+        os${f1}:${rst}          ${f7}$os${rst}
+┌───┐   kernel${f1}:${rst}      ${f7}$kernel${rst}
+│${f1}•˩•${rst}│   shell${f1}:${rst}       ${f7}$shell${rst}
+└───┘   init${f1}:${rst}        ${f7}$init${rst}
+        wm${f1}:${rst}          ${f7}$wm${rst}
 
 EOF
 
