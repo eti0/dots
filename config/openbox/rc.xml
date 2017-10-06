@@ -82,8 +82,8 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>70</top>
-    <bottom>30</bottom>
+    <top>30</top>
+    <bottom>60</bottom>
     <left>30</left>
     <right>30</right>
   </margins>
