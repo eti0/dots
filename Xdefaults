@@ -5,8 +5,8 @@
 !
 
 ! fonts
-*font:				-kakwa-*
-*boldFont:			-kakwa-*
+*font:				-erus-*
+*boldFont:			-erus-*
 
 
 ! disable the scrollbar
