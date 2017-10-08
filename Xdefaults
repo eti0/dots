@@ -5,8 +5,8 @@
 !
 
 ! fonts
-*font:				-erus-*
-*boldFont:			-erus-*
+*font:				-kakwa-*
+*boldFont:			-kakwa-*
 
 
 ! disable the scrollbar
@@ -64,7 +64,7 @@
 
 
 ! size
-*geometry:			70x25
+*geometry:			70x30
 
 ! depth
 *.depth:			32

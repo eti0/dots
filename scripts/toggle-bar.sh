@@ -30,7 +30,7 @@ else
 
 	# since lemonbar is ugly on startup (empty spaces)
 	# i use n30f to display a png until the bar is done starting
-	convert -size "$widthx30" "xc:$background" "$tmpimg"
+	convert -size "$width x30" "xc:$background" "$tmpimg"
 	n30f "$tmpimg" -y "$ypos" &
 
 	sleep ".5s" && /usr/scripts/wbr.sh d &
