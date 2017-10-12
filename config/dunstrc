@@ -59,7 +59,3 @@
     foreground = "#051519"
     frame_color = "#ffffff"
     timeout = 10
-
-[play_sound]
-    summary = "*"
-    script = /usr/scripts/notification-sound.sh

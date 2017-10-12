@@ -40,7 +40,7 @@ icon() {
 	elif [[ "$(wcond)" == "mostly cloudy" ||  "$(wcond)" == "partly cloudy" || "$(wcond)" == "mostly clear"  ]] ; then
 		ico=""
 		echo "$ico "
-	elif [ "$(wcond)" == "overcast" ] ; then
+	elif [[ "$(wcond)" == "overcast" || "$(wcond)" == "obscured" ]] ; then
 		ico=""
 		echo "$ico "
 	elif [ "$(wcond)" == "clear" ] ; then
