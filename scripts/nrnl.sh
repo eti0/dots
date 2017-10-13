@@ -46,8 +46,6 @@ wm
 init
 cat <<EOF
 
-$user${f1}@${rst}$host
-
         os${f1}:${rst}          ${f7}$os${rst}
 ┌───┐   kernel${f1}:${rst}      ${f7}$kernel${rst}
 │${f1}•˩•${rst}│   shell${f1}:${rst}       ${f7}$shell${rst}
