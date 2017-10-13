@@ -11,4 +11,4 @@ height=$(xdotool getactivewindow getwindowgeometry --shell | head -5 | tail -1 |
 newPosX=$((screenWidth/2-width/2))
 newPosY=$((screenHeight/2-height/2))
 
-xdotool getactivewindow windowmove "$newPosX" "$(expr $newPosY - 20)"
+xdotool getactivewindow windowmove "$(expr $newPosX - 5)" "$(expr $newPosY - 20)"
