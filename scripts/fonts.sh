@@ -2,7 +2,7 @@
 
 mkfontdir ~/.fonts
 
-cp "$HOME/.fonts/fonts.dir" "$HOME/.fonts/fonts.scale"
+cp "$HOME/.fonts/fonts.dir" "$HOME/.fonts/fonts.alias"
 sed -i "1d;s/.pcf.gz//;s/.pcf//" "$HOME/.fonts/fonts.alias"
 
 xset fp+ ~/.fonts
