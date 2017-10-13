@@ -23,6 +23,7 @@ os() {
 	os=$(source /etc/os-release && echo $ID)
 	export os
 }
+
 wm() {
 	id=$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)
 	id=${id##* }
@@ -33,6 +34,7 @@ wm() {
 	wm=${wm,,}
 	export wm
 }
+
 init() {
 	init=$(readlink /sbin/init)
 	init=${init##*/}
@@ -61,3 +63,5 @@ if  [[ $1 = "-b" ]]; then
 else
 	:
 fi
+
+# $user${f1}@${rst}$host
