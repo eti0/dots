@@ -3,7 +3,7 @@
 # colors
 text="#fff"
 warning="#232e2f"
-background="#051519"
+background="#071d22"
 border="#0a2126"
 
 # other stuff

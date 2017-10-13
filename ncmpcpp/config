@@ -59,7 +59,8 @@ display_remaining_time = "no"
 ask_before_clearing_playlists = "yes"
 discard_colors_if_item_is_selected = "yes"
 allow_for_physical_item_deletion = "yes"
-seek_time = 3
+seek_time = 5
+execute_on_song_change = "notify-send "now playing $(mpc current)""
 
 
 # visualizer

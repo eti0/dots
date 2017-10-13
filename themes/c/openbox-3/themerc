@@ -1,6 +1,6 @@
 # titlebars
 border.width: 7
-window.inactive.border.color: #051519
+window.inactive.border.color: #071d22
 window.active.border.color: #ffffff
 padding.height: 10
 padding.width: 7

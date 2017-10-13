@@ -16,11 +16,11 @@
 ! colorscheme
 ! special
 *.foreground:		#ffffff
-*.background:		#051519
+*.background:		#071d22
 *.cursorColor:		#ffffff
 
 ! black
-*.color0:			#051519
+*.color0:			#08242b
 *.color8:			#617278
 
 ! red
@@ -88,7 +88,7 @@ Xcursor.theme:		ElCapitan
 
 ! rofi settings
 rofi.color-enabled:	true
-rofi.color-window:	#051519,	#ffffff,		#051519
-rofi.color-normal:	#051519,	#ffffff,		#051519,	#051519,	#f8818e
-rofi.color-active:	#051519,	#ffffff,		#051519,	#c9c9c9,	#051519
-rofi.color-urgent:	#051519,	#dddddd,		#051519,	#c9c9c9,	#051519
+rofi.color-window:	#071d22,	#ffffff,		#071d22
+rofi.color-normal:	#071d22,	#ffffff,		#071d22,	#071d22,	#f8818e
+rofi.color-active:	#071d22,	#ffffff,		#071d22,	#c9c9c9,	#071d22
+rofi.color-urgent:	#071d22,	#dddddd,		#071d22,	#c9c9c9,	#071d22
