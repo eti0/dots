@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 
+# fetch the colors
+source "/usr/scripts/colors.sh"
+
 # vars
 cil="/tmp/calendar.png"
 bg="/usr/scripts/popup/img/bg.png"
 width=$(xdotool "getdisplaygeometry" | awk '{print $1;}')
 height=$(xdotool "getdisplaygeometry" | awk '{print $2;}')
 ypos=$(expr "$height" - "242")
-# xpos=$(expr "$width")
+xpos=$(expr "$width")
 
 # convert the output to png
 convert -background "rgba(0,0,0,0)" \
-		-fill white \
+		-fill "$background" \
 		-font "kakwafont-12-n" \
 		+antialias \
 		-pointsize 12 \

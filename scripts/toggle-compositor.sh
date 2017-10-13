@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # toggle the compositor
 
-# get the pid of the bar
+# get the pid of compton
 pid=$(pidof compton)
 
 if [ $pid ] ; then
