@@ -1,0 +1,4 @@
+Host xv
+     HostName lemon.eti.tf
+     User eti
+     ForwardX11Trusted yes

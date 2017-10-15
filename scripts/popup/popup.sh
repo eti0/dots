@@ -4,6 +4,9 @@
 # e.g.: popup.sh "term" "nmtui" "60x25+1056+42"
 #       popup.sh "img" "rice.png" "10" -p "24"
 
+# fetch the colors
+source "/usr/scripts/colors.sh"
+
 # vars
 pointer="/usr/scripts/popup/img/pointer.png"
 height=$(xdotool "getdisplaygeometry" | awk '{print $2;}')
@@ -13,7 +16,7 @@ ypos=$(expr "$height" - "242")
 if [ "$1" == "img" ] ; then
 	n30f -t "popup" -x "$3" -y "$ypos" -c "killall n30f" "$2" &
 else [ "$1" == "term" ]
-	urxvt -name "popup" -g "$3" -bd "#051519" -b "20" -e "$2" &
+	urxvt -name "popup" -g "$3" -bd "$background" -b "20" -e "$2" &
 fi
     
 # pointer

@@ -13,7 +13,7 @@ xpos=$(expr "$width")
 
 # convert the output to png
 convert -background "rgba(0,0,0,0)" \
-		-fill "$background" \
+		-fill "white" \
 		-font "kakwafont-12-n" \
 		+antialias \
 		-pointsize 12 \

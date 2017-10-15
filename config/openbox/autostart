@@ -37,3 +37,6 @@ sleep 1m && mpdas -c /home/eti/.mpdasrc &
 
 # reload resources
 xrdb /home/eti/.Xdefaults &
+
+# android notifications
+an2linuxserver &
