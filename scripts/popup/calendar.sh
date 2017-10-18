@@ -21,19 +21,10 @@ convert -background "rgba(0,0,0,0)" \
 		"$cil"
 
 # display it
-if [ "$1" == "d" ] ; then
-	sleep ".1s"
-	popup.sh "img" "$bg" "$(expr "$width" - "214")" -p "1844" &
-	sleep ".05s"
-	n30f -t "popup" -x "$(expr "$width" - "170")" -y "$(expr "$ypos" + "52")" -c "killall n30f" "$cil"
-elif [ "$1" == "l" ] ; then
-	sleep ".1s"
-	popup.sh "img" "$bg" "581" -p "677" &
-	sleep ".05s"
-	n30f -t "popup" -x "622" -y "110" -c "killall n30f" "$cil"
-else
-	:
-fi
+sleep ".1s"
+popup.sh "img" "$bg" "$(expr "$width" - "214")" -p "$(expr "$width" - "76")" &
+sleep ".05s"
+n30f -t "popup" -x "$(expr "$width" - "170")" -y "$(expr "$ypos" + "52")" -c "killall n30f" "$cil"
 
 # delete it
 sleep ".2s"
