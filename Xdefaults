@@ -20,7 +20,7 @@
 *.cursorColor:		#ffffff
 
 ! black
-*.color0:			#08242b
+*.color0:			#071d22
 *.color8:			#617278
 
 ! red
