@@ -20,7 +20,7 @@ sensitivity = 5
 
 # The number of bars (0-200). 0 (default) sets it to auto (fill up console).
 # width of bars and space between bars in number of characters. Default width 3 and space 1.
-bars = 10
+# bars = 10
 bar_width = 1
 bar_spacing = 1
 
@@ -68,7 +68,7 @@ method = ncurses
 # visual styles, may be 'stereo' or 'mono'. 
 # Stereo mirrors both channels with low frequencies in center.
 # Mono averages both channels and outputs left to right lowest to highest frequencies
-style = mono
+style = stereo
 
 # raw output target defaults to stdout, a fifo will be created if target does not exist
 ; raw_target = /dev/stdout
