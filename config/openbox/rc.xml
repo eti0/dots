@@ -105,6 +105,11 @@
         <command>/usr/scripts/toggle-bar.sh</command>
       </action>
     </keybind>
+    <keybind key="C-W-y">
+      <action name="Execute">
+        <command>/usr/scripts/toggle-compositor.sh</command>
+      </action>
+    </keybind>
     <keybind key="C-A-l">
       <action name="Execute">
         <name>lock</name>
@@ -233,6 +238,11 @@
         <dialog>none</dialog>
       </action>
     </keybind>
+    <keybind key="A-Up">
+      <action name="Execute">
+        <command>/usr/scripts/popup/menu.sh</command>
+      </action>
+    </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>/usr/scripts/vol.sh -i 5</command>
@@ -248,17 +258,17 @@
         <command>/usr/scripts/vol.sh -t</command>
       </action>
     </keybind>
-	<keybind key="W-A-Right">
+    <keybind key="W-A-Right">
       <action name="Execute">
         <command>mpc seek "+5"</command>
       </action>
     </keybind>
-	<keybind key="W-A-Left">
+    <keybind key="W-A-Left">
       <action name="Execute">
         <command>mpc seek "-5"</command>
       </action>
     </keybind>
-	<keybind key="W-A-Down">
+    <keybind key="W-A-Down">
       <action name="Execute">
         <command>mpc toggle</command>
       </action>
