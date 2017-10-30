@@ -11,7 +11,7 @@ height=$(xdotool "getdisplaygeometry" | awk '{print $2;}')
 ypos=$(expr "$height" - "242")
 
 # extract the album art
-ffmpeg -loglevel 0 -y -i "$HOME/Music/$csf" -vf scale=-1:200 "$csil"
+ffmpeg -loglevel 0 -y -i "$HOME/Music/$csf" -vf scale=-200:200 "$csil"
 
 # display it
 sleep ".1s"
