@@ -3,9 +3,9 @@
 
 IF="Master"			# audio channel: Master|PCM
 SECS="1"			# sleep $SECS
-BG="#051519"		# background colour of window
+BG="#071d22"		# background colour of window
 FG="#fff"			# foreground colour of text/icon
-BAR_FG="#66cc88"	# foreground colour of volume bar
+BAR_FG="#f8818e"	# foreground colour of volume bar
 BAR_BG="#082026"	# background colour of volume bar
 XPOS="30"			# horizontal positioning
 YPOS="30"			# vertical positioning
