@@ -6,6 +6,7 @@
     "colorscheme": "sol",
     "cursorline": true,
     "eofnewline": false,
+    "fastdirty": true,
     "fileformat": "unix",
     "fishfmt": true,
     "ftoptions": true,
@@ -13,6 +14,7 @@
     "indentchar": " ",
     "infobar": true,
     "keepautoindent": false,
+    "keymenu": false,
     "linter": true,
     "mouse": true,
     "pluginchannels": [
@@ -29,6 +31,7 @@
     "splitBottom": true,
     "splitRight": true,
     "statusline": false,
+    "sucmd": "sudo",
     "syntax": true,
     "tabmovement": false,
     "tabsize": 4,

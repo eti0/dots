@@ -50,7 +50,7 @@ cat <<EOF
 
         os${f1}:${rst}          ${f7}$os${rst}
 ┌───┐   kernel${f1}:${rst}      ${f7}$kernel${rst}
-│${f1}•˩•${rst}│   shell${f1}:${rst}       ${f7}$shell${rst}
+│${f7}•˩•${rst}│   shell${f1}:${rst}       ${f7}$shell${rst}
 └───┘   init${f1}:${rst}        ${f7}$init${rst}
         wm${f1}:${rst}          ${f7}$wm${rst}
 

@@ -7,9 +7,10 @@ function fish_prompt
     set -l brred (set_color brred)
     set -l blue (set_color blue)
     set -l green (set_color green)
+    set -l white (set_color white)
     set -l normal (set_color normal)
 
-    set -l cwd $red(basename (pwd | sed "s:^$HOME:~:"))
+    set -l cwd $white(basename (pwd | sed "s:^$HOME:~:"))
 
     # Print pwd or full path
     echo -n -s $cwd $normal
