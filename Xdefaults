@@ -5,8 +5,8 @@
 !
 
 ! fonts
-*font:				-kakwa-*
-*boldFont:			-kakwa-*
+*font:				-benis-*
+*boldFont:			-benis-*
 
 
 ! disable the scrollbar
@@ -60,11 +60,11 @@
 *.perl-ext-common:	default,matcher,selection-to-clipboard
 *.url-launcher:		/usr/bin/chromium
 *.matcher.button:	3
-*.matcher.rend.0:	fg16
+*.matcher.rend.0:	fg9
 
 
 ! size
-*geometry:			60x22
+*geometry:			60x25
 
 ! depth
 *.depth:			32

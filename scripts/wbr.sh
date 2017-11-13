@@ -88,8 +88,13 @@ clock() {
 
 loop-desktop() {
 	while :; do
-			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+753+30" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$(window)\
-			%{r}$(weather)%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}%{A:/usr/scripts/popup/calendar.sh d &:}$(clock)%{A}$p$bg"
+			echo "%{l}\
+			%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}\
+			%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}\
+			$(window)\
+			%{r}\
+			%{A:/usr/scripts/vol.sh -t &:}$(sound)$p%{A}\
+			%{A:/usr/scripts/popup/calendar.sh d &:}$(clock)%{A}$p$bg"
 			sleep ".2s"
 		done |\
 	
@@ -102,8 +107,15 @@ loop-desktop() {
 
 loop-laptop() {
 	while :; do
-			echo "%{l}%{A1:popup.sh "term" "ncmpcpp" "60x20+476+30" &:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$(window)\
-			%{r}%{A:/usr/scripts/vol.sh -t &:}%{A:urxvt -e sudo nmtui &:}$(network)$p%{A}%{A:/usr/scripts/vol.sh -t &:}$(sound)$p%{A}$(battery)  %{A:/usr/scripts/popup/calendar.sh d &:}$(clock)%{A}$p$bg"
+			echo "%{l}\
+			%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}\
+			%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}\
+			$(window)\
+			%{r}\
+			%{A:urxvt -e sudo nmtui &:}$(network)$p%{A}\
+			%{A:/usr/scripts/vol.sh -t &:}$(sound)$p%{A}\
+			%{A:/usr/scripts/batstat.sh:}$(battery)$p%{A}\
+			%{A:/usr/scripts/popup/calendar.sh d &:}$(clock)%{A}$p$bg"
 			sleep ".2s"
 		done |\
 	
