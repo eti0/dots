@@ -48,11 +48,11 @@ wm
 init
 cat <<EOF
 
-        os${f1}:${rst}          ${f7}$os${rst}
-┌───┐   kernel${f1}:${rst}      ${f7}$kernel${rst}
-│${f7}•˩•${rst}│   shell${f1}:${rst}       ${f7}$shell${rst}
-└───┘   init${f1}:${rst}        ${f7}$init${rst}
-        wm${f1}:${rst}          ${f7}$wm${rst}
+        os${f2}:${rst}          ${f7}$os${rst}
+┌───┐   kernel${f2}:${rst}      ${f7}$kernel${rst}
+│${f2}•${rst}˩${f2}•${rst}│   shell${f2}:${rst}       ${f7}$shell${rst}
+└───┘   init${f2}:${rst}        ${f7}$init${rst}
+        wm${f2}:${rst}          ${f7}$wm${rst}
 
 EOF
 
@@ -64,4 +64,4 @@ else
 	:
 fi
 
-# $user${f1}@${rst}$host
+# $user${f2}@${rst}$host

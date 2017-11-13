@@ -24,32 +24,32 @@
 *.color8:			#617278
 
 ! red
-*.color1:			#665c50
-*.color9:			#9e8e7b
+*.color1:			#84969a
+*.color9:			#22292a
 
 ! green
-*.color2:			#a08c70
-*.color10:			#dabf99
+*.color2:			#81f894
+*.color10:			#3cfa58
 
 ! yellow
-*.color3:			#cca675
-*.color11:			#fed999
+*.color3:			#97a6aa
+*.color11:			#3e494c
 
 ! blue
-*.color4:			#895f3d
-*.color12:			#ce8e5b
+*.color4:			#5e6f73
+*.color12:			#a2b0b3
 
 ! magenta
-*.color5:			#8d715d
-*.color13:			#c9a184
+*.color5:			#677a7e
+*.color13:			#e0e5e6
 
 ! cyan
-*.color6:			#7c817a
-*.color14:			#adb4aa
+*.color6:			#7b8e93
+*.color14:			#556468
 
 ! white
-*.color7:			#c5b89f
-*.color15:			#fcebcb
+*.color7:			#b3bec1
+*.color15:			#f7f8f8
 
 
 ! cursor
@@ -64,7 +64,7 @@
 
 
 ! size
-*geometry:			70x30
+*geometry:			60x22
 
 ! depth
 *.depth:			32
@@ -89,6 +89,6 @@ Xcursor.theme:		ElCapitan
 ! rofi settings
 rofi.color-enabled:	true
 rofi.color-window:	#071d22,	#ffffff,		#071d22
-rofi.color-normal:	#071d22,	#ffffff,		#071d22,	#071d22,	#c5b89f
+rofi.color-normal:	#071d22,	#ffffff,		#071d22,	#071d22,	#81f894
 rofi.color-active:	#071d22,	#ffffff,		#071d22,	#c9c9c9,	#071d22
 rofi.color-urgent:	#071d22,	#dddddd,		#071d22,	#c9c9c9,	#071d22
