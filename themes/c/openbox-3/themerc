@@ -1,7 +1,7 @@
 # titlebars
 border.width: 7
-# *.active.border.color: #9e8e7b
-# *.inactive.border.color: #665c50
+# *.active.border.color: #
+# *.inactive.border.color: #
 border.color: #ffffff
 padding.height: 12
 padding.width: 9
@@ -10,7 +10,7 @@ padding.width: 9
 # menu
 menu.items.active.bg: Solid Flat
 menu.items.active.bg.color: #ffffff
-menu.items.active.text.color: #9e8e7b
+menu.items.active.text.color: #81f894
 menu.items.bg: Flat Solid
 menu.items.bg.color: #ffffff
 menu.items.disabled.text.color: #999
@@ -37,8 +37,8 @@ window.handle.width: 0
 
 # active window
 window.active.*.bg: Solid Flat
-window.active.*.bg.color: #9e8e7b
-window.active.button.*.bg.color: #9e8e7b
+window.active.*.bg.color: #81f894
+window.active.button.*.bg.color: #81f894
 window.active.button.hover.image.color: #000000
 window.active.button.pressed.image.color: #ffffff
 window.active.button.toggled.image.color: #071d22
