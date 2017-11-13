@@ -9,18 +9,18 @@ padding.width: 9
 
 # menu
 menu.items.active.bg: Solid Flat
-menu.items.active.bg.color: #ffffff
+menu.items.active.bg.color: #071d22
 menu.items.active.text.color: #81f894
 menu.items.bg: Flat Solid
-menu.items.bg.color: #ffffff
+menu.items.bg.color: #071d22
 menu.items.disabled.text.color: #999
-menu.items.text.color: #071d22
+menu.items.text.color: #ffffff
 menu.border.width: 15
-menu.border.color: #ffffff
-menu.separator.color: #ffffff
+menu.border.color: #071d22
+menu.separator.color: #071d22
 menu.title.bg: Solid Flat
-menu.title.bg.color: #ffffff
-menu.title.text.color: #071d22
+menu.title.bg.color: #071d22
+menu.title.text.color: #ffffff
 menu.title.text.justify: Center
 
 
