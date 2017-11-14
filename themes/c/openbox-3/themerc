@@ -1,5 +1,5 @@
 # titlebars
-border.width: 7
+border.width: 5
 border.color: #ffffff
 *.active.border.color: #ffffff
 *.inactive.border.color: #f2f2f2
