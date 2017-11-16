@@ -1,16 +1,16 @@
 # titlebars
-border.width: 5
-border.color: #ffffff
+border.width: 0
+# border.color: #ffffff
 *.active.border.color: #ffffff
 *.inactive.border.color: #f2f2f2
-padding.height: 12
-padding.width: 9
+padding.height: 0
+padding.width: 0
 
 
 # menu
 menu.items.active.bg: Solid Flat
 menu.items.active.bg.color: #071d22
-menu.items.active.text.color: #81f894
+menu.items.active.text.color: #ffffff
 menu.items.bg: Flat Solid
 menu.items.bg.color: #071d22
 menu.items.disabled.text.color: #999
@@ -37,8 +37,8 @@ window.handle.width: 0
 
 # active window
 window.active.*.bg: Solid Flat
-window.active.*.bg.color: #81f894
-window.active.button.*.bg.color: #81f894
+window.active.*.bg.color: #ffffff
+window.active.button.*.bg.color: #ffffff
 window.active.button.hover.image.color: #000000
 window.active.button.pressed.image.color: #ffffff
 window.active.button.toggled.image.color: #071d22
@@ -47,9 +47,9 @@ window.active.button.unpressed.image.color: #071d22
 
 # inactive window
 window.inactive.*.bg: Solid Flat
-window.inactive.*.bg.color: #665c50
-window.inactive.button.*.bg.color: #665c50
+window.inactive.*.bg.color: #1d383e
+window.inactive.button.*.bg.color: #1d383e
 window.inactive.button.hover.image.color: #ffffff
 window.inactive.button.pressed.image.color: #ffffff
-window.inactive.button.toggled.image.color: #665c50
-window.inactive.button.unpressed.image.color: #665c50
+window.inactive.button.toggled.image.color: #1d383e
+window.inactive.button.unpressed.image.color: #1d383e

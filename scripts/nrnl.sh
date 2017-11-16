@@ -48,6 +48,7 @@ wm
 init
 cat <<EOF
 
+$user${f2}@${rst}$host
         os${f2}:${rst}          ${f7}$os${rst}
 ┌───┐   kernel${f2}:${rst}      ${f7}$kernel${rst}
 │${f2}•${rst}˩${f2}•${rst}│   shell${f2}:${rst}       ${f7}$shell${rst}
@@ -63,5 +64,3 @@ if  [[ $1 = "-b" ]]; then
 else
 	:
 fi
-
-# $user${f2}@${rst}$host
