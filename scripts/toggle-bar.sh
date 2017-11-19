@@ -25,6 +25,9 @@ if [ $pid ] ; then
 	sed -i "s/-50\"/-20\"/g" "$HOME/.config/dunstrc"
 	kill -9 "$(pidof dunst)"
 
+	# adapt center.sh
+	sed -i "s/- 20/- 0/g" "/usr/scripts/center.sh"
+
 	# kill the bar
 	kill -9 "$pid"
 else
@@ -35,6 +38,9 @@ else
 	# change dunst placement
 	sed -i "s/-20\"/-50\"/g" "$HOME/.config/dunstrc"
 	kill -9 "$(pidof dunst)"
+
+	# adapt center.sh
+	sed -i "s/- 0/- 20/g" "/usr/scripts/center.sh"
 
 	# since lemonbar is ugly on startup (empty spaces)
 	# i use n30f to display a png until the bar is done starting
