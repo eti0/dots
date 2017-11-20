@@ -15,41 +15,42 @@
 
 ! colorscheme
 ! special
-*.foreground:		#ffffff
-*.background:		#071d22
-*.cursorColor:		#ffffff
+*.foreground:			#ffffff
+*.background:			#071d22
+*.cursorColor:			#ffffff
 
 ! black
 *.color0:			#071d22
 *.color8:			#617278
 
 ! red
-*.color1:			#84969a
-*.color9:			#22292a
+*.color1:			#f8a1aa
+*.color9:			#e9b3bf
 
 ! green
-*.color2:			#81f894
-*.color10:			#3cfa58
+*.color2:			#8cc495
+*.color10:			#ade1b6
 
 ! yellow
-*.color3:			#97a6aa
-*.color11:			#3e494c
+*.color3:			#d9cb9c
+*.color11:			#e8daac
 
 ! blue
-*.color4:			#5e6f73
-*.color12:			#a2b0b3
+*.color4:			#8ab6c2
+*.color12:			#b5dbe4
 
 ! magenta
-*.color5:			#677a7e
-*.color13:			#e0e5e6
+*.color5:			#d9d294
+*.color13:			#faf3b6
 
 ! cyan
-*.color6:			#7b8e93
-*.color14:			#556468
+*.color6:			#7eb5ac
+*.color14:			#a3d0c8
 
 ! white
 *.color7:			#b3bec1
 *.color15:			#f7f8f8
+
 
 
 ! cursor
@@ -89,7 +90,7 @@ Xcursor.theme:		ElCapitan
 ! rofi settings
 rofi.color-enabled:	true
 rofi.color-window:	#071d22,	#ffffff,		#071d22
-rofi.color-normal:	#071d22,	#ffffff,		#071d22,	#071d22,	#81f894
+rofi.color-normal:	#071d22,	#ffffff,		#071d22,	#071d22,	#8cc495
 rofi.color-active:	#071d22,	#ffffff,		#071d22,	#c9c9c9,	#071d22
 rofi.color-urgent:	#071d22,	#dddddd,		#071d22,	#c9c9c9,	#071d22
 
