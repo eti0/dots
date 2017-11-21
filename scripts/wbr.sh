@@ -11,7 +11,7 @@ desktops() {
 	tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
 
 	for w in `seq 0 $((cur - 1))`; do line="${line}- "; done
-	line="${line}$af0-$txt"
+	line="${line}÷"
 	for w in `seq $((cur + 2)) $tot`; do line="${line} -"; done
 	echo $line
 }
@@ -21,7 +21,7 @@ song() {
 	playing=$(mpc status | grep -o 'playing' )
 
 	if [ "$playing" == "playing" ]; then
-		echo "$af0$txt $csong$p"
+		echo "$p$af0$txt $csong$p"
 	else [ "$playing" == "" ];
 		echo ""
 	fi
@@ -33,7 +33,7 @@ window() {
 	if [ "$cwindow" == "Openbox" ] ; then
 		echo ""
 	else
-		echo "$af0$txt $cwindow  "
+		echo "$p$af0$txt $cwindow$p"
 	fi
 }
 
@@ -89,12 +89,12 @@ clock() {
 loop-desktop() {
 	while :; do
 			echo "%{l}\
-			%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}\
-			%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}\
-			$(window)\
+			$a2$af3%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}$txt$bg\
+			$a5%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
+			$a5$(window)$bg\
 			%{r}\
-			%{A:/usr/scripts/vol.sh -t &:}$(sound)$p%{A}\
-			%{A:/usr/scripts/popup/calendar.sh d &:}$(clock)%{A}$p$bg"
+			$a5%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$bg\
+			$a5%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
 			sleep ".2s"
 		done |\
 	
@@ -108,14 +108,14 @@ loop-desktop() {
 loop-laptop() {
 	while :; do
 			echo "%{l}\
-			%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}\
-			%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}\
-			$(window)\
+			$a2$af3%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}$txt$bg\
+			$a5%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
+			$a5$(window)$bg\
 			%{r}\
-			%{A:urxvt -e sudo nmtui &:}$(network)$p%{A}\
-			%{A:/usr/scripts/vol.sh -t &:}$(sound)$p%{A}\
-			%{A:/usr/scripts/batstat.sh:}$(battery)$p%{A}\
-			%{A:/usr/scripts/popup/calendar.sh d &:}$(clock)%{A}$p$bg"
+			$a5%{A:urxvt -e sudo nmtui &:}$p$(network)$p%{A}$bg\
+			$a5%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$bg\
+			$a5%{A:/usr/scripts/batstat.sh:}$p$(battery)$p%{A}$bg\
+			$a5%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
 			sleep ".2s"
 		done |\
 	
