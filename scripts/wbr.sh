@@ -16,14 +16,32 @@ desktops() {
 	echo $line
 }
 
+workspace() {
+	cur=$(xdotool "get_desktop")
+
+	if [ "$cur" == "0" ] ; then
+		printf "un"
+	elif [ "$cur" == "1" ] ; then
+		printf "deux"
+	elif [ "$cur" == "2" ] ; then
+		printf "trois"
+	elif [ "$cur" == "3" ] ; then
+		printf "quatre"
+	elif [ "$cur" == "4" ] ; then
+		printf "cinq"
+	else
+		printf "???"
+	fi
+}
+
 song() {
 	csong=$(mpc current)
 	playing=$(mpc status | grep -o 'playing' )
 
 	if [ "$playing" == "playing" ]; then
 		echo "$p$af0$txt $csong$p"
-	else [ "$playing" == "" ];
-		echo ""
+	else
+		:
 	fi
 }
 
@@ -31,7 +49,7 @@ window() {
 	cwindow=$(xdotool "getwindowfocus" "getwindowname")
 
 	if [ "$cwindow" == "Openbox" ] ; then
-		echo ""
+		:
 	else
 		echo "$p$af0$txt $cwindow$p"
 	fi
@@ -82,14 +100,14 @@ battery() {
 }
 
 clock() {
-	datetime=$(date "+$af0$txt %a %R")
+	datetime=$(date "+$af0$txt %A %R")
 	echo $datetime
 }
 
 loop-desktop() {
 	while :; do
 			echo "%{l}\
-			$a2$af3%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}$txt$bg\
+			$a2$af3%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
 			$a5%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
 			$a5$(window)$bg\
 			%{r}\
@@ -108,7 +126,7 @@ loop-desktop() {
 loop-laptop() {
 	while :; do
 			echo "%{l}\
-			$a2$af3%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(desktops)$p%{A}%{A}$txt$bg\
+			$a2$af3%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
 			$a5%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
 			$a5$(window)$bg\
 			%{r}\
