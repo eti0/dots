@@ -5,6 +5,10 @@ source "/usr/scripts/colors.sh"
 
 # vars
 p="   "
+barh="30"
+height=$(xdotool "getdisplaygeometry" | awk '{print $2;}')
+pos=$(expr "$height" - "$barh")
+
 
 desktops() {
 	cur=`xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'`
@@ -106,41 +110,41 @@ clock() {
 
 loop-desktop() {
 	while :; do
-			echo "%{l}\
-			$a2$af3%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
-			$a5%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
-			$a5$(window)$bg\
-			%{r}\
-			$a5%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$bg\
-			$a5%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
-			sleep ".2s"
-		done |\
+		echo "%{l}\
+		$a1$af2%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
+		$a2%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
+		$a2$(window)$bg\
+		%{r}\
+		$a2%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$bg\
+		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
+		sleep ".2s"
+	done |\
 	
 	lemonbar \
 	    -f '-x-vanilla-*' \
 	    -f '-wuncon-siji-*' \
-	    -g "x30++1050" \
+	    -g "x$barh++$pos" \
 	    | bash
 }
 
 loop-laptop() {
 	while :; do
-			echo "%{l}\
-			$a2$af3%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
-			$a5%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
-			$a5$(window)$bg\
-			%{r}\
-			$a5%{A:urxvt -e sudo nmtui &:}$p$(network)$p%{A}$bg\
-			$a5%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$bg\
-			$a5%{A:/usr/scripts/batstat.sh:}$p$(battery)$p%{A}$bg\
-			$a5%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
-			sleep ".2s"
-		done |\
+		echo "%{l}\
+		$a1%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
+		$a2%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
+		$a2$(window)$bg\
+		%{r}\
+		$a2%{A:urxvt -e sudo nmtui &:}$p$(network)$p%{A}$bg\
+		$a2%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$bg\
+		$a2%{A:/usr/scripts/batstat.sh:}$p$(battery)$p%{A}$bg\
+		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
+		sleep ".2s"
+	done |\
 	
 	lemonbar \
 	    -f '-x-vanilla-*' \
 	    -f '-wuncon-siji-*' \
-	    -g "x30++738" \
+	    -g "x$barh++$pos" \
 	    | bash
 }
 
