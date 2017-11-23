@@ -111,7 +111,7 @@ clock() {
 loop-desktop() {
 	while :; do
 		echo "%{l}\
-		$a1$af2%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
+		$a1$af2%{A1:urxvt -name popup -e ncmpcpp &:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
 		$a2%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
 		$a2$(window)$bg\
 		%{r}\
@@ -130,7 +130,7 @@ loop-desktop() {
 loop-laptop() {
 	while :; do
 		echo "%{l}\
-		$a1%{A1:/usr/scripts/popup/popup.sh term ncmpcpp 60x20:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
+		$a1$af2%{A1:urxvt -name popup -e ncmpcpp &:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
 		$a2%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
 		$a2$(window)$bg\
 		%{r}\

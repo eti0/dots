@@ -1,28 +1,24 @@
 #!/usr/bin/env bash
 # usage:
-# popup.sh [type] [program / file] [geometry / placement] -p [pointer location]
-# e.g.: popup.sh "term" "nmtui" "60x25+1056+42"
-#       popup.sh "img" "rice.png" "10" -p "24"
+# popup [file] [placement] -p [pointer location]
 
 # fetch the colors
 source "/usr/scripts/colors.sh"
 
 # vars
+background="/usr/scripts/popup/img/bg.png"
 pointer="/usr/scripts/popup/img/pointer.png"
 height=$(xdotool "getdisplaygeometry" | awk '{print $2;}')
-ypos=$(expr "$height" - "242")
+ypos=$(expr "$height" - "240")
 
-# launch
-if [ "$1" == "img" ] ; then
-	n30f -t "popup" -x "$3" -y "$ypos" -c "killall n30f" "$2" &
-else [ "$1" == "term" ]
-	urxvt -name "popup" -g "$3" -bd "$background" -b "20" -e "$2" &
-fi
-    
+# exec
+n30f -x "$2" -y "$ypos" -c "killall n30f" "$background" &
+sleep ".05s"
+n30f -x "$(expr "$2" + 2)" -y "$(expr "$ypos" + 2)" -c "killall n30f" "$1" &
+
 # pointer
-if [ "$4" == "-p" ] ; then
-	n30f -t "pointer" -x "$5" -y "$(expr "$ypos" + "204")" -c "killall n30f" "$pointer"
-	echo $height
+if [ "$3" == "-p" ] ; then
+	n30f -x "$(expr "$2" + "$4")" -y "$(expr "$ypos" + "204")" -c "killall n30f" "$pointer"
 else
 	exit
 fi

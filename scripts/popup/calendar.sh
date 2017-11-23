@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# fetch the colors
-source "/usr/scripts/colors.sh"
-
 # vars
 cil="/tmp/calendar.png"
 bg="/usr/scripts/popup/img/bg.png"
@@ -22,9 +19,9 @@ convert -background "rgba(0,0,0,0)" \
 
 # display it
 sleep ".1s"
-popup.sh "img" "$bg" "$(expr "$width" - "214")" -p "$(expr "$width" - "76")" &
+popup "" "$(expr "$width" - "210")" -p "152" &
 sleep ".05s"
-n30f -t "popup" -x "$(expr "$width" - "170")" -y "$(expr "$ypos" + "52")" -c "killall n30f" "$cil"
+n30f -x "$(expr "$width" - "170")" -y "$(expr "$ypos" + "52")" -c "killall n30f" "$cil"
 
 # delete it
 sleep ".2s"
