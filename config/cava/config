@@ -47,14 +47,14 @@ higher_cutoff_freq = 8000
 # 
 # for alsa 'source' will be the capture device. Default: 'hw:Loopback,1'
 # for fifo 'source' will be the path to fifo-file. Default: '/tmp/mpd.fifo' 
-# method = pulse
-# source = auto
+method = pulse
+source = alsa_output.pci-0000_00_05.0.analog-stereo.monitor
 
 # method = alsa  
 # source = hw:Loopback,1 
 
-method = fifo
-source = /tmp/mpd.fifo
+# method = fifo
+# source = /tmp/mpd.fifo
 
 
 
