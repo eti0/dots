@@ -16,7 +16,7 @@ function fish_prompt
     # Print pwd or full path
     echo -n -s $cwd $normal
 
-    set -l prompt_color $brgreen
+    set -l prompt_color $red
     if test $last_status = 0
         set prompt_color $brwhite
     end
