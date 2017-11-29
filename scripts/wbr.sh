@@ -115,7 +115,7 @@ loop-desktop() {
 		$a2%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
 		$a2$(window)$bg\
 		%{r}\
-		$a2$p$(weather)$p$bg\
+		$a2%{A:/usr/scripts/weather.sh:}$p$(weather)$p%{A}$bg\
 		$a2%{A:/usr/scripts/vol.sh -t &:}$p$(sound)$p%{A}$bg\
 		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
 		sleep ".2s"
@@ -135,7 +135,7 @@ loop-laptop() {
 		$a2%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
 		$a2$(window)$bg\
 		%{r}\
-		$a2$p$(weather)$p$bg\
+		$a2%{A:notify-send 'updating the weather status' && /usr/scripts/weather.sh:}$p$(weather)$p%{A}$bg\
 		$a2%{A:/usr/scripts/batstat.sh:}$p$(battery)$p%{A}$bg\
 		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
 		sleep ".2s"

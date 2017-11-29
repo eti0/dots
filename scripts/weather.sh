@@ -48,14 +48,10 @@ icon() {
 
 
 # exec
-while :; do
-	if [ "$(icon)" == "" ] ; then
-		echo "$temp - $cond" > "$file"
-		cat "$file"
-		sleep "10m"
-	else
-		echo "$af0$(icon)$txt $temp - $cond" > "$file"
-		cat "$file"
-		sleep "10m"
-	fi
-done
+if [ "$(icon)" == "" ] ; then
+	echo "$temp - $cond" > "$file"
+	cat "$file"
+else
+	echo "$af0$(icon)$txt $temp - $cond" > "$file"
+	cat "$file"
+fi
