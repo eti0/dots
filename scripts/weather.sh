@@ -52,10 +52,10 @@ while :; do
 	if [ "$(icon)" == "" ] ; then
 		echo "$temp - $cond" > "$file"
 		cat "$file"
-		sleep "15m"
+		sleep "10m"
 	else
 		echo "$af0$(icon)$txt $temp - $cond" > "$file"
 		cat "$file"
-		sleep "15m"
+		sleep "10m"
 	fi
 done
