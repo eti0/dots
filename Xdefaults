@@ -32,16 +32,16 @@
 *.color10:			#ade1b6
 
 ! yellow
-*.color3:			#d9cb9c
-*.color11:			#e8daac
+*.color3:			#f0e0aa
+*.color11:			#fbf1cf
 
 ! blue
 *.color4:			#8ab6c2
 *.color12:			#b5dbe4
 
 ! magenta
-*.color5:			#d9d294
-*.color13:			#faf3b6
+*.color5:			#94a9d9
+*.color13:			#b6cbfa
 
 ! cyan
 *.color6:			#7eb5ac
@@ -50,7 +50,6 @@
 ! white
 *.color7:			#b3bec1
 *.color15:			#f7f8f8
-
 
 
 ! cursor
