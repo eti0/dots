@@ -13,6 +13,11 @@ elif [ "$1" = "s" ] ; then
 elif [ "$1" = "r" ] ; then
 	sudo xbps-remove "${@:2}"
 else
-	printf "usage: xbp [i (install) | s (search) | r (remove)]\n"
+	printf "you didn't provide any argument you dumbfuck.
+usage: xbp [options]
+options:
+  i (install)
+  s (search)
+  r (remove)\n"
 	exit 1
 fi
