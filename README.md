@@ -3,4 +3,4 @@
  ┃┃┃ ┃ ┃ ┗━┓
 ╺┻┛┗━┛ ╹ ┗━┛</pre>
 
-![rice](https://x.eti.tf/iPXEt.png)
+![rice](https://x.eti.tf/b3nTS.png)
