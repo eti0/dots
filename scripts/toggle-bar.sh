@@ -17,6 +17,12 @@ tmpimg="/tmp/toggle.png"
 
 # execute
 if [ $pid ] ; then
+	convert -size "$width x30" "xc:$background" "$tmpimg"
+	n30f "$tmpimg" -y "$ypos" &
+
+	# kill n30f
+	sleep ".3s" && kill -9 "$(pidof n30f)" &
+	
 	# change openbox margins
 	sed -i "s/<bottom>60<\/bottom>/<bottom>30<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
 	openbox --reconfigure
