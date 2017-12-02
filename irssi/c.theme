@@ -120,7 +120,7 @@ abstracts = {
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "$1%K —%W ";
+  msgnick = "%W$1%n — ";
 
   # message from you is printed. "ownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -140,14 +140,14 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1-}";
-  ownnick = "%g$*%n";
+  ownnick = "%w$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
-  pubmsgnick = "{msgnick $0 $1-}";
-  pubnick = "$*";
+  pubmsgnick = "%K{msgnick $0 $1-}%n";
+  pubnick = "$*%n";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
-  pubmsgmenick = "%8{msgnick $0 $1-}%n";
+  pubmsgmenick = "%g{msgnick $0 $1-}%n";
   menick = "$*%n";
 
   # public highlighted message in channel
@@ -158,17 +158,17 @@ abstracts = {
   msgchannel = "%K:%c$*%n";
 
   # private message, $0 = nick, $1 = host
-  privmsg = "[%R$0%K(%r$1-%K)%n] ";
+  privmsg = "[%r$0%K(%r$1-%K)%n] ";
 
   # private message from you, $0 = "msg", $1 = target nick
-  ownprivmsg = "[%r$0%K(%R$1-%K)%n] ";
+  ownprivmsg = "[%r$0%K(%r$1-%K)%n] ";
 
   # own private message in query
   ownprivmsgnick = "{msgnick  $*}";
   ownprivnick = "%_$*%n";
 
   # private message in query
-  privmsgnick = "{msgnick  %R$*%n}";
+  privmsgnick = "{msgnick  %r$*%n}";
 
   ##
   ## Actions (/ME stuff)
@@ -202,14 +202,14 @@ abstracts = {
   whois = "%# $[8]0 : $1-";
 
   # notices
-  ownnotice = "[%r$0%K(%R$1-%K)]%n ";
+  ownnotice = "[%r$0%K(%r$1-%K)]%n ";
   notice = "%K-%M$*%K-%n ";
   pubnotice_channel = "%K:%m$*";
   pvtnotice_host = "%K(%m$*%K)";
   servernotice = "%g!$*%n ";
 
   # CTCPs
-  ownctcp = "[%r$0%K(%R$1-%K)] ";
+  ownctcp = "[%r$0%K(%r$1-%K)] ";
   ctcp = "%g$*%n";
 
   # wallops
@@ -218,7 +218,7 @@ abstracts = {
   wallop_action = "%_ * $*%n ";
 
   # netsplits
-  netsplit = "%R$*%n";
+  netsplit = "%r$*%n";
   netjoin = "%C$*%n";
 
   # /names list
@@ -236,7 +236,7 @@ abstracts = {
 
   # DCC chat, own msg/action
   dccownmsg = "[%r$0%K($1-%K)%n] ";
-  dccownnick = "%R$*%n";
+  dccownnick = "%rR$*%n";
   dccownquerynick = "%_$*%n";
   dccownaction = "{action $*}";
   dccownaction_target = "{action_core $0}%K:%c$1%n ";

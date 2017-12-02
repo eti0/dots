@@ -24,6 +24,13 @@ servers = (
     use_tls = "yes";
     tls_verify = "yes";
     tls_capath = "/etc/ssl/certs";
+  },
+  {
+    address = "irc.lainchan.org";
+    chatnet = "lainchan";
+    port = "6697";
+    use_tls = "no";
+    tls_verify = "no";
   }
 );
 
@@ -33,10 +40,11 @@ chatnets = {
   rizon = {
     type = "IRC";
     sasl_mechanism = "plain";
-    sasl_username = "eti";
-    sasl_password = "";
+    sasl_username = "user";
+    sasl_password = "passwd";
   };
   nixers = { type = "IRC"; };
+  lainchan = { type = "IRC"; };
 };
 
 
@@ -48,7 +56,7 @@ settings = {
     indent_always = "yes";
   };
   "fe-common/core" = {
-    theme = "noko";
+    theme = "c";
     timestamps = "no";
     show_nickmode_empty = "yes";
     autolog = "yes";
@@ -56,13 +64,16 @@ settings = {
   };
   type = "IRC";
   "perl/core/scripts" = {
-    nickcolor_colors = "12 13 14 15";
+    nickcolor_colors = "2 3 4 5 6 7 10 11 12 13";
     tmux_away_message = "afk";
     tmux_away_window = "0";
     neat_dynamic = "yes";
     splitlong_max_length = "70";
     splitlong_line_start = "- ";
     splitlong_line_end = " ";
+    irssinotifier_api_token = "token";
+    irssinotifier_encryption_password = "passwd";
+    irssinotifier_screen_detached_only = "yes";
   };
 };
 
@@ -91,7 +102,7 @@ statusbar = {
 };
 
 
-ignores = ( { level = "JOINS PARTS QUITS NICKS MODES"; } );
+ignores = ( { level = "JOINS PARTS QUITS MODES"; } );
 aliases = {
   leave = "part";
   close = "window close";
