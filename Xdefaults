@@ -5,8 +5,8 @@
 !
 
 ! fonts
-*font:				-benis-lemon-*
-*boldFont:			-benis-lemon-*
+*font:				-*-lemon-*
+*boldFont:			-*-lemon-*
 
 
 ! disable the scrollbar
