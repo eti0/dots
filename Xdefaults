@@ -6,7 +6,8 @@
 
 ! fonts
 *font:				-*-lemon-*
-*boldFont:			-*-lemon-*
+*boldFont:
+*lineSpace:			2
 
 
 ! disable the scrollbar
