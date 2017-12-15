@@ -7,7 +7,7 @@
 ! fonts
 *font:				-*-lemon-*
 *boldFont:
-*lineSpace:			2
+*lineSpace:			1
 
 
 ! disable the scrollbar
@@ -65,7 +65,7 @@
 
 
 ! size
-*geometry:			60x25
+*geometry:			60x20
 
 ! depth
 *.depth:			32
