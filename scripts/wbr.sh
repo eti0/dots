@@ -104,7 +104,7 @@ battery() {
 }
 
 clock() {
-	datetime=$(date "+$af0$txt %A %R")
+	datetime=$(date "+$af0$txt %a %R")
 	echo $datetime
 }
 
@@ -124,7 +124,8 @@ loop-desktop() {
 	lemonbar \
 	    -f '-x-vanilla-*' \
 	    -f '-wuncon-siji-*' \
-	    -g "x$barh++$pos" \
+	    -g "x$barh++" \
+	    -b \
 	    | bash
 }
 
@@ -133,9 +134,7 @@ loop-laptop() {
 		echo "%{l}\
 		$a1$af2%{A1:urxvt -name popup -e ncmpcpp &:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
 		$a2%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
-		$a2$(window)$bg\
 		%{r}\
-		$a2%{A:notify-send 'updating the weather status' && /usr/scripts/weather.sh:}$p$(weather)$p%{A}$bg\
 		$a2%{A:/usr/scripts/batstat.sh:}$p$(battery)$p%{A}$bg\
 		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
 		sleep ".2s"
@@ -144,7 +143,8 @@ loop-laptop() {
 	lemonbar \
 	    -f '-x-vanilla-*' \
 	    -f '-wuncon-siji-*' \
-	    -g "x$barh++$pos" \
+	    -g "x$barh++" \
+	    -b \
 	    | bash
 }
 

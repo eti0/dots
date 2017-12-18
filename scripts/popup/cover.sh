@@ -14,7 +14,7 @@ ypos=$(expr "$height" - "242")
 ffmpeg -loglevel 0 -y -i "$HOME/Music/$csf" -vf scale=-200:200 "$csil"
 
 # display it
-popup /tmp/cover.png "6" -p "97"
+popup /tmp/cover.png "6"
 
 # delete it
 sleep ".25s"

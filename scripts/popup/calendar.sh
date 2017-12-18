@@ -18,9 +18,9 @@ convert -background "rgba(0,0,0,0)" \
 		"$cil"
 
 # display it
-popup "" "$(expr "$width" - "210")" -p "152" &
+popup "" "$(expr "$width" - "215")" -p "139" &
 sleep ".05s"
-n30f -x "$(expr "$width" - "170")" -y "$(expr "$ypos" + "52")" -c "killall n30f" "$cil"
+n30f -x "$(expr "$width" - "168")" -y "$(expr "$ypos" + "50")" -c "killall n30f" "$cil"
 
 # delete it
 sleep ".2s"
