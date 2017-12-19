@@ -23,13 +23,13 @@ file="/tmp/weather"
 
 # define ico
 icon() {
-	if [[ "$cond" == "light rain" || "$cond" == "drizzle" ]] ; then
+	if [[ "$cond" == "light rain" || "$cond" == "drizzle" || "$cond" == "light rain and breezy" || "$cond" == "drizzle and breezy" || "$cond" == "drizzle and windy" ]] ; then
 		ico=""
 		printf "$ico"
 	elif [[ "$cond" == "showers" || "$cond" == "rain" ]] ; then
 		ico=""
 		printf "$ico"
-	elif [[ "$cond" == "mostly cloudy" ||  "$cond" == "partly cloudy" || "$cond" == "mostly clear"  ]] ; then
+	elif [[ "$cond" == "mostly cloudy" ||  "$cond" == "partly cloudy" || "$cond" == "mostly clear" || "$cond" == "windy and mostly cloudy" || "$cond" == "breezy and mostly cloudy"  ]] ; then
 		ico=""
 		printf "$ico"
 	elif [[ "$cond" == "overcast" || "$cond" == "obscured" ]] ; then

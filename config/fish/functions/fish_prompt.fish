@@ -18,7 +18,7 @@ function fish_prompt
 
     set -l prompt_color $red
     if test $last_status = 0
-        set prompt_color $brwhite
+        set prompt_color $white
     end
 
     # Terminate with a nice prompt char

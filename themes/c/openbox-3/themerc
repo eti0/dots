@@ -1,5 +1,5 @@
 # titlebars
-border.width: 0
+border.width: 5
 # border.color: #ffffff
 *.active.border.color: #f2f2f2
 *.inactive.border.color: #e6e6e6
@@ -37,7 +37,7 @@ window.handle.width: 0
 
 # active window
 window.active.*.bg: Solid Flat
-window.active.*.*.bg.color: #f7f7f7
+window.active.*.*.bg.color: #8ab6c2
 window.active.*.hover.image.color: #f7f7f7
 window.active.*.pressed.image.color: #f7f7f7
 window.active.*.toggled.image.color: #071d22
@@ -46,7 +46,7 @@ window.active.*.unpressed.image.color: #071d22
 
 # inactive window
 window.inactive.*.bg: Solid Flat
-window.inactive.*.*.bg.color: #e6e6e6
+window.inactive.*.*.bg.color: #f0e0aa
 window.inactive.*.hover.image.color: #f2f2f2
 window.inactive.*.pressed.image.color: #f2f2f2
 window.inactive.*.toggled.image.color: #2a424a
