@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
-    <strength>40</strength>
-    <screen_edge_strength>50</screen_edge_strength>
+    <strength>50</strength>
+    <screen_edge_strength>20</screen_edge_strength>
   </resistance>
   <focus>
     <focusNew>yes</focusNew>
@@ -15,12 +15,12 @@
   <placement>
     <policy>Smart</policy>
     <center>yes</center>
-    <monitor>Active</monitor>
-    <primaryMonitor>1</primaryMonitor>
+    <monitor>Mouse</monitor>
+    <primaryMonitor>Mouse</primaryMonitor>
   </placement>
   <theme>
     <name>c</name>
-    <titleLayout/>
+    <titleLayout>IC</titleLayout>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>lemon</name>
@@ -64,11 +64,11 @@
     <number>5</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>I</name>
-      <name>II</name>
-      <name>III</name>
-      <name>IV</name>
-      <name>V</name>
+      <name>un</name>
+      <name>deux</name>
+      <name>trois</name>
+      <name>quatre</name>
+      <name>cinq</name>
     </names>
     <popupTime>0</popupTime>
   </desktops>
@@ -82,23 +82,11 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>30</top>
-    <bottom>60</bottom>
-    <left>30</left>
-    <right>30</right>
+    <top>0</top>
+    <bottom>30</bottom>
+    <left>0</left>
+    <right>0</right>
   </margins>
-  <dock>
-    <position>Floating</position>
-    <floatingX>10</floatingX>
-    <floatingY>1047</floatingY>
-    <noStrut>no</noStrut>
-    <stacking>Above</stacking>
-    <direction>Horizontal</direction>
-    <autoHide>no</autoHide>
-    <moveButton>Middle</moveButton>
-    <hideDelay>300</hideDelay>
-    <showDelay>300</showDelay>
-  </dock>
   <keyboard>
     <keybind key="C-W-t">
       <action name="Execute">
@@ -133,44 +121,38 @@
     </keybind>
     <keybind key="A-F1">
       <action name="Execute">
-        <name>Terminal</name>
+        <name>terminal</name>
         <command>urxvtc</command>
       </action>
     </keybind>
     <keybind key="A-F2">
       <action name="Execute">
-        <name>Run</name>
+        <name>run</name>
         <command>rofi -show run -lines 7 -bw 5 -line-margin 8 -padding 30 -font "lemon 7" -scrollbar-width 0 -separator-style "none" -width 30</command>
+      </action>
+    </keybind>
+    <keybind key="A-F8">
+      <action name="Execute">
+        <name>clipboard</name>
+        <command>clipmenu -lines 15 -bw 5 -line-margin 6 -padding 30 -font "lemon 7" -scrollbar-width 0 -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="A-F3">
       <action name="Execute">
-        <name>PCManFM</name>
+        <name>pcmanfm</name>
         <command>pcmanfm</command>
       </action>
     </keybind>
     <keybind key="A-F5">
       <action name="Execute">
-        <name>Chromium</name>
+        <name>chromium</name>
         <command>chromium</command>
       </action>
     </keybind>
     <keybind key="A-F6">
       <action name="Execute">
-        <name>Kill stalonetray</name>
-        <command>killall stalonetray</command>
-      </action>
-    </keybind>
-    <keybind key="A-F7">
-      <action name="Execute">
-        <name>Stalonetray</name>
-        <command>stalonetray</command>
-      </action>
-    </keybind>
-    <keybind key="A-F8">
-      <action name="Execute">
-        <name>Clipboard</name>
-        <command>clipmenu -lines 15 -bw 5 -line-margin 6 -padding 30 -font "lemon 7" -scrollbar-width 0 -separator-style "none"</command>
+        <name>toggle the systemtray</name>
+        <command>/usr/scripts/toggle-tray.sh</command>
       </action>
     </keybind>
     <keybind key="C-Left">
@@ -193,7 +175,7 @@
         <to>Previous</to>
       </action>
     </keybind>
-    <keybind key="A-F4">
+    <keybind key="W-w">
       <action name="Close"/>
     </keybind>
     <keybind key="W-Down">
@@ -245,12 +227,12 @@
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>/usr/scripts/vol.sh -i 5</command>
+        <command>/usr/scripts/vol.sh -i 10</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>/usr/scripts/vol.sh -d 5</command>
+        <command>/usr/scripts/vol.sh -d 10</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
@@ -513,10 +495,19 @@
       <decor>no</decor>
       <layer>above</layer>
     </application>
-    <!--
     <application class="*">
       <decor>no</decor>
     </application>
-    -->
   </applications>
+  <dock>
+    <position>Top</position>
+    <floatingX>0</floatingX>
+    <floatingY>748</floatingY>
+    <stacking>Below</stacking>
+    <direction>Horizontal</direction>
+    <noStrut>yes</noStrut>
+    <autoHide>no</autoHide>
+    <hideDelay>300</hideDelay>
+    <showDelay>300</showDelay>
+  </dock>
 </openbox_config>

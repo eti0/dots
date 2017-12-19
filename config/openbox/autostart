@@ -1,39 +1,38 @@
-# compton
-compton -Ccf &
-
-# set the gamma
-xgamma -gamma 0.7 &
-
-# fonts
-/usr/scripts/fonts.sh &
-
-# beep off
-xset -b &
-
-# screensaver off
-xset -dpms &
-xset s off &
-
-# urxvt daemon
-urxvtd &
-
 # set the background
-./.fehbg &
+/home/eti/.fehbg &
 
-# bar
-sleep 1s && /usr/scripts/toggle-bar.sh d &
+# set the keymap
+setxkbmap us &
+
+# start urxvtd
+urxvtd &
 
 # start mpd
 mpd &
 
-# clipmenu
+# start clipmenu
 clipmenud &
 
-# mpd scrobbler
-sleep 1m && mpdas -c /home/eti/.mpdasrc &
+# disable beeping
+xset -b &
 
-# weather for the bar
-/usr/scripts/fweather.sh &
+# set the gamma
+xgamma -gamma 0.8 &
 
-# reload resources
-xrdb /home/eti/.Xdefaults &
+# set the fonts
+/usr/scripts/fonts.sh &
+
+# enable touchpad clicks
+/usr/scripts/touchpad.sh &
+
+# start compton
+compton -Ccf &
+
+# start the bar
+sleep 2s && /usr/scripts/toggle-bar.sh &
+
+# start the mpd scrobbler
+sleep 1m && mpdas &
+
+# battery icon
+cbatticon -l "10" -i "symbolic" &
