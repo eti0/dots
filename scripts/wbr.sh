@@ -17,7 +17,7 @@ desktops() {
 	for w in `seq 0 $((cur - 1))`; do line="${line}- "; done
 	line="${line}÷"
 	for w in `seq $((cur + 2)) $tot`; do line="${line} -"; done
-	echo $line
+	echo "$line"
 }
 
 workspace() {
@@ -59,6 +59,11 @@ window() {
 	fi
 }
 
+crypto() {
+	ccv="$(cat "/tmp/crypto")"
+	echo "$af0☭$txt $ccv"
+}
+
 weather() {
 	cat "/tmp/weather"
 }
@@ -67,9 +72,9 @@ network() {
 	cnetwork=$(iwgetid -r)
 
 	if [ "$cnetwork" == "" ]; then
-		echo $wrn$txt
+		echo "$wrn$txt"
 	else
-		echo $af0$txt $cnetwork
+		echo "$af0$txt $cnetwork"
 	fi
 }
 
@@ -78,9 +83,9 @@ sound() {
 	muted=$(amixer get Master | grep -o off | tail -n1)
 	
 	if [ "$muted" == "off" ]; then
-		echo $wrn$txt
+		echo "$wrn$txt"
 	else
-		echo $af0$txt $level
+		echo "$af0$txt $level"
 	fi
 }
 
@@ -105,7 +110,7 @@ battery() {
 
 clock() {
 	datetime=$(date "+$af0$txt %a %R")
-	echo $datetime
+	echo "$datetime"
 }
 
 loop-desktop() {
@@ -135,6 +140,7 @@ loop-laptop() {
 		$a1$af2%{A1:urxvt -name popup -e ncmpcpp &:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
 		$a2%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
 		%{r}\
+		$a2%{A:notify-send 'updating the crypto values' && /usr/scripts/ccv.sh -f eth /tmp/crypto:}$p$(crypto)$p%{A}$bg\
 		$a2%{A:/usr/scripts/batstat.sh:}$p$(battery)$p%{A}$bg\
 		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
 		sleep ".2s"

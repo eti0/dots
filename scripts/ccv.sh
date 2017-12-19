@@ -27,41 +27,88 @@ dgr="\e[90m"
 lgr="\e[37m"
 
 # misc
-hold="$2"
+ctc="f$2"
+out="$3"
+
 
 
 # funcs
-fetch() {
-	# hide the cursor
-	tput civis
-	
-	# BTC
+fbtc() {
 	url="$btcurl"
 	curl -s "$url" > "$btctmp"
 	cur="$(cat "$btctmp" | grep -oP "(?<=$str0).*?(?=$str1)")"
 	prc="$(cat "$btctmp" | grep -oP "(?<=$prc0).*?(?=$prc1)")"
-	printf ""$ylw"BTC:"$rst" \$$cur "$dgr"-"$rst" $prc%% \n"
-	rm "$btctmp"
+
+	if [ "$iiaf" = "yes" ] ; then
+		printf "BTC: \$$cur - $prc%% \n"
+	else
+		printf ""$ylw"BTC:"$rst" \$$cur "$dgr"-"$rst" $prc%% \n"
+	fi
 	
-	# ETH
+	rm "$btctmp"
+}
+
+
+feth() {
 	url="$ethurl"
 	curl -s "$url" > "$ethtmp"
 	cur="$(cat "$ethtmp" | grep -oP "(?<=$str0).*?(?=$str1)")"
 	prc="$(cat "$ethtmp" | grep -oP "(?<=$prc0).*?(?=$prc1)")"
-	printf ""$blu"ETH:"$rst" \$$cur "$dgr"-"$rst" $prc%% \n"
-	rm "$ethtmp"
+
+	if [ "$iiaf" = "yes" ] ; then
+		printf "ETH: \$$cur - $prc%% \n"
+	else
+		printf ""$ylw"ETH:"$rst" \$$cur "$dgr"-"$rst" $prc%% \n"
+	fi
 	
-	# LTC
+	rm "$ethtmp"
+}
+
+
+fltc() {
 	url="$ltcurl"
 	curl -s "$url" > "$ltctmp"
 	cur="$(cat "$ltctmp" | grep -oP "(?<=$str0).*?(?=$str1)")"
 	prc="$(cat "$ltctmp" | grep -oP "(?<=$prc0).*?(?=$prc1)")"
-	printf ""$lgr"LTC:"$rst" \$$cur "$dgr"-"$rst" $prc%% \n"
+
+	if [ "$iiaf" = "yes" ] ; then
+		printf "LTC: \$$cur - $prc%% \n"
+	else
+		printf ""$ylw"LTC:"$rst" \$$cur "$dgr"-"$rst" $prc%% \n"
+	fi
+	
 	rm "$ltctmp"
+}
+
+
+fetch() {
+	# hide the cursor
+	tput civis
+
+	# get the values
+	fbtc
+	feth
+	fltc
 
 	# show the cursor
 	tput cnorm
 }
+
+
+file() {
+	$ctc > $out
+}
+
+loopfile() {
+	while :; do
+		# fetch the values
+		file
+		
+		# wait
+		sleep "$hold"
+	done
+}
+
 
 loop() {
 	while :; do	
@@ -83,6 +130,7 @@ loop() {
 	done
 }
 
+
 usage() {
 	printf "usage: ccv [options]
 options:
@@ -94,10 +142,22 @@ options:
 
 # exec
 # show the cursor even on quit
-trap "tput cnorm && exit 1" INT
+trap "tput cnorm && exit" INT
 
 if [ "$1" = "-l" ] ; then
+	# set the arg
+	hold="$2"
 	loop
+elif [ "$1" = "-f" ] ; then
+	# is it a file?
+	iiaf="yes"
+	file
+elif [ "$1" = "-lf" ] ; then
+	# is it a file?
+	iiaf="yes"
+	# set the arg
+	hold="$4"
+	loopfile
 elif [ "$1" = "-h" ] ; then
 	usage
 else
