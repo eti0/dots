@@ -17,14 +17,8 @@ tmpimg="/tmp/toggle.png"
 
 # execute
 if [ $pid ] ; then
-	convert -size "$width x30" "xc:$background" "$tmpimg"
-	n30f "$tmpimg" -y "$ypos" &
-
-	# kill n30f
-	sleep ".3s" && kill -9 "$(pidof n30f)" &
-	
 	# change openbox margins
-	sed -i "s/<bottom>60<\/bottom>/<bottom>30<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
+	sed -i "s/<bottom>30<\/bottom>/<bottom>0<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
 	openbox --reconfigure
 
 	# change dunst placement
@@ -38,7 +32,7 @@ if [ $pid ] ; then
 	kill -9 "$pid"
 else
 	# change openbox margins
-	sed -i "s/<bottom>30<\/bottom>/<bottom>60<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
+	sed -i "s/<bottom>0<\/bottom>/<bottom>30<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
 	openbox --reconfigure
 
 	# change dunst placement
@@ -54,7 +48,7 @@ else
 	n30f "$tmpimg" -y "$ypos" &
 
 	# start the bar
-	sleep ".5s" && /usr/scripts/wbr.sh d &
+	sleep ".5s" && /usr/scripts/wbr.sh l &
 
 	# kill n30f
 	sleep "1s" && kill -9 "$(pidof n30f)" &

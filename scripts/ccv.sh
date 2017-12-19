@@ -58,7 +58,7 @@ feth() {
 	if [ "$iiaf" = "yes" ] ; then
 		printf "ETH: \$$cur - $prc%% \n"
 	else
-		printf ""$ylw"ETH:"$rst" \$$cur "$dgr"-"$rst" $prc%% \n"
+		printf ""$blu"ETH:"$rst" \$$cur "$dgr"-"$rst" $prc%% \n"
 	fi
 	
 	rm "$ethtmp"
@@ -74,7 +74,7 @@ fltc() {
 	if [ "$iiaf" = "yes" ] ; then
 		printf "LTC: \$$cur - $prc%% \n"
 	else
-		printf ""$ylw"LTC:"$rst" \$$cur "$dgr"-"$rst" $prc%% \n"
+		printf ""$lgr"LTC:"$rst" \$$cur "$dgr"-"$rst" $prc%% \n"
 	fi
 	
 	rm "$ltctmp"
