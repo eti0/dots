@@ -140,7 +140,6 @@ loop-laptop() {
 		$a1$af2%{A1:urxvt -name popup -e ncmpcpp &:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
 		$a2%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
 		%{r}\
-		$a2%{A:notify-send 'updating the crypto values' && /usr/scripts/ccv.sh -f eth /tmp/crypto:}$p$(crypto)$p%{A}$bg\
 		$a2%{A:/usr/scripts/batstat.sh:}$p$(battery)$p%{A}$bg\
 		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
 		sleep ".2s"
