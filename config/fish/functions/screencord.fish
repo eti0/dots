@@ -1,6 +1,17 @@
 # record the screen
 
+# vars
+set res (xdotool "getdisplaygeometry" | sed 's/ /x/')
+set comment "recording...\n"
+set audioint default
+set audio alsa
+set enc libx264
+set pres veryfast
+set crf 20
+set fps 50
+
+# exec
 function screencord
-    printf "recording...\n"
-    ffmpeg -f "alsa" -i "default" -loglevel "16" -f "x11grab" -framerate "60" -s "1920x1080" -i :0.0 -c:v "hevc_nvenc" "$HOME/Videos/$argv.mp4"
+    printf $comment
+    ffmpeg -loglevel 16 -f $audio -i $audioint -f x11grab -framerate $fps -s $res -i :0.0 -c:v $enc -preset $pres -crf $crf $HOME/Videos/$argv.mp4
 end
