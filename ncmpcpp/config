@@ -13,16 +13,15 @@ mpd_port = "7755"
 
 # display
 song_list_format = "$0%t"
-song_columns_list_format = "(5)[]{}(55)[16]{t}"
-# alternative -- song_columns_list_format = "(20)[]{a}(0)[16]{t}"
+# alternative -- song_columns_list_format = "(5)[]{}(55)[16]{t}"
+song_columns_list_format = "(0)[16]{t}"
 song_status_format = "$3%t"
 playlist_display_mode = "columns"
 
 
 # now playing
-# alternative -- now_playing_prefix = "$0$2"
-now_playing_prefix = "$3-"
-now_playing_suffix = "$0"
+# alternative -- now_playing_prefix = "$3-"
+now_playing_suffix = " $5×"
 
 
 # playlist

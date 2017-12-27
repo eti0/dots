@@ -90,7 +90,7 @@ Xcursor.theme:		ElCapitan
 ! rofi settings
 rofi.color-enabled:	true
 rofi.color-window:	#071d22,	#ffffff,		#071d22
-rofi.color-normal:	#071d22,	#ffffff,		#071d22,	#071d22,	#8cc495
+rofi.color-normal:	#071d22,	#ffffff,		#071d22,	#071d22,	#ade1b6
 rofi.color-active:	#071d22,	#ffffff,		#071d22,	#c9c9c9,	#071d22
 rofi.color-urgent:	#071d22,	#dddddd,		#071d22,	#c9c9c9,	#071d22
 
