@@ -52,7 +52,7 @@ battery() {
 loop-desktop() {
 	while :; do
 		echo "%{l}\
-		$a2$txt%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}\
+		$bg$txt%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}\
 		$a1$bgf%{A1:urxvt -name popup -e ncmpcpp &:}%{A3:mpc toggle &:}$p$(clock)$p%{A}%{A}\
 		%{B#00000000}"
 		sleep ".2s"
