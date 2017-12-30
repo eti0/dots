@@ -12,7 +12,7 @@ mpd_port = "7755"
 
 
 # display
-song_list_format = "$0%t"
+song_list_format = "%t"
 # alternative -- song_columns_list_format = "(5)[]{}(55)[16]{t}"
 song_columns_list_format = "(0)[16]{t}"
 song_status_format = "$3%t"
@@ -21,7 +21,7 @@ playlist_display_mode = "columns"
 
 # now playing
 # alternative -- now_playing_prefix = "$3-"
-now_playing_suffix = " $5×"
+now_playing_suffix = " $8×"
 
 
 # playlist
@@ -35,7 +35,7 @@ message_delay_time= "1"
 
 # progress bar
 progressbar_look = "───"
-progressbar_color = "black"
+# progressbar_color = "black"
 progressbar_elapsed_color = "white"
 
 
