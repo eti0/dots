@@ -61,7 +61,7 @@ loop-desktop() {
 	lemonbar \
 	    -f '-x-vanilla-*' \
 	    -f '-wuncon-siji-*' \
-	    -g ""$barw"x"$barh"+"$margin"+"$margin"" \
+	    -g "100x"$barh"+"$margin"+"$margin"" \
 	    -d \
 	    | bash
 }
@@ -80,7 +80,7 @@ loop-laptop() {
 	lemonbar \
 	    -f '-x-vanilla-*' \
 	    -f '-wuncon-siji-*' \
-	    -g ""$barw"x"$barh"+"$margin"+"$margin"" \
+	    -g "140x"$barh"+"$margin"+"$margin"" \
 	    -d \
 	    | bash
 }
