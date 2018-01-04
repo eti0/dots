@@ -63,7 +63,7 @@ abstracts = {
   ##
 
   # text to insert at the beginning of each non-message line
-  line_start = "%g——%n ";
+  line_start = "";
 
   # timestamp styling, nothing by default
   timestamp = "$*";
@@ -158,24 +158,24 @@ abstracts = {
   msgchannel = "%K:%c$*%n";
 
   # private message, $0 = nick, $1 = host
-  privmsg = "[%r$0%K(%r$1-%K)%n] ";
+  privmsg = "[%w$0%K(%w$1-%K)%n] ";
 
   # private message from you, $0 = "msg", $1 = target nick
-  ownprivmsg = "[%r$0%K(%r$1-%K)%n] ";
+  ownprivmsg = "[%w$0%K(%w$1-%K)%n] ";
 
   # own private message in query
   ownprivmsgnick = "{msgnick  $*}";
   ownprivnick = "%_$*%n";
 
   # private message in query
-  privmsgnick = "{msgnick  %r$*%n}";
+  privmsgnick = "{msgnick  %w$*%n}";
 
   ##
   ## Actions (/ME stuff)
   ##
 
   # used internally by this theme
-  action_core = "%g— $0%n$1";
+  action_core = "%w× $0%n$1";
 
   # generic one that's used by most actions
   action = "{action_core $*} ";
@@ -273,7 +273,7 @@ abstracts = {
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = "        %g—%n ";
+  prompt = "        %w—%n ";
 
   sb = "$* ";
   sbmode = "";
@@ -296,13 +296,13 @@ abstracts = {
 };
 formats = {
   "fe-common/core" = {
-    pubmsg = "{pubmsgnick $nickalign$2 {pubnick $nickcolor$[7]0$nicktrunc}}$1";
-    own_msg = "{ownmsgnick $2 {ownnick $[7]0}}$1";
-    own_msg_channel = "{ownmsgnick $3 {ownnick $[7]0}{msgchannel $1}}$2";
-    pubmsg_me = "{pubmsgmenick $nickalign$2 {menick $[7]0$nicktrunc}}$1";
-    pubmsg_me_channel = "{pubmsgmenick $nickalign$3 {menick $[7]0$nicktrunc}{msgchannel $1}}$2";
-    pubmsg_hilight = "{pubmsghinick $0 $nickalign$3 $[7]1$nicktrunc}$2";
-    pubmsg_hilight_channel = "{pubmsghinick $0 $nickalign$4 $[7]1$nicktrunc{msgchannel $2}}$3";
-    pubmsg_channel = "{pubmsgnick $3 {pubnick $[7]0}{msgchannel $1}}$2";
+    pubmsg = "{pubmsgnick $2 {pubnick $nickcolor$[-7]0}}$1";
+    own_msg = "{ownmsgnick $2 {ownnick $nickcolor$[-7]0}}$1";
+    own_msg_channel = "{ownmsgnick $3 {ownnick $nickcolor$[-7]0}{msgchannel $1}}$2";
+    pubmsg_me = "{pubmsgmenick $2 {menick $nickcolor$[-7]0}}$1";
+    pubmsg_me_channel = "{pubmsgmenick $3 {menick $nickcolor$[-7]0}{msgchannel $1}}$2";
+    pubmsg_hilight = "{pubmsghinick $nickcolor$0 $3 $[-7]1}$2";
+    pubmsg_hilight_channel = "{pubmsghinick $nickcolor$0 $4 $[-7]1{msgchannel $2}}$3";
+    pubmsg_channel = "{pubmsgnick $3 {pubnick $nickcolor$[-7]0}{msgchannel $1}}$2";
   };
 };
