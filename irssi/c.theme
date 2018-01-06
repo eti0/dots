@@ -139,15 +139,15 @@ abstracts = {
   #  privmsgnick = "%K{msgnick  %R$*%K}%n";
 
   # $0 = nick mode, $1 = nick
-  ownmsgnick = "{msgnick $0 $1-}";
-  ownnick = "%w$*%n";
+  ownmsgnick = "{msgnick $0 $1%w}";
+  ownnick = "$*";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "%K{msgnick $0 $1-}%n";
   pubnick = "$*%n";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
-  pubmsgmenick = "%g{msgnick $0 $1-}%n";
+  pubmsgmenick = "%c{msgnick $0 $1-}%n";
   menick = "$*%n";
 
   # public highlighted message in channel
@@ -296,8 +296,8 @@ abstracts = {
 };
 formats = {
   "fe-common/core" = {
-    pubmsg = "{pubmsgnick $2 {pubnick $nickcolor$[-7]0}}$1";
-    own_msg = "{ownmsgnick $2 {ownnick $nickcolor$[-7]0}}$1";
+    pubmsg = "{pubmsgnick $2 {pubnick \00305$[-7]0}}$1";
+    own_msg = "{ownmsgnick $2 {ownnick $[-7]0}}$1";
     own_msg_channel = "{ownmsgnick $3 {ownnick $nickcolor$[-7]0}{msgchannel $1}}$2";
     pubmsg_me = "{pubmsgmenick $2 {menick $nickcolor$[-7]0}}$1";
     pubmsg_me_channel = "{pubmsgmenick $3 {menick $nickcolor$[-7]0}{msgchannel $1}}$2";

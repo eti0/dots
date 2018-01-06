@@ -39,7 +39,7 @@ chatnets = {
     type = "IRC";
     sasl_mechanism = "plain";
     sasl_username = "eti";
-    sasl_password = "";
+    sasl_password = "<password>";
   };
   nixers = { type = "IRC"; };
   lainchan = { type = "IRC"; };
@@ -53,7 +53,7 @@ settings = {
     indent_always = "yes";
   };
   "fe-common/core" = {
-    theme = "noko";
+    theme = "c";
     timestamps = "no";
     show_nickmode_empty = "yes";
     autolog = "yes";
@@ -63,13 +63,16 @@ settings = {
   "perl/core/scripts" = {
     tmux_away_message = "afk";
     tmux_away_window = "0";
-    neat_dynamic = "yes";
-    irssinotifier_api_token = "";
-    irssinotifier_encryption_password = "";
+    irssinotifier_api_token = "<token>";
+    irssinotifier_encryption_password = "<password>";
     irssinotifier_screen_detached_only = "no";
     irssinotifier_away_only = "yes";
     irssinotifier_ignore_active_window = "no";
-    neat_colors = "cCBX3HbMX3AX32X42m";
+    nickcolor_enable_prefix = "yes";
+    nickcolor_enable_truncate = "yes";
+    nickcolor_prefix_text = "        %K—%n ";
+    nickcolor_truncate_value = "-7";
+    nickcolor_colors = "4 5 6 7 12 13 14";
   };
 };
 
