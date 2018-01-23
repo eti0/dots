@@ -10,7 +10,6 @@ print_info() {
     prin "song$(color 1):$(color2) $(mpc current)"
 
 	info line_break
-	info line_break
 
     # info line_break
     # info cols

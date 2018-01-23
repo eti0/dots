@@ -5,7 +5,7 @@
 !
 
 ! fonts
-*font:				-kakwa-*
+*font:				-*-sail-*
 *boldFont:
 *lineSpace:			1
 
@@ -65,7 +65,7 @@
 
 
 ! size
-*geometry:			60x22
+*geometry:			55x22
 
 ! depth
 *.depth:			32
