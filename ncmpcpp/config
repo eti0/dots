@@ -65,11 +65,11 @@ seek_time = 5
 
 
 # visualizer
-visualizer_in_stereo = "no"
-visualizer_sync_interval = "30"
+visualizer_in_stereo = "yes"
+visualizer_sync_interval = "128"
 visualizer_output_name = "fifo"
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_type = "spectrum" (spectrum/wave)
 # visualizer_sample_multiplier = 0.20
 visualizer_color = "white"
-visualizer_look = "∙~"
+visualizer_look = "∙│"
