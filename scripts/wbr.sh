@@ -6,9 +6,12 @@ source "/usr/scripts/colors.sh"
 
 
 # vars
-p="  "
+rrate=".2s"
+p="   "
 barh="30"
 margin="30"
+font="-*-vanilla-*"
+iconfont="-*-siji-*"
 
 
 # functions
@@ -123,12 +126,12 @@ loop-desktop() {
 		$a2$(window)$bg\
 		%{r}\
 		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
-		sleep ".2s"
+		sleep "$rrate"
 	done |\
 	
 	lemonbar \
-	    -f '-x-vanilla-*' \
-	    -f '-wuncon-siji-*' \
+	    -f "$font" \
+   	    -f "$iconfont" \
 	    -g "x"$barh"" \
 	    -b \
 	    | bash
@@ -143,12 +146,12 @@ loop-laptop() {
 		%{r}\
 		$a2%{A:/usr/scripts/batstat.sh:}$p$(battery)$p%{A}$bg\
 		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
-		sleep ".2s"
+		sleep "$rrate"
 	done |\
 	
 	lemonbar \
-	    -f '-x-vanilla-*' \
-	    -f '-wuncon-siji-*' \
+	    -f "$font" \
+	    -f "$iconfont" \
 	    -g "x"$barh"" \
 	    -b \
 	    | bash
