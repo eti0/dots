@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
-    <strength>50</strength>
-    <screen_edge_strength>20</screen_edge_strength>
+    <strength>20</strength>
+    <screen_edge_strength>0</screen_edge_strength>
   </resistance>
   <focus>
     <focusNew>yes</focusNew>
@@ -209,6 +209,11 @@
     <keybind key="A-Print">
       <action name="Execute">
         <command>/usr/scripts/scrw.sh</command>
+      </action>
+    </keybind>
+	<keybind key="C-space">
+      <action name="Execute">
+        <command>/usr/scripts/menu.sh</command>
       </action>
     </keybind>
     <keybind key="A-Tab">
@@ -500,12 +505,12 @@
     </application>
   </applications>
   <dock>
-    <position>Top</position>
+    <position>TopLeft</position>
     <floatingX>0</floatingX>
     <floatingY>748</floatingY>
     <stacking>Below</stacking>
     <direction>Horizontal</direction>
-    <noStrut>yes</noStrut>
+    <noStrut>no</noStrut>
     <autoHide>no</autoHide>
     <hideDelay>300</hideDelay>
     <showDelay>300</showDelay>
