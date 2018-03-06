@@ -33,7 +33,7 @@ n5="$m5"
 menu() {
 	while :; do
 		echo "%{A:"$nprog" & killall "mbar":}%{+o}%{+u}$p $prog $tw %{A}"
-		sleep "infinity"
+		sleep "256"
 	done |\
 
 	mbar \
