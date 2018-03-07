@@ -122,10 +122,11 @@ loop-desktop() {
 	while :; do
 		echo "%{l}\
 		$a1$af2%{A1:urxvt -name popup -e ncmpcpp &:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
-		$a3%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
+		$a3%{A:cover d &:}$(song)%{A}$bg\
 		$a2$(window)$bg\
 		%{r}\
-		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
+		$a2%{A:notify-send 'updating the weather...' && weather &:}$p$(weather)$p%{A}$bg\
+		$a2%{A:calendar &:}$p$(clock)$p%{A}$bg"
 		sleep "$rrate"
 	done |\
 	
@@ -141,11 +142,11 @@ loop-laptop() {
 	while :; do
 		echo "%{l}\
 		$a1$af2%{A1:urxvt -name popup -e ncmpcpp &:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
-		$a3%{A:/usr/scripts/popup/cover.sh d &:}$(song)%{A}$bg\
+		$a3%{A:cover d &:}$(song)%{A}$bg\
 		$a2$(window)$bg\
 		%{r}\
-		$a2%{A:/usr/scripts/batstat.sh:}$p$(battery)$p%{A}$bg\
-		$a2%{A:/usr/scripts/popup/calendar.sh &:}$p$(clock)$p%{A}$bg"
+		$a2%{A:batstat &:}$p$(battery)$p%{A}$bg\
+		$a2%{A:calendar &:}$p$(clock)$p%{A}$bg"
 		sleep "$rrate"
 	done |\
 	
