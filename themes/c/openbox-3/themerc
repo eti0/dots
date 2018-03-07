@@ -2,7 +2,7 @@
 border.width: 5
 # border.color: #ffffff
 *.active.border.color: #2a424a
-*.inactive.border.color: #1b3737
+*.inactive.border.color: #192e33
 padding.height: 10
 padding.width: 8
 
