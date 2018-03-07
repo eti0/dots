@@ -8,6 +8,7 @@
 *font:				-*-vanilla-*
 *boldFont:
 *lineSpace:			1
+*letterSpace:		0
 
 
 ! disable the scrollbar

@@ -32,8 +32,8 @@
     browser = /usr/bin/chromium
     icon_position = off
     always_run_script = true
-    # frame_width = 7
-    # frame_color = "#ffffff"
+    frame_width = 5
+    frame_color = "#ffffff"
     
 [experimental]
     per_monitor_dpi = false
@@ -45,17 +45,17 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#071d22"
-    foreground = "#ffffff"
+    background = "#ffffff"
+    foreground = "#071d22"
     timeout = 4
 
 [urgency_normal]
-    background = "#071d22"
-    foreground = "#ffffff"
+    background = "#ffffff"
+    foreground = "#071d22"
     timeout = 5
 
 [urgency_critical]
-    background = "#ffffff"
-    foreground = "#051519"
+    background = "#071d22"
+    foreground = "#ffffff"
     frame_color = "#ffffff"
     timeout = 10
