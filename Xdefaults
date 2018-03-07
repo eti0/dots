@@ -84,9 +84,9 @@ Xft.rgba:			rgb
 ! rofi settings
 rofi.color-enabled:	true
 rofi.color-window:	#ffffff, #ffffff, #ffffff
-rofi.color-normal:	#ffffff, #071d22, #ffffff, #ffffff, #ade1b6
-rofi.color-active:	#ffffff, #071d22, #ffffff, #ffffff, #071d22
-rofi.color-urgent:	#ffffff, #071d22, #ffffff, #ffffff, #071d22
+rofi.color-normal:	#ffffff, #425357, #ffffff, #ffffff, #071d22
+rofi.color-active:	#ffffff, #425357, #ffffff, #ffffff, #071d22
+rofi.color-urgent:	#ffffff, #425357, #ffffff, #ffffff, #071d22
 
 
 ! scrolling
