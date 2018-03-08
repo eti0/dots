@@ -128,13 +128,13 @@
     <keybind key="A-F2">
       <action name="Execute">
         <name>run</name>
-        <command>rofi -show run -lines 7 -bw 5 -line-margin 8 -padding 30 -font "lemon 7" -scrollbar-width 0 -separator-style "none" -width 30</command>
+        <command>rofi -show "run" -lines "7" -bw "5" -line-margin "8" -padding "30" -font "lemon 7" -scrollbar-width "0" -separator-style "none" -width "30"</command>
       </action>
     </keybind>
     <keybind key="A-F8">
       <action name="Execute">
         <name>clipboard</name>
-        <command>clipmenu -lines 15 -bw 5 -line-margin 6 -padding 30 -font "lemon 7" -scrollbar-width 0 -separator-style "none"</command>
+        <command>clipmenu -lines "15" -bw "5" -line-margin "6" -padding "30" -font "lemon 7" -scrollbar-width "0" -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="A-F3">
@@ -153,6 +153,56 @@
       <action name="Execute">
         <name>toggle the systemtray</name>
         <command>/usr/scripts/toggle-tray.sh</command>
+      </action>
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+        <command>/usr/scripts/scr.sh</command>
+      </action>
+    </keybind>
+    <keybind key="A-Print">
+      <action name="Execute">
+        <command>/usr/scripts/scrw.sh</command>
+      </action>
+    </keybind>
+	<keybind key="C-space">
+      <action name="Execute">
+        <command>/usr/scripts/menu.sh</command>
+      </action>
+    </keybind>
+    <keybind key="A-Up">
+      <action name="Execute">
+        <command>/usr/scripts/popup/menu.sh</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>/usr/scripts/vol.sh -i "10"</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>/usr/scripts/vol.sh -d "10"</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>/usr/scripts/vol.sh -t</command>
+      </action>
+    </keybind>
+    <keybind key="W-A-Right">
+      <action name="Execute">
+        <command>mpc seek "+5"</command>
+      </action>
+    </keybind>
+    <keybind key="W-A-Left">
+      <action name="Execute">
+        <command>mpc seek "-5"</command>
+      </action>
+    </keybind>
+    <keybind key="W-A-Down">
+      <action name="Execute">
+        <command>mpc "toggle"</command>
       </action>
     </keybind>
     <keybind key="C-Left">
@@ -201,21 +251,6 @@
       <action name="ToggleDecorations">
       </action>
     </keybind>
-    <keybind key="Print">
-      <action name="Execute">
-        <command>/usr/scripts/scr.sh</command>
-      </action>
-    </keybind>
-    <keybind key="A-Print">
-      <action name="Execute">
-        <command>/usr/scripts/scrw.sh</command>
-      </action>
-    </keybind>
-	<keybind key="C-space">
-      <action name="Execute">
-        <command>/usr/scripts/menu.sh</command>
-      </action>
-    </keybind>
     <keybind key="A-Tab">
       <action name="NextWindow">
         <finalactions>
@@ -223,41 +258,6 @@
           <action name="Raise"/>
         </finalactions>
         <dialog>none</dialog>
-      </action>
-    </keybind>
-    <keybind key="A-Up">
-      <action name="Execute">
-        <command>/usr/scripts/popup/menu.sh</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioRaiseVolume">
-      <action name="Execute">
-        <command>/usr/scripts/vol.sh -i 10</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioLowerVolume">
-      <action name="Execute">
-        <command>/usr/scripts/vol.sh -d 10</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioMute">
-      <action name="Execute">
-        <command>/usr/scripts/vol.sh -t</command>
-      </action>
-    </keybind>
-    <keybind key="W-A-Right">
-      <action name="Execute">
-        <command>mpc seek "+5"</command>
-      </action>
-    </keybind>
-    <keybind key="W-A-Left">
-      <action name="Execute">
-        <command>mpc seek "-5"</command>
-      </action>
-    </keybind>
-    <keybind key="W-A-Down">
-      <action name="Execute">
-        <command>mpc toggle</command>
       </action>
     </keybind>
   </keyboard>
@@ -272,6 +272,11 @@
       </mousebind>
       <mousebind button="A-Right" action="Drag">
         <action name="Resize"/>
+      </mousebind>
+      <mousebind button="A-Middle" action="Press">
+      	<action name="Execute">
+      	  <command>/usr/scripts/center.sh</command>
+      	</action>
       </mousebind>
     </context>
     <context name="Titlebar">
@@ -504,15 +509,4 @@
       <decor>no</decor>
     </application>
   </applications>
-  <dock>
-    <position>TopLeft</position>
-    <floatingX>0</floatingX>
-    <floatingY>748</floatingY>
-    <stacking>Below</stacking>
-    <direction>Horizontal</direction>
-    <noStrut>no</noStrut>
-    <autoHide>no</autoHide>
-    <hideDelay>300</hideDelay>
-    <showDelay>300</showDelay>
-  </dock>
 </openbox_config>
