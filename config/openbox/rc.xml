@@ -22,6 +22,7 @@
     <name>c</name>
     <titleLayout>IC</titleLayout>
     <animateIconify>no</animateIconify>
+    <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
       <name>lemon</name>
       <size>8</size>
@@ -58,7 +59,6 @@
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
-    <keepBorder>yes</keepBorder>
   </theme>
   <desktops>
     <number>5</number>
@@ -73,13 +73,9 @@
     <popupTime>0</popupTime>
   </desktops>
   <resize>
-    <drawContents>yes</drawContents>
+    <drawContents>no</drawContents>
     <popupShow>Always</popupShow>
     <popupPosition>Center</popupPosition>
-    <popupFixedPosition>
-      <x>0</x>
-      <y>0</y>
-    </popupFixedPosition>
   </resize>
   <margins>
     <top>0</top>
@@ -88,37 +84,6 @@
     <right>0</right>
   </margins>
   <keyboard>
-    <keybind key="C-W-t">
-      <action name="Execute">
-        <command>/usr/scripts/toggle-bar.sh</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-y">
-      <action name="Execute">
-        <command>/usr/scripts/toggle-compositor.sh</command>
-      </action>
-    </keybind>
-    <keybind key="C-A-l">
-      <action name="Execute">
-        <name>lock</name>
-        <command>/usr/scripts/lock.sh</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-c">
-      <action name="Execute">
-        <command>/usr/scripts/center.sh</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-l">
-      <action name="Execute">
-        <command>setxkbmap "us"</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-k">
-      <action name="Execute">
-        <command>setxkbmap "fr"</command>
-      </action>
-    </keybind>
     <keybind key="A-F1">
       <action name="Execute">
         <name>terminal</name>
@@ -127,13 +92,11 @@
     </keybind>
     <keybind key="A-F2">
       <action name="Execute">
-        <name>run</name>
         <command>rofi -show "run" -lines "7" -bw "5" -line-margin "8" -padding "30" -font "lemon 7" -scrollbar-width "0" -separator-style "none" -width "30"</command>
       </action>
     </keybind>
     <keybind key="A-F8">
       <action name="Execute">
-        <name>clipboard</name>
         <command>clipmenu -lines "15" -bw "5" -line-margin "6" -padding "30" -font "lemon 7" -scrollbar-width "0" -separator-style "none"</command>
       </action>
     </keybind>
@@ -149,10 +112,30 @@
         <command>chromium</command>
       </action>
     </keybind>
+    <keybind key="C-W-c">
+      <action name="Execute">
+        <command>/usr/scripts/center.sh</command>
+      </action>
+    </keybind>
+    <keybind key="C-W-l">
+      <action name="Execute">
+        <command>/usr/scripts/layout.sh</command>
+      </action>
+    </keybind>
     <keybind key="A-F6">
       <action name="Execute">
         <name>toggle the systemtray</name>
         <command>/usr/scripts/toggle-tray.sh</command>
+      </action>
+    </keybind>
+    <keybind key="C-W-t">
+      <action name="Execute">
+        <command>/usr/scripts/toggle-bar.sh</command>
+      </action>
+    </keybind>
+    <keybind key="C-W-y">
+      <action name="Execute">
+        <command>/usr/scripts/toggle-compositor.sh</command>
       </action>
     </keybind>
     <keybind key="Print">
@@ -168,11 +151,6 @@
 	<keybind key="C-space">
       <action name="Execute">
         <command>/usr/scripts/menu.sh</command>
-      </action>
-    </keybind>
-    <keybind key="A-Up">
-      <action name="Execute">
-        <command>/usr/scripts/popup/menu.sh</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
