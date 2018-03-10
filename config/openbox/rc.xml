@@ -472,7 +472,7 @@
     <middle>no</middle>
     <submenuShowDelay>50</submenuShowDelay>
     <submenuHideDelay>100</submenuHideDelay>
-    <showIcons>yes</showIcons>
+    <showIcons>no</showIcons>
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
