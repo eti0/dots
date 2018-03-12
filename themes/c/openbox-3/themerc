@@ -29,7 +29,7 @@ osd.label.text.color: #071d22
 
 # windows
 border.width: 5
-*.active.border.color: #2a424a
+*.active.border.color: #ffffff
 *.inactive.border.color: #192e33
 window.client.padding.width: 0
 window.handle.width: 0
