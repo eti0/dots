@@ -114,7 +114,7 @@
     </keybind>
     <keybind key="C-W-c">
       <action name="Execute">
-        <command>/usr/scripts/center.sh</command>
+        <command>/usr/scripts/create.sh</command>
       </action>
     </keybind>
     <keybind key="C-W-l">

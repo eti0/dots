@@ -2,10 +2,10 @@
 # requires xdotool and ffmpeg.
 
 # vars
-crf="20"
+crf="17"
 fps="50"
 enc="h264"
-prs="veryfast"
+prs="fast"
 pxf="yuv420p"
 aud="alsa"
 aui="default"
@@ -16,8 +16,6 @@ res="$(xdotool "getdisplaygeometry" | sed 's/ /x/')"
 printf "$com\n"
 notify-send "$com"
 ffmpeg -loglevel 16 \
-       -f "$aud" \
-       -i "$aui" \
        -f "x11grab" \
        -framerate "$fps" \
        -s "$res" \
