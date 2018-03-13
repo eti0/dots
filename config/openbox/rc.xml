@@ -36,25 +36,25 @@
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>lemon</name>
+      <name>Monaco</name>
       <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>lemon</name>
+      <name>Monaco</name>
       <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>lemon</name>
+      <name>Monaco</name>
       <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>lemon</name>
+      <name>Monaco</name>
       <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
@@ -76,6 +76,10 @@
     <drawContents>no</drawContents>
     <popupShow>Always</popupShow>
     <popupPosition>Center</popupPosition>
+    <popupFixedPosition>
+      <x>0</x>
+      <y>0</y>
+    </popupFixedPosition>
   </resize>
   <margins>
     <top>0</top>
@@ -87,7 +91,7 @@
     <keybind key="A-F1">
       <action name="Execute">
         <name>terminal</name>
-        <command>urxvtc</command>
+        <command>urxvt</command>
       </action>
     </keybind>
     <keybind key="A-F2">
@@ -114,58 +118,53 @@
     </keybind>
     <keybind key="C-W-c">
       <action name="Execute">
-        <command>/usr/scripts/create.sh</command>
+        <command>drawterm</command>
       </action>
     </keybind>
     <keybind key="C-W-l">
       <action name="Execute">
-        <command>/usr/scripts/layout.sh</command>
+        <command>layout</command>
       </action>
     </keybind>
     <keybind key="A-F6">
       <action name="Execute">
-        <name>toggle the systemtray</name>
-        <command>/usr/scripts/toggle-tray.sh</command>
+        <name>toggle the systray</name>
+        <command>toggle-tray</command>
       </action>
     </keybind>
     <keybind key="C-W-t">
       <action name="Execute">
-        <command>/usr/scripts/toggle-bar.sh</command>
+        <command>toggle-bar</command>
       </action>
     </keybind>
     <keybind key="C-W-y">
       <action name="Execute">
-        <command>/usr/scripts/toggle-compositor.sh</command>
+        <command>toggle-compositor</command>
       </action>
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>/usr/scripts/scr.sh</command>
+        <command>scr</command>
       </action>
     </keybind>
     <keybind key="A-Print">
       <action name="Execute">
-        <command>/usr/scripts/scrw.sh</command>
-      </action>
-    </keybind>
-	<keybind key="C-space">
-      <action name="Execute">
-        <command>/usr/scripts/menu.sh</command>
+        <command>scrw</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>/usr/scripts/vol.sh -i "10"</command>
+        <command>vol -i "10"</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>/usr/scripts/vol.sh -d "10"</command>
+        <command>vol -d "10"</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>/usr/scripts/vol.sh -t</command>
+        <command>vol -t</command>
       </action>
     </keybind>
     <keybind key="W-A-Right">
@@ -252,9 +251,9 @@
         <action name="Resize"/>
       </mousebind>
       <mousebind button="A-Middle" action="Press">
-      	<action name="Execute">
-      	  <command>/usr/scripts/center.sh</command>
-      	</action>
+        <action name="Execute">
+          <command>center</command>
+        </action>
       </mousebind>
     </context>
     <context name="Titlebar">
@@ -487,4 +486,15 @@
       <decor>no</decor>
     </application>
   </applications>
+  <dock>
+    <position>TopLeft</position>
+    <floatingX>0</floatingX>
+    <floatingY>0</floatingY>
+    <stacking>Above</stacking>
+    <direction>Vertical</direction>
+    <noStrut>no</noStrut>
+    <autoHide>no</autoHide>
+    <hideDelay>300</hideDelay>
+    <showDelay>300</showDelay>
+  </dock>
 </openbox_config>

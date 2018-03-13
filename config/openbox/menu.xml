@@ -3,7 +3,7 @@
 	<menu id="root-menu" label="Openbox">
 		<item label="new">
 			<action name="Execute">
-				<execute>create</execute>
+				<execute>drawterm</execute>
 			</action>
 		</item>
 		<item label="delete">
