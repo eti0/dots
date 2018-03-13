@@ -8,7 +8,7 @@ wd="6"
 hd="15"
 
 # exec
-slop -nl -b "5" -c "1 1 1 .1" > "$tmp"
+slop -nl -b "5" -c "1 1 1 0" > "$tmp"
 sed -i 's/x/ /; s/+/ /; s/+/ /' "$tmp"
 
 w="$(cat $tmp | awk '{print $1}')"
@@ -18,4 +18,4 @@ h="$(printf $(( ("$h" + "$m") / "$hd" )) )"
 x="$(cat $tmp | awk '{print $3}')"
 y="$(cat $tmp | awk '{print $4}')"
 
-urxvtc -g "$w"x"$h"+"$x"+"$y"
+urxvt -g "$w"x"$h"+"$x"+"$y"
