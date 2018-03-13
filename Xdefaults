@@ -7,7 +7,7 @@
 ! fonts
 *font:				xft:Monaco:size=7
 *boldFont:
-*lineSpace:			1
+*lineSpace:			0
 *letterSpace:		0
 
 
