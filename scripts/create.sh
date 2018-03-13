@@ -5,7 +5,7 @@
 tmp="/tmp/sel"
 m="10"
 wd="6"
-hd="15"
+hd="19"
 
 # exec
 slop -nl -b "5" -c "1 1 1 0" > "$tmp"

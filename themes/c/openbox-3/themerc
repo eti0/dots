@@ -9,15 +9,16 @@ menu.items.active.bg.color: #94a9d9
 menu.items.active.text.color: #071d22
 menu.items.*.border.width: 10
 menu.items.bg: Flat
-menu.items.bg.color: #ffffff
-menu.items.disabled.text.color: #8888888
-menu.items.text.color: #071d22
+menu.items.bg.color: #071d22
+menu.items.disabled.text.color: #94a9d9
+menu.items.text.color: #ffffff
 menu.border.width: 0
 menu.border.color: #ffffff
 menu.title.bg: Flat
-menu.title.bg.color: #ffffff
-menu.title.text.color: #071d22
+menu.title.bg.color: #071d22
+menu.title.text.color: #94a9d9
 menu.title.text.justify: Right
+menu.separator.color: #000000
 
 
 # osd
@@ -29,8 +30,8 @@ osd.label.text.color: #071d22
 
 # windows
 border.width: 5
-*.active.border.color: #ffffff
-*.inactive.border.color: #192e33
+*.active.border.color: #fbfbfb
+*.inactive.border.color: #edf1f2
 window.client.padding.width: 0
 window.handle.width: 0
 
