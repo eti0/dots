@@ -3,5 +3,5 @@
 # quit on error
 set -e
 
-maim $HOME/Pictures/Screenshots/$(date +%F-%T).png --hidecursor
+maim --hidecursor "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 notify-send "screenshot taken"
