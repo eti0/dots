@@ -37,25 +37,25 @@
     </font>
     <font place="MenuHeader">
       <name>Monaco</name>
-      <size>8</size>
+      <size>7</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
       <name>Monaco</name>
-      <size>8</size>
+      <size>7</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Monaco</name>
-      <size>8</size>
+      <name>lemon</name>
+      <size>7</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Monaco</name>
-      <size>8</size>
+      <name>lemon</name>
+      <size>7</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -118,7 +118,7 @@
     </keybind>
     <keybind key="C-W-c">
       <action name="Execute">
-        <command>drawterm</command>
+        <command>create</command>
       </action>
     </keybind>
     <keybind key="C-W-l">
