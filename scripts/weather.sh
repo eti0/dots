@@ -4,7 +4,7 @@
 # grab the colors
 if [ "$1" == "-o" ] ; then
 	:
-elif [ "$(which /usr/scripts/colors.sh)" ] ; then
+elif [ -f "/usr/scripts/colors.sh" ] ; then
 	source "/usr/scripts/colors.sh"
 else
 	printf "no colors.sh\nuse \"-o\" to omit.\n"
