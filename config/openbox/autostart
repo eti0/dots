@@ -1,38 +1,11 @@
-# set the background
-/home/eti/.fehbg &
-
-# set the keymap
-setxkbmap us &
-
-# start urxvtd
-urxvtd &
-
-# start mpd
+$HOME/.fehbg &
 mpd &
-
-# start clipmenu
 clipmenud &
-
-# disable beeping
 xset -b &
-
-# set the gamma
 xgamma -gamma 0.8 &
-
-# set the fonts
-/usr/scripts/fonts.sh &
-
-# enable touchpad clicks
-/usr/scripts/touchpad.sh &
-
-# start compton
+fonts &
 compton -Ccf &
-
-# start the bar
-sleep 2s && /usr/scripts/toggle-bar.sh &
-
-# start the mpd scrobbler
+nm-applet &
+battery &
+sleep 5s && toggle-bar &
 sleep 1m && mpdas &
-
-# battery icon
-cbatticon -l "10" -i "symbolic" &
