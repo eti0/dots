@@ -121,7 +121,7 @@
         <command>create</command>
       </action>
     </keybind>
-    <keybind key="C-W-l">
+    <keybind key="C-W-space">
       <action name="Execute">
         <command>layout</command>
       </action>

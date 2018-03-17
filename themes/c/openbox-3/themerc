@@ -5,8 +5,8 @@ padding.width: 8
 
 # menu
 menu.items.active.bg: Flat
-menu.items.active.bg.color: #94a9d9
-menu.items.active.text.color: #071d22
+menu.items.active.bg.color: #071d22
+menu.items.active.text.color: #94a9d9
 menu.items.*.border.width: 10
 menu.items.bg: Flat
 menu.items.bg.color: #071d22
@@ -16,8 +16,8 @@ menu.border.width: 25
 menu.border.color: #071d22
 menu.title.bg: Flat
 menu.title.bg.color: #071d22
-menu.title.text.color: #94a9d9
-menu.title.text.justify: Right
+menu.title.text.color: #071d22
+menu.title.text.justify: Left
 menu.separator.color: #000000
 
 
