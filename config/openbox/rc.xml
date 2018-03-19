@@ -179,7 +179,7 @@
     </keybind>
     <keybind key="W-A-Down">
       <action name="Execute">
-        <command>mpc "toggle"</command>
+        <command>spotifycli --playpause</command>
       </action>
     </keybind>
     <keybind key="C-Left">
