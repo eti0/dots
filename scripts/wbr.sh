@@ -11,7 +11,7 @@ p="   "
 barh="30"
 margin="30"
 font="-*-vanilla-*"
-iconfont="-*-siji-*"
+iconfont="-*-cure-*"
 
 
 # functions
@@ -51,6 +51,16 @@ song() {
 		echo "$p$csong$p"
 	else
 		:
+	fi
+}
+
+spotify() {
+	current=$(spotifycli --status)
+
+	if [ "$current" == "spotify is off" ]; then
+		:
+	else
+		printf "$p$current$p"
 	fi
 }
 
@@ -121,8 +131,8 @@ clock() {
 loop-desktop() {
 	while :; do
 		echo "%{l}\
-		$a1$af2%{A1:urxvt -name popup -e ncmpcpp &:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
-		$a3%{A:cover d &:}$(song)%{A}$bg\
+		$a1$af2%{A3:spotifycli --playpause &:}$p$(workspace)$p%{A}$txt$bg\
+		$a3$(spotify)$bg\
 		$a2$(window)$bg\
 		%{r}\
 		$a2%{A:notify-send 'updating the weather...' && weather &:}$p$(weather)$p%{A}$bg\
@@ -141,8 +151,8 @@ loop-desktop() {
 loop-laptop() {
 	while :; do
 		echo "%{l}\
-		$a1$af2%{A1:urxvt -name popup -e ncmpcpp &:}%{A3:mpc toggle &:}$p$(workspace)$p%{A}%{A}$txt$bg\
-		$a3%{A:cover d &:}$(song)%{A}$bg\
+		$a1$af2%{A3:spotifycli --playpause &:}$p$(workspace)$p%{A}$txt$bg\
+		$a3$(spotify)$bg\
 		$a2$(window)$bg\
 		%{r}\
 		$a2%{A:batstat &:}$p$(battery)$p%{A}$bg\
