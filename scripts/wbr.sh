@@ -10,8 +10,8 @@ rrate=".2s"
 p="   "
 barh="30"
 margin="30"
-font="-*-vanilla-*"
-iconfont="-*-cure-*"
+font="-*-cure-*"
+iconfont="-*-siji-*"
 
 
 # functions
