@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
-	<menu id="root-menu" label="Openbox">
-		<item label="new">
+	<menu id="root-menu" label="openbox">
+		<item label="term">
 			<action name="Execute">
-				<execute>create</execute>
+				<execute>urxvt</execute>
 			</action>
 		</item>
-		<item label="delete">
+		<item label="files">
 			<action name="Execute">
-				<execute>sh -c "kill $(xprop _NET_WM_PID | awk '/PID/ {print $3}')"</execute>
+				<execute>pcmanfm</execute>
 			</action>
 		</item>
-		<item label="hide">
+		<item label="wwww">
 			<action name="Execute">
-				<execute>sh -c "xdotool windowminimize $(xdotool selectwindow)"</execute>
+				<execute>chromium</execute>
 			</action>
 		</item>
+		<separator/>
+		<menu id="power" label="power">
+			<item label="reboot">
+				<action name="Execute">
+					<execute>sudo reboot</execute>
+				</action>
+			</item>
+			<item label="sleep">
+				<action name="Execute">
+					<execute>sudo zzz</execute>
+				</action>
+			</item>			
+		</menu>
+		<separator/>
+		<menu id="openbox" label="openbox">
+			<item label="exit">
+				<action name="Exit"/>
+			</item>
+			<item label="restart">
+				<action name="Restart"/>
+			</item>
+		</menu>
 	</menu>
 </openbox_menu>

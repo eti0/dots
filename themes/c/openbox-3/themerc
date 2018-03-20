@@ -18,7 +18,7 @@ menu.title.bg: Flat
 menu.title.bg.color: #071d22
 menu.title.text.color: #071d22
 menu.title.text.justify: Left
-menu.separator.color: #000000
+menu.separator.color: #071d22
 
 
 # osd
