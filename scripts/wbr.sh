@@ -144,7 +144,6 @@ loop-desktop() {
 	    -f "$font" \
    	    -f "$iconfont" \
 	    -g "x"$barh"" \
-	    -b \
 	    | bash
 }
 
@@ -164,7 +163,6 @@ loop-laptop() {
 	    -f "$font" \
 	    -f "$iconfont" \
 	    -g "x"$barh"" \
-	    -b \
 	    | bash
 }
 

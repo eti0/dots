@@ -5,9 +5,9 @@
 !
 
 ! fonts
-*font:				xft:Monaco:size=7
+*font:				-*-vanilla-*
 *boldFont:
-*lineSpace:			0
+*lineSpace:			2
 *letterSpace:		0
 
 
