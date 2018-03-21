@@ -16,7 +16,6 @@ source "$colors"
 # functions
 desktop() {
 	current="$(xdotool "get_desktop")"
-	
 	case "$current" in
 		"0")
 			desktop="un"
@@ -37,20 +36,17 @@ desktop() {
 			desktop="???"
 			;;
 	esac
-	
 	printf "$desktop"
 }
 
 mpd() {
 	current="$(mpc "current")"
-	
 	printf "$current"
 }
 
 spotify() {
 	current="$(sps "current")"
 	pid="$(pidof "spotify")"
-	
 	if [ "$pid" ] ; then
 		printf "$padding$current$padding"
 	else
@@ -60,11 +56,10 @@ spotify() {
 
 window() {
 	current="$(xdotool "getwindowfocus" "getwindowname")"
-	
-	if [ "$current" == "Openbox" ] ; then
+	if [ "$current" = "Openbox" ] ; then
 		:
 	else
-		printf "$current"
+		printf "$padding$current$padding"
 	fi
 }
 
@@ -73,10 +68,7 @@ weather() {
 }
 
 battery() {
-	id="BAT0"
-	percent="$(cat "/sys/class/power_supply/"$id"/capacity")"
-	power="$(cat "/sys/class/power_supply/"$id"/status")"
-	
+	percent="$(cat "/sys/class/power_supply/"$battery"/capacity")"
 	echo "$percent%%"
 }
 
@@ -92,7 +84,7 @@ dloop() {
 		echo "%{l}\
 		$a1$af2%{A3:sps 'play' &:}$padding$(desktop)$padding%{A}$txt$bg\
 		$a3$(spotify)$bg\
-		$a2$padding$(window)$padding$bg\
+		$a2$(window)$bg\
 		%{r}\
 		$a2%{A:notify-send 'updating the weather' && weather &:}$padding$(weather)$padding%{A}$bg\
 		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
@@ -111,7 +103,7 @@ lloop() {
 		echo "%{l}\
 		$a1$af2%{A3:sps 'play' &:}$padding$(desktop)$padding%{A}$txt$bg\
 		$a3$(spotify)$bg\
-		$a2$padding$(window)$padding$bg\
+		$a2$(window)$bg\
 		%{r}\
 		$a2%{A:batstat &:}$padding $(battery)$padding%{A}$bg\
 		$a2%{A:calendar &:}$padding $(clock)$padding%{A}$bg"
