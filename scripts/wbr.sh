@@ -55,12 +55,12 @@ song() {
 }
 
 spotify() {
-	current=$(spotifycli --status)
-
-	if [ "$current" == "spotify is off" ]; then
-		:
-	else
+	current="$(sps "current")"
+	pid="$(pidof "spotify")"
+	if [ "$pid" ] ; then
 		printf "$p$current$p"
+	else
+		:
 	fi
 }
 
