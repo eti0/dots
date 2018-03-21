@@ -1,73 +1,15 @@
 #!/usr/bin/env bash
-# audio volume bar
+# vars
+sink="0"
 
-IF="Master"			# audio channel: Master|PCM
-SECS="1"			# sleep $SECS
-BG="#071d22"		# background colour of window
-FG="#fff"			# foreground colour of text/icon
-BAR_FG="#f7f8f8"	# foreground colour of volume bar
-BAR_BG="#617278"	# background colour of volume bar
-XPOS="30"			# horizontal positioning
-YPOS="30"			# vertical positioning
-HEIGHT="30"			# window height
-WIDTH="225"			# window width
-BAR_WIDTH="200"		# width of volume bar
-BAR_HEIGHT="1"		# height of volume bar
-
-# don't touch
-PIPE="/tmp/volpipe"
-
-err() {
-  echo "$1"
-  exit 1
-}
-
-usage() {
-  echo "usage: vol [option] [argument]"
-  echo
-  echo "Options:"
-  echo "     -i, --increase - increase volume by \`argument'"
-  echo "     -d, --decrease - decrease volume by \`argument'"
-  echo "     -t, --toggle   - toggle mute on and off"
-  echo "     -h, --help     - display this"
-  exit 
-}   
-    
-#Argument Parsing
-case "$1" in 
-  '-i'|'--increase')
-    [ -z "$2" ] && err "No argument specified for increase."
-    [ -n "$(tr -d [0-9] <<<$2)" ] && err "The argument needs to be an integer."
-    AMIXARG="${2}%+"
-    ;;
-  '-d'|'--decrease')
-    [ -z "$2" ] && err "No argument specified for decrease."
-    [ -n "$(tr -d [0-9] <<<$2)" ] && err "The argument needs to be an integer."
-    AMIXARG="${2}%-"
-    ;;
-  '-t'|'--toggle')
-    AMIXARG="toggle"
-    ;;
-  ''|'-h'|'--help')
-    usage
-    ;;
-  *)
-    err "Unrecognized option \`$1', see vol --help"
-    ;;
-esac
-
-#Actual volume changing (readability low)
-AMIXOUT="$(amixer set "$IF" "$AMIXARG" | tail -n 1)"
-MUTE="$(cut -d '[' -f 4 <<<"$AMIXOUT")"
-VOL="$(cut -d '[' -f 2 <<<"$AMIXOUT" | sed 's/%.*//g')"
-
-#Using named pipe to determine whether previous call still exists
-#Also prevents multiple volume bar instances
-if [ ! -e "$PIPE" ]; then
-  mkfifo "$PIPE"
-  (dzen2 -tw "$WIDTH" -h "$HEIGHT" -x "$XPOS" -y "$YPOS" -bg "$BG" -fg "$FG" < "$PIPE"
-   rm -f "$PIPE") &
+# exec
+if [ "$1" == "i" ] ; then
+	pactl set-sink-volume "$sink" +"$2"%
+elif [ "$1" == "d" ] ; then
+	pactl set-sink-volume "$sink" -"$2"%
+elif [ "$1" == "t" ] ; then
+	pactl set-sink-mute "$sink" "toggle"
+else
+	printf "wrong argument."
+	exit "1"
 fi
-
-#Feed the pipe!
-(echo "$VOL" | gdbar  -fg "$BAR_FG" -bg "$BAR_BG" -w "$BAR_WIDTH" -h "$BAR_HEIGHT" ; sleep "$SECS") > "$PIPE"
