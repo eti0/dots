@@ -17,7 +17,7 @@ convert -background "rgba(0,0,0,0)" \
 		"$cil"
 
 # display it
-popup "" "$(expr "$mw" - "215")" -p "175" &
+popup "" "$(expr "$mw" - "215")" &
 sleep ".05s"
 n30f -x "$(expr "$mw" - "168")" -y 92 -c "killall n30f" "$cil"
 

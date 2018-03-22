@@ -73,7 +73,7 @@ battery() {
 }
 
 clock() {
-	clock="$(date "+%a %R")"
+	clock="$(date "+%R")"
 	printf "$clock"
 }
 
@@ -101,12 +101,12 @@ dloop() {
 lloop() {
 	while :; do
 		echo "%{l}\
-		$a1$af2%{A3:sps 'play' &:}$padding$(desktop)$padding%{A}$txt$bg\
-		$a3$(spotify)$bg\
-		$a2$(window)$bg\
+		%{A3:sps 'play' &:}$padding$(desktop)$padding%{A}$bg\
+		$(spotify)$bg\
+		%{c}\
+		%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
 		%{r}\
-		$a2%{A:batstat &:}$padding$(battery)$padding%{A}$bg\
-		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
+		%{A:batstat &:}$padding$(battery)$padding%{A}$bg"
 		sleep "$refresh"
 	done |\
 
