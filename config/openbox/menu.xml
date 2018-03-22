@@ -11,7 +11,7 @@
 				<execute>pcmanfm</execute>
 			</action>
 		</item>
-		<item label="wwww">
+		<item label="www">
 			<action name="Execute">
 				<execute>chromium</execute>
 			</action>

@@ -24,37 +24,37 @@
     <animateIconify>no</animateIconify>
     <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
-      <name>lemon</name>
+      <name>cure</name>
       <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>lemon</name>
+      <name>cure</name>
       <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Monaco</name>
+      <name>cure</name>
       <size>7</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Monaco</name>
+      <name>cure</name>
       <size>7</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>lemon</name>
+      <name>cure</name>
       <size>7</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>lemon</name>
+      <name>cure</name>
       <size>7</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
@@ -82,8 +82,8 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>0</top>
-    <bottom>30</bottom>
+    <top>30</top>
+    <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
@@ -121,7 +121,7 @@
         <command>create</command>
       </action>
     </keybind>
-    <keybind key="C-W-space">
+    <keybind key="XF86Launch1">
       <action name="Execute">
         <command>layout</command>
       </action>
@@ -154,32 +154,32 @@
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>vol -i "10"</command>
+        <command>vol i 10</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>vol -d "10"</command>
+        <command>vol d 10</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>vol -t</command>
+        <command>vol t</command>
       </action>
     </keybind>
     <keybind key="W-A-Right">
       <action name="Execute">
-        <command>mpc seek "+5"</command>
+        <command>sps next</command>
       </action>
     </keybind>
     <keybind key="W-A-Left">
       <action name="Execute">
-        <command>mpc seek "-5"</command>
+        <command>sps previous</command>
       </action>
     </keybind>
     <keybind key="W-A-Down">
       <action name="Execute">
-        <command>spotifycli --playpause</command>
+        <command>sps play</command>
       </action>
     </keybind>
     <keybind key="C-Left">

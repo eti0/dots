@@ -105,8 +105,8 @@ lloop() {
 		$a3$(spotify)$bg\
 		$a2$(window)$bg\
 		%{r}\
-		$a2%{A:batstat &:}$padding $(battery)$padding%{A}$bg\
-		$a2%{A:calendar &:}$padding $(clock)$padding%{A}$bg"
+		$a2%{A:batstat &:}$padding$(battery)$padding%{A}$bg\
+		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
 		sleep "$refresh"
 	done |\
 
