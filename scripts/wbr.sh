@@ -48,7 +48,7 @@ spotify() {
 	current="$(sps "current")"
 	pid="$(pidof "spotify")"
 	if [ "$pid" ] ; then
-		printf "$padding$current$padding"
+		printf "$current"
 	else
 		:
 	fi
@@ -59,7 +59,7 @@ window() {
 	if [ "$current" = "Openbox" ] ; then
 		:
 	else
-		printf "$padding$current$padding"
+		printf "$current"
 	fi
 }
 
@@ -83,8 +83,8 @@ dloop() {
 	while :; do
 		echo "%{l}\
 		$a1$af2%{A3:sps 'play' &:}$padding$(desktop)$padding%{A}$txt$bg\
-		$a3$(spotify)$bg\
-		$a2$(window)$bg\
+		$a3$padding$(spotify)$padding$bg\
+		$a2$padding$(window)$$paddingbg\
 		%{r}\
 		$a2%{A:notify-send 'updating the weather' && weather &:}$padding$(weather)$padding%{A}$bg\
 		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
@@ -101,8 +101,8 @@ dloop() {
 lloop() {
 	while :; do
 		echo "%{l}\
-		%{A3:sps 'play' &:}$padding$(desktop)$padding%{A}$bg\
-		$(spotify)$bg\
+		$padding$(desktop)$padding$bg\
+		%{A:sps 'play' &:}$padding$(spotify)$padding%{A}$bg\
 		%{c}\
 		%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
 		%{r}\
@@ -113,7 +113,7 @@ lloop() {
 	lemonbar \
 		-f "$font" \
 		-f "$ifont" \
-		-g "x"$height"" \
+		-g "x"$height"+1080" \
 	| bash
 }
 

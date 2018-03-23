@@ -7,11 +7,11 @@ background_color_hover = #071d22 70
 # panel
 panel_items = T
 panel_size = 100% 30
-panel_margin = 0 30
+panel_margin = 0
 panel_background_id = 1
 panel_position = top center horizontal
 panel_window_name = tint2
-panel_monitor = 2
+panel_monitor = 1
 
 # task
 task_text = 1
