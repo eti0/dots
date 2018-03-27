@@ -113,7 +113,7 @@ lloop() {
 	lemonbar \
 		-f "$font" \
 		-f "$ifont" \
-		-g "x"$height"+1080" \
+		-g "x"$height"" \
 	| bash
 }
 
