@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
-#
-# simple script to center window in height and width
-#
 
-IFS='x' read screenWidth screenHeight < <(xdpyinfo | grep dimensions | grep -o '[0-9x]*' | head -n1)
+mw="$(xdotool "getdisplaygeometry" | awk '{print $1;}')"
+mh="$(xdotool "getdisplaygeometry" | awk '{print $2;}')"
 
-width=$(xdotool getactivewindow getwindowgeometry --shell | head -4 | tail -1 | sed 's/[^0-9]*//')
-height=$(xdotool getactivewindow getwindowgeometry --shell | head -5 | tail -1 | sed 's/[^0-9]*//')
+ww="$(xdotool "getwindowgeometry" "$(xdotool "getactivewindow")" | awk -v FS="(Geometry: | )" '{print $4}' | tail -n1 | sed "s/x.*//")"
+wh="$(xdotool "getwindowgeometry" "$(xdotool "getactivewindow")" | awk -v FS="(Geometry: | )" '{print $4}' | tail -n1 | sed "s/.*.x//")"
 
-newPosX=$((screenWidth/2-width/2))
-newPosY=$((screenHeight/2-height/2))
+mw="$(($mw / "2"))"
+mh="$(($mh / "2"))"
+ww="$(($ww / "2"))"
+wh="$(($wh / "2"))"
 
-xdotool getactivewindow windowmove "$(expr $newPosX - 2)" "$(expr $newPosY - 0)"
+x="$(expr "$mw" - "$ww")"
+y="$(expr "$mh" - "$wh")"
+
+xdotool "windowmove" "$(xdotool "getactivewindow")" "$x" "$y"
