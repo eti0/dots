@@ -46,11 +46,10 @@ mpd() {
 
 spotify() {
 	current="$(sps "current")"
-	pid="$(pidof "spotify")"
-	if [ "$pid" ] ; then
-		printf "$current"
-	else
+	if [ "$current" == "Spotify is not running." ] ; then
 		:
+	else
+		printf "$current"
 	fi
 }
 
