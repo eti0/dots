@@ -9,6 +9,7 @@ zoom = 2
 zoom_factor = 1
 
 # visibility
+layer = "normal"
 show_popups = true
 show_sticky = false
 show_titles = false
@@ -21,7 +22,7 @@ show_titles = false
 action_buttons = 132
 allow_cover = false
 auto_hide = false
-switch_delay = 100
+switch_delay = 50
 
 # fonts
 popup_font = "cure"
