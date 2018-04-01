@@ -48,7 +48,7 @@ icon() {
 
 
 # exec
-if [ "$(icon)" == "" ] ; then
+if [[ "$(icon)" == "" || "$1" == "--noicon" || "$2" == "--noicon" ]] ; then
 	echo "$temp - $cond" > "$file"
 	cat "$file"
 else

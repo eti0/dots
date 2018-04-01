@@ -81,12 +81,12 @@ clock() {
 dloop() {
 	while :; do
 		echo "%{l}\
-		$a1$af2%{A3:sps 'play' &:}$padding$(desktop)$padding%{A}$txt$bg\
-		$a3$padding$(spotify)$padding$bg\
-		$a2$padding$(window)$$paddingbg\
+		$padding$(desktop)$padding$bg\
+		%{A:sps 'play' &:}$padding$(spotify)$padding%{A}$bg\
+		%{c}\
+		%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
 		%{r}\
-		$a2%{A:notify-send 'updating the weather' && weather &:}$padding$(weather)$padding%{A}$bg\
-		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
+		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}$bg"
 		sleep "$refresh"
 	done |\
 
