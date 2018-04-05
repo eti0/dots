@@ -9,6 +9,4 @@ compton -Ccf &
 nm-applet &
 battery &
 sleep 5s && toggle-bar &
-tint2 -c $HOME/.config/tint2/slim &
-# tint2 -c $HOME/.config/tint2/slim2 &
 sleep 1m && mpdas &
