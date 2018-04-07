@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # vars
-sink="0"
+sink="$(pactl info | grep -oP "(?<=Default Sink: ).*(?=)")"
 
 # exec
 if [ "$1" == "i" ] ; then
