@@ -1,0 +1,9 @@
+{
+	// unbind
+	"Alt.": "UnbindKey",
+	"Alt,": "UnbindKey",
+
+	// bind
+	"Alt-[": "PreviousTab",
+	"Alt-]": "NextTab"
+}
