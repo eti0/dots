@@ -5,7 +5,7 @@ word="$1"
 
 # funcs
 get() {
-	cmd=$(curl -s "$www/$word" | grep -oP '(?<=<meta name="description" content=").*(?=See more.)' | sed "s/.*,/$word:/")
+	cmd=$(curl -s "$www/$word" | grep -oP '(?<=<meta name="description" content=").*(?=See more.)' | sed "s/.*definition,/$word:/")
 	if [ "$cmd" == "" ] ; then
 		printf "this word wasn't found. \n"
 		exit "1"
