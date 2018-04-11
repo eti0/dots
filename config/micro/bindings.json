@@ -2,6 +2,8 @@
 	// unbind
 	"Alt.": "UnbindKey",
 	"Alt,": "UnbindKey",
+	"CtrlG": "UnbindKey",
+	"F1": "UnbindKey",
 
 	// bind
 	"Alt-[": "PreviousTab",
