@@ -28,9 +28,7 @@ if [ -f "$file" ] ; then
 		notify-send "???"
 	fi
 else
-	notify-send "$file not found. defaulting to $lay1 layout."
+	notify-send "$file not found. defaulting to the $lay1 layout."
 	setxkbmap "$lay1"
 	printf "$lay1" > "$file"
-	sleep "1"
-	notify-send "keyboard layout: $current"
 fi
