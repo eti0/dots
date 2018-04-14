@@ -20,7 +20,7 @@ usage() {
 }
 
 # exec
-if [ "$1" == "" ] ; then
+if [[ "$@" == "" ]] ; then
 	usage
 else
 	get
