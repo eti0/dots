@@ -2,7 +2,8 @@
 # no rice no life - display system info
 
 # colors
-f="3" b="4"
+f="3"
+b="4"
 for j in f b; do
 	for i in {0..7} ; do
 		printf -v "$j$i" "%b" "\e[${!j}${i}m"
@@ -30,9 +31,9 @@ os() {
 }
 
 wm() {
-	id="$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)"
+	id="$(xprop -root -notype "_NET_SUPPORTING_WM_CHECK")"
 	id="${id##* }"
-	wm="$(xprop -id "$id" -notype -len 100 -f _NET_WM_NAME 8t)"
+	wm="$(xprop -id "$id" -notype -len "100" -f "_NET_WM_NAME" "8t")"
 	wm="${wm/*_NET_WM_NAME = }"
 	wm="${wm/\"}"
 	wm="${wm/\"*}"
@@ -41,7 +42,7 @@ wm() {
 }
 
 init() {
-	init="$(readlink /sbin/init)"
+	init="$(readlink "/sbin/init")"
 	init="${init##*/}"
 	init="${init%%-*}"
 	export "init"
