@@ -7,7 +7,7 @@ fps="50"
 enc="h264"
 prs="fast"
 pxf="yuv420p"
-aud="alsa"
+aud="pulse"
 aui="default"
 com="recording..."
 res="$(xdotool "getdisplaygeometry" | sed 's/ /x/')"
@@ -20,6 +20,9 @@ ffmpeg -loglevel 16 \
        -framerate "$fps" \
        -s "$res" \
        -i :0.0 \
+       -f "$aud" \
+       -ac "2" \
+       -i "$aui" \
        -c:v "$enc" \
        -preset "$prs" \
        -crf "$crf" \
