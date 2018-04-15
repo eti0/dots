@@ -82,7 +82,7 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>60</top>
+    <top>40</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -255,6 +255,8 @@
         <action name="Resize"/>
       </mousebind>
       <mousebind button="A-Middle" action="Press">
+		<action name="Focus"/>
+        <action name="Raise"/>
         <action name="Execute">
           <command>center</command>
         </action>
