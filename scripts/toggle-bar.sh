@@ -7,7 +7,7 @@ pid="$(pidof "lemonbar")"
 width="$(xdotool "getdisplaygeometry" | awk '{print $1;}')"
 height="$(xdotool "getdisplaygeometry" | awk '{print $2;}')"
 y="0"
-h="30"
+h="40"
 
 # import colors
 source "/usr/scripts/colors.sh"

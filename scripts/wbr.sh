@@ -3,7 +3,7 @@
 colors="/usr/scripts/colors.sh"
 refresh=".2"
 padding="   "
-height="30"
+height="40"
 font="-*-cure-*"
 ifont="-*-siji-*"
 battery="BAT0"
