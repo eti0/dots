@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # vars
 www="http://www.dictionary.com/browse"
-word="$1"
+word="$@"
+tmp="/tmp/dico"
+tmpv="/tmp/dico.wav"
 
 # funcs
 get() {
@@ -14,14 +16,24 @@ get() {
 	fi
 }
 
+vox() {
+	get > "$tmp"
+	cat "$tmp"
+	flite -voice "slt" -f "$tmp" -o "$tmpv"
+	ffplay -nodisp -autoexit -loglevel "panic" "$tmpv"
+}
+
 usage() {
-	printf "usage: \n    dict <word> \n    requires curl, grep and sed. \n"
+	printf "usage: dict [options] <word>\n	options:\n	-v: read the definition with text to speech. \nrequires curl, grep and sed.\ninstall ffmpeg and flite to use the -v option. \n"
 	exit "1"
 }
 
 # exec
 if [[ "$@" == "" ]] ; then
 	usage
+elif [[ "$1" == "-v" ]] ; then
+	word="${@:2}"
+	vox
 else
 	get
 fi
