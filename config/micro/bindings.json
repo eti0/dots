@@ -3,6 +3,7 @@
 	"Alt.": "UnbindKey",
 	"Alt,": "UnbindKey",
 	"CtrlG": "UnbindKey",
+	"Alt-g": "UnbindKey",
 	"F1": "UnbindKey",
 
 	// bind

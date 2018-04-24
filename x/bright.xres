@@ -1,0 +1,49 @@
+! padding
+*internalBorder:	90
+
+! url stuff
+*.matcher.rend.0:	fg7
+
+! line space
+*lineSpace:			3
+
+! font
+*font:				xft:Roboto Mono:size=11:style=Medium,xft:Noto Mono:size=11
+
+! special
+*.foreground:   #071d22
+*.background:   #f7f7f7
+*.cursorColor:  #071d22
+
+! black
+*.color0:       #071d22
+*.color8:       #617278
+
+! red
+*.color1:       #f8a1aa
+*.color9:       #e9b3bf
+
+! green
+*.color2:       #8cc495
+*.color10:      #ade1b6
+
+! yellow
+*.color3:       #f0e0aa
+*.color11:      #fbf1cf
+
+! blue
+*.color4:       #8ab6c2
+*.color12:      #b5dbe4
+
+! magenta
+*.color5:       #94a9d9
+*.color13:      #b6cbfa
+
+! cyan
+*.color6:       #7eb5ac
+*.color14:      #a3d0c8
+
+! white
+*.color7:       #374e54
+*.color15:      #b7c5c5
+

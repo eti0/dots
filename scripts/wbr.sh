@@ -82,7 +82,7 @@ dloop() {
 	while :; do
 		echo "%{l}\
 		$padding$(desktop)$padding$bg\
-		%{A:sps 'play' &:}$padding$(spotify)$padding%{A}$bg\
+		%{A:sps 'play' & mpc 'toggle' &:}$padding$(mpd)$(spotify)$padding%{A}$bg\
 		%{c}\
 		%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
 		%{r}\
@@ -101,7 +101,7 @@ lloop() {
 	while :; do
 		echo "%{l}\
 		$padding$(desktop)$padding$bg\
-		%{A:sps 'play' &:}$padding$(spotify)$padding%{A}$bg\
+		%{A:sps 'play' & mpc 'toggle' &:}$padding$(mpd)$(spotify)$padding%{A}$bg\
 		%{c}\
 		%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
 		%{r}\
