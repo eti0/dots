@@ -2,7 +2,7 @@
 
 xrdb "$HOME/.xres/bright.xres"
 
-urxvt -e ssh xv &
+urxvt -title tch -e ssh xv &
 disown
 
 sleep ".5s"
