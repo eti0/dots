@@ -1,0 +1,49 @@
+! this is a thicc config - don't use it, really.
+! padding
+*internalBorder:	90
+
+! url stuff
+*.matcher.rend.0:	fg7
+
+! line space
+*lineSpace:			10
+
+! font
+*font:				-*-tamzenforpowerline-*
+
+! special
+*.foreground:		#071d22
+*.background:		#f7f7f7
+*.cursorColor:		#071d22
+
+! black
+*.color0:			#021f29
+*.color8:			#073d47
+
+! red
+*.color1:			#c1566b
+*.color9:			#f8879f
+
+! green
+*.color2:			#a7dfa6
+*.color10:			#cae1c9
+
+! yellow
+*.color3:			#ed9b8b
+*.color11:			#e1aba1
+
+! blue
+*.color4:			#8fa4da
+*.color12:			#aeb6d0
+
+! magenta
+*.color5:			#c6779d
+*.color13:			#d2a9bd
+
+! cyan
+*.color6:			#6776a4
+*.color14:			#8998c7
+
+! white
+*.color7:			#e7f8ff
+*.color15:			#ffffff
