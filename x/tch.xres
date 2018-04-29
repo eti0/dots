@@ -6,7 +6,7 @@
 *.matcher.rend.0:	fg7
 
 ! line space
-*lineSpace:			10
+*lineSpace:			8
 
 ! font
 *font:				-*-tamzenforpowerline-*

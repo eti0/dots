@@ -68,7 +68,7 @@ weather() {
 
 battery() {
 	percent="$(cat "/sys/class/power_supply/"$battery"/capacity")"
-	echo "$percent%%"
+	echo "$percent%"
 }
 
 clock() {
