@@ -158,12 +158,12 @@
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>vol i 10</command>
+        <command>vol i 5</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>vol d 10</command>
+        <command>vol d 5</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
@@ -481,16 +481,15 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
-    <application name="chromium">
-      <decor>no</decor>
-    </application>
     <application name="popup">
       <decor>no</decor>
       <layer>above</layer>
     </application>
+    <!--
     <application class="*">
       <decor>no</decor>
     </application>
+    -->
   </applications>
   <dock>
     <position>TopLeft</position>
