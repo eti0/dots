@@ -81,12 +81,12 @@ clock() {
 dloop() {
 	while :; do
 		echo "%{l}\
-		$padding$(desktop)$padding$bg\
-		%{A:sps 'play' & mpc 'toggle' &:}$padding$(mpd)$(spotify)$padding%{A}$bg\
+		$padding$(desktop)$padding\
+		%{A:sps 'play' & mpc 'toggle' &:}$padding$(mpd)$(spotify)$padding%{A}\
 		%{c}\
-		%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
+		%{A:calendar &:}$padding$(clock)$padding%{A}\
 		%{r}\
-		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}$bg"
+		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}"
 		sleep "$refresh"
 	done |\
 
@@ -94,18 +94,19 @@ dloop() {
 		-f "$font" \
 		-f "$ifont" \
 		-g "x"$height"" \
+		-B "$background" \
 	| bash
 }
 
 lloop() {
 	while :; do
 		echo "%{l}\
-		$padding$(desktop)$padding$bg\
-		%{A:sps 'play' & mpc 'toggle' &:}$padding$(mpd)$(spotify)$padding%{A}$bg\
+		$padding$(desktop)$padding\
+		%{A:sps 'play' & mpc 'toggle' &:}$padding$(mpd)$(spotify)$padding%{A}\
 		%{c}\
-		%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
+		%{A:calendar &:}$padding$(clock)$padding%{A}\
 		%{r}\
-		%{A:batstat &:}$padding$(battery)$padding%{A}$bg"
+		%{A:batstat &:}$padding$(battery)$padding%{A}"
 		sleep "$refresh"
 	done |\
 
@@ -113,6 +114,7 @@ lloop() {
 		-f "$font" \
 		-f "$ifont" \
 		-g "x"$height"" \
+		-B "$background" \
 	| bash
 }
 

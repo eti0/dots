@@ -15,7 +15,7 @@ wrn="%{F$warning}"
 acc0="#b3bec1"
 acc1="#f2f2f2"
 acc2="#2a424a"
-acc3="#94a9d9"
+acc3="#f8879f"
 
 # background accents
 a0="%{B$acc0}"
@@ -27,6 +27,7 @@ a3="%{B$acc3}"
 af0="%{F$acc0}"
 af1="%{F$acc1}"
 af2="%{F$acc2}"
+af3="%{F$acc3}"
 
 # misc
 bgt="%{B$text}"
