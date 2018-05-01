@@ -21,7 +21,7 @@
   <theme>
     <name>c</name>
     <cornerRadius>8</cornerRadius>
-    <titleLayout>IC</titleLayout>
+    <titleLayout/>
     <animateIconify>no</animateIconify>
     <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
