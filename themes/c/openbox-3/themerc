@@ -33,7 +33,7 @@ window.handle.width: 0
 
 
 # titlebars
-padding.height: 10
+padding.height: 15
 padding.width: 8
 
 

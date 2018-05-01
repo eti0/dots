@@ -12,14 +12,16 @@ convert -background "rgba(0,0,0,0)" \
 		-fill "white" \
 		-font "$font" \
 		+antialias \
-		-pointsize 12 \
-		label:"$(date "+%d %B %Y\n" && cal -m| tail -n7)" \
+		-pointsize "12" \
+		label:"$(date "+%d %B %Y\n" && cal -m | tail -n7)" \
 		"$cil"
 
 # display it
-popup "" "$(expr "$mw" - "215")" &
+popup "" "$(expr "$mw" - "240")" &
 sleep ".05s"
-n30f -x "$(expr "$mw" - "168")" -y 92 -c "killall n30f" "$cil"
+n30f -x "$(expr "$mw" - "195")" \
+	 -y "160" \
+	 -c "killall n30f" "$cil"
 
 # delete it
 sleep ".2s"
