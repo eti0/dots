@@ -20,6 +20,7 @@
   </placement>
   <theme>
     <name>c</name>
+    <cornerRadius>8</cornerRadius>
     <titleLayout>IC</titleLayout>
     <animateIconify>no</animateIconify>
     <keepBorder>yes</keepBorder>
@@ -178,7 +179,7 @@
     </keybind>
     <keybind key="W-A-Left">
       <action name="Execute">
-        <command>sps previous</command>
+        <command>sps prev</command>
       </action>
     </keybind>
     <keybind key="W-A-Down">
@@ -255,7 +256,7 @@
         <action name="Resize"/>
       </mousebind>
       <mousebind button="A-Middle" action="Press">
-		<action name="Focus"/>
+        <action name="Focus"/>
         <action name="Raise"/>
         <action name="Execute">
           <command>center</command>
