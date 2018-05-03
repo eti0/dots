@@ -10,8 +10,7 @@ menu.items.text.color: white
 menu.border.width: 25
 menu.border.color: #071d22
 menu.title.bg: Flat
-menu.title.bg.color: #071d22
-menu.title.text.color: #071d22
+menu.title.*.color: #071d22
 menu.title.text.justify: Left
 menu.separator.color: #071d22
 
@@ -38,19 +37,12 @@ padding.width: 8
 
 
 # active window
-window.active.title.width:  40
 window.active.*.bg: Flat
 window.active.*.*.bg.color: white
-window.active.*.hover.image.color: white
-window.active.*.pressed.image.color: white
-window.active.*.toggled.image.color: #071d22
-window.active.*.unpressed.image.color: #071d22
+window.active.*.*.image.color: black
 
 
 # inactive window
 window.inactive.*.bg: Flat
 window.inactive.*.*.bg.color: white
-window.inactive.*.hover.image.color: white
-window.inactive.*.pressed.image.color: white
-window.inactive.*.toggled.image.color: #2a424a
-window.inactive.*.unpressed.image.color: #566a70
+window.inactive.*.*.image.color: black
