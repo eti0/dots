@@ -1,1 +1,1 @@
-<right><i>please don't steal too much stuff.</i></right>
+<p align="right"><i>please don't steal too much stuff.</i></p>
