@@ -187,6 +187,21 @@
         <command>sps play</command>
       </action>
     </keybind>
+	<keybind key="W-A-Right">
+      <action name="Execute">
+        <command>mpc next</command>
+      </action>
+    </keybind>
+    <keybind key="W-A-Left">
+      <action name="Execute">
+        <command>mpc prev</command>
+      </action>
+    </keybind>
+    <keybind key="W-A-Down">
+      <action name="Execute">
+        <command>mpc toggle</command>
+      </action>
+    </keybind>
     <keybind key="C-Left">
       <action name="GoToDesktop">
         <to>Previous</to>
