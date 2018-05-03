@@ -1,4 +1,1 @@
-<pre align="center">
-╺┳┓┏━┓╺┳╸┏━┓
- ┃┃┃ ┃ ┃ ┗━┓
-╺┻┛┗━┛ ╹ ┗━┛</pre>
+<right><i>please don't steal too much stuff.</i></right>
