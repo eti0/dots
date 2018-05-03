@@ -20,12 +20,12 @@
 		<menu id="power" label="power">
 			<item label="reboot">
 				<action name="Execute">
-					<execute>sudo reboot</execute>
+					<execute>gksudo reboot</execute>
 				</action>
 			</item>
 			<item label="sleep">
 				<action name="Execute">
-					<execute>sudo zzz</execute>
+					<execute>gksudo zzz</execute>
 				</action>
 			</item>			
 		</menu>

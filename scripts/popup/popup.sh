@@ -8,7 +8,7 @@ source "/usr/scripts/colors.sh"
 # vars
 background="/usr/scripts/popup/img/bg.png"
 pointer="/usr/scripts/popup/img/pointer.png"
-y="70"
+y="30"
 
 # exec
 n30f -x "$2" \
