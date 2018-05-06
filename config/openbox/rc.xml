@@ -113,8 +113,8 @@
     </keybind>
     <keybind key="A-F5">
       <action name="Execute">
-        <name>chromium</name>
-        <command>chromium</command>
+        <name>luakit</name>
+        <command>luakit</command>
       </action>
     </keybind>
     <keybind key="C-W-c">
@@ -187,7 +187,7 @@
         <command>sps play</command>
       </action>
     </keybind>
-	<keybind key="W-A-Right">
+    <keybind key="W-A-Right">
       <action name="Execute">
         <command>mpc next</command>
       </action>

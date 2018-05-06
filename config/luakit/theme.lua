@@ -1,5 +1,5 @@
 --------------------------
--- default luakit theme --
+-- yet another luakit theme --
 --------------------------
 
 local theme = {}
@@ -63,10 +63,10 @@ theme.tab_fg            = "#071d22"
 theme.tab_bg            = "#fff"
 theme.tab_hover_bg      = "#fff"
 theme.tab_hover_fg      = "#071d22"
-theme.tab_ntheme        = "#ddd"
+theme.tab_ntheme        = "#fff"
 theme.selected_fg       = "#818cee"
 theme.selected_bg       = "#fff"
-theme.selected_ntheme   = "#ddd"
+theme.selected_ntheme   = "#fff"
 theme.loading_fg        = "#fff"
 theme.loading_bg        = "#071d22"
 
@@ -81,6 +81,9 @@ theme.notrust_fg        = "#e69494"
 theme.ok = { fg = "#071d22", bg = "#fff" }
 theme.warn = { fg = "#eb7070", bg = "#fff" }
 theme.error = { fg = "#fff", bg = "#eb7070" }
+
+-- remove tab numbers
+require('lousy.widget.tab').label_format = '{title}'
 
 return theme
 

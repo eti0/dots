@@ -3,8 +3,6 @@
 ----------------------------------------------------------------------------------------
 
 require "lfs"
-require "userconf"
-require "theme"
 
 if unique then
     unique.new("org.luakit")
@@ -27,6 +25,7 @@ luakit.process_limit = 4
 
 -- Load library of useful functions for luakit
 local lousy = require "lousy"
+lousy.widget.tab.add_signal("build", function (w) w.widget.child.margin = 20 end)
 
 -- Load users global config
 -- ("$XDG_CONFIG_HOME/luakit/globals.lua" or "/etc/xdg/luakit/globals.lua")
@@ -62,6 +61,8 @@ window.add_signal("build", function (w)
     r.layout:pack(widgets.ssl())
     r.layout:pack(widgets.tabi())
     r.layout:pack(widgets.scroll())
+
+    w.mbar.ebox.margin = 10
 end)
 
 -- Load luakit binds and modes
@@ -174,7 +175,7 @@ local image_css = require "image_css"
 local newtab_chrome = require "newtab_chrome"
 
 -- Add tab favicons mod
-local tab_favicons = require "tab_favicons"
+-- local tab_favicons = require "tab_favicons"
 
 -- Add :view-source command
 local view_source = require "view_source"
