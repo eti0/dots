@@ -3,13 +3,18 @@
 sink="$(pactl info | grep -oP "(?<=Default Sink: ).*(?=)")"
 
 # exec
-if [ "$1" == "i" ] ; then
-	pactl set-sink-volume "$sink" +"$2"%
-elif [ "$1" == "d" ] ; then
-	pactl set-sink-volume "$sink" -"$2"%
-elif [ "$1" == "t" ] ; then
-	pactl set-sink-mute "$sink" "toggle"
-else
-	printf "wrong argument."
-	exit "1"
-fi
+case "$1" in
+	"i")
+		pactl set-sink-volume "$sink" +"$2"%
+		;;
+	"d")
+		pactl set-sink-volume "$sink" -"$2"%
+		;;
+	"t")
+		pactl set-sink-mute "$sink" "toggle"
+		;;
+	*)
+		printf "wrong argument."
+		exit "1"
+		;;
+esac
