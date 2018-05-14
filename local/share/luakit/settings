@@ -1,0 +1,22 @@
+{{
+["domain"]={2},
+},
+{
+[""]={3},
+},
+{
+["tablist.always_visible"]=true,
+["webview.enable_webaudio"]=true,
+["window.new_window_size"]="900x750",
+["window.close_with_last_tab"]=false,
+["webview.monospace_font_family"]="Roboto Mono",
+["webview.draw_compositing_indicators"]=false,
+["webview.enable_smooth_scrolling"]=false,
+["window.home_page"]="luakit://newtab/",
+["window.scroll_step"]=40,
+["webview.sans_serif_font_family"]="Inter UI",
+["webview.enable_dns_prefetching"]=true,
+["webview.enable_webgl"]=true,
+["webview.enable_accelerated_2d_canvas"]=false,
+},
+}

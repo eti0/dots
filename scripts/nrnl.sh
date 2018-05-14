@@ -55,12 +55,11 @@ wm
 init
 cat << EOF
 
-${f7} __
-${f7}/_/\/\     ${rst}os${f7}:${rst}         ${f7}$os${rst}
-${f7}\_\  /     ${rst}shell${f7}:${rst}      ${f7}$shell${rst}
-${f7}/_/  \     ${rst}wm${f7}:${rst}         ${f7}$wm${rst}
-${f7}\_\/\ \    ${rst}init${f7}:${rst}       ${f7}$init${rst}
-${f7}   \_\/
+${rst} ,gg,   ,gg
+${f4}  ""8b,dP"      ${rst}os${f7}:${rst}         ${f7}$os${rst}
+${f4}    ,88"        ${rst}shell${f7}:${rst}      ${f7}$shell${rst}
+${f4}  ,dP"Y8,       ${rst}wm${f7}:${rst}         ${f7}$wm${rst}
+${rst} dP"   "Y8
 
 EOF
 
