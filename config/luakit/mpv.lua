@@ -7,7 +7,7 @@ local _M = {}
 --- Open a URI in mpv.
 -- @tparam string url The URI to play.
 function _M.play(url)
-    local cmd = string.format("%s -e mpv \'%s\'", "urxvt", url)
+    local cmd = string.format("%s -g 100x18 -e mpv \'%s\'", "urxvt", url)
     msg.info("Running %s", cmd)
     luakit.spawn(cmd)
 end
