@@ -5,7 +5,7 @@
 [""]={3},
 },
 {
-["tablist.always_visible"]=true,
+["tablist.always_visible"]=false,
 ["webview.enable_webaudio"]=true,
 ["window.new_window_size"]="900x750",
 ["window.close_with_last_tab"]=false,
