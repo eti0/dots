@@ -501,6 +501,9 @@
       <decor>no</decor>
       <layer>above</layer>
     </application>
+    <application name="luakit">
+      <decor>no</decor>
+    </application>
     <!--
     <application class="*">
       <decor>no</decor>
