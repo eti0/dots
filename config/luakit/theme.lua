@@ -5,7 +5,7 @@
 local theme = {}
 
 -- default settings
-theme.font = "12px Roboto"
+theme.font = "cure"
 theme.fg   = "#fff"
 theme.bg   = "#071d22"
 

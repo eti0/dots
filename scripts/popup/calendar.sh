@@ -3,7 +3,7 @@
 # vars
 cil="/tmp/calendar.png"
 bg="/usr/scripts/popup/img/bg.png"
-font="kakwafont-12-n"
+font="lime"
 mw=$(xdotool "getdisplaygeometry" | awk '{print $1;}')
 
 
@@ -12,15 +12,15 @@ convert -background "rgba(0,0,0,0)" \
 		-fill "white" \
 		-font "$font" \
 		+antialias \
-		-pointsize "12" \
+		-pointsize "10" \
 		label:"$(date "+%d %B %Y\n" && cal -m | tail -n7)" \
 		"$cil"
 
 # display it
-popup "" "$(expr "$mw" - "240")" &
+popup "" "$(expr "$mw" - "270")" &
 sleep ".05s"
-n30f -x "$(expr "$mw" - "195")" \
-	 -y "122" \
+n30f -x "$(expr "$mw" - "200")" \
+	 -y "145" \
 	 -c "killall n30f" "$cil"
 
 # delete it

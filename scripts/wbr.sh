@@ -4,7 +4,7 @@ colors="/usr/scripts/colors.sh"
 refresh=".2"
 padding="   "
 height="40"
-font="Roboto Medium:size=8"
+font="-*-cure-*"
 ifont="-*-siji-*"
 battery="BAT0"
 
@@ -81,12 +81,12 @@ clock() {
 dloop() {
 	while :; do
 		echo "%{l}\
-		$padding$padding$(desktop)$padding\
+		$padding$(desktop)$padding\
 		%{A:sps 'play' & mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$padding$(mpd)$(spotify)$padding%{A}%{A}%{A}\
 		%{c}\
 		%{A:calendar &:}$padding$(clock)$padding%{A}\
 		%{r}\
-		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding$padding%{A}"
+		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}"
 		sleep "$refresh"
 	done |\
 

@@ -23,7 +23,7 @@ osd.label.text.color: #071d22
 
 
 # windows
-border.width: 20
+border.width: 0
 *.border.color: white
 # *.active.border.color: white
 # *.inactive.border.color: #f2f2f2

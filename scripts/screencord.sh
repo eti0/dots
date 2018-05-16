@@ -2,8 +2,8 @@
 # requires xdotool and ffmpeg.
 
 # vars
-crf="17"
-fps="50"
+crf="20"
+fps="30"
 enc="h264"
 prs="fast"
 pxf="yuv420p"
@@ -20,9 +20,6 @@ ffmpeg -loglevel 16 \
        -framerate "$fps" \
        -s "$res" \
        -i :0.0 \
-       -f "$aud" \
-       -ac "2" \
-       -i "$aui" \
        -c:v "$enc" \
        -preset "$prs" \
        -crf "$crf" \

@@ -15,8 +15,8 @@ n30f -x "$2" \
 	 -y "$(expr $y + 36)" \
 	 -c "killall n30f" "$background" &
 sleep ".05s"
-n30f -x "$(expr $2 + 5)" \
-	 -y "$(expr $y + 41)" \
+n30f -x "$(expr $2 + 20)" \
+	 -y "$(expr $y + 56)" \
 	 -c "killall n30f" "$1" &
 
 # pointer
