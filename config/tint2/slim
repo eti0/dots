@@ -1,8 +1,7 @@
 # background
-rounded = 0
 border_width = 0
-background_color = #071d22 60
-background_color_hover = #071d22 70
+background_color = #ffffff 50
+background_color_hover = #ffffff 75
 
 # panel
 panel_items = T
@@ -17,9 +16,9 @@ panel_monitor = 2
 task_text = 1
 task_centered = 1
 task_padding = 2 5 4
-task_font = cure 8
-task_font_color = #ffffff 100
-task_iconified_font_color = #ffffff 90
+task_font = Roboto Medium 8
+task_font_color = #071d22 100
+task_iconified_font_color = #071d22 90
 task_background_id = 1
 mouse_left = toggle_iconify
 taskbar_hide_different_monitor = 1

@@ -4,7 +4,7 @@ colors="/usr/scripts/colors.sh"
 refresh=".2"
 padding="   "
 height="40"
-font="-*-cure-*"
+font="Roboto Medium:size=8"
 ifont="-*-siji-*"
 battery="BAT0"
 
@@ -81,18 +81,19 @@ clock() {
 dloop() {
 	while :; do
 		echo "%{l}\
-		$padding$(desktop)$padding\
+		$padding$padding$(desktop)$padding\
 		%{A:sps 'play' & mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$padding$(mpd)$(spotify)$padding%{A}%{A}%{A}\
 		%{c}\
 		%{A:calendar &:}$padding$(clock)$padding%{A}\
 		%{r}\
-		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}"
+		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding$padding%{A}"
 		sleep "$refresh"
 	done |\
 
 	lemonbar \
 		-f "$font" \
 		-f "$ifont" \
+		-F "$text" \
 		-g "x"$height"" \
 		-B "$background" \
 	| bash
