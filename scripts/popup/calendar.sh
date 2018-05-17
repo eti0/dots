@@ -20,7 +20,7 @@ convert -background "rgba(0,0,0,0)" \
 popup "" "$(expr "$mw" - "270")" &
 sleep ".05s"
 n30f -x "$(expr "$mw" - "200")" \
-	 -y "145" \
+	 -y "150" \
 	 -c "killall n30f" "$cil"
 
 # delete it

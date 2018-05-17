@@ -1,22 +1,18 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-# quit on error
-set -e
 
 # vars
-csf=$(mpc -f "%file%" | head -1)
-csil="/tmp/cover.png"
-csbil="/usr/scripts/popup/img/bg.png"
+set song (mpc -f '%file%' | head -1)
+set cover "/tmp/cover.png"
 
-# extract the album art
+
+# exec
 ffmpeg -loglevel "0" \
 	   -y \
-	   -i "$HOME/Music/$csf" \
-	   -vf scale="-200:200" "$csil"
+	   -i "$HOME/Music/$song" \
+	   -vf scale="-200:200" "$cover"
 
-# display it
-popup "$csil" "20"
+popup "$cover" "30"
 
-# delete it
 sleep ".1"
-rm "$csil"
+rm "$cover"

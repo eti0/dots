@@ -1,29 +1,48 @@
-#!/usr/bin/env bash
-# usage:
-# popup [file] [placement] -p [pointer location]
+#!/usr/bin/env fish
 
-# fetch the colors
-source "/usr/scripts/colors.sh"
 
 # vars
-background="/usr/scripts/popup/img/bg.png"
-pointer="/usr/scripts/popup/img/pointer.png"
-y="30"
+set scriptdir "/usr/scripts"
+set background "$scriptdir/popup/img/bg.png"
+set file "$argv[1]"
+set tmpf "/tmp/popup.png"
+set ypos "70"
+set xpos "$argv[2]"
+
+
+# funcs
+function resize
+	convert "$file" \
+			-resize "200x200!" \
+			"$tmpf"
+end
+
+function display_background
+	n30f -x "$xpos" \
+		 -y "$ypos" \
+		 -c "killall n30f" \
+		 "$background" &
+end
+
+function display_image
+	n30f -x (math $xpos + 20) \
+		 -y (math $ypos + 20) \
+		 -c "killall n30f" \
+		 "$tmpf" &
+end
+
+function clean
+	rm "$tmpf"
+end
+
 
 # exec
-n30f -x "$2" \
-	 -y "$(expr $y + 36)" \
-	 -c "killall n30f" "$background" &
-sleep ".05s"
-n30f -x "$(expr $2 + 20)" \
-	 -y "$(expr $y + 56)" \
-	 -c "killall n30f" "$1" &
-
-# pointer
-if [ "$3" == "-p" ] ; then
-	n30f -x "$(expr $2 + $4)" \
-		 -y "$(expr $y + 30)" \
-		 -c "killall n30f" "$pointer"
+if test -z "$argv"
+	printf "usage:\npopup: [file] [position]\n"
 else
-	exit
-fi
+	resize
+	display_background
+	display_image
+	sleep "1s"
+	clean
+end
