@@ -1,13 +1,18 @@
-#!/usr/bin/env bash
-#
-# This script will alert when battery is less than 20% and discharging
-# Created by Daniel Neemann
+#!/usr/bin/env fish
+# alerts the user when the battery level is low | original script created by Daniel Neemann
 
-while :; do 
-	n=$(cat /sys/class/power_supply/BAT0/capacity)
-	y=$(cat /sys/class/power_supply/BAT0/status)
-	if [ "$n" -lt "10" ] && [ "$y" = "Discharging" ]; then
-	    notify-send "battery level is low! - $n%"
-	fi
-	sleep 5m
-done
+
+# vars
+set c (cat "/sys/class/power_supply/BAT0/capacity")
+set s (cat "/sys/class/power_supply/BAT0/status")
+
+
+# exec
+while true
+	if test "$c" -lt "20" ; and test "$s" != "Charging"
+		notify-send "battery level low! - $c%"
+	else
+		#
+	end
+	sleep "5m"
+end
