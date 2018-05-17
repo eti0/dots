@@ -4,8 +4,7 @@ local add_binds = require("modes").add_binds
 
 local _M = {}
 
---- Open a URI in chromium.
--- @tparam string url The URI to play.
+--- open a URI in chromium.
 function _M.play(url)
     local cmd = string.format("%s --app=\'%s\'", "chromium", url)
     msg.info("Running %s", cmd)

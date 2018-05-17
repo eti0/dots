@@ -1,27 +1,35 @@
---------------------------
--- yet another luakit theme --
---------------------------
+--		   __  __                          __
+--		  / /_/ /_  ___  ____ ___  ___    / /_  ______ _
+--		 / __/ __ \/ _ \/ __ `__ \/ _ \  / / / / / __ `/
+--		/ /_/ / / /  __/ / / / / /  __/ / / /_/ / /_/ /
+--		\__/_/ /_/\___/_/ /_/ /_/\___(_)_/\__,_/\__,_/ 
+--		
 
 local theme = {}
 
+
 -- default settings
-theme.font = "cure"
+theme.font = "12px cure"
 theme.fg   = "#fff"
 theme.bg   = "#071d22"
 
--- genaral colours
+
+-- general colours
 theme.success_fg = "#94dba0"
 theme.loaded_fg  = "#80bcd6"
 theme.error_fg = "#fff"
 theme.error_bg = "#eb7070"
 
+
 -- warning colours
 theme.warning_fg = "#eb7070"
 theme.warning_bg = "#fff"
 
+
 -- notification colours
 theme.notif_fg = "#fff"
 theme.notif_bg = "#071d22"
+
 
 -- menu colours
 theme.menu_fg                   = "#fff"
@@ -39,24 +47,29 @@ theme.menu_enabled_bg = theme.menu_bg
 theme.menu_active_fg = "#5389d5"
 theme.menu_active_bg = theme.menu_bg
 
+
 -- proxy manager
 theme.proxy_active_menu_fg      = '#071d22'
 theme.proxy_active_menu_bg      = '#fff'
 theme.proxy_inactive_menu_fg    = '#888'
 theme.proxy_inactive_menu_bg    = '#fff'
 
+
 -- statusbar specific
 theme.sbar_fg         = "#fff"
 theme.sbar_bg         = "#071d22"
+
 
 -- downloadbar specific
 theme.dbar_fg         = "#fff"
 theme.dbar_bg         = "#071d22"
 theme.dbar_error_fg   = "#eb7070"
 
+
 -- input bar specific
 theme.ibar_fg           = "#fff"
 theme.ibar_bg           = "#071d22"
+
 
 -- tab label
 theme.tab_fg            = "#071d22"
@@ -73,17 +86,21 @@ theme.loading_bg        = "#071d22"
 theme.selected_private_tab_bg = "#818cee"
 theme.private_tab_bg    = "#606eeb"
 
+
 -- trusted/untrusted ssl colours
 theme.trust_fg          = "#99cd8e"
 theme.notrust_fg        = "#e69494"
+
 
 -- general colour pairings
 theme.ok = { fg = "#071d22", bg = "#fff" }
 theme.warn = { fg = "#eb7070", bg = "#fff" }
 theme.error = { fg = "#fff", bg = "#eb7070" }
 
+
 -- remove tab numbers
 require('lousy.widget.tab').label_format = '{title}'
+
 
 return theme
 

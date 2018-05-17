@@ -14,4 +14,4 @@ ph="$(printf $(( "$h" / "$hd" )) )"
 
 urxvt -g "$pw"x"$ph"+"$x"+"$y" &
 sleep ".1s"
-xdotool windowsize "$(xdotool "getactivewindow")" "$w" "$h"
+xdotool windowsize "$(xdotool "getactivewindow")" "$w" "$(($h - 35))"
