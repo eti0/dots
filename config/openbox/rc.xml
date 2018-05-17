@@ -154,7 +154,7 @@
     </keybind>
     <keybind key="A-Print">
       <action name="Execute">
-        <command>scrw</command>
+        <command>scr w</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
@@ -497,10 +497,6 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
-    <application name="popup">
-      <decor>no</decor>
-      <layer>above</layer>
-    </application>
     <application name="luakit">
       <decor>no</decor>
     </application>

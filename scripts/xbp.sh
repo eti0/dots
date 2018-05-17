@@ -3,8 +3,8 @@
 
 # funcs
 function usage
-		printf "usage: xbp [options]\noptions:\n    i (install)\n    s (search)\n    r (remove)\n"
-		exit "1"
+	printf "usage: xbp [options]\noptions:\n    i (install)\n    s (search)\n    r (remove)\n"
+	exit "1"
 end
 
 
