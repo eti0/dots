@@ -4,7 +4,7 @@
 
 # vars
 set file "/tmp/klayout"
-set current (cat "$file")
+set current (cat $file)
 set lay1 "us"
 set lay2 "fr"
 set lay3 "ru"

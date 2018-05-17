@@ -3,8 +3,9 @@
 
 
 # vars
-set c (cat "/sys/class/power_supply/BAT0/capacity")
-set s (cat "/sys/class/power_supply/BAT0/status")
+set battery "BAT0"
+set c (cat /sys/class/power_supply/$battery/capacity)
+set s (cat /sys/class/power_supply/$battery/status)
 
 
 # exec

@@ -2,7 +2,7 @@
 
 
 # vars
-set pid (pidof "netwmpager")
+set pid (pidof netwmpager)
 
 
 # exec

@@ -12,7 +12,11 @@ ffmpeg -loglevel "0" \
 	   -i "$HOME/Music/$song" \
 	   -vf scale="-200:200" "$cover"
 
-popup "$cover" "30"
+if test -f "$cover"
+	popup "$cover" "30"
+else
+	#
+end
 
 sleep ".1"
 rm "$cover"

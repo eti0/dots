@@ -10,7 +10,7 @@ set pxf "yuv420p"
 set aud "pulse"
 set aui "default"
 set com "recording..."
-set res (xdotool "getdisplaygeometry" | sed 's/ /x/')
+set res (xdotool getdisplaygeometry | sed 's/ /x/')
 
 
 # exec

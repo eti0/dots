@@ -5,7 +5,6 @@ refresh=".2"
 padding="   "
 height="40"
 font="-*-cure-*"
-ifont="-*-siji-*"
 battery="BAT0"
 
 
@@ -92,7 +91,6 @@ dloop() {
 
 	lemonbar \
 		-f "$font" \
-		-f "$ifont" \
 		-F "$text" \
 		-g "x"$height"" \
 		-B "$background" \
@@ -113,7 +111,6 @@ lloop() {
 
 	lemonbar \
 		-f "$font" \
-		-f "$ifont" \
 		-g "x"$height"" \
 		-B "$background" \
 	| bash

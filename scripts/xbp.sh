@@ -1,6 +1,13 @@
 #!/usr/bin/env fish
 
 
+# funcs
+function usage
+		printf "usage: xbp [options]\noptions:\n    i (install)\n    s (search)\n    r (remove)\n"
+		exit "1"
+end
+
+
 # exec
 switch "$argv[1]"
 	case "i"
@@ -10,11 +17,5 @@ switch "$argv[1]"
 	case "r"
 		xbps-remove $argv[2..-1]
 	case "*"
-		printf "you didn't provide any argument you dumbfuck.
-	usage: xbp [options]
-	options:
-	  i (install)
-	  s (search)
-	  r (remove)\n"
-		exit "1"
+        usage
 end
