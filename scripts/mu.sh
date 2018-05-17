@@ -1,16 +1,15 @@
-#!/usr/bin/env bash
-# download youtube or soundcloud links as mp3
-# require scdl (https://github.com/flyingrub/scdl) and youtube-dl (https://github.com/rg3/youtube-dl).
+#!/usr/bin/env fish
 
-if [ -z "$*" ] ; then
+
+if test -z "$argv"
 	exit 1
 else
-	printf "$1" | grep "soundcloud"
-		if [ "$?" = "0" ] ; then
-			scdl --path "$HOME/Music/sc/" --onlymp3 -l "$@"
-		elif [ "$?" = "1" ] ; then
-			youtube-dl -x --audio-format "mp3" -o "$HOME/Music/yt/%(title)s.%(ext)s" "$@"
+	printf "$argv" | grep "soundcloud" > "/dev/null"
+		if test "$status" = "0"
+			scdl --path "$HOME/Music/sc/" --onlymp3 -l "$argv"
+		else if test "$status" = "1"
+			youtube-dl -x --audio-format "mp3" -o "$HOME/Music/yt/%(title)s.%(ext)s" "$argv"
 		else
-			:
-		fi
-fi
+			#
+		end
+end

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
 xrdb "$HOME/.xres/tch.xres"
 

@@ -1,14 +1,16 @@
-#!/usr/bin/env bash
-# toggle the compositor
+#!/usr/bin/env fish
 
-# get the pid of compton
-pid=$(pidof compton)
 
-if [ $pid ] ; then
-	kill -9 $pid
+# vars
+set pid (pidof compton)
+
+
+# exec
+if test "$pid"
+	kill -9 "$pid"
 	notify-send "compositor disabled"
 else
 	compton -Ccf &
 	disown
 	notify-send "compositor enabled"
-fi
+end

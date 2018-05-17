@@ -1,11 +1,13 @@
-#!/usr/bin/env bash
-# toggle the system tray
+#!/usr/bin/env fish
 
-# get the pid of stalonetray
-pid=$(pidof stalonetray)
 
-if [ $pid ] ; then
-	killall stalonetray
+# vars
+set pid (pidof stalonetray)
+
+
+# exec
+if test "$pid"
+	killall "stalonetray"
 else
 	stalonetray &
-fi
+end

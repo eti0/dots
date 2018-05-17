@@ -1,11 +1,17 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-mkfontdir ~/.fonts
 
-cp "$HOME/.fonts/fonts.dir" "$HOME/.fonts/fonts.alias"
-sed -i "1d;s/.pcf.gz//;s/.pcf//" "$HOME/.fonts/fonts.alias"
+# vars
+set fontdir "$HOME/.fonts"
 
-xset fp+ ~/.fonts
+
+# exec
+mkfontdir "$fontdir"
+
+cp "$fontdir/fonts.dir" "$fontdir/fonts.alias"
+sed -i "1d;s/.pcf.gz//;s/.pcf//;s/.bdf//" "$fontdir/fonts.alias"
+
+xset fp+ "$fontdir"
 xset fp rehash
 
-echo "done!"
+printf "done!\n"

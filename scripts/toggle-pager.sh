@@ -1,11 +1,14 @@
-#!/usr/bin/env bash
-# toggle the pager
+#!/usr/bin/env fish
 
-pid="$(pidof "netwmpager")"
 
-if [ "$pid" ] ; then
+# vars
+set pid (pidof "netwmpager")
+
+
+# exec
+if test "$pid"
 	kill -9 "$pid"
 else
 	netwmpager &
 	disown
-fi
+end

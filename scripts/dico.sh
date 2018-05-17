@@ -1,28 +1,31 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
+
+
 # vars
-www="http://www.dictionary.com/browse"
-word="$@"
+set www "http://www.dictionary.com/browse"
+set word "$argv"
+set cmd (curl -s "$www/$word" | grep -oP '(?<=<meta name="description" content=").*(?=See more.)' | sed "s/.*definition,/$word:/")	
+
 
 # funcs
-get() {
-	cmd=$(curl -s "$www/$word" | grep -oP '(?<=<meta name="description" content=").*(?=See more.)' | sed "s/.*definition,/$word:/")	
-	
-	if [ -z "$cmd" ] ; then
+function get
+	if test -z "$cmd"
 		printf "this word wasn't found.\n"
 		exit "1"
 	else
 		printf "$cmd\n"
-	fi
-}
+	end
+end
 
-usage() {
+function usage
 	printf "usage: dict <word>\nrequires curl, grep and sed.\n"
 	exit "1"
-}
+end
+
 
 # exec
-if [ -z "$@" ] ; then
+if test -z "$argv"
 	usage
 else
 	get
-fi
+end

@@ -1,7 +1,24 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-# quit on error
-set -e
 
-maim --hidecursor "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
-notify-send "screenshot taken"
+# vars
+set frmt (date +%F-%T)
+set path "$HOME/Pictures/Screenshots/$frmt.png"
+
+
+# exec
+if test "$argv" = "w"
+    maim -s --hidecursor "$path"
+    if test "$status" = "0"
+        notify-send "window screenshot taken"
+    else
+        #
+    end
+else
+    maim --hidecursor $path
+    if test "$status" = "0"
+        notify-send "window screenshot taken"
+    else
+        #
+    end
+end

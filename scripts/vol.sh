@@ -1,20 +1,19 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
+
+
 # vars
-sink="$(pactl info | grep -oP "(?<=Default Sink: ).*(?=)")"
+set sink (pactl info | grep -oP "(?<=Default Sink: ).*(?=)")
+
 
 # exec
-case "$1" in
-	"i")
-		pactl set-sink-volume "$sink" +"$2"%
-		;;
-	"d")
-		pactl set-sink-volume "$sink" -"$2"%
-		;;
-	"t")
+switch "$argv[1]"
+	case "i"
+		pactl set-sink-volume "$sink" +"$argv[2]"%
+	case "d"
+		pactl set-sink-volume "$sink" -"$argv[2]"%
+	case "t"
 		pactl set-sink-mute "$sink" "toggle"
-		;;
-	*)
+	case "*"
 		printf "wrong argument."
 		exit "1"
-		;;
-esac
+end

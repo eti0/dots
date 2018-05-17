@@ -1,10 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
+# print battery information in a notification
 
-which notify-send &> /dev/null
 
-if [ $? = 0 ] ; then
-	notify-send "$(acpi -b | sed 's/Battery 0: //')"
-else
-	printf "error: notify-send not found\n"
-	exit 1
-fi
+notify-send (acpi -b | sed 's/Battery 0: //')

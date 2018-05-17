@@ -1,17 +1,25 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
+# center the focused window
 
-mw="$(xdotool "getdisplaygeometry" | awk '{print $1;}')"
-mh="$(xdotool "getdisplaygeometry" | awk '{print $2;}')"
 
-ww="$(xdotool "getwindowgeometry" "$(xdotool "getactivewindow")" | awk -v FS="(Geometry: | )" '{print $4}' | tail -n1 | sed "s/x.*//")"
-wh="$(xdotool "getwindowgeometry" "$(xdotool "getactivewindow")" | awk -v FS="(Geometry: | )" '{print $4}' | tail -n1 | sed "s/.*.x//")"
+# vars
+set aw (xdotool "getactivewindow")
+set dg (xdotool "getdisplaygeometry")
 
-mw="$(($mw / "2"))"
-mh="$(($mh / "2"))"
-ww="$(($ww / "2"))"
-wh="$(($wh / "2"))"
+set mw (printf "$dg" | awk '{print $1;}')
+set mh (printf "$dg" | awk '{print $2;}')
 
-x="$(expr "$mw" - "$ww")"
-y="$(expr "$mh" - "$wh")"
+set ww (xdotool "getwindowgeometry" "$aw" | awk -v FS="(Geometry: | )" '{print $4}' | tail -n1 | sed "s/x.*//")
+set wh (xdotool "getwindowgeometry" "$aw" | awk -v FS="(Geometry: | )" '{print $4}' | tail -n1 | sed "s/.*.x//")
 
-xdotool "windowmove" "$(xdotool "getactivewindow")" "$x" "$y"
+set mw (math "$mw" / "2" )
+set mh (math "$mh" / "2" )
+set ww (math "$ww" / "2" )
+set wh (math "$wh" / "2" )
+
+set x (math "$mw" - "$ww")
+set y (math "$mh" - "$wh")
+
+
+# exec
+xdotool "windowmove" "$aw" "$x" "$y"
