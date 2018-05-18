@@ -12,7 +12,7 @@ function _M.play(url)
 end
 
 add_binds("normal", {
-    { ",p", "Play in mpv.", function (w)
+    { ",p", "open in mpv.", function (w)
             _M.play(w.view.hovered_uri or w.view.uri)
         end },
 })
