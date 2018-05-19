@@ -3,7 +3,7 @@
 	<menu id="root-menu" label="openbox">
 		<item label="term">
 			<action name="Execute">
-				<execute>urxvt</execute>
+				<execute>drawterm</execute>
 			</action>
 		</item>
 		<item label="files">
