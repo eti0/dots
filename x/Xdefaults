@@ -5,10 +5,10 @@
 !
 
 ! fonts
-*font:				-*-vanilla-*
+*font:				xft:Verily Serif Mono:size=10
 *boldFont:
 *lineSpace:			2
-*letterSpace:			0
+*letterSpace:		0
 
 
 ! disable the scrollbar
@@ -17,9 +17,9 @@
 
 ! colorscheme
 ! special
-*.foreground:			#ffffff
-*.background:			#071d22
-*.cursorColor:			#ffffff
+*.foreground:		#ffffff
+*.background:		#071d22
+*.cursorColor:		#ffffff
 
 ! black
 *.color0:			#071d22
@@ -27,27 +27,27 @@
 
 ! red
 *.color1:			#c1566b
-*.color9:			#f8a2b4
+*.color9:			#f8879f
 
 ! green
 *.color2:			#a7dfa6
-*.color10:			#d6f0d6
+*.color10:			#cae1c9
 
 ! yellow
 *.color3:			#ed9b8b
-*.color11:			#ffc2b6
+*.color11:			#e1aba1
 
 ! blue
 *.color4:			#8fa4da
-*.color12:			#cbd4f3
+*.color12:			#aeb6d0
 
 ! magenta
 *.color5:			#c6779d
-*.color13:			#e5b8ce
+*.color13:			#d2a9bd
 
 ! cyan
 *.color6:			#6776a4
-*.color14:			#c4cff1
+*.color14:			#8998c7
 
 ! white
 *.color7:			#b3bec1
@@ -55,14 +55,14 @@
 
 
 ! cursor
-*cursorBlink:			1
+*cursorBlink:		1
 
 
 ! links
-*.perl-ext-common:		default,matcher,selection-to-clipboard
-*.url-launcher:			/usr/local/bin/luakit
-*.matcher.button:		3
-*.matcher.rend.0:		fg9
+*.perl-ext-common:	default,matcher,selection-to-clipboard
+*.url-launcher:		/usr/local/bin/luakit
+*.matcher.button:	3
+*.matcher.rend.0:	fg9
 
 
 ! size
@@ -70,27 +70,27 @@
 
 
 ! padding
-*internalBorder:		40
+*internalBorder:	40
 
 
 ! xft fonts settings
-Xft.autohint:			0
-Xft.lcdfilter:			lcddefault
-Xft.hinting:			1
-Xft.hintstyle:			hintslight
-Xft.antialias:			1
+Xft.autohint:		0
+Xft.lcdfilter:		lcddefault
+Xft.hinting:		1
+Xft.hintstyle:		hintslight
+Xft.antialias:		1
 Xft.rgba:			rgb
 
 
 ! rofi settings
-rofi.color-enabled:		true
-rofi.color-window:		#ffffff, #ffffff, #ffffff
-rofi.color-normal:		#ffffff, #425357, #ffffff, #ffffff, #94a9d9
-rofi.color-active:		#ffffff, #425357, #ffffff, #ffffff, #94a9d9
-rofi.color-urgent:		#ffffff, #425357, #ffffff, #ffffff, #94a9d9
+rofi.color-enabled:	true
+rofi.color-window:	#ffffff, #ffffff, #ffffff
+rofi.color-normal:	#ffffff, #425357, #ffffff, #ffffff, #94a9d9
+rofi.color-active:	#ffffff, #425357, #ffffff, #ffffff, #94a9d9
+rofi.color-urgent:	#ffffff, #425357, #ffffff, #ffffff, #94a9d9
 
 
 ! scrolling
-*.scrollTtyOutput:		false
-*.scrollWithBuffer:		true
-*.scrollTtyKeypress:		true
+*.scrollTtyOutput:	false
+*.scrollWithBuffer:	true
+*.scrollTtyKeypress:true
