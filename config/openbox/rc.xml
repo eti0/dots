@@ -26,7 +26,7 @@
     <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
       <name>Adobe Blank</name>
-      <size>6</size>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -37,25 +37,25 @@
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Noto Serif</name>
+      <name>cure</name>
       <size>9</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Noto Serif</name>
+      <name>cure</name>
       <size>9</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Noto Serif</name>
+      <name>cure</name>
       <size>9</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Noto Serif</name>
+      <name>cure</name>
       <size>9</size>
       <weight>Normal</weight>
       <slant>Normal</slant>

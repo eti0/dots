@@ -5,7 +5,7 @@
 !
 
 ! fonts
-*font:				xft:Verily Serif Mono:size=10
+*font:				-*-drift-*
 *boldFont:
 *lineSpace:			2
 *letterSpace:		0

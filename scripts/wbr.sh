@@ -4,7 +4,7 @@ colors="/usr/scripts/colors.sh"
 refresh=".2"
 padding="   "
 height="40"
-font="Noto Serif:size=10:style=Italic"
+font="-*-cure-*"
 battery="BAT0"
 
 
@@ -122,7 +122,7 @@ laptop_loop() {
 
 
 # exec
-if [ -f "/sys/class/power_supply/$battery" ] ; then
+if [ -f "/sys/class/power_supply/$battery/status" ] ; then
 	laptop_loop
 else
 	desktop_loop
