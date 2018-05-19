@@ -40,7 +40,11 @@ desktop() {
 
 mpd() {
 	current="$(mpc "current")"
-	printf "$current"
+	if [ "$current" ] ; then
+		printf "%.0s-$padding$current"
+	else
+		:
+	fi
 }
 
 spotify() {
@@ -48,7 +52,7 @@ spotify() {
 	if [ "$current" == "Spotify is not running." ] ; then
 		:
 	else
-		printf "$current"
+		printf "%.0s-$padding$current"
 	fi
 }
 
@@ -77,15 +81,15 @@ clock() {
 
 
 # loops
-dloop() {
+desktop_loop() {
 	while :; do
 		echo "%{l}\
 		$padding$(desktop)$padding\
-		%{A:sps 'play' & mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$padding$(mpd)$(spotify)$padding%{A}%{A}%{A}\
-		%{c}\
-		%{A:calendar &:}$padding$(clock)$padding%{A}\
+		%{A:sps 'play' & mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)$(spotify)$padding%{A}%{A}%{A}\
 		%{r}\
-		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}"
+		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}\
+		-\
+		%{A:calendar &:}$padding$(clock)$padding%{A}"
 		sleep "$refresh"
 	done |\
 
@@ -97,15 +101,15 @@ dloop() {
 	| bash
 }
 
-lloop() {
+laptop_loop() {
 	while :; do
 		echo "%{l}\
 		$padding$(desktop)$padding\
-		%{A:sps 'play' & mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$padding$(mpd)$(spotify)$padding%{A}%{A}%{A}\
-		%{c}\
-		%{A:calendar &:}$padding$(clock)$padding%{A}\
+		%{A:sps 'play' & mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)$(spotify)$padding%{A}%{A}%{A}\
 		%{r}\
-		%{A:batstat &:}$padding$(battery)$padding%{A}"
+		%{A:batstat &:}$padding$(battery)$padding%{A}\
+		-\
+		%{A:calendar &:}$padding$(clock)$padding%{A}"
 		sleep "$refresh"
 	done |\
 
@@ -118,8 +122,8 @@ lloop() {
 
 
 # exec
-if [ -f "/sys/class/power_supply/"$battery"/status" ] ; then
-	lloop
+if [ "/sys/class/power_supply/$battery" ] ; then
+	laptop_loop
 else
-	dloop
+	desktop_loop
 fi
