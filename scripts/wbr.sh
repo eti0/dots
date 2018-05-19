@@ -122,7 +122,7 @@ laptop_loop() {
 
 
 # exec
-if [ "/sys/class/power_supply/$battery" ] ; then
+if [ -f "/sys/class/power_supply/$battery" ] ; then
 	laptop_loop
 else
 	desktop_loop
