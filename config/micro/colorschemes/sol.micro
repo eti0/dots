@@ -7,7 +7,7 @@ color-link special "brightgreen"
 color-link preproc "red"
 color-link comment "brightblack"
 color-link error "red"
-color-link type "green"
+color-link type "white"
 color-link todo "green"
 
 # line indicators

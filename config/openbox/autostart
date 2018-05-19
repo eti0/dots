@@ -8,5 +8,5 @@ fonts &
 compton -Ccf &
 nm-applet &
 battery &
-sleep 5s && toggle-bar &
+sleep 1s && toggle-bar &
 sleep 1m && mpdas &

@@ -28,21 +28,35 @@ border.width: 0
 # *.active.border.color: white
 # *.inactive.border.color: #f2f2f2
 window.client.padding.width: 0
-window.handle.width: 0
+window.handle.width: 60
 
 
 # titlebars
-padding.height: 15
-padding.width: 8
+padding.height: 0
+padding.width: 0
 
 
 # active window
 window.active.*.bg: Flat
-window.active.*.*.bg.color: white
+window.active.*.*.bg.color: #071d22
 window.active.*.*.image.color: black
 
 
 # inactive window
 window.inactive.*.bg: Flat
-window.inactive.*.*.bg.color: white
+window.inactive.*.*.bg.color: #071d22
 window.inactive.*.*.image.color: black
+
+
+# handle
+window.active.handle.bg: Flat
+window.active.handle.bg.color: white
+window.inactive.handle.bg: Flat
+window.inactive.handle.bg.color: white
+
+
+# grip
+window.active.grip.bg: Flat
+window.active.grip.bg.color: white
+window.inactive.grip.bg: Flat
+window.inactive.grip.bg.color: white

@@ -4,7 +4,7 @@ colors="/usr/scripts/colors.sh"
 refresh=".2"
 padding="   "
 height="40"
-font="-*-cure-*"
+font="Noto Serif:size=10:style=Italic"
 battery="BAT0"
 
 
