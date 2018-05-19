@@ -16,7 +16,7 @@ read "width" "height" "xpos" "ypos" < <(slop -l -f "$format" -b "$border" -c "$c
 # ((width -= 30))
 ((height -= 42))
 
-active="$(xdotool search --sync --classname drawterm)"
+active="$(xdotool search --sync --classname drawterm | tail -n1)"
 
 xdotool "windowmove" "$active" "$xpos" "$ypos"
 xdotool "windowsize" "$active" "$width" "$height"
