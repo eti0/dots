@@ -25,38 +25,38 @@
     <animateIconify>no</animateIconify>
     <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
-      <name>cure</name>
-      <size>8</size>
+      <name>Adobe Blank</name>
+      <size>6</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>cure</name>
-      <size>8</size>
+      <name>Adobe Blank</name>
+      <size>6</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>cure</name>
-      <size>7</size>
+      <name>Noto Serif</name>
+      <size>9</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>cure</name>
-      <size>7</size>
+      <name>Noto Serif</name>
+      <size>9</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>cure</name>
-      <size>7</size>
+      <name>Noto Serif</name>
+      <size>9</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>cure</name>
-      <size>7</size>
+      <name>Noto Serif</name>
+      <size>9</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -92,7 +92,7 @@
     <keybind key="A-F1">
       <action name="Execute">
         <name>terminal</name>
-        <command>urxvt</command>
+        <command>drawterm</command>
       </action>
     </keybind>
     <keybind key="A-F2">
@@ -115,11 +115,6 @@
       <action name="Execute">
         <name>luakit</name>
         <command>luakit</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-c">
-      <action name="Execute">
-        <command>create</command>
       </action>
     </keybind>
     <keybind key="XF86Launch1">
