@@ -14,7 +14,7 @@ read "width" "height" "xpos" "ypos" < <(slop -l -f "$format" -b "$border" -c "$c
 
 # adapt to the border width of your windows
 # ((width -= 30))
-((height -= 72))
+((height -= 54))
 
 active="$(xdotool search --sync --classname drawterm | tail -n1)"
 
