@@ -26,13 +26,13 @@
     <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
       <name>Adobe Blank</name>
-      <size>10</size>
+      <size>1</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
       <name>Adobe Blank</name>
-      <size>6</size>
+      <size>1</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
