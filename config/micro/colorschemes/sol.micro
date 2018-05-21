@@ -1,13 +1,13 @@
 # colors
 color-link indent-char "red"
-color-link identifier "white"
+color-link identifier "blue"
 color-link statement "magenta"
-color-link constant "white"
-color-link special "brightgreen"
+color-link constant "default"
+color-link special "green"
 color-link preproc "red"
-color-link comment "brightblack"
+color-link comment "white"
 color-link error "red"
-color-link type "white"
+color-link type "blue"
 color-link todo "green"
 
 # line indicators
@@ -17,5 +17,5 @@ color-link gutter-warning "red"
 color-link gutter-error "red"
 
 # tabbar & statusline
-color-link statusline "brightblack"
+color-link statusline "white"
 color-link tabbar "brightblack"

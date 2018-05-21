@@ -3,20 +3,20 @@
 
 # vars
 set song (mpc -f '%file%' | head -1)
-set cover "/tmp/cover.png"
+set file "/tmp/cover.png"
 
 
 # exec
 ffmpeg -loglevel "0" \
-	   -y \
-	   -i "$HOME/Music/$song" \
-	   -vf scale="-200:200" "$cover"
+       -y \
+       -i "$HOME/Music/$song" \
+       -vf scale="-200:200" \
+       "$file"
 
-if test -f "$cover"
-	popup "$cover" "30"
+if test -f "$file"
+    popup "$file" "30"
 else
-	#
+    #
 end
 
-sleep ".1"
-rm "$cover"
+rm "$file"

@@ -1,28 +1,46 @@
 #!/usr/bin/env bash
 
+
 # vars
-cil="/tmp/calendar.png"
-bg="/usr/scripts/popup/img/bg.png"
+dir="/usr/scripts/popup"
+file="/tmp/calendar.png"
+background="$dir/img/bg.png"
 font="lime"
-mw=$(xdotool "getdisplaygeometry" | awk '{print $1;}')
+monitorwidth="$(xdotool getdisplaygeometry | awk '{print $1;}')"
+x="$(expr $monitorwidth - 270)"
+y="70"
 
 
-# convert the output to png
+# funcs
 convert -background "rgba(0,0,0,0)" \
-		-fill "white" \
-		-font "$font" \
-		+antialias \
-		-pointsize "10" \
-		label:"$(date "+%d %B %Y\n" && cal -m | tail -n7)" \
-		"$cil"
+	-fill "white" \
+	-font "$font" \
+	+antialias \
+	-pointsize "10" \
+	label:"$(date "+%d %B %Y \n" && cal -m | tail -n7)" \
+	"$file"
 
-# display it
-popup "" "$(expr "$mw" - "270")" &
-sleep ".05s"
-n30f -x "$(expr "$mw" - "200")" \
-	 -y "150" \
-	 -c "killall n30f" "$cil"
 
-# delete it
-sleep ".2s"
-rm "$cil"
+# exec
+if $(pidof n30f) ; then
+	pkill -f "n30f -t calendar_background"
+	pkill -f "n30f -t calendar"
+else
+	:
+fi
+
+n30f -t calendar_background \
+     -x "$x" \
+     -y "$y" \
+     -c "pkill -f 'n30f -t calendar_background' && pkill -f 'n30f -t calendar'" \
+     "$background" &
+
+n30f -t calendar \
+     -x "$(expr $x + 70)" \
+     -y "$(expr $y + 80)" \
+     -c "pkill -f 'n30f -t calendar_background' && pkill -f 'n30f -t calendar'" \
+     "$file"
+
+
+# clean
+rm "$file"
