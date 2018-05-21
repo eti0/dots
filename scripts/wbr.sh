@@ -85,7 +85,7 @@ desktop_loop() {
 	while :; do
 		echo "%{l}\
 		$padding$(desktop)$padding\
-		%{A:sps 'play' & mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)$(spotify)$padding%{A}%{A}%{A}\
+		%{A:mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}\
 		%{r}\
 		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}\
 		-\
@@ -95,7 +95,6 @@ desktop_loop() {
 
 	lemonbar \
 		-f "$font" \
-		-F "$text" \
 		-g "x"$height"" \
 		-B "$background" \
 	| bash
@@ -105,7 +104,7 @@ laptop_loop() {
 	while :; do
 		echo "%{l}\
 		$padding$(desktop)$padding\
-		%{A:sps 'play' & mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)$(spotify)$padding%{A}%{A}%{A}\
+		%{A:mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}\
 		%{r}\
 		%{A:batstat &:}$padding$(battery)$padding%{A}\
 		-\
