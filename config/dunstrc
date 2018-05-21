@@ -1,5 +1,5 @@
 [global]
-    font = Noto Serif Italic 10
+    font = cure 8
     markup = full
     format = "%s\n%b"
     sort = yes

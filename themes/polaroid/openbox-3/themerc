@@ -17,7 +17,7 @@ menu.separator.color: #071d22
 
 # osd
 osd.label.text.color: white
-osd.border.width: 20
+osd.border.width: 0
 osd.border.color: #071d22
 
 
@@ -26,8 +26,8 @@ border.width: 0
 *.border.color: white
 # *.active.border.color: white
 # *.inactive.border.color: #f2f2f2
-window.client.padding.width: 0
-window.handle.width: 50
+window.client.padding.width: 20
+window.handle.width: 70
 
 
 # titlebars
@@ -37,13 +37,13 @@ padding.width: 0
 
 # active window
 window.active.*.bg: Flat
-window.active.*.*.bg.color: #071d22
+window.active.*.*.bg.color: white
 window.active.*.*.image.color: black
 
 
 # inactive window
 window.inactive.*.bg: Flat
-window.inactive.*.*.bg.color: #071d22
+window.inactive.*.*.bg.color: white
 window.inactive.*.*.image.color: black
 
 

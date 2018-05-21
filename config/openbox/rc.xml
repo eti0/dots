@@ -76,10 +76,10 @@
   <resize>
     <drawContents>no</drawContents>
     <popupShow>Always</popupShow>
-    <popupPosition>Center</popupPosition>
+    <popupPosition>Fixed</popupPosition>
     <popupFixedPosition>
-      <x>0</x>
-      <y>0</y>
+      <x>center</x>
+      <y>70</y>
     </popupFixedPosition>
   </resize>
   <margins>

@@ -3,7 +3,7 @@
 
 # vars
 set crf "20"
-set fps "30"
+set fps "50"
 set enc "h264"
 set prs "fast"
 set pxf "yuv420p"
