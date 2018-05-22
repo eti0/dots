@@ -14,7 +14,7 @@ function display-background
     n30f -t popup-background \
 	 -x "$xpos" \
 	 -y "$ypos" \
-	 -c "pkill -f 'n30f -t popup-background'" \
+	 -c "pkill -f 'n30f -t popup-image' && pkill -f 'n30f -t popup-background'" \
 	 "$background" &
 end
 
@@ -22,7 +22,7 @@ function display-image
     n30f -t popup-image \
 	 -x (math $xpos + 20) \
 	 -y (math $ypos + 20) \
-	 -c "pkill -f 'n30f -t popup-image'" \
+	 -c "pkill -f 'n30f -t popup-image' && pkill -f 'n30f -t popup-background'" \
 	 "$file" &
 end
 

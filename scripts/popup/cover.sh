@@ -14,9 +14,10 @@ ffmpeg -loglevel "0" \
        "$file"
 
 if test -f "$file"
-    popup "$file" "30"
+	popup "$file" "30"
 else
-    #
+	#
 end
 
+sleep "1"
 rm "$file"
