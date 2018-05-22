@@ -4,7 +4,7 @@ colors="/usr/scripts/colors.sh"
 refresh=".2"
 padding="   "
 height="40"
-font="-*-cure-*"
+font="-*-euphon-*"
 battery="BAT0"
 
 
@@ -85,7 +85,7 @@ desktop_loop() {
 	while :; do
 		echo "%{l}\
 		$padding$(desktop)$padding\
-		%{A:mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}\
+		%{A:mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A}%{A:sps 'play' &:}%{A2:notify-send 'looking for a cover' && cover-spotify &:}$(spotify)$padding%{A}%{A}\
 		%{r}\
 		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}\
 		-\
