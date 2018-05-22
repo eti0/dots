@@ -2,7 +2,7 @@
 color-link indent-char "red"
 color-link identifier "blue"
 color-link statement "magenta"
-color-link constant "default"
+color-link constant "brightwhite"
 color-link special "green"
 color-link preproc "red"
 color-link comment "white"
