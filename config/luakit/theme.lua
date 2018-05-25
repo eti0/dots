@@ -9,9 +9,9 @@ local theme = {}
 
 
 -- default settings
-theme.font = "12px cure"
+theme.font = "12px euphon"
 theme.fg   = "#fff"
-theme.bg   = "#071d22"
+theme.bg   = "#000000"
 
 
 -- general colours
@@ -28,15 +28,15 @@ theme.warning_bg = "#fff"
 
 -- notification colours
 theme.notif_fg = "#fff"
-theme.notif_bg = "#071d22"
+theme.notif_bg = "#000000"
 
 
 -- menu colours
 theme.menu_fg                   = "#fff"
-theme.menu_bg                   = "#071d22"
+theme.menu_bg                   = "#000000"
 theme.menu_selected_fg          = "#5389d5"
-theme.menu_selected_bg          = "#071d22"
-theme.menu_title_bg             = "#071d22"
+theme.menu_selected_bg          = "#000000"
+theme.menu_title_bg             = "#000000"
 theme.menu_primary_title_fg     = "#e6e6e6"
 theme.menu_secondary_title_fg   = "#e6e6e6"
 
@@ -49,7 +49,7 @@ theme.menu_active_bg = theme.menu_bg
 
 
 -- proxy manager
-theme.proxy_active_menu_fg      = '#071d22'
+theme.proxy_active_menu_fg      = '#000000'
 theme.proxy_active_menu_bg      = '#fff'
 theme.proxy_inactive_menu_fg    = '#888'
 theme.proxy_inactive_menu_bg    = '#fff'
@@ -57,31 +57,31 @@ theme.proxy_inactive_menu_bg    = '#fff'
 
 -- statusbar specific
 theme.sbar_fg         = "#fff"
-theme.sbar_bg         = "#071d22"
+theme.sbar_bg         = "#000000"
 
 
 -- downloadbar specific
 theme.dbar_fg         = "#fff"
-theme.dbar_bg         = "#071d22"
+theme.dbar_bg         = "#000000"
 theme.dbar_error_fg   = "#eb7070"
 
 
 -- input bar specific
 theme.ibar_fg           = "#fff"
-theme.ibar_bg           = "#071d22"
+theme.ibar_bg           = "#000000"
 
 
 -- tab label
-theme.tab_fg            = "#071d22"
+theme.tab_fg            = "#000000"
 theme.tab_bg            = "#fff"
 theme.tab_hover_bg      = "#fff"
-theme.tab_hover_fg      = "#071d22"
+theme.tab_hover_fg      = "#000000"
 theme.tab_ntheme        = "#fff"
 theme.selected_fg       = "#818cee"
 theme.selected_bg       = "#fff"
 theme.selected_ntheme   = "#fff"
 theme.loading_fg        = "#fff"
-theme.loading_bg        = "#071d22"
+theme.loading_bg        = "#000000"
 
 theme.selected_private_tab_bg = "#818cee"
 theme.private_tab_bg    = "#606eeb"
@@ -93,7 +93,7 @@ theme.notrust_fg        = "#e69494"
 
 
 -- general colour pairings
-theme.ok = { fg = "#071d22", bg = "#fff" }
+theme.ok = { fg = "#000000", bg = "#fff" }
 theme.warn = { fg = "#eb7070", bg = "#fff" }
 theme.error = { fg = "#fff", bg = "#eb7070" }
 

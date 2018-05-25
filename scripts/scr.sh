@@ -17,7 +17,7 @@ if test "$argv" = "w"
 else
     maim --hidecursor $path
     if test "$status" = "0"
-        notify-send "window screenshot taken"
+        notify-send "screenshot taken"
     else
         #
     end

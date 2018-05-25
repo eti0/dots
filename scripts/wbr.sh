@@ -96,6 +96,7 @@ desktop_loop() {
 	lemonbar \
 		-f "$font" \
 		-g "x"$height"" \
+		-F "$text" \
 		-B "$background" \
 	| bash
 }
@@ -115,6 +116,7 @@ laptop_loop() {
 	lemonbar \
 		-f "$font" \
 		-g "x"$height"" \
+		-F "$text" \
 		-B "$background" \
 	| bash
 }

@@ -13,8 +13,8 @@ urxvt -iconic -name "drawterm" &
 read "width" "height" "xpos" "ypos" < <(slop -l -f "$format" -b "$border" -c "$color" )
 
 # adapt to the border width of your windows
-# ((width -= 30))
-((height -= 54))
+((width -= 40))
+((height -= 40))
 
 active="$(xdotool search --sync --classname drawterm | tail -n1)"
 

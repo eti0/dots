@@ -38,17 +38,17 @@
     history = ctrl+grave
 
 [urgency_low]
-    background = "#071d22"
+    background = "#000000"
     foreground = "#ffffff"
     timeout = 5
 
 [urgency_normal]
-    background = "#071d22"
+    background = "#000000"
     foreground = "#ffffff"
     timeout = 5
 
 [urgency_critical]
-    background = "#071d22"
+    background = "#000000"
     foreground = "#ffffff"
     frame_color = "#ffffff"
     timeout = 30
