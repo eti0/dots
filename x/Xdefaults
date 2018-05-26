@@ -5,7 +5,7 @@
 !
 
 ! fonts
-*font:				-*-drift-*
+*font:				-*-yakuza-*
 *boldFont:
 *lineSpace:			2
 *letterSpace:		0
@@ -17,41 +17,41 @@
 
 ! colorscheme
 ! special
-*.foreground:		#ffffff
-*.background:		#071d22
-*.cursorColor:		#ffffff
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
 
 ! black
-*.color0:			#071d22
-*.color8:			#617278
+*.color0:       #000000
+*.color8:       #525252
 
 ! red
-*.color1:			#c1566b
-*.color9:			#f8879f
+*.color1:       #7c7c7c
+*.color9:       #7c7c7c
 
 ! green
-*.color2:			#a7dfa6
-*.color10:			#cae1c9
+*.color2:       #8e8e8e
+*.color10:      #8e8e8e
 
 ! yellow
-*.color3:			#ed9b8b
-*.color11:			#e1aba1
+*.color3:       #a0a0a0
+*.color11:      #a0a0a0
 
 ! blue
-*.color4:			#8fa4da
-*.color12:			#aeb6d0
+*.color4:       #686868
+*.color12:      #686868
 
 ! magenta
-*.color5:			#c6779d
-*.color13:			#d2a9bd
+*.color5:       #747474
+*.color13:      #747474
 
 ! cyan
-*.color6:			#6776a4
-*.color14:			#8998c7
+*.color6:       #868686
+*.color14:      #868686
 
 ! white
-*.color7:			#b3bec1
-*.color15:			#f7f8f8
+*.color7:       #b9b9b9
+*.color15:      #ffffff
 
 
 ! cursor
