@@ -20,8 +20,5 @@ set wh (math "$wh" / "2" )
 set x (math "$mw" - "$ww")
 set y (math "$mh" - "$wh")
 
-set y (math "$y" - 10)
-
-
 # exec
 xdotool "windowmove" "$aw" "$x" "$y"
