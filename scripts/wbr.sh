@@ -2,7 +2,7 @@
 # vars
 colors="/usr/scripts/colors.sh"
 refresh=".2"
-padding="   "
+padding="    "
 height="40"
 font="-*-euphon-*"
 battery="BAT0"
