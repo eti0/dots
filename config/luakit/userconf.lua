@@ -19,9 +19,3 @@ local lousy = require "lousy"
 
 -- tab margins
 lousy.widget.tab.add_signal("build", function (w) w.widget.child.margin = 20 end)
-
-
--- remap middle mouse ; disables middle mouse to search
-modes.remap_binds("normal", {
-    { "<Control-Mouse2>", "all", true },
-})

@@ -228,6 +228,10 @@ end
 
 
 
+-- unbind middle mouse
+modes.remove_binds("all", { "<Mouse2>" })
+
+
 -- restore last saved session
 local w = (not luakit.nounique) and (session and session.restore())
 if w then
