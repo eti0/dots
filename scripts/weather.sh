@@ -13,20 +13,20 @@ set url "https://api.darksky.net/forecast/$key/$loc?units=$units&lang=fr"
 
 # funcs
 function fetch
-	wget -q $url -O $api
+    wget -q $url -O $api
 end
 
 function summary
-	jq -r ".currently.summary" < $api
+    jq < $api -r ".currently.summary"
 end
 
 function temperature
-	set temp (jq -r ".currently.apparentTemperature" < $api)
-	printf $temp | sed "s/\..*\$/°C/"
+    set temp (jq < $api -r ".currently.apparentTemperature")
+    printf $temp | sed "s/\..*\$/°C/"
 end
 
 function print
-	printf (temperature)\ -\ (summary) | tee $weather
+    printf (temperature)\ -\ (summary) | tee $weather
 end
 
 
