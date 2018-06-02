@@ -74,7 +74,7 @@
     <popupTime>0</popupTime>
   </desktops>
   <resize>
-    <drawContents>no</drawContents>
+    <drawContents>yes</drawContents>
     <popupShow>Always</popupShow>
     <popupPosition>Fixed</popupPosition>
     <popupFixedPosition>
@@ -118,6 +118,11 @@
       </action>
     </keybind>
     <keybind key="XF86Launch1">
+      <action name="Execute">
+        <command>layout</command>
+      </action>
+    </keybind>
+    <keybind key="W-space">
       <action name="Execute">
         <command>layout</command>
       </action>
