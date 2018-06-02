@@ -75,8 +75,7 @@ battery() {
 }
 
 clock() {
-	clock="$(date "+%R")"
-	printf "$clock"
+	tempus
 }
 
 
