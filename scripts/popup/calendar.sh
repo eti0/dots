@@ -11,7 +11,9 @@ x="$(expr $monitorwidth - 270)"
 y="70"
 
 
-# funcs
+# exec
+pkill -f "n30f -t calendar"
+
 convert -background "rgba(0,0,0,0)" \
 	-fill "white" \
 	-font "$font" \
@@ -20,25 +22,16 @@ convert -background "rgba(0,0,0,0)" \
 	label:"$(date "+%d %B %Y \n" && cal -m | tail -n7)" \
 	"$file"
 
-
-# exec
-if $(pidof n30f) ; then
-	pkill -f "n30f -t calendar_background"
-	pkill -f "n30f -t calendar"
-else
-	:
-fi
-
 n30f -t calendar_background \
      -x "$x" \
      -y "$y" \
-     -c "pkill -f 'n30f -t calendar_background' && pkill -f 'n30f -t calendar'" \
+     -c "pkill -f 'n30f -t calendar'" \
      "$background" &
 
 n30f -t calendar \
      -x "$(expr $x + 70)" \
      -y "$(expr $y + 80)" \
-     -c "pkill -f 'n30f -t calendar_background' && pkill -f 'n30f -t calendar'" \
+     -c "pkill -f 'n30f -t calendar'" \
      "$file"
 
 
