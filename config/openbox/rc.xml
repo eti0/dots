@@ -500,9 +500,11 @@
     <application name="luakit">
       <decor>no</decor>
     </application>
+    <!--
     <application class="*">
       <decor>no</decor>
     </application>
+    -->
   </applications>
   <dock>
     <position>TopLeft</position>

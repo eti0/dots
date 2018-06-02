@@ -17,16 +17,15 @@ function fetch
 end
 
 function summary
-    jq < $api -r ".currently.summary"
+    jq <$api -r ".currently.summary" | awk '{print tolower($0)}'
 end
 
 function temperature
-    set temp (jq < $api -r ".currently.apparentTemperature")
-    printf $temp | sed "s/\..*\$/°C/"
+    jq -r '.currently | .apparentTemperature | floor | tostring + "°C"' <"$api"
 end
 
 function print
-    printf (temperature)\ -\ (summary) | tee $weather
+    printf (temperature)\ :\ (summary) | tee $weather
 end
 
 
