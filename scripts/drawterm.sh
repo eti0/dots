@@ -11,6 +11,13 @@ format="%w %h %x %y"
 urxvt -iconic -name "drawterm" &
 read "width" "height" "xpos" "ypos" < <(slop -l -f "$format" -b "$border" -c "$color")
 
+if [ "$width" ] ; then
+	:
+else
+	pkill -n -f "urxvt -iconic -name drawterm"
+	exit "1"
+fi
+
 # adapt to the border width of your windows
 ((width -= 0))
 ((height -= 54))
