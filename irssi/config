@@ -39,7 +39,7 @@ chatnets = {
     type = "IRC";
     sasl_mechanism = "plain";
     sasl_username = "eti";
-    sasl_password = "<password>";
+    sasl_password = "<password>;";
   };
   nixers = { type = "IRC"; };
   lainchan = { type = "IRC"; };
@@ -63,16 +63,11 @@ settings = {
   "perl/core/scripts" = {
     tmux_away_message = "afk";
     tmux_away_window = "0";
-    irssinotifier_api_token = "<token>";
-    irssinotifier_encryption_password = "<password>";
-    irssinotifier_screen_detached_only = "no";
-    irssinotifier_away_only = "yes";
-    irssinotifier_ignore_active_window = "no";
     nickcolor_enable_prefix = "yes";
     nickcolor_enable_truncate = "yes";
-    nickcolor_prefix_text = "        %K—%n ";
+    nickcolor_prefix_text = "          ";
     nickcolor_truncate_value = "-7";
-    nickcolor_colors = "4 5 6 7 12 13 14";
+    nickcolor_colors = "2 6 10 11 12 13 14";
   };
 };
 
@@ -81,8 +76,7 @@ statusbar = {
     topic = { disabled = "yes"; };
     window = {
       items = {
-        barstart = { priority = "100"; };
-        user = { };
+        barstart = { alignment = "right"; priority = "100"; };
         window = { };
         window_empty = { };
         lag = { priority = "-1"; alignment = "right"; position = "0"; };
@@ -93,14 +87,14 @@ statusbar = {
       position = "0";
       placement = "top";
       visible = "active";
-      disabled = "yes";
     };
     prompt = { position = "0"; };
+    window_inact = { disabled = "yes"; };
   };
 };
 
 
-ignores = ( { level = "JOINS PARTS QUITS MODES"; } );
+ignores = ( { level = "MODES JOINS PARTS QUITS"; } );
 
 aliases = {
   leave = "part";
@@ -113,6 +107,7 @@ aliases = {
 logs = { };
 
 keyboard = (
-  { key = "^O"; id = "command"; data = "son "; },
-  { key = "^P"; id = "command"; data = "soff "; }
+  { key = "^O"; id = "command"; data = "statusbar window enable "; },
+  { key = "^P"; id = "command"; data = "statusbar window disable "; },
+  { key = "meta-[M"; id = "command"; data = "mouse_xterm "; }
 );
