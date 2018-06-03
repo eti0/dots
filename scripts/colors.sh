@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # colors
-text="#000000"
+text="#ffffff"
 warning="#232e2f"
-background="#ffffff"
+background="#071d22"
 
 # other stuff
 trs="%{F#00000000}"
