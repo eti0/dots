@@ -13,6 +13,7 @@ menu.title.bg: Flat
 menu.title.*.color: #071d22
 menu.title.text.justify: Left
 menu.separator.color: #071d22
+menu.overlap.x: -40
 
 
 # osd

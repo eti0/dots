@@ -56,9 +56,9 @@ init
 cat << EOF
 
 ${rst} ,gg,   ,gg
-${f4}  ""8b,dP"      ${rst}os${f7}:${rst}         ${f7}$os${rst}
-${f4}    ,88"        ${rst}shell${f7}:${rst}      ${f7}$shell${rst}
-${f4}  ,dP"Y8,       ${rst}wm${f7}:${rst}         ${f7}$wm${rst}
+${f4}  ""8b,dP"      ${rst}os${f4}:${rst}         ${f4}$os${rst}
+${f4}    ,88"        ${rst}shell${f4}:${rst}      ${f4}$shell${rst}
+${f4}  ,dP"Y8,       ${rst}wm${f4}:${rst}         ${f4}$wm${rst}
 ${rst} dP"   "Y8
 
 EOF

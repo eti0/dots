@@ -41,7 +41,7 @@ desktop() {
 mpd() {
 	current="$(mpc "current" | sed "s/ \- / \: /")"
 	if [ "$current" ] ; then
-		printf "%.0s-$padding$current"
+		printf "%.0s-$padding$current$padding"
 	else
 		:
 	fi
@@ -52,7 +52,7 @@ spotify() {
 	if [ "$current" == "Spotify is not running." ] ; then
 		:
 	else
-		printf "%.0s-$padding$current"
+		printf "%.0s-$padding$current$padding"
 	fi
 }
 
