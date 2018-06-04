@@ -1,4 +1,5 @@
 export XDG_MENU_PREFIX="gnome-"
 export CM_LAUNCHER="rofi"
+export GOPATH="$HOME/go"
 export MPD_PORT="7755"
 export EDITOR="micro"
