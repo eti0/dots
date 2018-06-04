@@ -84,7 +84,7 @@ desktop_loop() {
 	while :; do
 		echo "%{l}\
 		$padding$(desktop)$padding\
-		%{A:mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A}%{A:sps 'play' &:}%{A2:notify-send 'looking for a cover' && cover-spotify &:}$(spotify)$padding%{A}%{A}\
+		%{A:mpc 'toggle' &:}%{A2:notify-send 'looking for a cover' && cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}\
 		%{r}\
 		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}\
 		-\
@@ -104,7 +104,7 @@ laptop_loop() {
 	while :; do
 		echo "%{l}\
 		$padding$(desktop)$padding\
-		%{A:mpc 'toggle' &:}%{A2:cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A}%{A:sps 'play' &:}%{A2:notify-send 'looking for a cover' && cover-spotify &:}$(spotify)$padding%{A}%{A}\
+		%{A:mpc 'toggle' &:}%{A2:notify-send 'looking for a cover' && cover &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}\
 		%{r}\
 		%{A:batstat &:}$padding$(battery)$padding%{A}\
 		-\
