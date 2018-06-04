@@ -39,9 +39,10 @@ desktop() {
 }
 
 mpd() {
-	current="$(mpc "current" | sed "s/ \- / \: /")"
-	if [ "$current" ] ; then
-		printf "%.0s-$padding$current$padding"
+	artist="$(mpc current | sed "s/ - .*//;s/;.*//")"
+	song="$(mpc current | sed "s/.* - //")"
+	if [ "$(mpc current)" ] ; then
+		printf "%.0s-$padding$artist : $song$padding"
 	else
 		:
 	fi

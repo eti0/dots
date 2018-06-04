@@ -8,7 +8,7 @@ if test (pidof spotify)
     set album (sps album)
 else
     set title (mpc current | sed "s/.* - //")
-    set artist (mpc current | sed "s/ - .*//")
+    set artist (mpc current | sed "s/ - .*//;s/;.*//")
     set album (mpc current -f "%album%")
 end
 

@@ -229,7 +229,7 @@ end
 
 
 -- unbind middle mouse
-modes.remove_binds("all", { "<Mouse2>" })
+-- modes.remove_binds("all", { "<Mouse2>" })
 
 
 -- restore last saved session
