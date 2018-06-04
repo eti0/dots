@@ -1,6 +1,5 @@
-# $HOME/.screenlayout/layout.sh &
 $HOME/.fehbg &
-mpd &
+mopidy &
 clipmenud &
 xset -b &
 xgamma -gamma 0.8 &
@@ -9,4 +8,3 @@ compton -Ccf &
 nm-applet &
 battery &
 sleep 5s && toggle-bar &
-sleep 1m && mpdas &
