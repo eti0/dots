@@ -7,8 +7,8 @@ if test (pidof spotify)
     set artist (sps current | sed "s/ - .*//")
     set album (sps album)
 else
-    set title (mpc current | sed "s/.* - //")
-    set artist (mpc current | sed "s/ - .*//;s/;.*//")
+    set title (mpc current -f "%title%")
+    set artist (mpc current -f "%artist%" | sed "s/;.*//")
     set album (mpc current -f "%album%")
 end
 
@@ -18,7 +18,7 @@ set file "/tmp/cover.png"
 if test -f "/tmp/$artist - $album.png"
     set file "/tmp/$artist - $album.png"
 else
-	notify-send "looking for a cover"
+    notify-send "looking for a cover"
     glyrc cover --album "$album" --artist "$artist" --title "$title" --write "$file"
     convert "$file" -resize "200x200" "$file" >/dev/null 2>&1
     cp "$file" "/tmp/$artist - $album.png"
