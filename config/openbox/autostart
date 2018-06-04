@@ -8,3 +8,4 @@ compton -Ccf &
 nm-applet &
 battery &
 sleep 5s && toggle-bar &
+mpdscribble &
