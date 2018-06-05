@@ -18,4 +18,4 @@ local lousy = require "lousy"
 
 
 -- tab margins
-lousy.widget.tab.add_signal("build", function (w) w.widget.child.margin = 20 end)
+lousy.widget.tab.add_signal("build", function (w) w.widget.child.margin = 15 end)

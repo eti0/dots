@@ -20,7 +20,7 @@ fi
 
 # adapt to the border width of your windows
 ((width -= 0))
-((height -= 54))
+((height -= 44))
 
 active="$(xdotool search --sync --classname drawterm | tail -n1)"
 

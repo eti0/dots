@@ -85,7 +85,7 @@ window.add_signal("build", function (w)
     r.layout:pack(widgets.scroll())
 
 	-- margins
-    w.sbar.layout.margin = 10
+    w.sbar.layout.margin = 13
     
     w.ibar.layout.margin_top = 4
     w.ibar.layout.margin_bottom = 5
