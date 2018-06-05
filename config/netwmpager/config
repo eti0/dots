@@ -1,6 +1,6 @@
 # geometry
-geometry = "300x50+20-20"
-border_width = 10
+geometry = "520x95+20-20"
+border_width = 20
 win_shift_x = 0
 win_shift_y = 0
 
