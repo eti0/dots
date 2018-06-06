@@ -100,9 +100,19 @@
         <command>rofi -show "run" -lines "7" -bw "5" -line-margin "8" -padding "30" -font "vanilla 7" -scrollbar-width "0" -separator-style "none" -width "30"</command>
       </action>
     </keybind>
+    <keybind key="A-F2">
+      <action name="Execute">
+        <command>aplay /usr/scripts/ambient/ios-unlock.wav</command>
+      </action>
+    </keybind>
     <keybind key="A-F8">
       <action name="Execute">
         <command>clipmenu -lines "15" -bw "5" -line-margin "6" -padding "30" -font "vanilla 7" -scrollbar-width "0" -separator-style "none"</command>
+      </action>
+    </keybind>
+    <keybind key="A-F8">
+      <action name="Execute">
+        <command>aplay /usr/scripts/ambient/ios-unlock.wav</command>
       </action>
     </keybind>
     <keybind key="A-F3">
