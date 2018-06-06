@@ -6,4 +6,4 @@ dir="/usr/scripts/ambient"
 
 
 # exec
-aplay "$dir/nextel3.wav"
+aplay "$dir/very-light-click.wav"
