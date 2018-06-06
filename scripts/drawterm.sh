@@ -5,6 +5,7 @@
 border="10"
 color="1 1 1 0"
 format="%w %h %x %y"
+dir="/usr/scripts"
 
 
 # exec
@@ -27,3 +28,4 @@ active="$(xdotool search --sync --classname drawterm | tail -n1)"
 xdotool "windowmove" "$active" "$xpos" "$ypos"
 xdotool "windowsize" "$active" "$width" "$height"
 wmctrl -ia "$active"
+aplay "$dir/ambient/ios-typing.wav"

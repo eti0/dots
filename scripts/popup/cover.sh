@@ -28,8 +28,6 @@ end
 
 if test -f "$file"
     popup "$file" "30" >/dev/null 2>&1
-    sleep "1s"
-    rm "$file"
 else
     notify-send "spotify cover not found"
     exit "1"

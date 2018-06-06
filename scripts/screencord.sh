@@ -3,11 +3,11 @@
 
 # vars
 set crf "20"
-set fps "50"
+set fps "30"
 set enc "h264"
 set prs "fast"
 set pxf "yuv420p"
-set aud "pulse"
+set aud "alsa"
 set aui "default"
 set com "recording..."
 set res (xdotool getdisplaygeometry | sed 's/ /x/')
@@ -15,8 +15,9 @@ set res (xdotool getdisplaygeometry | sed 's/ /x/')
 
 # exec
 printf "$com\n"
-notify-send "$com"
 ffmpeg -loglevel "16" \
+       -f "$aud" \
+       -i "$aui" \
        -f "x11grab" \
        -framerate "$fps" \
        -s "$res" \

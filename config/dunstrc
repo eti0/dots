@@ -52,3 +52,7 @@
     foreground = "#ffffff"
     frame_color = "#ffffff"
     timeout = 30
+
+[play_sound]
+    summary = "*"
+    script = "notif"
