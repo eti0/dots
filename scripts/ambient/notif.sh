@@ -6,4 +6,4 @@ dir="/usr/scripts/ambient"
 
 
 # exec
-aplay "$dir/very-light-click.wav"
+paplay "$dir/very-light-click.wav"

@@ -3,7 +3,7 @@
 
 # vars
 set key 43d042e6d1ed55ac9a3b36a89d07bb31
-set loc "44.8378,-0.5792"
+set loc "44.8158,-0.4733"
 set units si
 set temp "/tmp"
 set weather "$temp/weather"

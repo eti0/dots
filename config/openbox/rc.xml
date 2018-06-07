@@ -102,7 +102,7 @@
     </keybind>
     <keybind key="A-F2">
       <action name="Execute">
-        <command>aplay /usr/scripts/ambient/ios-unlock.wav</command>
+        <command>paplay /usr/scripts/ambient/ios-unlock.wav</command>
       </action>
     </keybind>
     <keybind key="A-F8">
@@ -112,7 +112,7 @@
     </keybind>
     <keybind key="A-F8">
       <action name="Execute">
-        <command>aplay /usr/scripts/ambient/ios-unlock.wav</command>
+        <command>paplay /usr/scripts/ambient/ios-unlock.wav</command>
       </action>
     </keybind>
     <keybind key="A-F3">
