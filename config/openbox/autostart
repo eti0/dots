@@ -4,7 +4,7 @@ clipmenud &
 xset -b &
 xgamma -gamma 0.8 &
 fonts &
-compton -Ccf &
+compton &
 nm-applet &
 battery &
 sleep 5s && toggle-bar &

@@ -19,44 +19,44 @@
     <primaryMonitor>Active</primaryMonitor>
   </placement>
   <theme>
-    <name>c</name>
+    <name>w</name>
     <cornerRadius>8</cornerRadius>
-    <titleLayout/>
+    <titleLayout>IC</titleLayout>
     <animateIconify>no</animateIconify>
     <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
-      <name>Adobe Blank</name>
-      <size>1</size>
+      <name>euphon</name>
+      <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Adobe Blank</name>
-      <size>1</size>
+      <name>euphon</name>
+      <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>cure</name>
-      <size>9</size>
+      <name>euphon</name>
+      <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>cure</name>
-      <size>9</size>
+      <name>euphon</name>
+      <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>cure</name>
-      <size>9</size>
+      <name>euphon</name>
+      <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>cure</name>
-      <size>9</size>
+      <name>euphon</name>
+      <size>8</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -83,7 +83,7 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>40</top>
+    <top>0</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>

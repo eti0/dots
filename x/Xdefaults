@@ -5,7 +5,7 @@
 !
 
 ! fonts
-*font:				-*-yakuza-*
+*font:				-*-vanilla-*
 *boldFont:
 *lineSpace:			2
 *letterSpace:		0
@@ -70,7 +70,7 @@
 
 
 ! padding
-*internalBorder:	40
+*internalBorder:	15
 
 
 ! xft fonts settings

@@ -21,7 +21,7 @@ playlist_display_mode = "columns"
 
 # now playing
 # alternative -- now_playing_prefix = "$3-"
-now_playing_suffix = " $8×"
+now_playing_suffix = " $8;"
 
 
 # playlist
@@ -36,7 +36,7 @@ message_delay_time= "1"
 # progress bar
 progressbar_look = "───"
 # progressbar_color = "black"
-progressbar_elapsed_color = "white"
+progressbar_elapsed_color = "green"
 
 
 # colors

@@ -1,0 +1,62 @@
+# menu
+menu.items.active.bg: Flat
+menu.items.active.bg.color: #071d22
+menu.items.active.text.color: #94a9d9
+menu.items.*.border.width: 10
+menu.items.bg: Flat
+menu.items.bg.color: #071d22
+menu.items.disabled.text.color: #94a9d9
+menu.items.text.color: white
+menu.border.width: 25
+menu.border.color: #071d22
+menu.title.bg: Flat
+menu.title.*.color: #071d22
+menu.title.text.justify: Left
+menu.separator.color: #071d22
+menu.overlap.x: -40
+
+
+# osd
+osd.label.text.color: #071d22
+osd.border.width: 20
+osd.border.color: white
+
+
+# windows
+border.width: 1
+# *.border.color: white
+*.active.border.color: #071d22
+*.inactive.border.color: #1b3035
+window.client.padding.width: 0
+window.handle.width: 40
+
+
+# titlebars
+padding.height: 15
+padding.width: 15
+
+
+# active window
+window.active.*.bg: Flat
+window.active.*.*.bg.color: white
+window.active.*.*.image.color: black
+
+
+# inactive window
+window.inactive.*.bg: Flat
+window.inactive.*.*.bg.color: white
+window.inactive.*.*.image.color: black
+
+
+# handle
+window.active.handle.bg: Flat
+window.active.handle.bg.color: white
+window.inactive.handle.bg: Flat
+window.inactive.handle.bg.color: white
+
+
+# grip
+window.active.grip.bg: Flat
+window.active.grip.bg.color: white
+window.inactive.grip.bg: Flat
+window.inactive.grip.bg.color: white

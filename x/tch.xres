@@ -1,12 +1,12 @@
 ! this is a thicc config - don't use it, really.
 ! padding
-*internalBorder:	75
+*internalBorder:	40
 
 ! url stuff
 *.matcher.rend.0:	fg7
 
 ! line space
-*lineSpace:			5
+*lineSpace:			4
 
 ! size
 *geometry:			90x20
