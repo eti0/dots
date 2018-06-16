@@ -2,13 +2,9 @@
 
 
 # vars
-set tmpimg "/tmp/toggle.png"
+set dir "/usr/scripts"
+set img "$dir/img/bar.png"
 set pid (pidof lemonbar)
-set geo (xdotool getdisplaygeometry)
-set width (printf $geo | awk '{print $1;}')
-set height (printf $geo | awk '{print $2;}')
-set y "0"
-set h "40"
 
 
 # exec
@@ -17,9 +13,12 @@ if test "$pid"
 	openbox --reconfigure
 
 	kill -9 "$pid"
+	pkill -f "n30f -t barborder"
 else
 	sed -i "s/<top>0<\/top>/<top>$h<\/top>/g" "$HOME/.config/openbox/rc.xml"
 	openbox --reconfigure
 
+	n30f -t "barborder" \
+	     -d "$img"
 	wbr &
 end
