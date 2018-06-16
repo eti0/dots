@@ -19,6 +19,7 @@ else
 	openbox --reconfigure
 
 	n30f -t "barborder" \
+	     -y "40" \
 	     -d "$img"
 	wbr &
 end
