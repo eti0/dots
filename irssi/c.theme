@@ -120,7 +120,7 @@ abstracts = {
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "$1 %K-%n ";
+  msgnick = "$1 %K:%n ";
 
   # message from you is printed. "ownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -143,25 +143,25 @@ abstracts = {
   ownnick = "$*";
 
   # public message in channel, $0 = nick mode, $1 = nick
-  pubmsgnick = "{msgnick $0 $1-}%n";
+  pubmsgnick = "{msgnick $0 $1}%n";
   pubnick = "$*%n";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
-  pubmsgmenick = "%W{msgnick $0 $1-}%n";
+  pubmsgmenick = "%W{msgnick $0 $1:}%n";
   menick = "$*%n";
 
   # public highlighted message in channel
   # $0 = highlight color, $1 = nick mode, $2 = nick
-  pubmsghinick = "{msgnick $1 $0$2-%n}";
+  pubmsghinick = "{msgnick $1 $0$2:%n}";
 
   # channel name is printed with message
   msgchannel = "%K:%c$*%n";
 
   # private message, $0 = nick, $1 = host
-  privmsg = "[%w$0%K(%w$1-%K)%n] ";
+  privmsg = "[%w$0%K(%w$1:%K)%n] ";
 
   # private message from you, $0 = "msg", $1 = target nick
-  ownprivmsg = "[%w$0%K(%w$1-%K)%n] ";
+  ownprivmsg = "[%w$0%K(%w$1:%K)%n] ";
 
   # own private message in query
   ownprivmsgnick = "{msgnick  $*}";
@@ -273,7 +273,7 @@ abstracts = {
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = "%n          ";
+  prompt = "%n        ; ";
 
   sb = "$* ";
   sbmode = "";

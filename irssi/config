@@ -39,7 +39,7 @@ chatnets = {
     type = "IRC";
     sasl_mechanism = "plain";
     sasl_username = "eti";
-    sasl_password = "<password>;";
+    sasl_password = "<password>";
   };
   nixers = { type = "IRC"; };
   lainchan = { type = "IRC"; };
@@ -67,7 +67,7 @@ settings = {
     nickcolor_enable_truncate = "yes";
     nickcolor_prefix_text = "          ";
     nickcolor_truncate_value = "-7";
-    nickcolor_colors = "2 6 10 11 12 13 14";
+    nickcolor_colors = "2 3 4 5 6 7 8 9 10 11 12 13 14";
   };
 };
 
