@@ -18,8 +18,8 @@ menu.overlap.x: -40
 
 # osd
 osd.label.text.color: #071d22
-osd.border.width: 20
-osd.border.color: white
+osd.border.width: 1
+osd.border.color: #071d22
 
 
 # windows
@@ -39,13 +39,13 @@ padding.width: 15
 # active window
 window.active.*.bg: Flat
 window.active.*.*.bg.color: white
-window.active.*.*.image.color: black
+window.active.*.*.image.color: #071d22
 
 
 # inactive window
 window.inactive.*.bg: Flat
 window.inactive.*.*.bg.color: white
-window.inactive.*.*.image.color: black
+window.inactive.*.*.image.color: #071d22
 
 
 # handle
