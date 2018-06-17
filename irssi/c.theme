@@ -147,7 +147,7 @@ abstracts = {
   pubnick = "$*%n";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
-  pubmsgmenick = "%W{msgnick $0 $1:}%n";
+  pubmsgmenick = "%W{msgnick $0 $1}%n";
   menick = "$*%n";
 
   # public highlighted message in channel
@@ -288,7 +288,7 @@ abstracts = {
   # normal text
   sb_act_text = "%K$*";
   # public message
-  sb_act_msg = "%K$*";
+  sb_act_msg = "%w$*";
   # hilight
   sb_act_hilight = "%R$*";
   # hilight with specified color, $0 = color, $1 = text
@@ -296,7 +296,7 @@ abstracts = {
 };
 formats = {
   "fe-common/core" = {
-    pubmsg = "{pubmsgnick $2 {pubnick \00312$[-7]0}}$1";
+    pubmsg = "{pubmsgnick $2 {pubnick \00305$[-7]0}}$1";
     own_msg = "          $1";
     own_msg_channel = "{ownmsgnick $3 {ownnick $nickcolor$[-7]0}{msgchannel $1}}$2";
     pubmsg_me = "{pubmsgmenick $2 {menick $nickcolor$[-7]0}}$1";
