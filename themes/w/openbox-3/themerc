@@ -1,18 +1,17 @@
 # menu
-menu.items.active.bg: Flat
-menu.items.active.bg.color: #071d22
-menu.items.active.text.color: #94a9d9
-menu.items.*.border.width: 10
 menu.items.bg: Flat
-menu.items.bg.color: #071d22
-menu.items.disabled.text.color: #94a9d9
-menu.items.text.color: white
-menu.border.width: 25
-menu.border.color: #071d22
+menu.items.bg.color: white
+menu.items.text.color: #071d22
+menu.items.active.bg: Flat
+menu.items.active.bg.color: white
+menu.items.active.text.color: #8fa4da
 menu.title.bg: Flat
-menu.title.*.color: #071d22
-menu.title.text.justify: Left
-menu.separator.color: #071d22
+menu.title.bg.color: white
+menu.title.text.color: #071d22
+menu.title.text.justify: Right
+menu.border.width: 25
+menu.border.color: white
+menu.separator.color: white
 menu.overlap.x: -40
 
 
@@ -28,7 +27,7 @@ border.width: 1
 *.active.border.color: #071d22
 *.inactive.border.color: #1b3035
 window.client.padding.width: 0
-window.handle.width: 40
+window.handle.width: 0
 
 
 # titlebars

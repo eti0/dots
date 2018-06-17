@@ -21,7 +21,7 @@
   <theme>
     <name>w</name>
     <cornerRadius>8</cornerRadius>
-    <titleLayout>IC</titleLayout>
+    <titleLayout>C</titleLayout>
     <animateIconify>no</animateIconify>
     <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
@@ -83,7 +83,7 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>0</top>
+    <top/>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -498,6 +498,9 @@
   </menu>
   <applications>
     <application name="luakit">
+      <decor>no</decor>
+    </application>
+    <application class="URxvt">
       <decor>no</decor>
     </application>
     <!--

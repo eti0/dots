@@ -42,7 +42,7 @@ mpd() {
 	artist="$(mpc current | sed "s/ - .*//;s/;.*//")"
 	song="$(mpc current | sed "s/.* - //")"
 	if [ "$(mpc current)" ] ; then
-		printf "%.0s-$padding$artist : $song$padding"
+		echo "$a2$padding$artist : $song$padding$bg"
 	else
 		:
 	fi
@@ -53,7 +53,7 @@ spotify() {
 	if [ "$current" == "Spotify is not running." ] ; then
 		:
 	else
-		printf "%.0s-$padding$current$padding"
+		echo "$a2$padding$current$padding$bg"
 	fi
 }
 
@@ -84,12 +84,11 @@ clock() {
 desktop_loop() {
 	while :; do
 		echo "%{l}\
-		$padding$(desktop)$padding\
+		$a3$padding$(desktop)$padding$bg\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}\
 		%{r}\
-		%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}\
-		-\
-		%{A:calendar &:}$padding$(clock)$padding%{A}"
+		$a2%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}$bg\
+		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
 		sleep "$refresh"
 	done |\
 
@@ -104,12 +103,11 @@ desktop_loop() {
 laptop_loop() {
 	while :; do
 		echo "%{l}\
-		$padding$(desktop)$padding\
+		$a3$padding$(desktop)$padding$bg\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}\
 		%{r}\
 		%{A:batstat &:}$padding$(battery)$padding%{A}\
-		-\
-		%{A:calendar &:}$padding$(clock)$padding%{A}"
+		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
 		sleep "$refresh"
 	done |\
 

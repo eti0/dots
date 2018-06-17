@@ -13,13 +13,9 @@ if test "$pid"
 	openbox --reconfigure
 
 	kill -9 "$pid"
-	pkill -f "n30f -t barborder"
 else
 	sed -i "s/<top>0<\/top>/<top>$h<\/top>/g" "$HOME/.config/openbox/rc.xml"
 	openbox --reconfigure
 
-	n30f -t "barborder" \
-	     -y "40" \
-	     -d "$img"
-	wbr &
+    wbr &
 end
