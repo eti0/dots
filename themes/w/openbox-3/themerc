@@ -24,8 +24,8 @@ osd.border.color: #071d22
 # windows
 border.width: 1
 # *.border.color: white
-*.active.border.color: #071d22
-*.inactive.border.color: #1b3035
+*.active.border.color: #192e33
+*.inactive.border.color: #1d3237
 window.client.padding.width: 0
 window.handle.width: 0
 
