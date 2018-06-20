@@ -44,7 +44,7 @@
     "syntax": true,
     "tabmovement": false,
     "tabsize": 4,
-    "tabstospaces": true,
+    "tabstospaces": false,
     "termtitle": true,
     "useprimary": true
 }

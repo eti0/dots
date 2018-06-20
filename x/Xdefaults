@@ -5,7 +5,7 @@
 !
 
 ! fonts
-*font:				-*-vanilla-*
+*font:				-*-vanilla-*,-efont-*
 *boldFont:
 *lineSpace:			2
 *letterSpace:		0
