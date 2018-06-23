@@ -14,7 +14,7 @@ source "$colors"
 
 # functions
 desktop() {
-	current="$(xdotool "get_desktop")"
+	current="$(xdotool 'get_desktop')"
 	case "$current" in
 		"0")
 			desktop="un"
@@ -39,8 +39,8 @@ desktop() {
 }
 
 mpd() {
-	artist="$(mpc current | sed "s/ - .*//;s/;.*//")"
-	song="$(mpc current | sed "s/.* - //")"
+	artist="$(mpc -f '%artist%' | head -1)"
+	song="$(mpc -f '%title%' | head -1)"
 	if [ "$(mpc current)" ] ; then
 		echo "$a2$padding$artist : $song$padding$bg"
 	else
@@ -49,7 +49,7 @@ mpd() {
 }
 
 spotify() {
-	current="$(sps "current" | sed "s/ \- / \: /")"
+	current="$(sps 'current' | sed 's/ \- / \: /')"
 	if [ "$current" == "Spotify is not running." ] ; then
 		:
 	else
@@ -58,7 +58,7 @@ spotify() {
 }
 
 window() {
-	current="$(xdotool "getwindowfocus" "getwindowname")"
+	current="$(xdotool 'getwindowfocus' 'getwindowname')"
 	if [ "$current" = "Openbox" ] ; then
 		:
 	else
@@ -71,7 +71,7 @@ weather() {
 }
 
 battery() {
-	percent="$(cat "/sys/class/power_supply/"$battery"/capacity")"
+	percent="$(cat '/sys/class/power_supply/$battery/capacity')"
 	echo "$percent%"
 }
 

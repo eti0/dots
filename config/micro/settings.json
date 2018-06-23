@@ -39,7 +39,7 @@
     "splitRight": true,
     "splitbottom": true,
     "splitright": true,
-    "statusline": false,
+    "statusline": true,
     "sucmd": "sudo",
     "syntax": true,
     "tabmovement": false,

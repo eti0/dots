@@ -271,8 +271,6 @@
         <action name="Resize"/>
       </mousebind>
       <mousebind button="A-Middle" action="Press">
-        <action name="Focus"/>
-        <action name="Raise"/>
         <action name="MoveResizeTo">
             <x>center</x>
             <y>center</y>
