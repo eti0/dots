@@ -76,7 +76,8 @@ battery() {
 }
 
 clock() {
-	tempus
+	time="$(date '+%j')"
+	printf "$time days around the sun"
 }
 
 
@@ -84,10 +85,8 @@ clock() {
 desktop_loop() {
 	while :; do
 		echo "%{l}\
-		$a3$padding$(desktop)$padding$bg\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}\
 		%{r}\
-		$a2%{A:notify-send 'updating the weather' && weather --noicon &:}$padding$(weather)$padding%{A}$bg\
 		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
 		sleep "$refresh"
 	done |\
