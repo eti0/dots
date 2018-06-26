@@ -71,7 +71,7 @@ weather() {
 }
 
 battery() {
-	percent="$(cat '/sys/class/power_supply/$battery/capacity')"
+	percent="$(cat '/sys/class/power_supply/'$battery'/capacity')"
 	echo "$percent%"
 }
 
@@ -102,7 +102,6 @@ desktop_loop() {
 laptop_loop() {
 	while :; do
 		echo "%{l}\
-		$a3$padding$(desktop)$padding$bg\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}\
 		%{r}\
 		%{A:batstat &:}$padding$(battery)$padding%{A}\

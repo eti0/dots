@@ -499,10 +499,10 @@
     <application name="luakit">
       <decor>no</decor>
     </application>
+    <!--
     <application class="URxvt">
       <decor>no</decor>
     </application>
-    <!--
     <application class="*">
       <decor>no</decor>
     </application>
