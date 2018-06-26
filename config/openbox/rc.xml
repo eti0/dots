@@ -19,9 +19,9 @@
     <primaryMonitor>Active</primaryMonitor>
   </placement>
   <theme>
-    <name>w</name>
+    <name>o</name>
     <cornerRadius>8</cornerRadius>
-    <titleLayout>C</titleLayout>
+    <titleLayout>IMC</titleLayout>
     <animateIconify>no</animateIconify>
     <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
@@ -272,8 +272,8 @@
       </mousebind>
       <mousebind button="A-Middle" action="Press">
         <action name="MoveResizeTo">
-            <x>center</x>
-            <y>center</y>
+          <x>center</x>
+          <y>center</y>
         </action>
       </mousebind>
     </context>
