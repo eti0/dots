@@ -74,7 +74,7 @@
     <popupTime>0</popupTime>
   </desktops>
   <resize>
-    <drawContents>yes</drawContents>
+    <drawContents>no</drawContents>
     <popupShow>Always</popupShow>
     <popupPosition>Fixed</popupPosition>
     <popupFixedPosition>
@@ -113,8 +113,8 @@
     </keybind>
     <keybind key="A-F5">
       <action name="Execute">
-        <name>luakit</name>
-        <command>luakit</command>
+        <name>chromium</name>
+        <command>chromium</command>
       </action>
     </keybind>
     <keybind key="XF86Launch1">
@@ -497,6 +497,9 @@
   </menu>
   <applications>
     <application name="luakit">
+      <decor>no</decor>
+    </application>
+    <application name="chromium">
       <decor>no</decor>
     </application>
     <!--

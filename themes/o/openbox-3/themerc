@@ -17,8 +17,7 @@ menu.overlap.x: -40
 
 # osd
 osd.label.text.color: #071d22
-osd.border.width: 1
-osd.border.color: #071d22
+osd.border.width: 0
 
 
 # windows

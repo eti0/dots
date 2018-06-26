@@ -13,7 +13,7 @@
 		</item>
 		<item label="www">
 			<action name="Execute">
-				<execute>luakit</execute>
+				<execute>chromium</execute>
 			</action>
 		</item>
 		<separator/>
