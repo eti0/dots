@@ -120,7 +120,7 @@ abstracts = {
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "%K$0%n  $1 %K:%n ";
+  msgnick = "%K$0%n $1 %K:%n ";
 
   # message from you is printed. "ownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -296,8 +296,8 @@ abstracts = {
 };
 formats = {
   "fe-common/core" = {
-    pubmsg = "             $1";
-    own_msg = "                $1";
+    pubmsg = "{pubmsgnick $2 {pubnick \00307$[-8]0}}$1";
+    own_msg = "             $1";
     own_msg_channel = "{ownmsgnick $3 {ownnick $nickcolor$[-7]0}{msgchannel $1}}$2";
     pubmsg_me = "{pubmsgmenick $2 {menick $nickcolor$[-7]0}}$1";
     pubmsg_me_channel = "{pubmsgmenick $3 {menick $nickcolor$[-7]0}{msgchannel $1}}$2";

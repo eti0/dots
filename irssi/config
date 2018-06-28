@@ -66,7 +66,7 @@ settings = {
     nickcolor_enable_prefix = "yes";
     nickcolor_enable_truncate = "yes";
     nickcolor_prefix_text = "             ";
-    nickcolor_truncate_value = "-7";
+    nickcolor_truncate_value = "-8";
     nickcolor_colors = "2 3 4 5 6 7 8 9 10 11 12 13 14";
   };
 };
