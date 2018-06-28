@@ -1,5 +1,4 @@
 $HOME/.fehbg &
-mopidy &
 clipmenud &
 xset -b &
 xgamma -gamma 0.8 &

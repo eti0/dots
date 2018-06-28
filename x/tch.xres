@@ -3,7 +3,7 @@
 *internalBorder:	40
 
 ! url stuff
-*.matcher.rend.0:	fg7
+*.matcher.rend.0:	fg5
 
 ! line space
 *lineSpace:			4
