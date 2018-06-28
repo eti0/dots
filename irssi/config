@@ -39,7 +39,7 @@ chatnets = {
     type = "IRC";
     sasl_mechanism = "plain";
     sasl_username = "eti";
-    sasl_password = "password";
+    sasl_password = "";
   };
   nixers = { type = "IRC"; };
   lainchan = { type = "IRC"; };
