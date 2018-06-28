@@ -120,7 +120,7 @@ abstracts = {
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "$1 %K:%n ";
+  msgnick = "%K$0%n  $1 %K:%n ";
 
   # message from you is printed. "ownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -175,7 +175,7 @@ abstracts = {
   ##
 
   # used internally by this theme
-  action_core = "        %M× %m$0%n$1";
+  action_core = "           %n:%n %y$0%n$1";
 
   # generic one that's used by most actions
   action = "{action_core $*} ";
@@ -273,13 +273,13 @@ abstracts = {
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = "%n        ; ";
+  prompt = "%n           ; ";
 
   sb = "$* ";
   sbmode = "";
   sbaway = " (%Gafk%n)";
   sbservertag = ":$0";
-  sbnickmode = "";
+  sbnickmode = "$*";
 
   # activity in statusbar
 
@@ -296,19 +296,19 @@ abstracts = {
 };
 formats = {
   "fe-common/core" = {
-    pubmsg = "{pubmsgnick $2 {pubnick \00305$[-7]0}}$1";
-    own_msg = "          $1";
+    pubmsg = "             $1";
+    own_msg = "                $1";
     own_msg_channel = "{ownmsgnick $3 {ownnick $nickcolor$[-7]0}{msgchannel $1}}$2";
     pubmsg_me = "{pubmsgmenick $2 {menick $nickcolor$[-7]0}}$1";
     pubmsg_me_channel = "{pubmsgmenick $3 {menick $nickcolor$[-7]0}{msgchannel $1}}$2";
     pubmsg_hilight = "{pubmsghinick $nickcolor$0 $3 $[-7]1}$2";
     pubmsg_hilight_channel = "{pubmsghinick $nickcolor$0 $4 $[-7]1{msgchannel $2}}$3";
     pubmsg_channel = "{pubmsgnick $3 {pubnick $nickcolor$[-7]0}{msgchannel $1}}$2";
-    your_nick_changed = "        + you ({nick $0}) are now know as {nick $1}";
-    nick_changed = "        + {channick $0} is now known as {channick_hilight $1}";
-    join = "        %m× {channick_hilight $0}%n join";
-    part = "        %m× {channick $0}%n leave";
-    kick = "        %m× {channick $0}%n was kicked - {reason $2}";
-    quit = "        %m× {channick $0}%n quit";
+    your_nick_changed = "           : you ({nick $0}) are now know as {nick $1}";
+    nick_changed = "           : {channick $0} is now known as {channick_hilight $1}";
+    join = "           %m× {channick_hilight $0}%n join";
+    part = "           %m× {channick $0}%n leave";
+    kick = "           %m× {channick $0}%n was kicked - {reason $2}";
+    quit = "           %m× {channick $0}%n quit";
   };
 };

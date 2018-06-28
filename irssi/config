@@ -39,7 +39,7 @@ chatnets = {
     type = "IRC";
     sasl_mechanism = "plain";
     sasl_username = "eti";
-    sasl_password = "<password>";
+    sasl_password = "password";
   };
   nixers = { type = "IRC"; };
   lainchan = { type = "IRC"; };
@@ -49,7 +49,7 @@ settings = {
   core = { real_name = "0x264F"; user_name = "eti"; nick = "eti"; };
   "fe-text" = {
     actlist_sort = "refnum";
-    indent = "10";
+    indent = "13";
     indent_always = "yes";
   };
   "fe-common/core" = {
@@ -65,7 +65,7 @@ settings = {
     tmux_away_window = "0";
     nickcolor_enable_prefix = "yes";
     nickcolor_enable_truncate = "yes";
-    nickcolor_prefix_text = "          ";
+    nickcolor_prefix_text = "             ";
     nickcolor_truncate_value = "-7";
     nickcolor_colors = "2 3 4 5 6 7 8 9 10 11 12 13 14";
   };
