@@ -55,11 +55,11 @@ wm
 init
 cat << EOF
 
-${rst} ,gg,   ,gg
-${f4}  ""8b,dP"      ${rst}os${f4}:${rst}         ${f4}$os${rst}
-${f4}    ,88"        ${rst}shell${f4}:${rst}      ${f4}$shell${rst}
-${f4}  ,dP"Y8,       ${rst}wm${f4}:${rst}         ${f4}$wm${rst}
-${rst} dP"   "Y8
+${rst}    / ·${f3}>${rst}	os${f3}:${rst}		${f7}$os${rst}
+${rst}   /)\|		shell${f3}:${rst}		${f7}$shell${rst}
+${rst}  // /		init${f3}:${rst}		${f7}$init${rst}
+${rst} /'${f3}" "${rst}		wm${f3}:${rst}		${f7}$wm${rst}
+${rst}/
 
 EOF
 
