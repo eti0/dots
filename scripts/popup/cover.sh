@@ -24,10 +24,11 @@ else
     glyrc cover --album "$album" --artist "$artist" --title "$title" --write "$file"
     convert "$file" -resize "200x200" "$file" >/dev/null 2>&1
     cp "$file" "$dir/$artist - $album.png"
+    rm "$file"
 end
 
-if test -f "$file"
-    popup "$file" "30" >/dev/null 2>&1
+if test -f "$dir/$artist - $album.png"
+    popup "$dir/$artist - $album.png" "30" >/dev/null 2>&1
 else
     notify-send "spotify cover not found"
     exit "1"
