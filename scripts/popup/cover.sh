@@ -4,6 +4,7 @@
 # vars
 set dir "$HOME/.covers"
 set file "$dir/cover.png"
+set ypos (xdotool getdisplaygeometry | awk '{print $2;}')
 
 if test (pidof spotify)
     set title (sps current | sed "s/.* - //")
@@ -28,7 +29,12 @@ else
 end
 
 if test -f "$dir/$artist - $album.png"
-    popup "$dir/$artist - $album.png" "30" >/dev/null 2>&1
+    popup "$dir/$artist - $album.png" "59" >/dev/null 2>&1 &
+	n30f -t "popup-arrow" \
+		 -x "40" \
+		 -y (math $ypos -80) \
+	 	 -c "pkill -f 'n30f -t popup-image' && pkill -f 'n30f -t popup-background' && pkill -f 'n30f -t popup-arrow'" \
+		 "/usr/scripts/popup/img/arrow.png"
 else
     notify-send "spotify cover not found"
     exit "1"

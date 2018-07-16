@@ -83,6 +83,8 @@ desktop_loop() {
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
+		-d \
+		-R \
 	| bash
 }
 

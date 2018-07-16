@@ -6,9 +6,9 @@ dir="/usr/scripts/popup"
 file="/tmp/calendar.png"
 background="$dir/img/bg.png"
 font="lime"
-monitorwidth="$(xdotool getdisplaygeometry | awk '{print $1;}')"
-x="$(expr $monitorwidth - 270)"
-y="70"
+monitorheight="$(xdotool getdisplaygeometry | awk '{print $2;}')"
+x="59"
+y="20"
 
 
 # exec
@@ -32,7 +32,13 @@ n30f -t calendar \
      -x "$(expr $x + 70)" \
      -y "$(expr $y + 80)" \
      -c "pkill -f 'n30f -t calendar'" \
-     "$file"
+     "$file" &
+
+n30f -t "popup-arrow" \
+     -x "$(expr $x - 19)" \
+     -y "$(expr $y + 30)" \
+     -c "pkill -f 'n30f -t calendar'" \
+     "/usr/scripts/popup/img/arrow.png"
 
 
 # clean

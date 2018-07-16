@@ -5,7 +5,7 @@
 !
 
 ! fonts
-*font:				-*-vanilla-*,-efont-*
+*font:				-*-vanilla-*
 *boldFont:
 *lineSpace:			2
 *letterSpace:			0
@@ -94,3 +94,8 @@ rofi.color-urgent:		#ffffff, #425357, #ffffff, #ffffff, #94a9d9
 *.scrollTtyOutput:		false
 *.scrollWithBuffer:		true
 *.scrollTtyKeypress:		true
+
+
+! disable ctrl+shift
+*.iso14755:			false
+*.iso14755_52:			false
