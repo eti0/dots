@@ -93,7 +93,7 @@ laptop_loop() {
 		echo "%{l}\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
-		%{A:batstat &:}$padding$(battery)$padding%{A}\
+		$a2%{A:batstat &:}$padding$(battery)$padding%{A}$bg\
 		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
 		sleep "$refresh"
 	done |\
@@ -103,6 +103,8 @@ laptop_loop() {
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
+		-d \
+		-R \
 	| bash
 }
 
