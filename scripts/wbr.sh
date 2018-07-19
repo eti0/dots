@@ -5,6 +5,7 @@ refresh=".2"
 padding="    "
 height="40"
 font="-*-euphon-*"
+font2="-efont-biwidth-*"
 battery="BAT0"
 
 
@@ -50,7 +51,7 @@ mpd() {
 
 spotify() {
 	current="$(sps 'current' | sed 's/ \- / \: /')"
-	if [ "$current" == "Spotify is not running." ] ; then
+	if [ "$current" == "No media player is currently running" ] ; then
 		:
 	else
 		echo "$a2$padding$current$padding$bg"
@@ -100,6 +101,7 @@ laptop_loop() {
 
 	lemonbar \
 		-f "$font" \
+		-f "$font2" \
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
