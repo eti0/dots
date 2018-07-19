@@ -18,18 +18,18 @@ end
 
 
 # exec
-if test -f "$dir/$artist - $album.png"
-    set file "$dir/$artist - $album.png"
+if test -f "$dir/$album.png"
+    set file "$dir/$album.png"
 else
     notify-send "looking for a cover"
     glyrc cover --album "$album" --artist "$artist" --title "$title" --write "$file"
     convert "$file" -resize "200x200" "$file" >/dev/null 2>&1
-    cp "$file" "$dir/$artist - $album.png"
+    cp "$file" "$dir/$album.png"
     rm "$file"
 end
 
-if test -f "$dir/$artist - $album.png"
-    popup "$dir/$artist - $album.png" "59" >/dev/null 2>&1 &
+if test -f "$dir/$album.png"
+    popup "$dir/$album.png" "59" >/dev/null 2>&1 &
 	n30f -t "popup-arrow" \
 		 -x "40" \
 		 -y (math $ypos -80) \
