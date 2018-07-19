@@ -36,7 +36,7 @@ if test -f "$dir/$artist - $album.png"
 	 	 -c "pkill -f 'n30f -t popup-image' && pkill -f 'n30f -t popup-background' && pkill -f 'n30f -t popup-arrow'" \
 		 "/usr/scripts/popup/img/arrow.png"
 else
-    notify-send "spotify cover not found"
+    notify-send "cover not found"
     exit "1"
 end
 
