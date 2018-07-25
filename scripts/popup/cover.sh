@@ -30,6 +30,7 @@ end
 
 if test -f "$dir/$album.png"
     popup "$dir/$album.png" "20" >/dev/null 2>&1 &
+    sleep ".02"
 	n30f -t "popup-arrow" \
 		 -x "50" \
 		 -y "40" \

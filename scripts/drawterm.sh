@@ -2,8 +2,8 @@
 # requires urxvt, slop, xdotool and wmctrl.
 
 # vars
-border="10"
-color="1 1 1 0"
+border="1"
+color="0 0 0 0"
 format="%w %h %x %y"
 dir="/usr/scripts"
 
@@ -21,7 +21,7 @@ fi
 
 # adapt to the border width of your windows
 # ((width -= 0))
-((height -= 42))
+# ((height -= 0))
 
 active="$(xdotool search --sync --classname drawterm | tail -n1)"
 

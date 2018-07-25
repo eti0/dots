@@ -3,8 +3,9 @@
 
 # vars
 set dir "/usr/scripts"
-set img "$dir/img/bar.png"
+set img "$dir/img/underline.png"
 set pid (pidof lemonbar)
+
 set h 40
 
 
@@ -14,9 +15,13 @@ if test "$pid"
 	openbox --reconfigure
 
 	kill -9 "$pid"
+    pkill -f "n30f -t underline"
 else
 	sed -i "s/<top>0<\/top>/<top>$h<\/top>/g" "$HOME/.config/openbox/rc.xml"
 	openbox --reconfigure
 
     wbr &
+    n30f -t "underline" \
+    -y "40" \
+    "$img" &
 end

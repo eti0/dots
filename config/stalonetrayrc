@@ -1,3 +1,4 @@
-background "#071d22"
-icon_size 32
+sticky true
+icon_size 24
 geometry 5x1-20-20
+background "#ffffff"

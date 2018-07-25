@@ -5,7 +5,7 @@
 !
 
 ! fonts
-*font:				-*-vanilla-*, \
+*font:				-*-cherry-*, \
 					-efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1
 *boldFont:
 *lineSpace:			2
@@ -18,41 +18,41 @@
 
 ! colorscheme
 ! special
-*.foreground:			#ffffff
-*.background:			#071d22
-*.cursorColor:			#ffffff
+*.foreground:			#071d22
+*.background:			#ffffff
+*.cursorColor:			#071d22
 
 ! black
-*.color0:			#071d22
-*.color8:			#617278
+*.color0:			#e3e6e6
+*.color8:			#b2b5b6
 
 ! red
-*.color1:			#c1566b
-*.color9:			#f8879f
+*.color1:			#071d22
+*.color9:			#071d22
 
 ! green
-*.color2:			#a7dfa6
-*.color10:			#cae1c9
+*.color2:			#071d22
+*.color10:			#071d22
 
 ! yellow
-*.color3:			#ed9b8b
-*.color11:			#e1aba1
+*.color3:			#071d22
+*.color11:			#071d22
 
 ! blue
-*.color4:			#8fa4da
-*.color12:			#aeb6d0
+*.color4:			#071d22
+*.color12:			#071d22
 
 ! magenta
-*.color5:			#c6779d
-*.color13:			#d2a9bd
+*.color5:			#071d22
+*.color13:			#071d22
 
 ! cyan
-*.color6:			#6776a4
-*.color14:			#8998c7
+*.color6:			#071d22
+*.color14:			#071d22
 
 ! white
-*.color7:			#b3bec1
-*.color15:			#f7f8f8
+*.color7:			#071d22
+*.color15:			#071d22
 
 
 ! cursor

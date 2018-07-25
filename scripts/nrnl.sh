@@ -55,11 +55,9 @@ wm
 init
 cat << EOF
 
-${rst}    / ·${f3}>${rst}	os${f3}:${rst}		${f7}$os${rst}
-${rst}   /)\|		shell${f3}:${rst}		${f7}$shell${rst}
-${rst}  // /		init${f3}:${rst}		${f7}$init${rst}
-${rst} /'${f3}" "${rst}		wm${f3}:${rst}		${f7}$wm${rst}
-${rst}/
+${rst}  /        /              ${rst}os${f3}:${rst}       ${f7}$os${rst}
+${rst} /_ _ __. //  ______ _    ${rst}shell${f3}:${rst}    ${f7}$shell${rst}
+${rst}/ /</(_/|</_ / / / <</_   ${rst}wm${f3}:${rst}       ${f7}$wm${rst}
 
 EOF
 
