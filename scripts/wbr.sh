@@ -5,7 +5,8 @@ refresh=".2"
 padding="    "
 height="40"
 font="-*-euphon-*"
-font2="-efont-biwidth-*"
+font2="-*-vanilla-*"
+font3="-efont-biwidth-*"
 battery="BAT0"
 
 
@@ -81,11 +82,11 @@ desktop_loop() {
 
 	lemonbar \
 		-f "$font" \
+		-f "$font2" \
+		-f "$font3" \
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
-		-d \
-		-R \
 	| bash
 }
 
@@ -102,11 +103,10 @@ laptop_loop() {
 	lemonbar \
 		-f "$font" \
 		-f "$font2" \
+		-f "$font3" \
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
-		-d \
-		-R \
 	| bash
 }
 

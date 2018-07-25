@@ -10,7 +10,7 @@ set s (cat /sys/class/power_supply/$battery/status)
 
 # exec
 while true
-	if test "$c" -lt "20" ; and test "$s" != "Charging"
+	if test "$c" -lt "30" ; and test "$s" != "Charging"
 		notify-send "battery level low! - $c%"
 	else
 		#
