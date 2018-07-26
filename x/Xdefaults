@@ -7,6 +7,7 @@
 ! fonts
 *font:				-*-cherry-*, \
 					-efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1
+
 *boldFont:
 *lineSpace:			2
 *letterSpace:			0
@@ -28,7 +29,7 @@
 
 ! red
 *.color1:			#071d22
-*.color9:			#071d22
+*.color9:			#e26a6a
 
 ! green
 *.color2:			#071d22
@@ -85,7 +86,7 @@ Xft.rgba:			rgb
 
 ! rofi settings
 rofi.color-enabled:		true
-rofi.color-window:		#ffffff, #ffffff, #ffffff
+rofi.color-window:		#ffffff, #071d22, #ffffff
 rofi.color-normal:		#ffffff, #425357, #ffffff, #ffffff, #94a9d9
 rofi.color-active:		#ffffff, #425357, #ffffff, #ffffff, #94a9d9
 rofi.color-urgent:		#ffffff, #425357, #ffffff, #ffffff, #94a9d9

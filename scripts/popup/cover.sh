@@ -2,34 +2,66 @@
 
 
 # vars
+set ypos "40"
 set dir "$HOME/.covers"
 set file "$dir/cover.png"
-set ypos "40"
+set source (mpc -f '%file%' | head -1)
 
+
+
+# checks
 if test (pidof spotify)
-    set title (sps current | sed "s/.* - //")
+	set title (sps current | sed "s/.* - //")
     set artist (sps current | sed "s/ - .*//")
     set album (sps album)
 else
-    set title (mpc current -f "%title%")
+	set title (mpc current -f "%title%")
     set artist (mpc current -f "%artist%" | sed "s/;.*//")
     set album (mpc current -f "%album%")
 end
 
-
-# exec
-if test -f "$dir/$album.png"
-    set file "$dir/$album.png"
+if test -z "$album"
+	set saved "$dir/$artist - $title.png"
 else
-    notify-send "looking for a cover"
-    glyrc cover --album "$album" --artist "$artist" --title "$title" --write "$file"
-    convert "$file" -resize "200x200" "$file" > /dev/null 2>&1
-    cp "$file" "$dir/$album.png"
-    rm "$file"
+	set saved "$dir/$artist - $album.png"
 end
 
-if test -f "$dir/$album.png"
-    popup "$dir/$album.png" "20" >/dev/null 2>&1 &
+
+
+# exec
+if test -f "$saved"
+    set file "$saved"
+else
+	ffmpeg -loglevel "0" \
+	       -y \
+	       -i "$HOME/Music/$source" \
+	       -vf scale="-200:200" \
+	       "$file"
+
+	if test "$status" -eq "0"
+    	cp "$file" "$saved"
+	    rm "$file"
+	else
+	    notify-send "looking for a cover with glyr"
+
+	    glyrc cover --album "$album" \
+					--artist "$artist" \
+					--title "$title" \
+					--write "$file"
+
+	    convert "$file" \
+				-resize "200x200" \
+				"$file" > /dev/null 2>&1
+
+	    cp "$file" "$saved"
+	    rm "$file"
+	end
+end
+
+
+
+if test -f "$saved"
+    popup "$saved" "20" >/dev/null 2>&1 &
     sleep ".02"
 	n30f -t "popup-arrow" \
 		 -x "50" \
