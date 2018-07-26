@@ -32,11 +32,15 @@ end
 if test -f "$saved"
     set file "$saved"
 else
-	ffmpeg -loglevel "0" \
-	       -y \
-	       -i "$HOME/Music/$source" \
-	       -vf scale="-200:200" \
-	       "$file"
+    if test -z (pidof spotify)
+    	ffmpeg -loglevel "0" \
+    	       -y \
+    	       -i "$HOME/Music/$source" \
+    	       -vf scale="-200:200" \
+    	       "$file"
+    else
+        #
+    end
 
 	if test "$status" -eq "0"
     	cp "$file" "$saved"

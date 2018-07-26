@@ -20,7 +20,6 @@
   </placement>
   <theme>
     <name>o</name>
-    <cornerRadius>8</cornerRadius>
     <titleLayout>IMC</titleLayout>
     <animateIconify>no</animateIconify>
     <keepBorder>yes</keepBorder>
@@ -60,6 +59,7 @@
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
+    <cornerRadius>8</cornerRadius>
   </theme>
   <desktops>
     <number>5</number>
@@ -97,12 +97,12 @@
     </keybind>
     <keybind key="A-F2">
       <action name="Execute">
-        <command>rofi -show "run" -lines "7" -bw "5" -line-margin "8" -padding "30" -font "vanilla 7" -scrollbar-width "0" -separator-style "none" -width "30"</command>
+        <command>rofi -show "run" -lines "7" -bw "1" -line-margin "8" -padding "30" -font "vanilla 7" -scrollbar-width "0" -separator-style "none" -width "30"</command>
       </action>
     </keybind>
     <keybind key="A-F8">
       <action name="Execute">
-        <command>clipmenu -lines "15" -bw "5" -line-margin "6" -padding "30" -font "vanilla 7" -scrollbar-width "0" -separator-style "none"</command>
+        <command>clipmenu -lines "15" -bw "1" -line-margin "6" -padding "30" -font "vanilla 7" -scrollbar-width "0" -separator-style "none"</command>
       </action>
     </keybind>
     <keybind key="A-F3">
@@ -502,10 +502,10 @@
     <application name="chromium">
       <decor>no</decor>
     </application>
-    <!--
     <application class="URxvt">
       <decor>no</decor>
     </application>
+	<!--
     <application class="*">
       <decor>no</decor>
     </application>
