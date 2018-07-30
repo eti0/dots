@@ -30,8 +30,8 @@
     separator_color = auto
     browser = /usr/local/bin/luakit
     icon_position = off
-    frame_width = 1
-    frame_color = "#071d22"
+    frame_width = 10
+    frame_color = "#ffffff"
 
 [shortcuts]
     close = ctrl+space

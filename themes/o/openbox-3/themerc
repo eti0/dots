@@ -9,10 +9,10 @@ menu.title.bg: Flat
 menu.title.bg.color: white
 menu.title.text.color: #071d22
 menu.title.text.justify: Right
-menu.border.width: 1
-menu.border.color: #071d22
+menu.border.width: 20
+menu.border.color: white
 menu.separator.color: white
-menu.overlap.x: 0
+menu.overlap.x: -20
 
 
 # osd
@@ -21,8 +21,8 @@ osd.border.width: 1
 
 
 # windows
-border.width: 1
-*.border.color: #071d22
+border.width: 20
+*.border.color: white
 # *.active.border.color: #192e33
 # *.inactive.border.color: #1d3237
 window.client.padding.width: 0
