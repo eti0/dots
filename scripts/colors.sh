@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # colors
-text="#071d22"
+text="#062228"
 warning="#232e2f"
 background="#ffffff"
 

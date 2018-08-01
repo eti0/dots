@@ -20,11 +20,11 @@
 ! colorscheme
 ! special
 *.foreground:			#ffffff
-*.background:			#071d22
+*.background:			#062228
 *.cursorColor:			#ffffff
 
 ! black
-*.color0:			#071d22
+*.color0:			#062228
 *.color8:			#617278
 
 ! red
@@ -86,7 +86,7 @@ Xft.rgba:			rgb
 
 ! rofi settings
 rofi.color-enabled:		true
-rofi.color-window:		#ffffff, #071d22, #ffffff
+rofi.color-window:		#ffffff, #062228, #ffffff
 rofi.color-normal:		#ffffff, #425357, #ffffff, #ffffff, #94a9d9
 rofi.color-active:		#ffffff, #425357, #ffffff, #ffffff, #94a9d9
 rofi.color-urgent:		#ffffff, #425357, #ffffff, #ffffff, #94a9d9

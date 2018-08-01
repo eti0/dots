@@ -15,7 +15,7 @@ y="59"
 pkill -f "n30f -t calendar"
 
 convert -background "rgba(0,0,0,0)" \
-	-fill "#071d22" \
+	-fill "#062228" \
 	-font "$font" \
 	+antialias \
 	-pointsize "10" \
