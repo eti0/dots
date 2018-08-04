@@ -2,8 +2,8 @@
 # requires urxvt, slop, xdotool and wmctrl.
 
 # vars
-border="1"
-color="0 0 0 0"
+border="2"
+color="255 255 255 0"
 format="%w %h %x %y"
 dir="/usr/scripts"
 

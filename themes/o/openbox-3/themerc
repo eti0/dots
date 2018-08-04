@@ -23,8 +23,8 @@ osd.border.width: 1
 # windows
 border.width: 20
 *.border.color: white
-# *.active.border.color: #192e33
-# *.inactive.border.color: #1d3237
+# *.active.border.color: #
+# *.inactive.border.color: #
 window.client.padding.width: 0
 window.handle.width: 0
 
