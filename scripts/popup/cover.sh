@@ -38,6 +38,14 @@ else
     	       -i "$HOME/Music/$source" \
     	       -vf scale="-200:200" \
     	       "$file"
+
+        convert "$file" \
+                -resize "200x200" \
+                -set colorspace Gray \
+                -separate \
+                -average \
+                -negate \
+                "$file" > /dev/null 2>&1
     else
         #
     end

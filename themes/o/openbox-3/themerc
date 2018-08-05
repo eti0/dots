@@ -21,7 +21,7 @@ osd.border.width: 1
 
 
 # windows
-border.width: 20
+border.width: 0
 *.border.color: white
 # *.active.border.color: #
 # *.inactive.border.color: #
