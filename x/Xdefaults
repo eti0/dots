@@ -6,7 +6,8 @@
 
 ! fonts
 *font:				xft:Monaco:size=8, \
-					-efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1
+					xft:Roboto Mono:size=8, \
+					xft:Noto Sans Mono CJK JP:size=8
 
 *boldFont:
 *lineSpace:			2

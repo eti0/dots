@@ -5,7 +5,7 @@ refresh=".2"
 padding="    "
 height="40"
 font="Helvetica Neue:size=9"
-font2="-*-vanilla-*"
+font2="Noto Sans CJK JP:size=7"
 font3="-efont-biwidth-*"
 battery="BAT0"
 
