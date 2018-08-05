@@ -1,0 +1,17 @@
+{
+	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-github.tmTheme",
+	"fold_buttons": false,
+	"font_face": "Monaco",
+	"font_size": 9,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"margin": 20,
+	"overlay_scroll_bars": "enabled",
+	"skin": "DA UI/Minimal",
+	"theme": "DA.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
