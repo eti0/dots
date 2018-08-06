@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # vars
 colors="/usr/scripts/colors.sh"
-refresh=".2"
+refresh=".5"
 padding="    "
 height="40"
 font="Helvetica Neue:size=9"
@@ -43,8 +43,9 @@ desktop() {
 mpd() {
 	artist="$(mpc -f '%artist%' | head -1)"
 	song="$(mpc -f '%title%' | head -1)"
+	progress="$(mpc | sed 's/.*(//;s/)//;2q;d')"
 	if [ "$(mpc current)" ] ; then
-		echo "$a2$padding$artist : $song$padding$bg"
+		echo "$a2$padding$artist : $song : $progress$padding$bg"
 	else
 		:
 	fi

@@ -7,7 +7,8 @@
 ! fonts
 *font:				xft:Monaco:size=8, \
 					xft:Roboto Mono:size=8, \
-					xft:Noto Sans Mono CJK JP:size=8
+					xft:Noto Sans Mono CJK JP:size=8, \
+					xft:Symbola:size=8
 
 *boldFont:
 *lineSpace:			2
