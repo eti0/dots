@@ -1,10 +1,8 @@
-$HOME/.fehbg &
-clipmenud &
-xset -b &
 xgamma -gamma 0.8 &
+xset -b &
 fonts &
+clipmenud &
 compton &
 nm-applet &
-battery &
+cbatticon &
 sleep 5s && toggle-bar &
-mpdscribble &
