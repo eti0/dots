@@ -19,7 +19,7 @@
     <primaryMonitor>Active</primaryMonitor>
   </placement>
   <theme>
-    <name>o</name>
+    <name>x</name>
     <titleLayout>IMC</titleLayout>
     <animateIconify>no</animateIconify>
     <keepBorder>yes</keepBorder>
@@ -496,18 +496,17 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
-    <application name="luakit">
-      <decor>no</decor>
-    </application>
     <application name="chromium">
       <decor>no</decor>
     </application>
-    <application class="URxvt">
+    <!--
+	<application class="URxvt">
       <decor>no</decor>
     </application>
     <application class="*">
       <decor>no</decor>
     </application>
+	-->
   </applications>
   <dock>
     <position>TopLeft</position>

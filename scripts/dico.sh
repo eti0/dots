@@ -4,7 +4,7 @@
 # vars
 set www "http://www.dictionary.com/browse"
 set word "$argv"
-set cmd (curl -s "$www/$word" | grep -oP '(?<=<meta name="description" content=").*(?=See more.)' | sed "s/.*definition,/$word:/")	
+set cmd (wget -qO - "$www/$word" | grep -oP '(?<=<meta name="description" content=").*(?=See more.)' | sed "s/.*definition,/$word:/")
 
 
 # funcs
@@ -18,7 +18,7 @@ function get
 end
 
 function usage
-	printf "usage: dict <word>\nrequires curl, grep and sed.\n"
+	printf "usage: dict <word>\nrequires wget, grep and sed.\n"
 	exit "1"
 end
 

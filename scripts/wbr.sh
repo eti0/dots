@@ -4,8 +4,8 @@ colors="/usr/scripts/colors.sh"
 refresh=".5"
 padding="    "
 height="40"
-font="Helvetica Neue:size=9"
-font2="Noto Sans CJK JP:size=7"
+font="-*-euphon-*"
+font2="-*-vanilla-*"
 font3="-efont-biwidth-*"
 battery="BAT0"
 
@@ -15,31 +15,6 @@ source "$colors"
 
 
 # functions
-desktop() {
-	current="$(xdotool 'get_desktop')"
-	case "$current" in
-		"0")
-			desktop="un"
-			;;
-		"1")
-			desktop="deux"
-			;;
-		"2")
-			desktop="trois"
-			;;
-		"3")
-			desktop="quatre"
-			;;
-		"4")
-			desktop="cinq"
-			;;
-		*)
-			desktop="???"
-			;;
-	esac
-	printf "$desktop"
-}
-
 mpd() {
 	artist="$(mpc -f '%artist%' | head -1)"
 	song="$(mpc -f '%title%' | head -1)"
@@ -66,8 +41,9 @@ battery() {
 }
 
 clock() {
-	time="$(date '+%j')"
-	printf "$time days around the sun"
+	born="$(date -d '5 Nov 1998' +%s)"
+    now="$(date -d now +%s)"
+    printf "$(((now - born) / 86400)) days spent on earth"
 }
 
 

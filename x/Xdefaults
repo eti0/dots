@@ -5,10 +5,8 @@
 !
 
 ! fonts
-*font:				xft:Monaco:size=8, \
-					xft:Roboto Mono:size=8, \
-					xft:Noto Sans Mono CJK JP:size=8, \
-					xft:Symbola:size=8
+*font:				-*-vanilla-*, \
+					-efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1
 
 *boldFont:
 *lineSpace:			2

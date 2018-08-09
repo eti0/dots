@@ -16,8 +16,8 @@ set res (xdotool getdisplaygeometry | sed 's/ /x/')
 # exec
 printf "$com\n"
 ffmpeg -loglevel "16" \
-       -f "$aud" \
-       -i "$aui" \
+       # -f "$aud" \
+       # -i "$aui" \
        -f "x11grab" \
        -framerate "$fps" \
        -s "$res" \

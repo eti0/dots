@@ -22,7 +22,7 @@ osd.border.width: 1
 
 # windows
 border.width: 0
-*.border.color: white
+*.border.color: black
 # *.active.border.color: #
 # *.inactive.border.color: #
 window.client.padding.width: 0
