@@ -35,18 +35,19 @@ padding.width: 15
 
 
 # active window
-window.active.*.bg: Gradient Vertical Flat
+window.active.*.bg: Gradient Vertical Flat Parentrelative
 window.active.*.*.bg.color: #717afe
 window.active.*.*.bg.colorTo: #636dfd
 window.active.*.*.image.color: white
-window.active.button.*.bg: Parentrelative
+window.active.*.text: Gradient
+window.active.*.text.color: #6973fd
+window.active.*.text.colorTo: #6d76fe
 
 
 # inactive window
-window.inactive.*.bg: Flat
+window.inactive.*.bg: Flat Parentrelative
 window.inactive.*.*.bg.color: white
 window.inactive.*.*.image.color: #071d22
-window.inactive.button.*.bg: Parentrelative
 
 
 # handle
