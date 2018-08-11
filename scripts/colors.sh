@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # colors
-text="#062228"
+text="#ffffff"
 warning="#232e2f"
-background="#ffffff"
+background="#d9062228"
 
 # other stuff
 trs="%{F#00000000}"
@@ -14,7 +14,7 @@ wrn="%{F$warning}"
 # accents
 acc0="#1f3f47"
 acc1="#f2f2f2"
-acc2="#ffffff"
+acc2="#133239"
 acc3="#8fa4da"
 
 # background accents

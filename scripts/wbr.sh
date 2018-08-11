@@ -5,8 +5,9 @@ refresh=".5"
 padding="    "
 height="40"
 font="-*-euphon-*"
-font2="-*-vanilla-*"
-font3="-efont-biwidth-*"
+font2="-*-ijis-*"
+font3="-*-vanilla-*"
+font4="-efont-biwidth-*"
 battery="BAT0"
 
 
@@ -35,6 +36,11 @@ spotify() {
 	fi
 }
 
+weather() {
+	file="/tmp/weather"
+	cat "$file" | sed "s/ :.*//"
+}
+
 battery() {
 	percent="$(cat '/sys/class/power_supply/'$battery'/capacity')"
 	echo "$percent%"
@@ -52,6 +58,8 @@ desktop_loop() {
 	while :; do
 		echo "%{l}\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
+		%{c}\
+		%{A:notify-send 'updating the weather' && weather &:}$padding$(weather)$padding%{A}$bg\
 		%{r}\
 		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
 		sleep "$refresh"
@@ -61,6 +69,7 @@ desktop_loop() {
 		-f "$font" \
 		-f "$font2" \
 		-f "$font3" \
+		-f "$font4" \
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
@@ -81,6 +90,7 @@ laptop_loop() {
 		-f "$font" \
 		-f "$font2" \
 		-f "$font3" \
+		-f "$font4" \
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
