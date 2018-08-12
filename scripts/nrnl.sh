@@ -5,9 +5,9 @@
 f="3"
 b="4"
 for j in f b; do
-	for i in {0..7} ; do
-		printf -v "$j$i" "%b" "\e[${!j}${i}m"
-	done
+    for i in {0..7} ; do
+        printf -v "$j$i" "%b" "\e[${!j}${i}m"
+    done
 done
 
 bld=$'\e[1m'
@@ -26,26 +26,26 @@ kernel="${kernel%_*}"
 shell="$(basename "$SHELL")"
 
 os() {
-	os="$(source "/etc/os-release" && echo "$ID")"
-	export "os"
+    os="$(source "/etc/os-release" && echo "$ID")"
+    export "os"
 }
 
 wm() {
-	id="$(xprop -root -notype "_NET_SUPPORTING_WM_CHECK")"
-	id="${id##* }"
-	wm="$(xprop -id "$id" -notype -len "100" -f "_NET_WM_NAME" "8t")"
-	wm="${wm/*_NET_WM_NAME = }"
-	wm="${wm/\"}"
-	wm="${wm/\"*}"
-	wm="${wm,,}"
-	export "wm"
+    id="$(xprop -root -notype "_NET_SUPPORTING_WM_CHECK")"
+    id="${id##* }"
+    wm="$(xprop -id "$id" -notype -len "100" -f "_NET_WM_NAME" "8t")"
+    wm="${wm/*_NET_WM_NAME = }"
+    wm="${wm/\"}"
+    wm="${wm/\"*}"
+    wm="${wm,,}"
+    export "wm"
 }
 
 init() {
-	init="$(readlink "/sbin/init")"
-	init="${init##*/}"
-	init="${init%%-*}"
-	export "init"
+    init="$(readlink "/sbin/init")"
+    init="${init##*/}"
+    init="${init%%-*}"
+    export "init"
 }
 
 
@@ -55,17 +55,17 @@ wm
 init
 cat << EOF
 
-${rst}  /        /              ${rst}os       ${f7}$os${rst}
-${rst} /_ _ __. //  ______ _    ${rst}shell    ${f7}$shell${rst}
-${rst}/ /</(_/|</_ / / / <</_   ${rst}wm       ${f7}$wm${rst}
+${rst}  ${f1}/${rst}${f4}        /              ${rst}os:       ${f4}$os${rst}
+${rst} ${f1}/_${rst}${f4} _ __. //  ______ _    ${rst}shell:    ${f4}$shell${rst}
+${rst}${f1}/ /${rst}${f6}</(_/|</_ / / / <</_   ${rst}wm:       ${f4}$wm${rst}
 
 EOF
 
 
 # optional blocks
 if  [[ "$1" = "-b" ]]; then
-	pcs() { for i in {0..7}; do echo -en "\e[${1}$((30+$i))m \u2588\u2588 \e[0m"; done; }
-	printf "\n%s\n%s\n\n" "$(pcs)" "$(pcs '1;')"
+    pcs() { for i in {0..7}; do echo -en "\e[${1}$((30+$i))m \u2588\u2588 \e[0m"; done; }
+    printf "\n%s\n%s\n\n" "$(pcs)" "$(pcs '1;')"
 else
-	:
+    :
 fi
