@@ -117,6 +117,12 @@
         <command>chromium</command>
       </action>
     </keybind>
+    <keybind key="A-F6">
+      <action name="Execute">
+        <name>sublime</name>
+        <command>subl</command>
+      </action>
+    </keybind>
     <keybind key="XF86Launch1">
       <action name="Execute">
         <command>layout</command>
@@ -499,10 +505,10 @@
     <application name="chromium">
       <decor>no</decor>
     </application>
-    <!--
-	<application class="URxvt">
+    <application class="URxvt">
       <decor>no</decor>
     </application>
+    <!--
     <application class="*">
       <decor>no</decor>
     </application>

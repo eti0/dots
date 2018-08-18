@@ -4,7 +4,7 @@ menu.items.bg.color: white
 menu.items.text.color: black
 menu.items.active.bg: Flat
 menu.items.active.bg.color: white
-menu.items.active.text.color: #8fa4da
+menu.items.active.text.color: #fe9b71
 menu.title.bg: Flat
 menu.title.bg.color: white
 menu.title.text.color: black
@@ -16,7 +16,7 @@ menu.overlap.x: -20
 
 
 # osd
-osd.label.text.color: #062228
+osd.label.text.color: black
 osd.border.width: 0
 
 
@@ -37,13 +37,13 @@ padding.width: 15
 # active window
 window.active.*.bg: Flat Parentrelative
 window.active.*.*.bg.color: white
-window.active.*.*.image.color: #062228
+window.active.*.*.image.color: black
 
 
 # inactive window
 window.inactive.*.bg: Flat Parentrelative
 window.inactive.*.*.bg.color: white
-window.inactive.*.*.image.color: #062228
+window.inactive.*.*.image.color: black
 
 
 # handle

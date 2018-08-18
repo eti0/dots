@@ -10,6 +10,10 @@ monitorwidth="$(xdotool getdisplaygeometry | awk '{print $1;}')"
 x="$(expr $monitorwidth - 260)"
 y="60"
 
+hold() {
+     sleep .01s
+}
+
 
 # exec
 pkill -f "n30f -t calendar"
@@ -26,6 +30,8 @@ n30f -t calendar_background \
      -y "$y" \
      -c "pkill -f 'n30f -t calendar'" \
      "$background" &
+
+hold
 
 n30f -t calendar \
      -x "$(expr $x + 70)" \
