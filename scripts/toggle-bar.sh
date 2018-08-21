@@ -3,7 +3,7 @@
 
 # vars
 set pid (pidof lemonbar)
-set h 40
+set h 35
 
 
 # exec

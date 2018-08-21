@@ -81,7 +81,7 @@ if test -f "$saved"
     sleep ".02"
 	n30f -t "popup-arrow" \
 		 -x "50" \
-		 -y "40" \
+		 -y "35" \
 	 	 -c "pkill -f 'n30f -t popup-image' && pkill -f 'n30f -t popup-background' && pkill -f 'n30f -t popup-arrow'" \
 		 "/usr/scripts/popup/img/arrow.png"
 else

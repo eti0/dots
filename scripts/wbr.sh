@@ -3,7 +3,7 @@
 colors="/usr/scripts/colors.sh"
 refresh=".5"
 padding="    "
-height="40"
+height="35"
 font="-*-euphon-*"
 font2="-*-ijis-*"
 font3="-*-vanilla-*"
@@ -43,7 +43,16 @@ weather() {
 
 battery() {
 	percent="$(cat '/sys/class/power_supply/'$battery'/capacity')"
-	echo "$percent%"
+	status="$(cat '/sys/class/power_supply/'$battery'/status')"
+	if [[ $status == "Unknown" || $status == "Charging" ]] ; then
+		if [ $percent -gt 98 ] ; then
+			echo "$a3$padding ̚ $padding$a3"
+		else
+			echo "$a3$padding$percent%$padding$bg"
+		fi
+	else
+		echo "$a2$padding$percent%$padding$bg"
+	fi
 }
 
 clock() {
@@ -79,8 +88,8 @@ laptop_loop() {
 		echo "%{l}\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
-		$a2%{A:batstat &:}$padding$(battery)$padding%{A}$bg\
-		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
+		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
+		%{A:batstat &:}$(battery)%{A}$bg"
 		sleep "$refresh"
 	done |\
 

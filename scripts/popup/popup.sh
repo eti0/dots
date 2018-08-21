@@ -6,7 +6,7 @@ set dir "/usr/scripts/popup"
 set background "$dir/img/bg.png"
 set file "$argv[1]"
 set xpos "$argv[2]"
-set ypos "59"
+set ypos "55"
 
 
 # funcs

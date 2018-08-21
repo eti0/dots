@@ -83,7 +83,7 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>40</top>
+    <top>35</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -115,12 +115,6 @@
       <action name="Execute">
         <name>chromium</name>
         <command>chromium</command>
-      </action>
-    </keybind>
-    <keybind key="A-F6">
-      <action name="Execute">
-        <name>sublime</name>
-        <command>subl</command>
       </action>
     </keybind>
     <keybind key="XF86Launch1">
@@ -505,14 +499,12 @@
     <application name="chromium">
       <decor>no</decor>
     </application>
-    <application class="URxvt">
+	<application class="URxvt">
       <decor>no</decor>
     </application>
-    <!--
     <application class="*">
       <decor>no</decor>
     </application>
-	-->
   </applications>
   <dock>
     <position>TopLeft</position>
