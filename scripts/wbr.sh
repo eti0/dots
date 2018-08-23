@@ -58,7 +58,16 @@ battery() {
 clock() {
 	born="$(date -d '5 Nov 1998' +%s)"
     now="$(date -d now +%s)"
-    printf "$(((now - born) / 86400)) days spent on earth"
+    printf "$(((now - born) / 86400)) jours passés sur terre"
+}
+
+irc() {
+	pidof ssh xv > /dev/null 2>&1
+	if [ "$?" -ne "1" ] ; then
+		echo "$a3$padding ˓ $padding$bg"
+	else
+		:
+	fi
 }
 
 
@@ -68,7 +77,8 @@ desktop_loop() {
 		echo "%{l}\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
-		$a2%{A:notify-send 'updating the weather' && weather &:}$padding$(weather)$padding%{A}%{A:calendar &:}$padding$(clock)$padding%{A}$bg"
+		$a2%{A:notify-send 'updating the weather' && weather &:}$padding$(weather)$padding%{A}\
+		$(irc)"
 		sleep "$refresh"
 	done |\
 

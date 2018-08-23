@@ -7,8 +7,8 @@ file="/tmp/calendar.png"
 background="$dir/img/bg.png"
 font="lime"
 monitorwidth="$(xdotool getdisplaygeometry | awk '{print $1;}')"
-x="$(expr $monitorwidth - 260)"
-y="55"
+x="$(expr $monitorwidth - 280)"
+y="40"
 
 hold() {
      sleep .01s
@@ -34,8 +34,8 @@ n30f -t calendar_background \
 hold
 
 n30f -t calendar \
-     -x "$(expr $x + 70)" \
-     -y "$(expr $y + 84)" \
+     -x "$(expr $x + 88)" \
+     -y "$(expr $y + 98)" \
      -c "pkill -f 'n30f -t calendar'" \
      "$file"
 

@@ -6,7 +6,7 @@ set dir "/usr/scripts/popup"
 set background "$dir/img/bg.png"
 set file "$argv[1]"
 set xpos "$argv[2]"
-set ypos "55"
+set ypos "40"
 
 
 # funcs
@@ -20,8 +20,8 @@ end
 
 function display-image
     n30f -t popup-image \
-	 -x (math $xpos + 20) \
-	 -y (math $ypos + 20) \
+	 -x (math $xpos + 40) \
+	 -y (math $ypos + 35) \
 	 -c "pkill -f 'n30f -t popup-image' && pkill -f 'n30f -t popup-background'" \
 	 "$file" &
 end
