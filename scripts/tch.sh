@@ -2,7 +2,7 @@
 
 xrdb "$HOME/.xres/tch.xres"
 
-urxvt &
+urxvt -name "irc" &
 disown
 
 sleep ".5s"
