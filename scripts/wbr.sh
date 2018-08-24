@@ -62,7 +62,7 @@ clock() {
 }
 
 irc() {
-	pidof ssh xv > /dev/null 2>&1
+	pgrep -f "urxvt -name irc" > /dev/null 2>&1
 	if [ "$?" -ne "1" ] ; then
 		echo "$a3$padding ˓ $padding$bg"
 	else
