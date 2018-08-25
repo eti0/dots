@@ -5,7 +5,7 @@
 !
 
 ! fonts
-*font:				-*-vanilla-*, \
+*font:				-*-dweep-*, \
 					-efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1
 
 *boldFont:
