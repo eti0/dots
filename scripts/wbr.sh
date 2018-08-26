@@ -77,8 +77,8 @@ desktop_loop() {
 		echo "%{l}\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
-		$a2%{A:notify-send 'updating the weather' && weather -i &:}$padding$(weather)$padding%{A}\
-		%{A:toggle-tch &:}$(irc)%{A}"
+		$a2%{A:notify-send 'updating the weather' && weather -i &:}$padding$(weather)$padding%{A}$bg\
+		%{A:toggle-tch &:}$(irc)%{A}$bg"
 		sleep "$refresh"
 	done |\
 
