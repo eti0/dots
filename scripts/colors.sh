@@ -3,7 +3,7 @@
 # colors
 text="#ffffff"
 warning="#232e2f"
-background="#d90d0a1c"
+background="#d913191e"
 
 # other stuff
 trs="%{F#00000000}"
@@ -12,10 +12,10 @@ txt="%{F$text}"
 wrn="%{F$warning}"
 
 # accents
-acc0="#1f3f47"
+acc0="#13191e"
 acc1="#f2f2f2"
-acc2="#151227"
-acc3="#8fa4da"
+acc2="#212a31"
+acc3="#ffffff"
 
 # background accents
 a0="%{B$acc0}"

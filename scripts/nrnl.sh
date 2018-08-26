@@ -55,9 +55,9 @@ wm
 init
 cat << EOF
 
-${rst}  /${f4}        /              ${rst}os:       ${f4}$os${rst}
-${rst} /_${f4} _ __. //  ______ _    ${rst}shell:    ${f4}$shell${rst}
-${rst}/ /</(_/|</_ / / / <</_   ${rst}wm:       ${f4}$wm${rst}
+${rst}  /${f6}        /              ${rst}os:       ${f6}$os${rst}
+${rst} /_${f6} _ __. //  ______ _    ${rst}shell:    ${f6}$shell${rst}
+${rst}/ /</(_/|</_ / / / <</_   ${rst}wm:       ${f6}$wm${rst}
 
 EOF
 

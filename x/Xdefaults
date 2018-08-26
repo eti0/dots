@@ -20,12 +20,12 @@
 ! colorscheme
 ! special
 *.foreground:			#ffffff
-*.background:			#0d0a1c
+*.background:			#13191e
 *.cursorColor:			#ffffff
 
 ! black
-*.color0:			#0d0a1c
-*.color8:			#747c84
+*.color0:			#13191e
+*.color8:			#686f75
 
 ! red
 *.color1:			#e2a780

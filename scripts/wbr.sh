@@ -64,7 +64,7 @@ clock() {
 irc() {
 	pgrep -f "urxvt -name irc" > /dev/null 2>&1
 	if [ "$?" -ne "1" ] ; then
-		echo "$a3$padding ˓ $padding$bg"
+		echo "$af0$a3$padding ˓ $padding$bg$txt"
 	else
 		:
 	fi

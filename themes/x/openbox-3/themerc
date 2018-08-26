@@ -22,28 +22,28 @@ osd.border.width: 0
 
 # windows
 border.width: 5
-*.border.color: white
-# *.active.border.color: #a7b3bf
-# *.inactive.border.color: #c7ccd1
+# *.border.color: white
+*.active.border.color: #2a3741
+*.inactive.border.color: #404b54
 window.client.padding.width: 0
 window.handle.width: 0
 
 
 # titlebars
-padding.height: 15
-padding.width: 15
+padding.height: 12
+padding.width: 12
 
 
 # active window
 window.active.*.bg: Flat Parentrelative
 window.active.*.*.bg.color: white
-window.active.*.*.image.color: #062228
+window.active.*.*.image.color: black
 
 
 # inactive window
 window.inactive.*.bg: Flat Parentrelative
 window.inactive.*.*.bg.color: white
-window.inactive.*.*.image.color: #062228
+window.inactive.*.*.image.color: black
 
 
 # handle

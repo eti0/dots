@@ -1,6 +1,6 @@
 # geometry
-geometry = "520x95+20-20"
-border_width = 20
+geometry = "320x55+20-20"
+border_width = 10
 win_shift_x = 0
 win_shift_y = 0
 
@@ -29,16 +29,16 @@ popup_font = "cure"
 window_font = "cure"
 
 # colors
-active_page_color = "rgb:07/1d/22"
-inactive_page_color = "rgb:07/1d/22"
+active_page_color = "rgb:13/19/1e"
+inactive_page_color = "rgb:13/19/1e"
 
-win_border_color = "rgb:07/1d/22"
-pager_border_color = "rgb:07/1d/22"
+win_border_color = "rgb:13/19/1e"
+pager_border_color = "rgb:13/19/1e"
 
-grid_color = "rgb:07/1d/22"
-desk_grid_color = "rgb:07/1d/22"
+grid_color = "rgb:13/19/1e"
+desk_grid_color = "rgb:13/19/1e"
 
-active_win_color = "rgb:ff/ff/ff"
-inactive_win_color = "rgb:61/72/78"
+active_win_color = "rgb:2a/37/41"
+inactive_win_color = "rgb:40/4b/54"
 
 popup_color = "rgb:ff/ff/ff"
