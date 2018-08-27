@@ -78,12 +78,12 @@ end
 if test -f "$saved"
     popup "$saved" "0" >/dev/null 2>&1 &
     sleep ".05"
-    n30f -t "inner_corners" \
-         -x "20" \
-         -y "55" \
-         -c "pkill -f 'n30f -t popup-image' && pkill -f 'n30f -t popup-background' && pkill -f 'n30f -t popup-arrow' && pkill -f 'n30f -t inner-corners'" \
-         "/usr/scripts/popup/img/inner-corners.png" &
-    sleep ".02"
+    # n30f -t "inner_corners" \
+    #      -x "20" \
+    #      -y "55" \
+    #      -c "pkill -f 'n30f -t popup-image' && pkill -f 'n30f -t popup-background' && pkill -f 'n30f -t popup-arrow' && pkill -f 'n30f -t inner-corners'" \
+    #      "/usr/scripts/popup/img/inner-corners.png" &
+    # sleep ".02"
     n30f -t "popup-arrow" \
          -x "45" \
          -y "35" \
