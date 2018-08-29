@@ -1,12 +1,6 @@
 ! this is a thicc config - don't use it, really.
-! padding
-*internalBorder:	30
-
-! url stuff
-*.matcher.rend.0:	fg6
-
-! line space
-*lineSpace:			4
-
-! size
-*geometry:			90x12
+*geometry:              90x12
+*internalBorder:        30
+*lineSpace:             4
+*matcher.rend.0:        fg6
+*scrollBar:             false
