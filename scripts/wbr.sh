@@ -46,9 +46,9 @@ battery() {
 	status="$(cat '/sys/class/power_supply/'$battery'/status')"
 	if [[ $status == "Unknown" || $status == "Charging" ]] ; then
 		if [ $percent -gt 98 ] ; then
-			echo "$a3$padding ̚ $padding$a3"
+			echo "$af0$a3$padding ̚ $padding$a3$txt"
 		else
-			echo "$a3$padding$percent%$padding$bg"
+			echo "$af0$a3$padding$percent%$padding$bg$txt"
 		fi
 	else
 		echo "$a2$padding$percent%$padding$bg"
@@ -56,9 +56,7 @@ battery() {
 }
 
 clock() {
-	born="$(date -d '5 Nov 1998' +%s)"
-    now="$(date -d now +%s)"
-    printf "$(((now - born) / 86400)) jours passés sur terre"
+    tempus
 }
 
 irc() {
@@ -97,9 +95,11 @@ laptop_loop() {
 	while :; do
 		echo "%{l}\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
+		%{c}\
+		%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
 		%{r}\
-		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
-		%{A:batstat &:}$(battery)%{A}$bg"
+		%{A:batstat &:}$(battery)%{A}$bg\
+		%{A:toggle-tch &:}$(irc)%{A}$bg"
 		sleep "$refresh"
 	done |\
 

@@ -11,7 +11,7 @@
 ! scrollbar
 *scrollBar:             true
 *scrollBar_right:       true
-*scrollstyle:           xterm
+*scrollstyle:           plain
 *scrollColor:           #32414e
 *thickness:             10
 
