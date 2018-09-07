@@ -9,7 +9,7 @@
 
 
 ! scrollbar
-*scrollBar:             true
+*scrollBar:             false
 *scrollBar_right:       true
 *scrollstyle:           plain
 *scrollColor:           #32414e
@@ -81,14 +81,6 @@ Xft.hinting:            1
 Xft.hintstyle:          hintslight
 Xft.antialias:          1
 Xft.rgba:               rgb
-
-
-! rofi settings
-rofi.color-enabled:     true
-rofi.color-window:      #ffffff, #062228, #ffffff
-rofi.color-normal:      #ffffff, #425357, #ffffff, #ffffff, #94a9d9
-rofi.color-active:      #ffffff, #425357, #ffffff, #ffffff, #94a9d9
-rofi.color-urgent:      #ffffff, #425357, #ffffff, #ffffff, #94a9d9
 
 
 ! scrolling
