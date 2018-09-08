@@ -74,10 +74,8 @@ desktop_loop() {
 	while :; do
 		echo "%{l}\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
-		%{c}\
-		%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
 		%{r}\
-		$a2%{A:notify-send 'updating the weather' && weather -i &:}$padding$(weather)$padding%{A}$bg\
+		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
 		%{A:toggle-tch &:}$(irc)%{A}$bg"
 		sleep "$refresh"
 	done |\
@@ -90,14 +88,16 @@ desktop_loop() {
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
+		-d \
+		-R \
 	| bash
 }
 
 laptop_loop() {
 	while :; do
 		echo "%{l}\
-		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{A:calendar &:}$(clock)%{A}$bg\
+		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
 		%{A:batstat &:}$(battery)%{A}$bg\
 		%{A:toggle-tch &:}$(irc)%{A}$bg"

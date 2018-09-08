@@ -2,11 +2,12 @@
 
 
 # vars
+set monh (xdotool getdisplaygeometry | awk '{print $2}')
 set dir "/usr/scripts/popup"
 set background "$dir/img/bg.png"
 set file "$argv[1]"
 set xpos "$argv[2]"
-set ypos "40"
+set ypos (math $monh - 275)
 
 
 # funcs

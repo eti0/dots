@@ -2,7 +2,8 @@
 
 
 # vars
-set ypos "40"
+set ypos (xdotool getdisplaygeometry | awk '{print $2}')
+set xpos "10"
 set dir "$HOME/.covers"
 set file "$dir/cover.png"
 set source (mpc -f '%file%' | head -1)
@@ -76,7 +77,7 @@ end
 
 
 if test -f "$saved"
-    popup "$saved" "0" >/dev/null 2>&1 &
+    popup "$saved" "35" >/dev/null 2>&1 &
     sleep ".05"
     # n30f -t "inner_corners" \
     #      -x "20" \
@@ -85,8 +86,8 @@ if test -f "$saved"
     #      "/usr/scripts/popup/img/inner-corners.png" &
     # sleep ".02"
     n30f -t "popup-arrow" \
-         -x "45" \
-         -y "35" \
+         -x "35" \
+         -y (math $ypos - 70) \
          -c "pkill -f 'n30f -t popup-image' && pkill -f 'n30f -t popup-background' && pkill -f 'n30f -t inner-corners' && pkill -f 'n30f -t popup-arrow'" \
          "/usr/scripts/popup/img/arrow.png"
 else
