@@ -88,8 +88,7 @@ desktop_loop() {
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
-		-d \
-		-R \
+		-b \
 	| bash
 }
 
@@ -112,6 +111,7 @@ laptop_loop() {
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
+		-b \
 	| bash
 }
 

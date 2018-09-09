@@ -7,8 +7,9 @@ file="/tmp/calendar.png"
 background="$dir/img/bg.png"
 font="lime"
 monitorwidth="$(xdotool getdisplaygeometry | awk '{print $1;}')"
-x="35"
-y="5"
+monitorheight="$(xdotool getdisplaygeometry | awk '{print $2;}')"
+x="$(expr $monitorwidth - 280)"
+y="$(expr $monitorheight - 310)"
 
 hold() {
      sleep .01s

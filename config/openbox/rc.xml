@@ -83,8 +83,8 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>35</top>
-    <bottom>0</bottom>
+    <top>0</top>
+    <bottom>35</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
@@ -97,12 +97,12 @@
     </keybind>
     <keybind key="A-F2">
       <action name="Execute">
-        <command>dmenu_run -fn "euphon-8" -nb "#13191e" -nf "#fff" -sb "#ffffff" -sf "#13191e" -h "35"</command>
+        <command>dmenu_run -b -fn "euphon-8" -nb "#13191e" -nf "#fff" -sb "#ffffff" -sf "#13191e" -h "35"</command>
       </action>
     </keybind>
     <keybind key="A-F8">
       <action name="Execute">
-        <command>clipmenu -fn "euphon-8" -nb "#13191e" -nf "#fff" -sb "#ffffff" -sf "#13191e" -h "35"</command>
+        <command>clipmenu -b -fn "euphon-8" -nb "#13191e" -nf "#fff" -sb "#ffffff" -sf "#13191e" -h "35"</command>
       </action>
     </keybind>
     <keybind key="A-F3">
@@ -499,7 +499,7 @@
     <application name="chromium">
       <decor>no</decor>
     </application>
-	<application class="URxvt">
+    <application class="URxvt">
       <decor>no</decor>
     </application>
     <application class="*">

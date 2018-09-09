@@ -8,12 +8,12 @@ set h 35
 
 # exec
 if test "$pid"
-	sed -i "s/<left>$h<\/left>/<left>0<\/left>/g" "$HOME/.config/openbox/rc.xml"
+	sed -i "s/<bottom>$h<\/bottom>/<bottom>0<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
 	openbox --reconfigure
 
 	kill -9 "$pid"
 else
-	sed -i "s/<left>0<\/left>/<left>$h<\/left>/g" "$HOME/.config/openbox/rc.xml"
+	sed -i "s/<bottom>0<\/bottom>/<bottom>$h<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
 	openbox --reconfigure
 
     wbr
