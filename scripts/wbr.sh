@@ -95,9 +95,9 @@ desktop_loop() {
 laptop_loop() {
 	while :; do
 		echo "%{l}\
-		%{A:calendar &:}$(clock)%{A}$bg\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
+        $a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
 		%{A:batstat &:}$(battery)%{A}$bg\
 		%{A:toggle-tch &:}$(irc)%{A}$bg"
 		sleep "$refresh"
