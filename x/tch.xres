@@ -4,3 +4,4 @@
 *lineSpace:             4
 *matcher.rend.0:        fg6
 *scrollBar:             false
+*.url-launcher:         /usr/local/bin/openup

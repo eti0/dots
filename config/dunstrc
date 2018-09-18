@@ -9,7 +9,7 @@
     show_age_threshold = 10
     word_wrap = yes
     ignore_newline = no
-    geometry = "0x0-60-60"
+    geometry = "0x0-60+60"
     title = dunst
     class = dunst
     shrink = yes
