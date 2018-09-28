@@ -23,11 +23,11 @@ function download
 end
 
 function video
-    urxvt -g 100x10 -e mpv $tmp
+    urxvt -g 100x10 -e mpv --keep-open=no $url
 end
 
 function audio
-    urxvt -g 100x10 -e mpv $tmp
+    urxvt -g 100x10 -e mpv --keep-open=no $url
 end
 
 function text
@@ -50,16 +50,13 @@ short
 set ext (echo $url | sed 's/^.*\.//;s/?.*//')
 
 switch $ext
-    case ""
-        echo "i require an argument"
-        exit 1
     case png jpg jpeg gif tif
         other
     case aac mp3
         audio
     case mp4 avi mkv
         video
-    case *
+    case '*'
         other
         exit 1
 end

@@ -46,7 +46,7 @@ battery() {
 	status="$(cat '/sys/class/power_supply/'$battery'/status')"
 	if [[ $status == "Unknown" || $status == "Charging" || $status == "Full" ]] ; then
 		if [[ $percent -gt 98 ]] ; then
-			echo "$af0$a3$padding ̚ $padding$a3$txt"
+			echo "$a1$padding ⮒ $padding$a3$txt"
 		else
 			echo "$af0$a3$padding$percent%$padding$bg$txt"
 		fi
@@ -62,7 +62,7 @@ clock() {
 irc() {
 	pgrep -f "urxvt -name irc" > /dev/null 2>&1
 	if [ "$?" -ne "1" ] ; then
-		echo "$af0$a3$padding ˓ $padding$bg$txt"
+		echo "$af0$a3$padding ☭ $padding$bg$txt"
 	else
 		:
 	fi

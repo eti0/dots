@@ -5,3 +5,40 @@
 *matcher.rend.0:        fg6
 *scrollBar:             false
 *.url-launcher:         /usr/local/bin/openup
+
+! special
+*.foreground:   #333333
+*.background:   #f5f5f5
+*.cursorColor:  #333333
+
+! black
+*.color0:       #ffffff
+*.color8:       #969896
+
+! red
+*.color1:       #ed6a43
+*.color9:       #0086b3
+
+! green
+*.color2:       #183691
+*.color10:      #f5f5f5
+
+! yellow
+*.color3:       #795da3
+*.color11:      #c8c8fa
+
+! blue
+*.color4:       #795da3
+*.color12:      #e8e8e8
+
+! magenta
+*.color5:       #a71d5d
+*.color13:      #ffffff
+
+! cyan
+*.color6:       #183691
+*.color14:      #333333
+
+! white
+*.color7:       #969896
+*.color15:      #333333
