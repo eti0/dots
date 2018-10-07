@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # vars
 colors="/usr/scripts/colors.sh"
-refresh=".5"
+refresh=".15"
 padding="    "
 height="35"
 font="-*-euphon-*"
@@ -45,10 +45,10 @@ battery() {
 	percent="$(cat '/sys/class/power_supply/'$battery'/capacity')"
 	status="$(cat '/sys/class/power_supply/'$battery'/status')"
 	if [[ $status == "Unknown" || $status == "Charging" || $status == "Full" ]] ; then
-		if [[ $percent -gt 98 ]] ; then
-			echo "$a1$padding ⮒ $padding$a3$txt"
+		if [[ $percent -gt 95 ]] ; then
+			echo "$a1$padding FULL $padding$a3"
 		else
-			echo "$af0$a3$padding$percent%$padding$bg$txt"
+			echo "$a1$padding$percent%$padding$bg"
 		fi
 	else
 		echo "$a2$padding$percent%$padding$bg"
@@ -56,13 +56,22 @@ battery() {
 }
 
 clock() {
-    date "+%R"
+	date "+%R"
 }
 
 irc() {
 	pgrep -f "urxvt -name irc" > /dev/null 2>&1
 	if [ "$?" -ne "1" ] ; then
-		echo "$af0$a3$padding ☭ $padding$bg$txt"
+		echo "$a3$padding :: $padding$bg"
+	else
+		:
+	fi
+}
+
+window() {
+	cur="$(xdotool getwindowname $(xdotool getactivewindow) | head -c 100)"
+	if [[ "$cur" ]] ; then
+		echo "$padding$padding$cur$padding$padding"
 	else
 		:
 	fi
@@ -95,9 +104,10 @@ desktop_loop() {
 laptop_loop() {
 	while :; do
 		echo "%{l}\
+		$a3$(window)$bg\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
-        $a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
+		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
 		%{A:batstat &:}$(battery)%{A}$bg\
 		%{A:toggle-tch &:}$(irc)%{A}$bg"
 		sleep "$refresh"
