@@ -1,7 +1,7 @@
 ! this is a really thick config - don't use it, really.
-*geometry:              90x12
+*geometry:              100x11
 *internalBorder:        30
-*lineSpace:             4
+*lineSpace:             2
 *matcher.rend.0:        fg6
 *scrollBar:             false
 *.url-launcher:         /usr/local/bin/openup

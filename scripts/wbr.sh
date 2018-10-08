@@ -16,8 +16,17 @@ source "$colors"
 
 
 # functions
+window() {
+	cur="$(xdotool getwindowname $(xdotool getactivewindow) | head -c 150)"
+	if [[ "$cur" ]] ; then
+		echo "$padding$padding$cur$padding$padding"
+	else
+		:
+	fi
+}
+
 mpd() {
-	artist="$(mpc -f '%artist%' | head -1)"
+	artist="$(mpc -f '%artist%' | head -1 | sed 's/\;/ + /')"
 	song="$(mpc -f '%title%' | head -1)"
 	progress="$(mpc | sed 's/.*(//;s/)//;2q;d')"
 	if [ "$(mpc current)" ] ; then
@@ -41,12 +50,16 @@ weather() {
 	cat "$file"
 }
 
+clock() {
+	date "+%R"
+}
+
 battery() {
 	percent="$(cat '/sys/class/power_supply/'$battery'/capacity')"
 	status="$(cat '/sys/class/power_supply/'$battery'/status')"
 	if [[ $status == "Unknown" || $status == "Charging" || $status == "Full" ]] ; then
 		if [[ $percent -gt 95 ]] ; then
-			echo "$a1$padding FULL $padding$a3"
+			echo "$a1$padding⮏$padding$a3"
 		else
 			echo "$a1$padding$percent%$padding$bg"
 		fi
@@ -55,23 +68,10 @@ battery() {
 	fi
 }
 
-clock() {
-	date "+%R"
-}
-
 irc() {
 	pgrep -f "urxvt -name irc" > /dev/null 2>&1
 	if [ "$?" -ne "1" ] ; then
 		echo "$a3$padding :: $padding$bg"
-	else
-		:
-	fi
-}
-
-window() {
-	cur="$(xdotool getwindowname $(xdotool getactivewindow) | head -c 100)"
-	if [[ "$cur" ]] ; then
-		echo "$padding$padding$cur$padding$padding"
 	else
 		:
 	fi
