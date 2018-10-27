@@ -14,5 +14,5 @@ function fish_prompt
         set prompt_color $red
     end
 
-    printf "$prompt_color ; $normal"
+    printf "$prompt_color : $normal"
 end

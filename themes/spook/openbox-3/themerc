@@ -30,15 +30,15 @@ window.handle.width: 0
 
 
 # titlebars
-padding.height: 10
-padding.width: 10
+padding.height: 12
+padding.width: 12
 
 
 # active window
 window.*.*.bg: Flat Parentrelative
-window.*.*.*.bg.color: #ff794b
-window.*.*.*.image.color: #a94828
-window.*.label.text.color: #ff794b
+window.*.*.*.bg.color: #f7855f
+window.*.*.*.image.color: #ac5639
+window.*.label.text.color: #f7855f
 
 
 # handle

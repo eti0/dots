@@ -1,3 +1,3 @@
 function fish_title
-    echo "$_"
+    echo "shell : $_"
 end
