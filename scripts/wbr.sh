@@ -27,7 +27,7 @@ window() {
 
 mpd() {
 	artist="$(mpc -f '%artist%' | head -1 | sed 's/\;/ + /')"
-	song="$(mpc -f '%title%' | head -1)"
+	song="$(mpc -f '%title%' | head -1 | sed 's/(feat\./( +/')"
 	progress="$(mpc | sed 's/.*(//;s/)//;2q;d')"
 	if [ "$(mpc current)" ] ; then
 		echo "$a2$padding$artist : $song : $progress$padding$bg"
