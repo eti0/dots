@@ -19,8 +19,9 @@
     <primaryMonitor>Active</primaryMonitor>
   </placement>
   <theme>
-    <name>x</name>
-    <titleLayout>IMC</titleLayout>
+    <name>spook</name>
+    <cornerRadius menu="no">4</cornerRadius>
+    <titleLayout>SLIMC</titleLayout>
     <animateIconify>no</animateIconify>
     <keepBorder>yes</keepBorder>
     <font place="ActiveWindow">
@@ -499,9 +500,11 @@
     <application name="chromium">
       <decor>no</decor>
     </application>
+    <!--
     <application class="URxvt">
       <decor>no</decor>
     </application>
+    -->
     <application class="*">
       <decor>no</decor>
     </application>
