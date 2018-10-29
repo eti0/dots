@@ -51,7 +51,7 @@ weather() {
 }
 
 clock() {
-	date "+%R"
+    tempus
 }
 
 battery() {

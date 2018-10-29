@@ -107,5 +107,5 @@ end
 
 # exec
 hour
-printf " "
+printf " : "
 minute
