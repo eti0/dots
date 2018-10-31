@@ -3,14 +3,14 @@
 
 # vars
 border="2"
-color="255 255 255 0"
+color="0 0 0 1"
 format="%w %h %x %y"
 dir="/usr/scripts"
 
 
 # exec
 urxvt -iconic -name "drawterm" &
-read "width" "height" "xpos" "ypos" < <(slop -l -f "$format" -b "$border" -c "$color")
+read "width" "height" "xpos" "ypos" < <(slop -t "0" -l -f "$format" -b "$border" -c "$color")
 
 if [ "$width" ] ; then
 	:

@@ -51,7 +51,7 @@ weather() {
 }
 
 clock() {
-    tempus
+	date "+%R"
 }
 
 battery() {
@@ -59,9 +59,9 @@ battery() {
 	status="$(cat '/sys/class/power_supply/'$battery'/status')"
 	if [[ $status == "Unknown" || $status == "Charging" || $status == "Full" ]] ; then
 		if [[ $percent -gt 95 ]] ; then
-			echo "$a1$padding⮏$padding$a3"
+			echo "$a3$padding⮏$padding$a3"
 		else
-			echo "$a1$padding$percent%$padding$bg"
+			echo "$a3$padding$percent%$padding$bg"
 		fi
 	else
 		echo "$a2$padding$percent%$padding$bg"

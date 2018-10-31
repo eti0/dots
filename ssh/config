@@ -3,3 +3,4 @@ Host xv
      User eti
      ForwardX11Trusted yes
      ForwardX11 yes
+     ServerAliveInterval 120

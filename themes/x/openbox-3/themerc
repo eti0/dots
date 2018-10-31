@@ -16,13 +16,13 @@ menu.overlap.x: -20
 
 
 # osd
-osd.label.text.color: white
+osd.label.text.color: black
 osd.border.width: 0
 
 
 # windows
 border.width: 0
-*.border.color: black
+*.border.color: white
 # *.active.border.color: #2a3741
 # *.inactive.border.color: #404b54
 window.client.padding.width: 0
