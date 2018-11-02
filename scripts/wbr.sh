@@ -16,10 +16,35 @@ source "$colors"
 
 
 # functions
+desktop() {
+	cur=$(xdotool get_desktop)
+	first="ראשון"
+	second="השני"
+	third="שלישית"
+	fourth="רביעי"
+	fifth="חמישי"
+	case "$cur" in
+		0)
+			echo "${a2}${a1}${padding}${first}${padding}${a2}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+			;;
+		1)
+			echo "${a2}${padding}${first}${padding}${a1}${padding}${second}${padding}${a2}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+			;;
+		2)
+			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${a1}${padding}${third}${padding}${a2}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+			;;
+		3)
+			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${a1}${padding}${fourth}${padding}${a2}${padding}${fifth}${padding}"
+			;;
+		4)
+			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${a1}${padding}${fifth}${padding}${a2}"
+	esac
+}
+
 window() {
 	cur="$(xdotool getwindowname $(xdotool getactivewindow) | head -c 150)"
 	if [[ "$cur" ]] ; then
-		echo "$padding$padding$cur$padding$padding"
+		echo "$padding$cur$padding"
 	else
 		:
 	fi
@@ -82,7 +107,7 @@ irc() {
 desktop_loop() {
 	while :; do
 		echo "%{l}\
-		$a3$(window)$bg\
+		$(desktop)$bg\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
 		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\

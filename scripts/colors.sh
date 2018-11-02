@@ -13,7 +13,7 @@ wrn="%{F$warning}"
 
 # accents
 acc0="#13191e"
-acc1="#9797c4"
+acc1="#2a343c"
 acc2="#212a31"
 acc3="#ff794b"
 
