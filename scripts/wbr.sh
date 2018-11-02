@@ -96,7 +96,7 @@ battery() {
 irc() {
 	pgrep -f "urxvt -name irc" > /dev/null 2>&1
 	if [ "$?" -ne "1" ] ; then
-		echo "$a3$padding :: $padding$bg"
+		echo "$a1$padding :: $padding$bg"
 	else
 		:
 	fi
