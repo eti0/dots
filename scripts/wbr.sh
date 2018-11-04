@@ -18,11 +18,11 @@ source "$colors"
 # functions
 desktop() {
 	cur=$(xdotool get_desktop)
-	first="ראשון"
-	second="השני"
-	third="שלישית"
-	fourth="רביעי"
-	fifth="חמישי"
+	first="%{A:xdotool set_desktop 0 &:}ראשון%{A}"
+	second="%{A:xdotool set_desktop 1 &:}השני%{A}"
+	third="%{A:xdotool set_desktop 2 &:}שלישית%{A}"
+	fourth="%{A:xdotool set_desktop 3 &:}רביעי%{A}"
+	fifth="%{A:xdotool set_desktop 4 &:}חמישי%{A}"
 	case "$cur" in
 		0)
 			echo "${a2}${a1}${padding}${first}${padding}${a2}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
@@ -123,6 +123,7 @@ desktop_loop() {
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
+		-a "20" \
 		-b \
 	| bash
 }
@@ -130,7 +131,7 @@ desktop_loop() {
 laptop_loop() {
 	while :; do
 		echo "%{l}\
-		$a3$(window)$bg\
+		%{A5:xdotool set_desktop $(expr $(xdotool get_desktop) - 1) &:}%{A4:xdotool set_desktop $(expr $(xdotool get_desktop) + 1) &:}$(desktop)%{A}%{A}$bg\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
 		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
@@ -147,6 +148,7 @@ laptop_loop() {
 		-g "x$height" \
 		-F "$text" \
 		-B "$background" \
+		-a "20" \
 		-b \
 	| bash
 }
