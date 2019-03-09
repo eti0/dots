@@ -21,7 +21,7 @@ playlist_display_mode = "columns"
 
 # now playing
 # alternative -- now_playing_prefix = "$3-"
-now_playing_suffix = " $8:"
+now_playing_suffix = " $8+"
 
 
 # playlist

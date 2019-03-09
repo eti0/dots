@@ -1,8 +1,16 @@
+! colors
+#include ".xres/wod.xres"
+
+
 ! fonts
-*font:                  -*-hy-*, \
-                        -*-vanilla-*, \
-                        -efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1, \
+*font:                  xft:Roboto Mono:size=10, \
+                        xft:Noto Mono:size=10, \
+                        xft:Free Mono:size=10, \
                         -gnu-unifont-medium-r-normal-sans-16-160-75-75-c-80-iso10646-1
+! *font:                  -*-hy-*, \
+!                         -*-vanilla-*, \
+!                         -efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1, \
+!                         -gnu-unifont-medium-r-normal-sans-16-160-75-75-c-80-iso10646-1
 
 *boldFont:
 *lineSpace:             2
@@ -15,45 +23,6 @@
 *scrollstyle:           plain
 *scrollColor:           #32414e
 *thickness:             10
-
-
-! colorscheme
-! special
-*.foreground:           #ffffff
-*.background:           #13191e
-*.cursorColor:          #ffffff
-
-! black
-*.color0:               #13191e
-*.color8:               #686f75
-
-! red
-*.color1:               #e2a780
-*.color9:               #ecc2a9
-
-! green
-*.color2:               #a1d0b8
-*.color10:              #badecd
-
-! yellow
-*.color3:               #b8d49a
-*.color11:              #d1e1c1
-
-! blue
-*.color4:               #ae95c7
-*.color12:              #cbb2e3
-
-! magenta
-*.color5:               #d0a3b9
-*.color13:              #e5bed2
-
-! cyan
-*.color6:               #aebfd1
-*.color14:              #bacbdd
-
-! white
-*.color7:               #c7ccd1
-*.color15:              #f3f4f5
 
 
 ! cursor

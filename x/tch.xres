@@ -12,7 +12,7 @@
 *.cursorColor:  #707070
 
 ! black
-*.color0:       #d3d3d3
+*.color0:       #ffffff
 *.color8:       #b3b3b3
 
 ! red

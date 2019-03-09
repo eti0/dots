@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # vars
 colors="/usr/scripts/colors.sh"
-refresh=".15"
+refresh=".1"
 padding="    "
 height="35"
 font="-*-euphon-*"
@@ -25,26 +25,26 @@ desktop() {
 	fifth="%{A:xdotool set_desktop 4 &:}חמישי%{A}"
 	case "$cur" in
 		0)
-			echo "${a2}${a1}%{+o}${padding}${first}${padding}%{-o}${a2}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+			echo "${a2}${a0}%{+u}${padding}${first}${padding}%{-u}${a2}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
 			;;
 		1)
-			echo "${a2}${padding}${first}${padding}${a1}%{+o}${padding}${second}${padding}%{-o}${a2}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+			echo "${a2}${padding}${first}${padding}${a0}%{+u}${padding}${second}${padding}%{-u}${a2}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
 			;;
 		2)
-			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${a1}%{+o}${padding}${third}${padding}%{-o}${a2}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${a0}%{+u}${padding}${third}${padding}%{-u}${a2}${padding}${fourth}${padding}${padding}${fifth}${padding}"
 			;;
 		3)
-			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${a1}%{+o}${padding}${fourth}${padding}%{-o}${a2}${padding}${fifth}${padding}"
+			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${a0}%{+u}${padding}${fourth}${padding}%{-u}${a2}${padding}${fifth}${padding}"
 			;;
 		4)
-			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${a1}%{+o}${padding}${fifth}${padding}%{-o}${a2}"
+			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${a0}%{+u}${padding}${fifth}${padding}%{-u}${a2}"
 	esac
 }
 
 window() {
 	cur="$(xdotool getwindowname $(xdotool getactivewindow) | head -c 150)"
 	if [[ "$cur" ]] ; then
-		echo "$padding$cur$padding"
+		echo "$padding$padding$cur$padding$padding"
 	else
 		:
 	fi
@@ -76,21 +76,7 @@ weather() {
 }
 
 clock() {
-	date "+%R"
-}
-
-battery() {
-	percent="$(cat '/sys/class/power_supply/'$battery'/capacity')"
-	status="$(cat '/sys/class/power_supply/'$battery'/status')"
-	if [[ $status == "Unknown" || $status == "Charging" || $status == "Full" ]] ; then
-		if [[ $percent -gt 95 ]] ; then
-			echo "$a3$padding⮏$padding$bg"
-		else
-			echo "$a3$padding$percent%$padding$bg"
-		fi
-	else
-		echo "$a2$padding$percent%$padding$bg"
-	fi
+	date "+$padding%R$padding"
 }
 
 irc() {
@@ -103,39 +89,15 @@ irc() {
 }
 
 
-# loops
-desktop_loop() {
+# loop
+loop() {
 	while :; do
 		echo "%{l}\
-		$(desktop)$bg\
-		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
-		%{r}\
-		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
-		%{A:toggle-tch &:}$(irc)%{A}$bg"
-		sleep "$refresh"
-	done |\
-
-	lemonbar \
-		-f "$font" \
-		-f "$font2" \
-		-f "$font3" \
-		-f "$font4" \
-		-g "x$height" \
-		-F "$text" \
-		-B "$background" \
-		-a "20" \
-		-b \
-	| bash
-}
-
-laptop_loop() {
-	while :; do
-		echo "%{l}\
+		$a1$(window)$bg\
 		%{A4:xdotool set_desktop $(expr $(xdotool get_desktop) - 1) &:}%{A5:xdotool set_desktop $(expr $(xdotool get_desktop) + 1) &:}$(desktop)%{A}%{A}$bg\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
 		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
-		%{A:batstat &:}$(battery)%{A}$bg\
 		%{A:toggle-tch &:}$(irc)%{A}$bg"
 		sleep "$refresh"
 	done |\
@@ -149,16 +111,10 @@ laptop_loop() {
 		-F "$text" \
 		-B "$background" \
 		-U "$acc3" \
-		-u "1" \
+		-u "0" \
 		-a "20" \
-		-b \
 	| bash
 }
 
-
 # exec
-if [ -f "/sys/class/power_supply/$battery/status" ] ; then
-	laptop_loop
-else
-	desktop_loop
-fi
+loop

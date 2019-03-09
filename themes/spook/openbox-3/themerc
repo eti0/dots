@@ -16,14 +16,14 @@ menu.overlap.x: -20
 
 
 # osd
-osd.label.text.color: white
+osd.label.text.color: black
 osd.border.width: 0
 
 
 # windows
 border.width: 0
-*.border.color: black
-# *.active.border.color: #2a3741
+*.border.color: white
+# *.active.border.co6or: #2a3741
 # *.inactive.border.color: #404b54
 window.client.padding.width: 0
 window.handle.width: 0
@@ -36,9 +36,9 @@ padding.width: 12
 
 # active window
 window.*.*.bg: Flat Parentrelative
-window.*.*.*.bg.color: #f7855f
-window.*.*.*.image.color: #ac5639
-window.*.label.text.color: #f7855f
+window.*.*.*.bg.color: white
+window.*.*.*.image.color: black
+window.*.label.text.color: white
 
 
 # handle

@@ -54,7 +54,7 @@ switch $ext
         other
     case aac mp3
         audio
-    case mp4 avi mkv
+    case mp4 avi mkv webm
         video
     case '*'
         other

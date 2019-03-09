@@ -1,4 +1,4 @@
-xgamma -gamma 0.8 &
+xgamma -gamma 0.9 &
 xset -b &
 fonts &
 clipmenud &
@@ -7,5 +7,5 @@ nm-applet &
 cbatticon &
 sleep 5s && toggle-bar &
 sleep 2s && pkill -9 -f discord &
-xinput --set-prop 13 "libinput Natural Scrolling Enabled" 1 &
-xinput set-prop 11 286 -111 -111 &
+xinput --set-prop 8 "libinput Natural Scrolling Enabled" 1 &
+# xinput set-prop 8 286 -111 -111 &
