@@ -1,5 +1,5 @@
 [global]
-    font = euphon 8
+    font = Inter UI 10
     markup = full
     format = "%s\n%b"
     sort = yes
@@ -9,7 +9,7 @@
     show_age_threshold = 30
     word_wrap = yes
     ignore_newline = no
-    geometry = "0x0-30+65"
+    geometry = "0x0-30+100"
     title = dunst
     class = dunst
     shrink = yes
@@ -25,7 +25,7 @@
     line_height = 1
     notification_height = 0
     separator_height = 4
-    padding = 15
+    padding = 25
     horizontal_padding = 50
     separator_color = auto
     browser = /usr/local/bin/luakit
