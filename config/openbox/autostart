@@ -6,6 +6,5 @@ compton &
 nm-applet &
 cbatticon &
 sleep 5s && toggle-bar &
-sleep 2s && pkill -9 -f discord &
 xinput --set-prop 8 "libinput Natural Scrolling Enabled" 1 &
 # xinput set-prop 8 286 -111 -111 &

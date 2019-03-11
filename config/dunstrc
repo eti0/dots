@@ -29,6 +29,7 @@
     horizontal_padding = 50
     separator_color = auto
     browser = /usr/local/bin/luakit
+    dmenu = /usr/bin/dmenu -b -fn "Inter UI Medium-10" -nb "#13191e" -nf "#fff" -sb "#ffffff" -sf "#13191e" -h "35"
     icon_position = off
     frame_width = 0
     frame_color = "#000000"
@@ -36,6 +37,7 @@
 [shortcuts]
     close = ctrl+space
     history = ctrl+grave
+    context = ctrl+period
 
 [urgency_low]
     background = "#ffffff"

@@ -6,7 +6,9 @@
 *font:                  xft:Gemeli Mono:size=10, \
                         xft:Roboto Mono:size=10, \
                         xft:Noto Mono:size=10, \
-                        xft:Free Mono Medium:size=10
+                        xft:Free Mono Medium:size=10, \
+                        xft:M+ 1m:size=10, \
+                        xft:Symbola:size=12
 
 ! *font:                  -*-hy-*, \
 !                         -*-vanilla-*, \
