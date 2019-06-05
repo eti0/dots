@@ -3,17 +3,17 @@
 
 
 ! fonts
-*font:                  xft:Gemeli Mono:size=10, \
-                        xft:Roboto Mono:size=10, \
-                        xft:Noto Mono:size=10, \
-                        xft:Free Mono Medium:size=10, \
-                        xft:M+ 1m:size=10, \
-                        xft:Symbola:size=12
+! *font:                  xft:Gemeli Mono:size=10, \
+!                         xft:Roboto Mono:size=10, \
+!                         xft:Noto Mono:size=10, \
+!                         xft:Free Mono Medium:size=10, \
+!                         xft:M+ 1m:size=10, \
+!                         xft:Symbola:size=12
 
-! *font:                  -*-hy-*, \
-!                         -*-vanilla-*, \
-!                         -efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1, \
-!                         -gnu-unifont-medium-r-normal-sans-16-160-75-75-c-80-iso10646-1
+*font:                  -*-hy-*, \
+                        -*-vanilla-*, \
+                        -efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1, \
+                        -gnu-unifont-medium-r-normal-sans-16-160-75-75-c-80-iso10646-1
 
 *boldFont:
 *lineSpace:             2

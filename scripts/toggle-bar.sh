@@ -16,5 +16,5 @@ else
     # sed -i "s/<bottom>0<\/bottom>/<bottom>$h<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
     openbox --reconfigure
 
-    wbrrrr
+    wbr
 end

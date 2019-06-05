@@ -23,7 +23,7 @@ convert -background "rgba(0,0,0,0)" \
 	-fill "#fff" \
 	-font "$font" \
 	-pointsize "10" \
-	label:"$(date "+%d %B %Y" && printf '\n' && cal -m1 | tail -n7)" \
+	label:"$(date "+%d %B %Y : %R\n" && cal -m1 | tail -n7)" \
 	"$file"
 
 n30f -t calendar_background \

@@ -25,24 +25,24 @@ desktop() {
 	fifth="%{A:xdotool set_desktop 4 &:}חמישי%{A}"
 	case "$cur" in
 		0)
-			echo "${a2}${a0}%{+u}${padding}${first}${padding}%{-u}${a2}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
-			;;
+		echo "${a2}${a0}%{+u}${padding}${first}${padding}%{-u}${a2}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+		;;
 		1)
-			echo "${a2}${padding}${first}${padding}${a0}%{+u}${padding}${second}${padding}%{-u}${a2}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
-			;;
+		echo "${a2}${padding}${first}${padding}${a0}%{+u}${padding}${second}${padding}%{-u}${a2}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+		;;
 		2)
-			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${a0}%{+u}${padding}${third}${padding}%{-u}${a2}${padding}${fourth}${padding}${padding}${fifth}${padding}"
-			;;
+		echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${a0}%{+u}${padding}${third}${padding}%{-u}${a2}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+		;;
 		3)
-			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${a0}%{+u}${padding}${fourth}${padding}%{-u}${a2}${padding}${fifth}${padding}"
-			;;
+		echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${a0}%{+u}${padding}${fourth}${padding}%{-u}${a2}${padding}${fifth}${padding}"
+		;;
 		4)
-			echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${a0}%{+u}${padding}${fifth}${padding}%{-u}${a2}"
+		echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${a0}%{+u}${padding}${fifth}${padding}%{-u}${a2}"
 	esac
 }
 
 window() {
-	cur="$(xdotool getwindowname $(xdotool getactivewindow) | head -c 150)"
+	cur="$(xdotool getwindowname $(xdotool getactivewindow) | head -c 150 | sed 's/ \- / \: /')"
 	if [[ "$cur" ]] ; then
 		echo "$padding$padding$cur$padding$padding"
 	else
@@ -76,7 +76,11 @@ weather() {
 }
 
 clock() {
-	date "+$padding%R$padding"
+	# date "+$padding%R$padding"
+	# tempus
+	born="$(date -d '5 Nov 1998' +%s)"
+	now="$(date -d now +%s)"
+	printf "$(((now - born) / 86400)) days spent on earth"
 }
 
 irc() {
@@ -103,16 +107,16 @@ loop() {
 	done |\
 
 	lemonbar \
-		-f "$font" \
-		-f "$font2" \
-		-f "$font3" \
-		-f "$font4" \
-		-g "x$height" \
-		-F "$text" \
-		-B "$background" \
-		-U "$acc3" \
-		-u "0" \
-		-a "20" \
+	-f "$font" \
+	-f "$font2" \
+	-f "$font3" \
+	-f "$font4" \
+	-g "x$height" \
+	-F "$text" \
+	-B "$background" \
+	-U "$acc3" \
+	-u "0" \
+	-a "20" \
 	| bash
 }
 

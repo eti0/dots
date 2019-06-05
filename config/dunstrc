@@ -1,5 +1,5 @@
 [global]
-    font = Inter UI 10
+    font = hy 8
     markup = full
     format = "%s\n%b"
     sort = yes
