@@ -1,8 +1,8 @@
 {
-	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-github.tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-google-light.tmTheme",
 	"fold_buttons": false,
-	"font_face": "euphon",
-	"font_size": 8,
+	"font_face": "Roboto Mono",
+	"font_size": 15,
 	"ignored_packages":
 	[
 		"Vintage"

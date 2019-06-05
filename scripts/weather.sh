@@ -5,7 +5,7 @@
 set key 43d042e6d1ed55ac9a3b36a89d07bb31
 set loc "44.8158,-0.4733"
 set units si
-set lang en
+set lang fr
 set temp "/tmp"
 set weather "$temp/weather"
 set api "$temp/weather-api"
@@ -18,11 +18,12 @@ function fetch
 end
 
 function summary
-    jq < "$api" -r ".currently.summary" | awk '{print tolower($0)}'
+    jq <"$api" -r ".currently.summary" | awk '{print tolower($0)}'
 end
 
 function icon
-    if test (date +%H) -gt 21 ; or test (date +%H) -lt 8
+    if test (date +%H) -gt 21
+        or test (date +%H) -lt 8
         switch (summary)
             case "clear" "no precipitation"
                 printf "̓"
@@ -62,11 +63,11 @@ function temperature
 end
 
 function print
-    printf (temperature)\ :\ (summary) | tee "$weather"
+    printf (temperature)\ \ +\ \ (summary) | tee "$weather"
 end
 
 function print-with-icon
-    printf (temperature)\ :\ (icon) | tee "$weather"
+    printf (temperature)\ \ +\ \ (icon) | tee "$weather"
 end
 
 

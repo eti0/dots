@@ -1,6 +1,9 @@
-Host xv
-     HostName lemon.eti.tf
+Host lemon
+     HostName 149.91.81.111
      User eti
-     ForwardX11Trusted yes
-     ForwardX11 yes
      ServerAliveInterval 120
+
+Host europe
+    HostName 199.247.11.225
+    User eti
+    ServerAliveInterval 120
