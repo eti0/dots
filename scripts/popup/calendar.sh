@@ -9,7 +9,7 @@ font="lime"
 monitorwidth="$(xdotool getdisplaygeometry | awk '{print $1;}')"
 monitorheight="$(xdotool getdisplaygeometry | awk '{print $2;}')"
 x="$(expr $monitorwidth - 280)"
-y="$(expr $monitorheight - 310)"
+y="45"
 
 hold() {
      sleep .01s
@@ -20,7 +20,7 @@ hold() {
 pkill -f "n30f -t calendar"
 
 convert -background "rgba(0,0,0,0)" \
-	-fill "#000000" \
+	-fill "#fff" \
 	-font "$font" \
 	-pointsize "10" \
 	label:"$(date "+%d %B %Y" && printf '\n' && cal -m1 | tail -n7)" \

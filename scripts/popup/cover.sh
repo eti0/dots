@@ -42,9 +42,9 @@ else
 
         convert "$file" \
                 -resize "200x200" \
-                # -separate \
-                # -negate \
-                # -set colorspace Gray \
+                -separate \
+                -negate \
+                -set colorspace Gray \
                 "$file" > /dev/null 2>&1
     else
         #
@@ -63,10 +63,10 @@ else
 
         convert "$file" \
                 -resize "200x200" \
-                # -set colorspace Gray \
-                # -separate \
-                # -average \
-                # -negate \
+                -set colorspace Gray \
+                -separate \
+                -average \
+                #-negate \
                 "$file" > /dev/null 2>&1
 
         cp "$file" "$saved"
