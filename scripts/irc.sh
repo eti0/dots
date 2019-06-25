@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
 
-urxvt -name "irc" &
+urxvt -name "irc"
