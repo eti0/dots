@@ -65,3 +65,49 @@ Xft.rgba:               rgb
 ! disable ctrl+shift
 *.iso14755:             false
 *.iso14755_52:          false
+
+
+! irc config
+*irc.geometry:              100x11
+*irc.internalBorder:        30
+*irc.lineSpace:             2
+*irc.matcher.rend.0:        fg6
+*irc.scrollBar:             false
+*irc..url-launcher:         /usr/local/bin/openup
+
+! special
+*.irc.foreground:   #707070
+*.irc.background:   #ffffff
+*.irc.cursorColor:  #707070
+
+! black
+*.irc.color0:       #ffffff
+*.irc.color8:       #b3b3b3
+
+! red
+*.irc.color1:       #ef6b7b
+*.irc.color9:       #ed5466
+
+! green
+*.irc.color2:       #99d569
+*.irc.color10:      #afdb80
+
+! yellow
+*.irc.color3:       #f5b235
+*.irc.color11:      #f5b535
+
+! blue
+*.irc.color4:       #4e5ee8
+*.irc.color12:      #5d62ea
+
+! magenta
+*.irc.color5:       #d6999f
+*.irc.color13:      #d29eb0
+
+! cyan
+*.irc.color6:       #959bc1
+*.irc.color14:      #6f76a1
+
+! white
+*.irc.color7:       #707070
+*.irc.color15:      #909090
