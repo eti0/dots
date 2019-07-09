@@ -10,7 +10,6 @@ if test "$pid"
     kill -9 "$pid"
     notify-send "compositor disabled"
 else
-    compton # --experimental-backends &
-    disown
+    compton & # --experimental-backends
     notify-send "compositor enabled"
 end
