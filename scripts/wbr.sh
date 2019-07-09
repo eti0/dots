@@ -18,26 +18,26 @@ source "$colors"
 # functions
 desktop() {
 	cur=$(xdotool get_desktop)
-	first="%{A:xdotool set_desktop 0 &:}ראשון%{A}"
-	second="%{A:xdotool set_desktop 1 &:}השני%{A}"
-	third="%{A:xdotool set_desktop 2 &:}שלישית%{A}"
-	fourth="%{A:xdotool set_desktop 3 &:}רביעי%{A}"
-	fifth="%{A:xdotool set_desktop 4 &:}חמישי%{A}"
+	first="%{A:xdotool set_desktop 0 &:}one%{A}"
+	second="%{A:xdotool set_desktop 1 &:}two%{A}"
+	third="%{A:xdotool set_desktop 2 &:}three%{A}"
+	fourth="%{A:xdotool set_desktop 3 &:}four%{A}"
+	fifth="%{A:xdotool set_desktop 4 &:}five%{A}"
 	case "$cur" in
 		0)
-		echo "${a2}${a0}%{+u}${padding}${first}${padding}%{-u}${a2}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+		echo "${a2}${a0}%{+u}${af4}${padding}${first}${padding}${txt}%{-u}${a2}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
 		;;
 		1)
-		echo "${a2}${padding}${first}${padding}${a0}%{+u}${padding}${second}${padding}%{-u}${a2}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+		echo "${a2}${padding}${first}${padding}${a0}%{+u}${af4}${padding}${second}${padding}${txt}%{-u}${a2}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
 		;;
 		2)
-		echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${a0}%{+u}${padding}${third}${padding}%{-u}${a2}${padding}${fourth}${padding}${padding}${fifth}${padding}"
+		echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${a0}%{+u}${af4}${padding}${third}${padding}${txt}%{-u}${a2}${padding}${fourth}${padding}${padding}${fifth}${padding}"
 		;;
 		3)
-		echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${a0}%{+u}${padding}${fourth}${padding}%{-u}${a2}${padding}${fifth}${padding}"
+		echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${a0}%{+u}${af4}${padding}${fourth}${padding}${txt}%{-u}${a2}${padding}${fifth}${padding}"
 		;;
 		4)
-		echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${a0}%{+u}${padding}${fifth}${padding}%{-u}${a2}"
+		echo "${a2}${padding}${first}${padding}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${a0}%{+u}${af4}${padding}${fifth}${padding}${txt}%{-u}${a2}"
 	esac
 }
 
@@ -51,8 +51,8 @@ window() {
 }
 
 mpd() {
-	artist="$(mpc -f '%artist%' | head -1 | sed 's/\;/ + /')"
-	song="$(mpc -f '%title%' | head -1 | sed 's/(feat\./( +/')"
+	artist="$(mpc -f '%artist%' | head -1 | sed 's/\;/ + /g')"
+	song="$(mpc -f '%title%' | head -1 | sed 's/(feat\./( +/g')"
 	progress="$(mpc | sed 's/.*(//;s/)//;2q;d')"
 	if [ "$(mpc current)" ] ; then
 		echo "$a2$padding$artist : $song : $progress$padding$bg"
@@ -97,7 +97,6 @@ irc() {
 loop() {
 	while :; do
 		echo "%{l}\
-		$a1$(window)$bg\
 		%{A4:xdotool set_desktop $(expr $(xdotool get_desktop) - 1) &:}%{A5:xdotool set_desktop $(expr $(xdotool get_desktop) + 1) &:}$(desktop)%{A}%{A}$bg\
 		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
 		%{r}\
