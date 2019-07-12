@@ -3,17 +3,12 @@
 
 
 ! fonts
-! *font:                  xft:Gemeli Mono:size=10, \
-!                         xft:Roboto Mono:size=10, \
-!                         xft:Noto Mono:size=10, \
-!                         xft:Free Mono Medium:size=10, \
-!                         xft:M+ 1m:size=10, \
-!                         xft:Symbola:size=12
+*font:                  xft:hy:size=8, \
+                        xft:vanilla:size=8, \
+                        xft:Biwidth:size=8, \
+                        xft:Unifont:size=8
 
-*font:                  -*-hy-*, \
-                        -*-vanilla-*, \
-                        -efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1, \
-                        -gnu-unifont-medium-r-normal-sans-16-160-75-75-c-80-iso10646-1
+Sxiv*font:              hy:size=8
 
 *boldFont:
 *lineSpace:             2
@@ -66,6 +61,18 @@ Xft.rgba:               rgb
 *.iso14755:             false
 *.iso14755_52:          false
 
+
+! xst
+st.font:                hy:size=8
+st.termname:            st-256color
+st.borderpx:            20
+st.cursorshape:         5
+st.cursorthickness:     1
+st.cursorblinkontype:   0
+st.bold_font:           0
+st.bellvolume:          0
+st.chscale:             1.15
+st.blinktimeout:        400
 
 ! irc config
 *irc.geometry:              100x11
