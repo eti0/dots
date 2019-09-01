@@ -3,10 +3,17 @@
 
 
 ! fonts
-*font:                  xft:hy:size=8, \
-                        xft:vanilla:size=8, \
-                        xft:Biwidth:size=8, \
-                        xft:Unifont:size=8
+*font:                  xft:Gemeli Mono:size=10, \
+                        xft:Noto Mono:size=10, \
+                        xft:FreeMono:size=10, \
+                        xft:Biwidth:size=10, \
+                        xft:Unifont:size=10
+
+! *font:                  xft:hy:size=8, \
+!                         xft:vanilla:size=8, \
+!                         xft:Symbola:size=10, \
+!                         xft:Biwidth:size=8, \
+!                         xft:Unifont:size=8
 
 Sxiv*font:              hy:size=8
 
@@ -73,6 +80,12 @@ st.bold_font:           0
 st.bellvolume:          0
 st.chscale:             1.15
 st.blinktimeout:        400
+
+
+! rofi
+rofi.font:              hy 8
+rofi.theme:             /usr/share/rofi/themes/paper-float.rasi
+
 
 ! irc config
 *irc.geometry:              100x11

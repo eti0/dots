@@ -1,9 +1,5 @@
-# xgamma -gamma 0.9
-xset -b
-fonts
-nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
-# clipmenud &
-# compton &
-xinput --set-prop 8 "libinput Natural Scrolling Enabled" 1
-# xinput set-prop 8 286 -111 -111
+xset -b &
+fonts &
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }" &
+xinput --set-prop 13 "libinput Natural Scrolling Enabled" 1 &
 sleep 5s && toggle-bar &

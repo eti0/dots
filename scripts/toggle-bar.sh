@@ -12,11 +12,11 @@ if test "$pid"
     openbox --reconfigure
 
     kill -9 "$pid"
-    pkill -9 -f "bar-underline"
+    # pkill -9 -f "bar-underline"
 else
     # sed -i "s/<bottom>0<\/bottom>/<bottom>$h<\/bottom>/g" "$HOME/.config/openbox/rc.xml"
     openbox --reconfigure
 
-    wbr &
-    n30f -t "bar-underline" -y "35" "/usr/scripts/img/underline.png" &
+    wbrrrr &
+    # n30f -t "bar-underline" -y "35" "/usr/scripts/img/underline.png" &
 end
