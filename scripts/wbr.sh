@@ -50,46 +50,27 @@ window() {
 	fi
 }
 
-mpd() {
-	artist="$(mpc -f '%artist%' | head -1 | sed 's/\;/ + /g')"
-	song="$(mpc -f '%title%' | head -1 | sed 's/(feat\./( +/g')"
-	progress="$(mpc | sed 's/.*(//;s/)//;2q;d')"
-	if [ "$(mpc current)" ] ; then
-		echo "$a2$padding$artist : $song : $progress$padding$bg"
-	else
-		:
-	fi
-}
-
-spotify() {
-	current="$(sps 'current' | sed 's/ \- / \: /')"
-	if [ "$current" == "No media player is currently running" ] ; then
-		:
-	else
-		echo "$a2$padding$current$padding$bg"
-	fi
-}
-
-weather() {
-	file="/tmp/weather"
-	cat "$file"
-}
-
 clock() {
 	# date "+$padding%R$padding"
 	# tempus
 	born="$(date -d '5 Nov 1998' +%s)"
 	now="$(date -d now +%s)"
-	printf "$(((now - born) / 86400)) days spent on earth"
+	# printf "$(((now - born) / 86400)) days spent on earth"
+    tempus
 }
 
 irc() {
-	pgrep -f "urxvt -name irc" > /dev/null 2>&1
+	pgrep -f "urxvt -name irc" > "/dev/null" 2>&1
 	if [ "$?" -ne "1" ] ; then
 		echo "$a1$padding :: $padding$bg"
 	else
 		:
 	fi
+}
+
+mpris() {
+	ignore="chrome"
+	playerctl metadata --ignore-player="$ignore" --format "${padding}np: {{ artist }} : {{ title }}${padding}" 2> "/dev/null" | sed "s/Player not found//"
 }
 
 
@@ -98,9 +79,9 @@ loop() {
 	while :; do
 		echo "%{l}\
 		%{A4:xdotool set_desktop $(expr $(xdotool get_desktop) - 1) &:}%{A5:xdotool set_desktop $(expr $(xdotool get_desktop) + 1) &:}$(desktop)%{A}%{A}$bg\
-		%{A2:cover &:}%{A:mpc 'toggle' &:}%{A3:urxvt -e 'ncmpcpp' &:}$(mpd)%{A}%{A}%{A:sps 'play' &:}$(spotify)$padding%{A}%{A}$bg\
+		%{A:playerctl play-pause &:}$(mpris)%{A}\
 		%{r}\
-		$a2%{A:calendar &:}$padding$(clock)$padding%{A}$bg\
+		$a2%{A:notify-send $(date "+%H\:%M\ %d/%m") &:}$padding$(clock)$padding%{A}$bg\
 		%{A:toggle-tch &:}$(irc)%{A}$bg"
 		sleep "$refresh"
 	done |\

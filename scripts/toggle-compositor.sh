@@ -2,7 +2,7 @@
 
 
 # vars
-set pid (pidof compton)
+set pid (pidof picom)
 
 
 # exec
@@ -10,6 +10,6 @@ if test "$pid"
     kill -9 "$pid"
     notify-send "compositor disabled"
 else
-    compton & # --experimental-backends
+    picom --experimental-backends &
     notify-send "compositor enabled"
 end
