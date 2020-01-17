@@ -1,7 +1,7 @@
 {
-	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-google-light.tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-github.tmTheme",
 	"fold_buttons": false,
-	"font_face": "Roboto Mono",
+	"font_face": "SF Mono",
 	"font_size": 15,
 	"ignored_packages":
 	[
@@ -13,5 +13,6 @@
 	"overlay_scroll_bars": "enabled",
 	"skin": "DA UI/Minimal",
 	"theme": "DA.sublime-theme",
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+	"word_wrap": "false"
 }
