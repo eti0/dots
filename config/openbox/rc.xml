@@ -85,7 +85,7 @@
   </resize>
   <margins>
     <top>0</top>
-    <bottom>35</bottom>
+    <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
@@ -223,7 +223,7 @@
         <to>Previous</to>
       </action>
     </keybind>
-    <keybind key="W-w">
+    <keybind key="W-q">
       <action name="Close"/>
     </keybind>
     <keybind key="W-Down">

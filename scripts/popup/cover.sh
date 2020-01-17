@@ -35,17 +35,17 @@ if test -f "$saved"
 else
     if test -z (pidof spotify)
         ffmpeg -loglevel "0" \
-               -y \
-               -i "$HOME/Music/$source" \
-               -vf scale="-200:200" \
-               "$file"
+            -y \
+            -i "$HOME/Music/$source" \
+            -vf scale="-200:200" \
+            "$file"
 
         convert "$file" \
-                -resize "200x200" \
-                -separate \
-                -negate \
-                -set colorspace Gray \
-                "$file" > /dev/null 2>&1
+            -resize "200x200" \
+            #-separate \
+            #-negate \
+            #-set colorspace Gray \
+            "$file" >/dev/null 2>&1
     else
         #
     end
@@ -57,18 +57,17 @@ else
         notify-send "looking for a cover with glyr"
 
         glyrc cover --album "$album" \
-                    --artist "$artist" \
-                    --title "$title" \
-                    --write "$file"
+            --artist "$artist" \
+            --title "$title" \
+            --write "$file"
 
         convert "$file" \
-                -resize "200x200" \
-                -set colorspace Gray \
-                -separate \
-                -average \
-                #-negate \
-                "$file" > /dev/null 2>&1
-
+            -resize "200x200" \
+            #     -set colorspace Gray \
+            #     -separate \
+            #     -average \
+            #     -negate \
+            "$file" >/dev/null 2>&1
         cp "$file" "$saved"
         rm "$file"
     end

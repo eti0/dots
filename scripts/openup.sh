@@ -39,7 +39,7 @@ function pic
 end
 
 function other
-    chromium $url
+    google-chrome $url
 end
 
 

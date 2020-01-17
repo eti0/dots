@@ -22,7 +22,7 @@ osd.border.width: 0
 
 # windows
 border.width: 0
-*.border.color: white
+*.border.color: #242627
 # *.active.border.co6or: #2a3741
 # *.inactive.border.color: #404b54
 window.client.padding.width: 0
@@ -36,20 +36,6 @@ padding.width: 12
 
 # active window
 window.*.*.bg: Flat Parentrelative
-window.*.*.*.bg.color: white
+window.*.*.*.bg.color: #252525
 window.*.*.*.image.color: black
-window.*.label.text.color: white
-
-
-# handle
-window.active.handle.bg: Flat
-window.active.handle.bg.color: white
-window.inactive.handle.bg: Flat
-window.inactive.handle.bg.color: white
-
-
-# grip
-window.active.grip.bg: Flat
-window.active.grip.bg.color: white
-window.inactive.grip.bg: Flat
-window.inactive.grip.bg.color: white
+window.*.label.text.color: #252525
