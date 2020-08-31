@@ -10,6 +10,6 @@ if test "$pid"
     kill -9 "$pid"
     notify-send "compositor disabled"
 else
-    picom --experimental-backends &
+    picom & # --experimental-backends &
     notify-send "compositor enabled"
 end

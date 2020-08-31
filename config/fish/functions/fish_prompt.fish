@@ -5,7 +5,7 @@ function fish_prompt
     set -l normal (set_color "normal")
     set -l brblack (set_color "brblack")
 
-    set -l cwd (basename (pwd | sed "s:^$HOME:घर:"))
+    set -l cwd (basename (pwd | sed "s:^$HOME:בית:"))
 
     if test "$last_status" = "0"
         set prompt_color "$brblack"

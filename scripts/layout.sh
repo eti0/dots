@@ -13,4 +13,4 @@ switch $current
 end
 
 setxkbmap $new
-notify-send keymap\ changed\ to\ $new
+# notify-send keymap\ changed\ to\ $new

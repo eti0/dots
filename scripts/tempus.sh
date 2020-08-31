@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # vars
-hour="$(date "+%H")"
+hour="$(date "+%-H")"
 minute="$(date "+%M")"
 
 hourSuffix="heures"
@@ -10,17 +10,17 @@ minuteTenthsStr=( "dix" "onze" "douze" "treize" "quatorze" "quinze" "seize" "dix
 minuteHiTenthsStr=( "vingt" "trente" "quarante" "cinquante" )
 
 # exec
-if [[ "$hour" -gt "12" ]] ; then
-    hour="$(($hour - 12))"
+if [ "$hour" -gt "12" ] ; then
+    hour="$(("$hour" - "12"))"
 fi
 
 hourToPrint="${hourStr["$hour"]} "${hourSuffix}""
 
 case $hour in
-    "00" | "12" )
+    "0" | "12" )
         hourToPrint="${hourToPrint//$hourSuffix}"
         hourToPrint="${hourToPrint//\ }" ;;
-    "01" | "1" )
+    "1" )
         hourToPrint="${hourToPrint//s}" ;;
 esac
 

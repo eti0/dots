@@ -18,11 +18,11 @@ source "$colors"
 # functions
 desktop() {
 	cur=$(xdotool get_desktop)
-	first="%{A:xdotool set_desktop 0 &:}one%{A}"
-	second="%{A:xdotool set_desktop 1 &:}two%{A}"
-	third="%{A:xdotool set_desktop 2 &:}three%{A}"
-	fourth="%{A:xdotool set_desktop 3 &:}four%{A}"
-	fifth="%{A:xdotool set_desktop 4 &:}five%{A}"
+	first="%{A:xdotool set_desktop 0 &:}un%{A}"
+	second="%{A:xdotool set_desktop 1 &:}deux%{A}"
+	third="%{A:xdotool set_desktop 2 &:}trois%{A}"
+	fourth="%{A:xdotool set_desktop 3 &:}quatre%{A}"
+	fifth="%{A:xdotool set_desktop 4 &:}cinq%{A}"
 	case "$cur" in
 		0)
 		echo "${a2}${a0}%{+u}${af4}${padding}${first}${padding}${txt}%{-u}${a2}${padding}${second}${padding}${padding}${third}${padding}${padding}${fourth}${padding}${padding}${fifth}${padding}"
@@ -79,7 +79,6 @@ loop() {
 	while :; do
 		echo "%{l}\
 		%{A4:xdotool set_desktop $(expr $(xdotool get_desktop) - 1) &:}%{A5:xdotool set_desktop $(expr $(xdotool get_desktop) + 1) &:}$(desktop)%{A}%{A}$bg\
-		%{A:playerctl play-pause &:}$(mpris)%{A}\
 		%{r}\
 		$a2%{A:notify-send $(date "+%H\:%M\ %d/%m") &:}$padding$(clock)$padding%{A}$bg\
 		%{A:toggle-tch &:}$(irc)%{A}$bg"

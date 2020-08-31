@@ -15,18 +15,19 @@ menu.separator.color: white
 menu.overlap.x: -20
 
 
-# osd
-osd.label.text.color: black
-osd.border.width: 0
-
-
 # windows
 border.width: 0
-*.border.color: #242627
-# *.active.border.co6or: #2a3741
-# *.inactive.border.color: #404b54
+# *.border.color: #00ff00
+# *.border.color: #1f1f1f
+# *.active.border.color: #32353e
+# *.inactive.border.color: #2c2e33
 window.client.padding.width: 0
 window.handle.width: 0
+
+
+# osd
+osd.label.text.color: white
+osd.border.width: 1
 
 
 # titlebars
@@ -36,6 +37,6 @@ padding.width: 12
 
 # active window
 window.*.*.bg: Flat Parentrelative
-window.*.*.*.bg.color: #252525
-window.*.*.*.image.color: black
-window.*.label.text.color: #252525
+window.*.*.*.bg.color: #282a2e
+window.*.label.text.color: #282a2e
+window.*.*.*.image.color: white

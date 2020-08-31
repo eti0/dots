@@ -4,11 +4,11 @@
 
 ! fonts
 *font:                  xft:erusfont:size=8, \
+                        xft:Unifont:size=8, \
                         xft:hy:size=8, \
                         xft:vanilla:size=8, \
-                        xft:Symbola:size=10, \
                         xft:Biwidth:size=8, \
-                        xft:Unifont:size=8
+                        xft:Symbola:size=10
 
 Sxiv*font:              euphon:size=8
 Sxiv.foreground:        #ffffff
@@ -35,7 +35,7 @@ Sxiv.background:        #444444
 *.perl-ext-common:      default,matcher,selection-to-clipboard
 *.url-launcher:         /usr/bin/xdg-open
 *.matcher.button:       3
-*.matcher.rend.0:       fg9
+*.matcher.rend.0:       fg3
 
 
 ! size
@@ -66,23 +66,17 @@ Xft.rgba:               rgb
 *.iso14755_52:          false
 
 
-! xst
-st.font:                hy:size=8
-st.termname:            st-256color
-st.borderpx:            20
-st.cursorshape:         5
-st.cursorthickness:     1
-st.cursorblinkontype:   0
-st.bold_font:           0
-st.bellvolume:          0
-st.chscale:             1.15
-st.blinktimeout:        400
-
-
-! rofi
-rofi.font:              hy 8
-rofi.theme:             /usr/share/rofi/themes/paper-float.rasi
-
+! tabbedex
+! *.tabbedex.tabbar-fg: 8
+! *.tabbedex.tabbar-bg: 0
+! *.tabbedex.tab-fg: 7
+! *.tabbedex.tab-bg: 0
+! *.tabbedex.title-fg: 13
+! *.tabbedex.title: false
+! *.tabbedex.no-tabbedex-keys: yes
+! *.keysym.Shift-Down: tabbedex:new_tab
+! *.keysym.Control-Tab: tabbedex:next_tab
+! *.keysym.Control-Shift-Tab: tabbedex:prev_tab
 
 ! irc config
 *irc.geometry:              100x11

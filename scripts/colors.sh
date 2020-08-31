@@ -16,7 +16,7 @@ acc0="#000000" # active bg
 acc1="#1d1d1d"
 acc2="#000000"
 acc3="#000000"
-acc4="#7a85ff" # active
+acc4="#D75756" # active
 
 # background accents
 a0="%{B$acc0}"
