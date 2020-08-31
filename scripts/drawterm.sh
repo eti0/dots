@@ -12,9 +12,10 @@ read "width" "height" "xpos" "ypos" < <(slop -q -t "0" -lf "$selectionFormat" -b
 
 [[ $width ]] || exit
 
-alacritty --position "$xpos" "$ypos" &
+alacritty &
 pid=$!
 
-xdo resize -w "$width" -h "$height" -p "$pid" -m
-
-wait
+xdo hide -p "$pid" -m
+xdo show -p "$pid" -m
+xdo move -x "$xpos" -y "$ypos" -p "$pid"
+xdo resize -w "$width" -h "$height" -p "$pid"
